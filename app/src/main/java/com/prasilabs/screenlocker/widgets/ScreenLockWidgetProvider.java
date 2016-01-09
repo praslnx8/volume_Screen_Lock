@@ -14,6 +14,7 @@ import com.prasilabs.screenlocker.utils.MyLogger;
 
 /**
  * Created by prasi on 9/1/16.
+ * For screen lock widget
  */
 public class ScreenLockWidgetProvider extends AppWidgetProvider
 {
@@ -24,11 +25,8 @@ public class ScreenLockWidgetProvider extends AppWidgetProvider
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds)
     {
-        final int count = appWidgetIds.length;
-
-        for (int i = 0; i < count; i++)
+        for (int widgetId : appWidgetIds)
         {
-            int widgetId = appWidgetIds[i];
             RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_screen_lock);
             remoteViews.setOnClickPendingIntent(R.id.screen_lock_btn, buildButtonPendingIntent(context));
 

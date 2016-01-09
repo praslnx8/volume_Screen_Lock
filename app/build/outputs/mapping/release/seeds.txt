@@ -1631,8 +1631,6 @@ android.support.v7.widget.Toolbar: int getContentInsetRight()
 android.support.v7.widget.Toolbar: android.support.v7.internal.widget.DecorToolbar getWrapper()
 android.support.v7.widget.Toolbar: void setCollapsible(boolean)
 android.support.v7.widget.Toolbar$SavedState: android.os.Parcelable$Creator CREATOR
-com.prasilabs.screenlocker.MyAppstate
-com.prasilabs.screenlocker.MyAppstate: MyAppstate()
 com.prasilabs.screenlocker.R$anim: int abc_fade_in
 com.prasilabs.screenlocker.R$anim: int abc_fade_out
 com.prasilabs.screenlocker.R$anim: int abc_grow_fade_in_from_bottom
@@ -2170,8 +2168,11 @@ com.prasilabs.screenlocker.R$drawable: int abc_textfield_default_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_activated_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_default_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_material
+com.prasilabs.screenlocker.R$drawable: int gcard
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn_small
+com.prasilabs.screenlocker.R$drawable: int ic_launcher
+com.prasilabs.screenlocker.R$drawable: int ic_launcher_small
 com.prasilabs.screenlocker.R$drawable: int notification_template_icon_bg
 com.prasilabs.screenlocker.R$drawable: int primary_btn
 com.prasilabs.screenlocker.R$drawable: int primary_btn_big
@@ -2204,6 +2205,7 @@ com.prasilabs.screenlocker.R$id: int activity_chooser_view_content
 com.prasilabs.screenlocker.R$id: int alertTitle
 com.prasilabs.screenlocker.R$id: int always
 com.prasilabs.screenlocker.R$id: int beginning
+com.prasilabs.screenlocker.R$id: int bottom_layout
 com.prasilabs.screenlocker.R$id: int buttonPanel
 com.prasilabs.screenlocker.R$id: int cancel_action
 com.prasilabs.screenlocker.R$id: int check_box
@@ -2215,6 +2217,7 @@ com.prasilabs.screenlocker.R$id: int custom
 com.prasilabs.screenlocker.R$id: int customPanel
 com.prasilabs.screenlocker.R$id: int decor_content_parent
 com.prasilabs.screenlocker.R$id: int default_activity_button
+com.prasilabs.screenlocker.R$id: int device_admin_btn
 com.prasilabs.screenlocker.R$id: int disableHome
 com.prasilabs.screenlocker.R$id: int edit_query
 com.prasilabs.screenlocker.R$id: int end
@@ -2237,6 +2240,8 @@ com.prasilabs.screenlocker.R$id: int multiply
 com.prasilabs.screenlocker.R$id: int never
 com.prasilabs.screenlocker.R$id: int none
 com.prasilabs.screenlocker.R$id: int normal
+com.prasilabs.screenlocker.R$id: int notification_switch
+com.prasilabs.screenlocker.R$id: int other_menu_layout
 com.prasilabs.screenlocker.R$id: int page_btn
 com.prasilabs.screenlocker.R$id: int parentPanel
 com.prasilabs.screenlocker.R$id: int progress_circular
@@ -2276,8 +2281,10 @@ com.prasilabs.screenlocker.R$id: int time
 com.prasilabs.screenlocker.R$id: int title
 com.prasilabs.screenlocker.R$id: int title_template
 com.prasilabs.screenlocker.R$id: int topPanel
+com.prasilabs.screenlocker.R$id: int transition_parent_layout
 com.prasilabs.screenlocker.R$id: int up
 com.prasilabs.screenlocker.R$id: int useLogo
+com.prasilabs.screenlocker.R$id: int volume_key_switch
 com.prasilabs.screenlocker.R$id: int withText
 com.prasilabs.screenlocker.R$id: int wrap_content
 com.prasilabs.screenlocker.R$integer: int abc_config_activityDefaultDur
@@ -2343,8 +2350,15 @@ com.prasilabs.screenlocker.R$string: int abc_shareactionprovider_share_with
 com.prasilabs.screenlocker.R$string: int abc_shareactionprovider_share_with_application
 com.prasilabs.screenlocker.R$string: int abc_toolbar_collapse_description
 com.prasilabs.screenlocker.R$string: int app_name
+com.prasilabs.screenlocker.R$string: int btn_disable_device_admin
+com.prasilabs.screenlocker.R$string: int btn_enable_device_admin
 com.prasilabs.screenlocker.R$string: int disabled_str
+com.prasilabs.screenlocker.R$string: int double_press_volume_lock_message
+com.prasilabs.screenlocker.R$string: int enable_message
+com.prasilabs.screenlocker.R$string: int enable_screen_lock_option_message
 com.prasilabs.screenlocker.R$string: int enabled_str
+com.prasilabs.screenlocker.R$string: int notification_lock_message
+com.prasilabs.screenlocker.R$string: int notification_screen_lock_message
 com.prasilabs.screenlocker.R$string: int status_bar_notification_info_overflow
 com.prasilabs.screenlocker.R$style: int AlertDialog_AppCompat
 com.prasilabs.screenlocker.R$style: int AlertDialog_AppCompat_Light
@@ -3013,9 +3027,17 @@ com.prasilabs.screenlocker.R$styleable: int[] ViewStubCompat
 com.prasilabs.screenlocker.R$styleable: int ViewStubCompat_android_id
 com.prasilabs.screenlocker.R$styleable: int ViewStubCompat_android_inflatedId
 com.prasilabs.screenlocker.R$styleable: int ViewStubCompat_android_layout
+com.prasilabs.screenlocker.R$xml: int screen_lock_widget
+com.prasilabs.screenlocker.R$xml: int vadmin
+com.prasilabs.screenlocker.VApp
+com.prasilabs.screenlocker.VApp: VApp()
+com.prasilabs.screenlocker.VApp$VAdmin
+com.prasilabs.screenlocker.VApp$VAdmin: VApp$VAdmin()
 com.prasilabs.screenlocker.services.MediaButtonIntentReciever
 com.prasilabs.screenlocker.services.MediaButtonIntentReciever: MediaButtonIntentReciever()
 com.prasilabs.screenlocker.services.ScreenLockService
 com.prasilabs.screenlocker.services.ScreenLockService: ScreenLockService()
 com.prasilabs.screenlocker.view.MainActivity
 com.prasilabs.screenlocker.view.MainActivity: MainActivity()
+com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider
+com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider: ScreenLockWidgetProvider()

@@ -4,7 +4,6 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.PowerManager;
-import android.view.KeyEvent;
 import android.widget.Toast;
 
 import com.prasilabs.screenlocker.constants.KeyConstant;
@@ -77,7 +76,7 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
 
                             MyLogger.l(TAG, "wake lock done");
                         }
-                        else if (isScreenOn && PhoneData.getPhoneData(context, KeyConstant.VOLUME_LOCK_ENABLE_STR, false))
+                        else if (isScreenOn && PhoneData.getPhoneData(context, KeyConstant.VOLUME_LOCK_ENABLE_STR, false) && isEnabled)
                         {
                             if (System.currentTimeMillis() - prevTime < 1000)
                             {
@@ -96,7 +95,7 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
             }
             else if(intent.getAction().equals(IntentConstant.LOCK_SCREEN_ACTION_INTENT))
             {
-                if(VUtil.checkisDeviceAdminEnabled())
+                if(VUtil.checkisDeviceAdminEnabled()) //Dont check for isEnabled
                 {
                     lockScreenNow(context);
                 }
@@ -111,14 +110,10 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
             else if(intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED))
             {
                 MyLogger.lw(TAG, "boot action recieved");
-                if(PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false))
-                {
-                    if(PhoneData.getPhoneData(context, KeyConstant.NOTIF_LOCK_ENABLE_STR, false) && VUtil.checkisDeviceAdminEnabled())
-                    {
-                        ScreenLockNotification.createNotification(context);
-                    }
-                    ScreenLockService.startService(context);
-                }
+
+                ScreenLockNotification.manageNotification(context);
+
+                ScreenLockService.startService(context);
             }
             else
             {

@@ -2,6 +2,7 @@ package com.prasilabs.screenlocker.constants;
 
 /**
  * Created by prasi on 9/1/16.
+ * Key constants for accesing phoneData, Bundle etc,,,
  */
 public class KeyConstant
 {

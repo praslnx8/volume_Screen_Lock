@@ -10,9 +10,10 @@
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-        android:name="com.prasilabs.screenlocker.MyAppstate"
+        android:name="com.prasilabs.screenlocker.VApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -31,17 +32,42 @@
             android:enabled="true"
             android:exported="true" >
             <intent-filter>
-                <action android:name="android.intent.action.SCREEN_ON" />
-                <action android:name="android.intent.action.SCREEN_OFF" />
                 <action android:name="android.media.VOLUME_CHANGED_ACTION" />
+                <action android:name="ANDROID.INTENT.ACTION.SCREEN_OFF" />
+                <action android:name="ANDROID.INTENT.ACTION.SCREEN_ON" />
+                <action android:name="LOCK_SCREEN_ACTION_INTENT" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <service
             android:name="com.prasilabs.screenlocker.services.ScreenLockService"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="false" >
         </service>
+
+        <receiver android:name="com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/screen_lock_widget" />
+        </receiver>
+        <receiver
+            android:name="com.prasilabs.screenlocker.VApp$VAdmin"
+            android:description="@string/app_name"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN" >
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/vadmin" />
+
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

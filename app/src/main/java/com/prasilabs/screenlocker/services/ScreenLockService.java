@@ -5,11 +5,14 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.IBinder;
 
 import com.prasilabs.screenlocker.R;
+import com.prasilabs.screenlocker.constants.KeyConstant;
 import com.prasilabs.screenlocker.utils.MyLogger;
+import com.prasilabs.screenlocker.utils.PhoneData;
 
 public class ScreenLockService extends Service
 {
@@ -35,6 +38,7 @@ public class ScreenLockService extends Service
             mediaPlayer = MediaPlayer.create(this, R.raw.sound);
             mediaPlayer.setVolume(0, 0);
             mediaPlayer.setLooping(true);
+            mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
         }
 
         mediaPlayer.start();
@@ -76,9 +80,12 @@ public class ScreenLockService extends Service
 
     public static void startService(Context context)
     {
-        Intent intent = new Intent(context, ScreenLockService.class);
-        context.startService(intent);
-        MyLogger.lw(TAG, "Service started");
+        if(PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false))
+        {
+            Intent intent = new Intent(context, ScreenLockService.class);
+            context.startService(intent);
+            MyLogger.lw(TAG, "Service started");
+        }
     }
 
     public static void stopService()

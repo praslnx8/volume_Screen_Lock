@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_margin="@dimen/paddingS"
     android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/screen_lock_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ic_launcher"/>
+        android:background="@drawable/ic_launcher_small"/>
+
+    <TextView
+        style="@style/button.primary.small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lock Now"/>
 
 </LinearLayout>

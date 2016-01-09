@@ -61,21 +61,21 @@
 # view res/layout/abc_screen_toolbar.xml #generated:36
 -keep class android.support.v7.widget.Toolbar { <init>(...); }
 
-# view AndroidManifest.xml #generated:16
+# view AndroidManifest.xml #generated:15
 -keep class com.prasilabs.screenlocker.VApp { <init>(...); }
 
-# view AndroidManifest.xml #generated:59
+# view AndroidManifest.xml #generated:58
 -keep class com.prasilabs.screenlocker.VApp$VAdmin { <init>(...); }
 
-# view AndroidManifest.xml #generated:31
+# view AndroidManifest.xml #generated:30
 -keep class com.prasilabs.screenlocker.services.MediaButtonIntentReciever { <init>(...); }
 
-# view AndroidManifest.xml #generated:44
+# view AndroidManifest.xml #generated:43
 -keep class com.prasilabs.screenlocker.services.ScreenLockService { <init>(...); }
 
-# view AndroidManifest.xml #generated:23
+# view AndroidManifest.xml #generated:22
 -keep class com.prasilabs.screenlocker.view.MainActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:50
+# view AndroidManifest.xml #generated:49
 -keep class com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider { <init>(...); }
 

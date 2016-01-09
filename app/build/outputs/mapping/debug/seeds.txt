@@ -2168,9 +2168,11 @@ com.prasilabs.screenlocker.R$drawable: int abc_textfield_default_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_activated_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_default_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_material
+com.prasilabs.screenlocker.R$drawable: int gcard
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn_small
 com.prasilabs.screenlocker.R$drawable: int ic_launcher
+com.prasilabs.screenlocker.R$drawable: int ic_launcher_small
 com.prasilabs.screenlocker.R$drawable: int notification_template_icon_bg
 com.prasilabs.screenlocker.R$drawable: int primary_btn
 com.prasilabs.screenlocker.R$drawable: int primary_btn_big
@@ -2215,6 +2217,7 @@ com.prasilabs.screenlocker.R$id: int custom
 com.prasilabs.screenlocker.R$id: int customPanel
 com.prasilabs.screenlocker.R$id: int decor_content_parent
 com.prasilabs.screenlocker.R$id: int default_activity_button
+com.prasilabs.screenlocker.R$id: int device_admin_btn
 com.prasilabs.screenlocker.R$id: int disableHome
 com.prasilabs.screenlocker.R$id: int edit_query
 com.prasilabs.screenlocker.R$id: int end
@@ -2238,6 +2241,7 @@ com.prasilabs.screenlocker.R$id: int never
 com.prasilabs.screenlocker.R$id: int none
 com.prasilabs.screenlocker.R$id: int normal
 com.prasilabs.screenlocker.R$id: int notification_switch
+com.prasilabs.screenlocker.R$id: int other_menu_layout
 com.prasilabs.screenlocker.R$id: int page_btn
 com.prasilabs.screenlocker.R$id: int parentPanel
 com.prasilabs.screenlocker.R$id: int progress_circular
@@ -2277,6 +2281,7 @@ com.prasilabs.screenlocker.R$id: int time
 com.prasilabs.screenlocker.R$id: int title
 com.prasilabs.screenlocker.R$id: int title_template
 com.prasilabs.screenlocker.R$id: int topPanel
+com.prasilabs.screenlocker.R$id: int transition_parent_layout
 com.prasilabs.screenlocker.R$id: int up
 com.prasilabs.screenlocker.R$id: int useLogo
 com.prasilabs.screenlocker.R$id: int volume_key_switch
@@ -2345,8 +2350,14 @@ com.prasilabs.screenlocker.R$string: int abc_shareactionprovider_share_with
 com.prasilabs.screenlocker.R$string: int abc_shareactionprovider_share_with_application
 com.prasilabs.screenlocker.R$string: int abc_toolbar_collapse_description
 com.prasilabs.screenlocker.R$string: int app_name
+com.prasilabs.screenlocker.R$string: int btn_disable_device_admin
+com.prasilabs.screenlocker.R$string: int btn_enable_device_admin
 com.prasilabs.screenlocker.R$string: int disabled_str
+com.prasilabs.screenlocker.R$string: int double_press_volume_lock_message
+com.prasilabs.screenlocker.R$string: int enable_message
+com.prasilabs.screenlocker.R$string: int enable_screen_lock_option_message
 com.prasilabs.screenlocker.R$string: int enabled_str
+com.prasilabs.screenlocker.R$string: int notification_lock_message
 com.prasilabs.screenlocker.R$string: int notification_screen_lock_message
 com.prasilabs.screenlocker.R$string: int status_bar_notification_info_overflow
 com.prasilabs.screenlocker.R$style: int AlertDialog_AppCompat

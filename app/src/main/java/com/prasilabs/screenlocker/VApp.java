@@ -9,17 +9,19 @@ import android.content.Intent;
 
 /**
  * Created by prasi on 8/1/16.
+ * This is the base app
  */
 public class VApp extends Application
 {
     public static DevicePolicyManager devicePolicyManager;
     public static ComponentName mAdminName;
 
-    public static boolean appDebug = true;
+    public static boolean appDebug = false;
 
     private static VApp sInstance;
 
-    public static VApp getsInstance() {
+    public static VApp getsInstance()
+    {
         return sInstance;
     }
 
