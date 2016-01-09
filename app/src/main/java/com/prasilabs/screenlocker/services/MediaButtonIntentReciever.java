@@ -11,7 +11,9 @@ import android.widget.Toast;
 
 import com.prasilabs.screenlocker.VApp;
 import com.prasilabs.screenlocker.constants.Constant;
+import com.prasilabs.screenlocker.utils.MyLogger;
 import com.prasilabs.screenlocker.utils.PhoneData;
+import com.prasilabs.screenlocker.utils.VUtil;
 
 import java.util.logging.Logger;
 
@@ -20,7 +22,7 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
     private static final String TAG = MediaButtonIntentReciever.class.getSimpleName();
 
     private static boolean isScreenOn = false;
-    private long prevTime;
+    private static long prevTime;
 
     private static PowerManager pm;
 
@@ -32,27 +34,27 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
     @Override
     public void onReceive(Context context, Intent intent)
     {
-        Log.d(TAG, "Intent recieved");
+        MyLogger.l(TAG, "Intent recieved");
 
         if(intent != null)
         {
-            Log.d(TAG, "Intent recieved is: " + intent.getAction());
+            MyLogger.l(TAG, "Intent recieved is: " + intent.getAction());
 
             if(intent.getAction().equals(Intent.ACTION_SCREEN_ON))
             {
-                Log.d(TAG, "screen on action recieved");
+                MyLogger.l(TAG, "screen on action recieved");
 
                 isScreenOn = true;
             }
             else if(intent.getAction().equals(Intent.ACTION_SCREEN_OFF))
             {
-                Log.d(TAG, "screen off action recieved");
+                MyLogger.l(TAG, "screen off action recieved");
 
                 isScreenOn = false;
             }
             else if(intent.getAction().equals("android.media.VOLUME_CHANGED_ACTION"))
             {
-                Log.d(TAG, "media button action recieved");
+                MyLogger.l(TAG, "media button action recieved");
 
                 boolean isEnabled = PhoneData.getPhoneData(context, Constant.UNLOCK_STR, false);
 
@@ -62,17 +64,24 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
                     {
                         pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
 
-                        Log.d(TAG, "power manager is initialized");
+                        MyLogger.l(TAG, "power manager is initialized");
                     }
                     PowerManager.WakeLock wakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, Constant.WAKE_TAG);
                     wakeLock.acquire();
                     wakeLock.release();
+
+                    MyLogger.l(TAG, "wake lock done");
                 }
-                else
+                else if(PhoneData.getPhoneData(context, Constant.VOLUME_LOCK_ENABLE_STR, false))
                 {
+
                     if(System.currentTimeMillis() - prevTime < 1000)
                     {
                         lockScreenNow(context);
+                    }
+                    else
+                    {
+                        MyLogger.l(TAG, "not a rapic action");
                     }
 
                     prevTime = System.currentTimeMillis();
@@ -82,29 +91,34 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
             {
                 lockScreenNow(context);
             }
+            else if(intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED))
+            {
+                MyLogger.lw(TAG, "boot action recieved");
+                if(PhoneData.getPhoneData(context, Constant.UNLOCK_STR, false))
+                {
+                    ScreenLockService.startService(context);
+                }
+            }
             else
             {
-                Log.d(TAG, "uncached intent arrived");
+                MyLogger.l(TAG, "uncached intent arrived");
             }
         }
         else
         {
-            Log.d(TAG, "null Intent recieved");
+            MyLogger.l(TAG, "null Intent recieved");
         }
     }
 
     private void lockScreenNow(Context context)
     {
-        if(VApp.devicePolicyManager != null && VApp.mAdminName != null)
+        if(VUtil.checkisDeviceAdminEnabled())
         {
-            if(VApp.devicePolicyManager.isAdminActive(VApp.mAdminName))
-            {
-                VApp.devicePolicyManager.lockNow();
-            }
-            else
-            {
-                Toast.makeText(context, "Please Enable Device admin in app", Toast.LENGTH_LONG).show();
-            }
+            VUtil.lockDevice();
+        }
+        else
+        {
+            Toast.makeText(context, "Please Enable Device admin in app", Toast.LENGTH_LONG).show();
         }
     }
 

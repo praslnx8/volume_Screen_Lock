@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -16,6 +17,7 @@ import com.prasilabs.screenlocker.constants.Constant;
 import com.prasilabs.screenlocker.utils.PhoneData;
 import com.prasilabs.screenlocker.R;
 import com.prasilabs.screenlocker.services.ScreenLockService;
+import com.prasilabs.screenlocker.utils.VUtil;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,8 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
         pageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 String url = "http://www.facebook.com/prasilabs";
                 Intent i = new Intent(Intent.ACTION_VIEW);
                 i.setData(Uri.parse(url));
@@ -73,39 +74,25 @@ public class MainActivity extends AppCompatActivity {
 
         volumeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
-            {
-                if(isChecked)
-                {
-                    if (VApp.devicePolicyManager != null && VApp.mAdminName != null)
-                    {
-                        if (!VApp.devicePolicyManager.isAdminActive(VApp.mAdminName))
-                        {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                PhoneData.savePhoneData(MainActivity.this, Constant.VOLUME_LOCK_ENABLE_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
 
-                            volumeSwitch.setChecked(false);
-                            Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
-                            intent.putExtra(DevicePolicyManager.EXTRA_DEVICE_ADMIN, VApp.mAdminName);
-                            intent.putExtra(DevicePolicyManager.EXTRA_ADD_EXPLANATION, "Additional text explaining why this needs to be added.");
-                            startActivityForResult(intent, Constant.REQUEST_ENABLE);
-                        }
-                        else
-                        {
-
-                        }
-                    }
-                }
-                else
-                {
-
+                if (isChecked && !VUtil.checkisDeviceAdminEnabled()) {
+                    VUtil.openDeviceManagerEnableAction(MainActivity.this);
                 }
             }
         });
 
         notificatinSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
-            {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                PhoneData.savePhoneData(MainActivity.this, Constant.NOTIF_LOCK_ENABLE_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
 
+                if (isChecked && !VUtil.checkisDeviceAdminEnabled()) {
+                    VUtil.openDeviceManagerEnableAction(MainActivity.this);
+                }
+
+                manageNotificationLock();
             }
         });
 
@@ -131,7 +118,49 @@ public class MainActivity extends AppCompatActivity {
         {
             ScreenLockService.stopService();
         }
+
+        boolean isNotifEnabled = PhoneData.getPhoneData(this, Constant.NOTIF_LOCK_ENABLE_STR, false);
+        boolean isKeyEnabled = PhoneData.getPhoneData(this, Constant.VOLUME_LOCK_ENABLE_STR, false);
+
+        notificatinSwitch.setChecked(isNotifEnabled);
+        volumeSwitch.setChecked(isKeyEnabled);
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        if(requestCode == Constant.REQUEST_VOLUME_ENABLE)
+        {
+            if(volumeSwitch != null)
+            {
+                volumeSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(this, Constant.VOLUME_LOCK_ENABLE_STR, VUtil.checkisDeviceAdminEnabled());
+            }
+        }
+        else if(requestCode == Constant.REQUEST_NOTIF_ENABLE)
+        {
+            if(notificatinSwitch != null)
+            {
+                notificatinSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(this, Constant.NOTIF_LOCK_ENABLE_STR, VUtil.checkisDeviceAdminEnabled());
+            }
+        }
+
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+    private void manageNotificationLock()
+    {
+        if(PhoneData.getPhoneData(this, Constant.NOTIF_LOCK_ENABLE_STR, false) && VUtil.checkisDeviceAdminEnabled())
+        {
+            //TODO show notification
+        }
+        else
+        {
+            //TODO Cancel Notification
+        }
+    }
+
 }
 
 

@@ -30,7 +30,7 @@ public class MyLogger
         {
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZZZ", Locale.ENGLISH);
             String cDateTime = dateFormat.format(new Date());
-            writeToFile(cDateTime + " :: " + from + " :: " + message, "myappdebug");
+            writeToFile(cDateTime + " :: " + from + " :: " + message, "VolumeLocker");
         }
     }
 

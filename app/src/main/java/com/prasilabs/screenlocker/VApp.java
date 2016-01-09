@@ -15,7 +15,7 @@ public class VApp extends Application
     public static DevicePolicyManager devicePolicyManager;
     public static ComponentName mAdminName;
 
-    public static boolean appDebug = false;
+    public static boolean appDebug = true;
 
     private static VApp sInstance;
 
@@ -39,11 +39,11 @@ public class VApp extends Application
         mAdminName = new ComponentName(this, VAdmin.class);
     }
 
-    public class VAdmin extends DeviceAdminReceiver
+    public static class VAdmin extends DeviceAdminReceiver
     {
         public VAdmin()
         {
-
+            super();
         }
 
         @Override

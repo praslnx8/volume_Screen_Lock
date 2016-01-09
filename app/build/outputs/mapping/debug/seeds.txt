@@ -3018,7 +3018,7 @@ com.prasilabs.screenlocker.R$xml: int vadmin
 com.prasilabs.screenlocker.VApp
 com.prasilabs.screenlocker.VApp: VApp()
 com.prasilabs.screenlocker.VApp$VAdmin
-com.prasilabs.screenlocker.VApp$VAdmin: VApp$VAdmin(com.prasilabs.screenlocker.VApp)
+com.prasilabs.screenlocker.VApp$VAdmin: VApp$VAdmin()
 com.prasilabs.screenlocker.services.MediaButtonIntentReciever
 com.prasilabs.screenlocker.services.MediaButtonIntentReciever: MediaButtonIntentReciever()
 com.prasilabs.screenlocker.services.ScreenLockService

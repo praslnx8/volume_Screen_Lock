@@ -9,6 +9,7 @@ import android.media.MediaPlayer;
 import android.os.IBinder;
 
 import com.prasilabs.screenlocker.R;
+import com.prasilabs.screenlocker.utils.MyLogger;
 
 public class ScreenLockService extends Service
 {
@@ -77,6 +78,7 @@ public class ScreenLockService extends Service
     {
         Intent intent = new Intent(context, ScreenLockService.class);
         context.startService(intent);
+        MyLogger.lw(TAG, "Service started");
     }
 
     public static void stopService()

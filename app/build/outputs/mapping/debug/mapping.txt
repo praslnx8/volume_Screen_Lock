@@ -6746,8 +6746,7 @@ com.prasilabs.screenlocker.VApp -> com.prasilabs.screenlocker.VApp:
     void onCreate() -> onCreate
     void <clinit>() -> <clinit>
 com.prasilabs.screenlocker.VApp$VAdmin -> com.prasilabs.screenlocker.VApp$VAdmin:
-    com.prasilabs.screenlocker.VApp this$0 -> a
-    void <init>(com.prasilabs.screenlocker.VApp) -> <init>
+    void <init>() -> <init>
     void onEnabled(android.content.Context,android.content.Intent) -> onEnabled
     void onDisabled(android.content.Context,android.content.Intent) -> onDisabled
 com.prasilabs.screenlocker.services.MediaButtonIntentReciever -> com.prasilabs.screenlocker.services.MediaButtonIntentReciever:
@@ -6773,7 +6772,9 @@ com.prasilabs.screenlocker.services.ScreenLockService -> com.prasilabs.screenloc
     void <clinit>() -> <clinit>
 com.prasilabs.screenlocker.utils.MyLogger -> com.prasilabs.screenlocker.a.a:
     void l(java.lang.String,java.lang.String) -> a
+    void lw(java.lang.String,java.lang.String) -> b
     void e(java.lang.Exception) -> a
+    void writeToFile(java.lang.String,java.lang.String) -> c
 com.prasilabs.screenlocker.utils.PhoneData -> com.prasilabs.screenlocker.a.b:
     java.lang.String TAG -> a
     void <init>() -> <init>
@@ -6781,6 +6782,13 @@ com.prasilabs.screenlocker.utils.PhoneData -> com.prasilabs.screenlocker.a.b:
     java.lang.String getPhoneData(android.content.Context,java.lang.String,java.lang.String) -> b
     void savePhoneData(android.content.Context,java.lang.String,boolean) -> a
     boolean getPhoneData(android.content.Context,java.lang.String,boolean) -> b
+    void <clinit>() -> <clinit>
+com.prasilabs.screenlocker.utils.VUtil -> com.prasilabs.screenlocker.a.c:
+    java.lang.String TAG -> a
+    void <init>() -> <init>
+    boolean checkisDeviceAdminEnabled() -> a
+    void lockDevice() -> b
+    void openDeviceManagerEnableAction(android.app.Activity) -> a
     void <clinit>() -> <clinit>
 com.prasilabs.screenlocker.view.MainActivity -> com.prasilabs.screenlocker.view.MainActivity:
     java.lang.String TAG -> i
@@ -6793,8 +6801,10 @@ com.prasilabs.screenlocker.view.MainActivity -> com.prasilabs.screenlocker.view.
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
     void renderView() -> j
+    void onActivityResult(int,int,android.content.Intent) -> onActivityResult
+    void manageNotificationLock() -> k
     void access$000(com.prasilabs.screenlocker.view.MainActivity) -> a
-    android.widget.Switch access$100(com.prasilabs.screenlocker.view.MainActivity) -> b
+    void access$100(com.prasilabs.screenlocker.view.MainActivity) -> b
     void <clinit>() -> <clinit>
 com.prasilabs.screenlocker.view.MainActivity$1 -> com.prasilabs.screenlocker.view.a:
     com.prasilabs.screenlocker.view.MainActivity this$0 -> a
