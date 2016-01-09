@@ -6826,3 +6826,11 @@ com.prasilabs.screenlocker.view.MainActivity$5 -> com.prasilabs.screenlocker.vie
     com.prasilabs.screenlocker.view.MainActivity this$0 -> a
     void <init>(com.prasilabs.screenlocker.view.MainActivity) -> <init>
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider -> com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider:
+    java.lang.String TAG -> a
+    void <init>() -> <init>
+    void onUpdate(android.content.Context,android.appwidget.AppWidgetManager,int[]) -> onUpdate
+    android.app.PendingIntent buildButtonPendingIntent(android.content.Context) -> a
+    void pushWidgetUpdate(android.content.Context,android.widget.RemoteViews) -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+    void <clinit>() -> <clinit>

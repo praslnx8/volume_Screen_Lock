@@ -2170,6 +2170,7 @@ com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_default_mtrl_alp
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_material
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn_small
+com.prasilabs.screenlocker.R$drawable: int ic_launcher
 com.prasilabs.screenlocker.R$drawable: int notification_template_icon_bg
 com.prasilabs.screenlocker.R$drawable: int primary_btn
 com.prasilabs.screenlocker.R$drawable: int primary_btn_big
@@ -3014,6 +3015,7 @@ com.prasilabs.screenlocker.R$styleable: int[] ViewStubCompat
 com.prasilabs.screenlocker.R$styleable: int ViewStubCompat_android_id
 com.prasilabs.screenlocker.R$styleable: int ViewStubCompat_android_inflatedId
 com.prasilabs.screenlocker.R$styleable: int ViewStubCompat_android_layout
+com.prasilabs.screenlocker.R$xml: int screen_lock_widget
 com.prasilabs.screenlocker.R$xml: int vadmin
 com.prasilabs.screenlocker.VApp
 com.prasilabs.screenlocker.VApp: VApp()
@@ -3025,3 +3027,5 @@ com.prasilabs.screenlocker.services.ScreenLockService
 com.prasilabs.screenlocker.services.ScreenLockService: ScreenLockService()
 com.prasilabs.screenlocker.view.MainActivity
 com.prasilabs.screenlocker.view.MainActivity: MainActivity()
+com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider
+com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider: ScreenLockWidgetProvider()

@@ -3252,10 +3252,9 @@ com.prasilabs.screenlocker.VApp:
 com.prasilabs.screenlocker.constants.Constant
 com.prasilabs.screenlocker.notifications.ScreenLockNotification
 com.prasilabs.screenlocker.utils.MyLogger:
-    16:16:public MyLogger()
+    17:17:public MyLogger()
 com.prasilabs.screenlocker.utils.PhoneData:
     54:55:public static void savePhoneData(android.content.Context,java.lang.String,int)
     59:60:public static void savePhoneData(android.content.Context,java.lang.String,long)
     77:84:public static long getPhoneData(android.content.Context,java.lang.String,long)
     89:96:public static int getPhoneData(android.content.Context,java.lang.String,int)
-com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider

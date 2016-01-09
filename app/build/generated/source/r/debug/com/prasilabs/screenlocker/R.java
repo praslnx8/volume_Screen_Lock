@@ -1676,19 +1676,20 @@ containing a value of this type.
         public static final int abc_textfield_search_material=0x7f02003d;
         public static final int gray_transparent_btn=0x7f02003e;
         public static final int gray_transparent_btn_small=0x7f02003f;
-        public static final int notification_template_icon_bg=0x7f02004c;
-        public static final int primary_btn=0x7f020040;
-        public static final int primary_btn_big=0x7f020041;
-        public static final int primary_btn_small=0x7f020042;
-        public static final int primary_transparent_btn=0x7f020043;
-        public static final int primary_transparent_btn_small=0x7f020044;
-        public static final int secondary_btn=0x7f020045;
-        public static final int secondary_btn_big=0x7f020046;
-        public static final int secondary_btn_small=0x7f020047;
-        public static final int secondary_transparent_btn=0x7f020048;
-        public static final int secondary_transparent_btn_big=0x7f020049;
-        public static final int secondary_transparent_btn_small=0x7f02004a;
-        public static final int white_transparent_btn=0x7f02004b;
+        public static final int ic_launcher=0x7f020040;
+        public static final int notification_template_icon_bg=0x7f02004d;
+        public static final int primary_btn=0x7f020041;
+        public static final int primary_btn_big=0x7f020042;
+        public static final int primary_btn_small=0x7f020043;
+        public static final int primary_transparent_btn=0x7f020044;
+        public static final int primary_transparent_btn_small=0x7f020045;
+        public static final int secondary_btn=0x7f020046;
+        public static final int secondary_btn_big=0x7f020047;
+        public static final int secondary_btn_small=0x7f020048;
+        public static final int secondary_transparent_btn=0x7f020049;
+        public static final int secondary_transparent_btn_big=0x7f02004a;
+        public static final int secondary_transparent_btn_small=0x7f02004b;
+        public static final int white_transparent_btn=0x7f02004c;
     }
     public static final class id {
         public static final int action0=0x7f0e0054;
@@ -2224,7 +2225,8 @@ containing a value of this type.
         public static final int textXXXL=0x7f0a0162;
     }
     public static final class xml {
-        public static final int vadmin=0x7f060000;
+        public static final int screen_lock_widget=0x7f060000;
+        public static final int vadmin=0x7f060001;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.

@@ -3,6 +3,7 @@ package com.prasilabs.screenlocker.utils;
 import android.util.Log;
 
 import com.prasilabs.screenlocker.VApp;
+import com.prasilabs.screenlocker.constants.Constant;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -30,7 +31,7 @@ public class MyLogger
         {
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZZZ", Locale.ENGLISH);
             String cDateTime = dateFormat.format(new Date());
-            writeToFile(cDateTime + " :: " + from + " :: " + message, "VolumeLocker");
+            writeToFile(cDateTime + " :: " + from + " :: " + message, Constant.LOGFILENAME_STR);
         }
     }
 
@@ -46,7 +47,7 @@ public class MyLogger
     private static void writeToFile(String stacktrace, String filename) {
         try
         {
-            BufferedWriter bos = new BufferedWriter(new FileWriter("sdcard/" + filename, true));
+            BufferedWriter bos = new BufferedWriter(new FileWriter("sdcard/" + filename, true)); //TODO make external storage instead of hard coding
             bos.newLine();
             bos.write(stacktrace);
             bos.flush();
