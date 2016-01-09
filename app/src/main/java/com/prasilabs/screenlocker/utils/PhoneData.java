@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 
-import com.prasilabs.screenlocker.constants.Constant;
+import com.prasilabs.screenlocker.constants.KeyConstant;
 
 /**
  * Created by prasi on 8/1/16.
@@ -17,7 +17,7 @@ public class PhoneData
     {
         try
         {
-            SharedPreferences sp = context.getSharedPreferences(Constant.PHONE_DATA_STR, Context.MODE_PRIVATE);
+            SharedPreferences sp = context.getSharedPreferences(KeyConstant.PHONE_DATA_STR, Context.MODE_PRIVATE);
             SharedPreferences.Editor edit = sp.edit();
             edit.putString(field, values);
             MyLogger.l(TAG + " saving", field + " = " + values);
@@ -33,7 +33,7 @@ public class PhoneData
     {
         try
         {
-            SharedPreferences sp = context.getSharedPreferences(Constant.PHONE_DATA_STR, Context.MODE_PRIVATE);
+            SharedPreferences sp = context.getSharedPreferences(KeyConstant.PHONE_DATA_STR, Context.MODE_PRIVATE);
             MyLogger.l(TAG + " reading", field + " " + sp.getString(field, defaultValue));
             return sp.getString(field, defaultValue);
         }

@@ -9,12 +9,8 @@ import android.content.Intent;
 import android.widget.RemoteViews;
 
 import com.prasilabs.screenlocker.R;
-import com.prasilabs.screenlocker.constants.Constant;
-import com.prasilabs.screenlocker.services.MediaButtonIntentReciever;
+import com.prasilabs.screenlocker.constants.IntentConstant;
 import com.prasilabs.screenlocker.utils.MyLogger;
-import com.prasilabs.screenlocker.utils.VUtil;
-
-import java.util.Random;
 
 /**
  * Created by prasi on 9/1/16.
@@ -26,22 +22,17 @@ public class ScreenLockWidgetProvider extends AppWidgetProvider
 
 
     @Override
-    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds)
+    {
         final int count = appWidgetIds.length;
 
         for (int i = 0; i < count; i++)
         {
             int widgetId = appWidgetIds[i];
-            // initializing widget layout
             RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget_screen_lock);
-
-            // register for button event
             remoteViews.setOnClickPendingIntent(R.id.screen_lock_btn, buildButtonPendingIntent(context));
 
-            // request for widget update
             pushWidgetUpdate(context, remoteViews);
-
-
 
             appWidgetManager.updateAppWidget(widgetId, remoteViews);
         }
@@ -52,13 +43,13 @@ public class ScreenLockWidgetProvider extends AppWidgetProvider
     {
 
         Intent intent = new Intent();
-        intent.setAction(Constant.LOCK_SCREEN_ACTION_INTENT);
-        return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        intent.setAction(IntentConstant.LOCK_SCREEN_ACTION_INTENT);
+        return PendingIntent.getBroadcast(context, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
     public static void pushWidgetUpdate(Context context, RemoteViews remoteViews)
     {
-        ComponentName myWidget = new ComponentName(context, MediaButtonIntentReciever.class);
+        ComponentName myWidget = new ComponentName(context, ScreenLockWidgetProvider.class);
         AppWidgetManager manager = AppWidgetManager.getInstance(context);
         manager.updateAppWidget(myWidget, remoteViews);
     }
@@ -68,21 +59,8 @@ public class ScreenLockWidgetProvider extends AppWidgetProvider
     {
         if(intent != null)
         {
-            if(intent.getAction().equals(Constant.LOCK_SCREEN_ACTION_INTENT))
-            {
-                MyLogger.l(TAG, "lock screen action intent arrived");
-
-                if(VUtil.checkisDeviceAdminEnabled())
-                {
-                    VUtil.lockDevice();
-                }
-            }
-            else
-            {
-                MyLogger.l(TAG, "uncatched intent");
-            }
+            MyLogger.l(TAG, "intent is: "+ intent.getAction());
         }
-
 
         super.onReceive(context, intent);
     }

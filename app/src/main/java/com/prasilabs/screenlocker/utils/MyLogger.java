@@ -1,9 +1,11 @@
 package com.prasilabs.screenlocker.utils;
 
+import android.os.Environment;
 import android.util.Log;
 
 import com.prasilabs.screenlocker.VApp;
 import com.prasilabs.screenlocker.constants.Constant;
+import com.prasilabs.screenlocker.constants.KeyConstant;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -13,6 +15,8 @@ import java.util.Locale;
 
 /**
  * Created by prasi on 8/1/16.
+ * This method is for logging in both console and print to file
+ * VApp.Debug should be true to enable logging
  */
 public class MyLogger
 {
@@ -29,9 +33,9 @@ public class MyLogger
     {
         if(VApp.appDebug)
         {
-            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZZZ", Locale.ENGLISH);
+            SimpleDateFormat dateFormat = new SimpleDateFormat(Constant.DATE_FORMAT_STR, Locale.ENGLISH);
             String cDateTime = dateFormat.format(new Date());
-            writeToFile(cDateTime + " :: " + from + " :: " + message, Constant.LOGFILENAME_STR);
+            writeToFile(cDateTime + " :: " + from + " :: " + message, KeyConstant.LOGFILENAME_STR);
         }
     }
 
@@ -47,7 +51,7 @@ public class MyLogger
     private static void writeToFile(String stacktrace, String filename) {
         try
         {
-            BufferedWriter bos = new BufferedWriter(new FileWriter("sdcard/" + filename, true)); //TODO make external storage instead of hard coding
+            BufferedWriter bos = new BufferedWriter(new FileWriter(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath() + "/" + filename, true));
             bos.newLine();
             bos.write(stacktrace);
             bos.flush();
@@ -55,7 +59,7 @@ public class MyLogger
         }
         catch (Exception e)
         {
-
+            MyLogger.e(e);
         }
     }
 }

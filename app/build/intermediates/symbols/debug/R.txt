@@ -714,6 +714,7 @@ int string abc_toolbar_collapse_description 0x7f080010
 int string app_name 0x7f080012
 int string disabled_str 0x7f080013
 int string enabled_str 0x7f080014
+int string notification_screen_lock_message 0x7f080015
 int string status_bar_notification_info_overflow 0x7f080011
 int style AlertDialog_AppCompat 0x7f0a007a
 int style AlertDialog_AppCompat_Light 0x7f0a007b

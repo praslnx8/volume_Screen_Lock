@@ -746,15 +746,228 @@ android.support.v4.app.NoSaveStateFrameLayout -> android.support.v4.a.bc:
     void <init>(android.content.Context) -> <init>
     void dispatchSaveInstanceState(android.util.SparseArray) -> dispatchSaveInstanceState
     void dispatchRestoreInstanceState(android.util.SparseArray) -> dispatchRestoreInstanceState
-android.support.v4.app.SharedElementCallback -> android.support.v4.a.bd:
+android.support.v4.app.NotificationBuilderWithActions -> android.support.v4.a.bd:
+    void addAction(android.support.v4.app.NotificationCompatBase$Action) -> a
+android.support.v4.app.NotificationBuilderWithBuilderAccessor -> android.support.v4.a.be:
+    android.app.Notification$Builder getBuilder() -> a
+    android.app.Notification build() -> b
+android.support.v4.app.NotificationCompat -> android.support.v4.a.bf:
+    android.support.v4.app.NotificationCompat$NotificationCompatImpl IMPL -> a
+    void addActionsToBuilder(android.support.v4.app.NotificationBuilderWithActions,java.util.ArrayList) -> b
+    void addStyleToBuilderJellybean(android.support.v4.app.NotificationBuilderWithBuilderAccessor,android.support.v4.app.NotificationCompat$Style) -> b
+    void access$000(android.support.v4.app.NotificationBuilderWithActions,java.util.ArrayList) -> a
+    void access$100(android.support.v4.app.NotificationBuilderWithBuilderAccessor,android.support.v4.app.NotificationCompat$Style) -> a
+    android.support.v4.app.NotificationCompat$NotificationCompatImpl access$200() -> a
+    void <clinit>() -> <clinit>
+android.support.v4.app.NotificationCompat$Action -> android.support.v4.a.bg:
+    android.os.Bundle mExtras -> e
+    android.support.v4.app.RemoteInput[] mRemoteInputs -> f
+    int icon -> a
+    java.lang.CharSequence title -> b
+    android.app.PendingIntent actionIntent -> c
+    android.support.v4.app.NotificationCompatBase$Action$Factory FACTORY -> d
+    int getIcon() -> a
+    java.lang.CharSequence getTitle() -> b
+    android.app.PendingIntent getActionIntent() -> c
+    android.os.Bundle getExtras() -> d
+    android.support.v4.app.RemoteInput[] getRemoteInputs() -> e
+    android.support.v4.app.RemoteInputCompatBase$RemoteInput[] getRemoteInputs() -> f
+    void <clinit>() -> <clinit>
+android.support.v4.app.NotificationCompat$Action$1 -> android.support.v4.a.bh:
+    void <init>() -> <init>
+android.support.v4.app.NotificationCompat$BigPictureStyle -> android.support.v4.a.bi:
+    android.graphics.Bitmap mPicture -> a
+    android.graphics.Bitmap mBigLargeIcon -> b
+    boolean mBigLargeIconSet -> c
+    void <init>() -> <init>
+android.support.v4.app.NotificationCompat$BigTextStyle -> android.support.v4.a.bj:
+    java.lang.CharSequence mBigText -> a
+    void <init>() -> <init>
+android.support.v4.app.NotificationCompat$Builder -> android.support.v4.a.bk:
+    android.content.Context mContext -> a
+    java.lang.CharSequence mContentTitle -> b
+    java.lang.CharSequence mContentText -> c
+    android.app.PendingIntent mContentIntent -> d
+    android.app.PendingIntent mFullScreenIntent -> e
+    android.widget.RemoteViews mTickerView -> f
+    android.graphics.Bitmap mLargeIcon -> g
+    java.lang.CharSequence mContentInfo -> h
+    int mNumber -> i
+    int mPriority -> j
+    boolean mShowWhen -> k
+    boolean mUseChronometer -> l
+    android.support.v4.app.NotificationCompat$Style mStyle -> m
+    java.lang.CharSequence mSubText -> n
+    int mProgressMax -> o
+    int mProgress -> p
+    boolean mProgressIndeterminate -> q
+    java.lang.String mGroupKey -> r
+    boolean mGroupSummary -> s
+    java.lang.String mSortKey -> t
+    java.util.ArrayList mActions -> u
+    boolean mLocalOnly -> v
+    java.lang.String mCategory -> w
+    android.os.Bundle mExtras -> x
+    int mColor -> y
+    int mVisibility -> z
+    android.app.Notification mPublicVersion -> A
+    android.app.Notification mNotification -> B
+    java.util.ArrayList mPeople -> C
+    void <init>(android.content.Context) -> <init>
+    android.support.v4.app.NotificationCompat$Builder setSmallIcon(int) -> a
+    android.support.v4.app.NotificationCompat$Builder setContentTitle(java.lang.CharSequence) -> a
+    android.support.v4.app.NotificationCompat$Builder setContentText(java.lang.CharSequence) -> b
+    android.support.v4.app.NotificationCompat$Builder setContentIntent(android.app.PendingIntent) -> a
+    android.support.v4.app.NotificationCompat$Builder setAutoCancel(boolean) -> a
+    void setFlag(int,boolean) -> a
+    android.app.Notification build() -> a
+    android.support.v4.app.NotificationCompat$BuilderExtender getExtender() -> b
+    java.lang.CharSequence limitCharSequenceLength(java.lang.CharSequence) -> c
+android.support.v4.app.NotificationCompat$BuilderExtender -> android.support.v4.a.bl:
+    void <init>() -> <init>
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder,android.support.v4.app.NotificationBuilderWithBuilderAccessor) -> a
+android.support.v4.app.NotificationCompat$InboxStyle -> android.support.v4.a.bm:
+    java.util.ArrayList mTexts -> a
+    void <init>() -> <init>
+android.support.v4.app.NotificationCompat$NotificationCompatImpl -> android.support.v4.a.bn:
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder,android.support.v4.app.NotificationCompat$BuilderExtender) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplApi20 -> android.support.v4.a.bo:
+    void <init>() -> <init>
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder,android.support.v4.app.NotificationCompat$BuilderExtender) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplApi21 -> android.support.v4.a.bp:
+    void <init>() -> <init>
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder,android.support.v4.app.NotificationCompat$BuilderExtender) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplBase -> android.support.v4.a.bq:
+    void <init>() -> <init>
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder,android.support.v4.app.NotificationCompat$BuilderExtender) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplGingerbread -> android.support.v4.a.br:
+    void <init>() -> <init>
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder,android.support.v4.app.NotificationCompat$BuilderExtender) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplHoneycomb -> android.support.v4.a.bs:
+    void <init>() -> <init>
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder,android.support.v4.app.NotificationCompat$BuilderExtender) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplIceCreamSandwich -> android.support.v4.a.bt:
+    void <init>() -> <init>
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder,android.support.v4.app.NotificationCompat$BuilderExtender) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplJellybean -> android.support.v4.a.bu:
+    void <init>() -> <init>
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder,android.support.v4.app.NotificationCompat$BuilderExtender) -> a
+android.support.v4.app.NotificationCompat$NotificationCompatImplKitKat -> android.support.v4.a.bv:
+    void <init>() -> <init>
+    android.app.Notification build(android.support.v4.app.NotificationCompat$Builder,android.support.v4.app.NotificationCompat$BuilderExtender) -> a
+android.support.v4.app.NotificationCompat$Style -> android.support.v4.a.bw:
+    java.lang.CharSequence mBigContentTitle -> d
+    java.lang.CharSequence mSummaryText -> e
+    boolean mSummaryTextSet -> f
+    void <init>() -> <init>
+android.support.v4.app.NotificationCompatApi20 -> android.support.v4.a.bx:
+    void addAction(android.app.Notification$Builder,android.support.v4.app.NotificationCompatBase$Action) -> a
+android.support.v4.app.NotificationCompatApi20$Builder -> android.support.v4.a.by:
+    android.app.Notification$Builder b -> a
+    android.os.Bundle mExtras -> b
+    void <init>(android.content.Context,android.app.Notification,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,android.widget.RemoteViews,int,android.app.PendingIntent,android.app.PendingIntent,android.graphics.Bitmap,int,int,boolean,boolean,boolean,int,java.lang.CharSequence,boolean,java.util.ArrayList,android.os.Bundle,java.lang.String,boolean,java.lang.String) -> <init>
+    void addAction(android.support.v4.app.NotificationCompatBase$Action) -> a
+    android.app.Notification$Builder getBuilder() -> a
+    android.app.Notification build() -> b
+android.support.v4.app.NotificationCompatApi21 -> android.support.v4.a.bz:
+android.support.v4.app.NotificationCompatApi21$Builder -> android.support.v4.a.ca:
+    android.app.Notification$Builder b -> a
+    void <init>(android.content.Context,android.app.Notification,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,android.widget.RemoteViews,int,android.app.PendingIntent,android.app.PendingIntent,android.graphics.Bitmap,int,int,boolean,boolean,boolean,int,java.lang.CharSequence,boolean,java.lang.String,java.util.ArrayList,android.os.Bundle,int,int,android.app.Notification,java.lang.String,boolean,java.lang.String) -> <init>
+    void addAction(android.support.v4.app.NotificationCompatBase$Action) -> a
+    android.app.Notification$Builder getBuilder() -> a
+    android.app.Notification build() -> b
+android.support.v4.app.NotificationCompatBase -> android.support.v4.a.cb:
+android.support.v4.app.NotificationCompatBase$Action -> android.support.v4.a.cc:
+    int getIcon() -> a
+    java.lang.CharSequence getTitle() -> b
+    android.app.PendingIntent getActionIntent() -> c
+    android.os.Bundle getExtras() -> d
+    android.support.v4.app.RemoteInputCompatBase$RemoteInput[] getRemoteInputs() -> f
+android.support.v4.app.NotificationCompatBase$Action$Factory -> android.support.v4.a.cd:
+android.support.v4.app.NotificationCompatGingerbread -> android.support.v4.a.ce:
+    android.app.Notification add(android.app.Notification,android.content.Context,java.lang.CharSequence,java.lang.CharSequence,android.app.PendingIntent,android.app.PendingIntent) -> a
+android.support.v4.app.NotificationCompatHoneycomb -> android.support.v4.a.cf:
+    android.app.Notification add(android.content.Context,android.app.Notification,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,android.widget.RemoteViews,int,android.app.PendingIntent,android.app.PendingIntent,android.graphics.Bitmap) -> a
+android.support.v4.app.NotificationCompatIceCreamSandwich -> android.support.v4.a.cg:
+android.support.v4.app.NotificationCompatIceCreamSandwich$Builder -> android.support.v4.a.ch:
+    android.app.Notification$Builder b -> a
+    void <init>(android.content.Context,android.app.Notification,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,android.widget.RemoteViews,int,android.app.PendingIntent,android.app.PendingIntent,android.graphics.Bitmap,int,int,boolean) -> <init>
+    android.app.Notification$Builder getBuilder() -> a
+    android.app.Notification build() -> b
+android.support.v4.app.NotificationCompatJellybean -> android.support.v4.a.ci:
+    java.lang.Object sExtrasLock -> a
+    java.lang.reflect.Field sExtrasField -> b
+    boolean sExtrasFieldAccessFailed -> c
+    java.lang.Object sActionsLock -> d
+    void addBigTextStyle(android.support.v4.app.NotificationBuilderWithBuilderAccessor,java.lang.CharSequence,boolean,java.lang.CharSequence,java.lang.CharSequence) -> a
+    void addBigPictureStyle(android.support.v4.app.NotificationBuilderWithBuilderAccessor,java.lang.CharSequence,boolean,java.lang.CharSequence,android.graphics.Bitmap,android.graphics.Bitmap,boolean) -> a
+    void addInboxStyle(android.support.v4.app.NotificationBuilderWithBuilderAccessor,java.lang.CharSequence,boolean,java.lang.CharSequence,java.util.ArrayList) -> a
+    android.util.SparseArray buildActionExtrasMap(java.util.List) -> a
+    android.os.Bundle getExtras(android.app.Notification) -> a
+    android.os.Bundle writeActionAndGetExtras(android.app.Notification$Builder,android.support.v4.app.NotificationCompatBase$Action) -> a
+    void <clinit>() -> <clinit>
+android.support.v4.app.NotificationCompatJellybean$Builder -> android.support.v4.a.cj:
+    android.app.Notification$Builder b -> a
+    android.os.Bundle mExtras -> b
+    java.util.List mActionExtrasList -> c
+    void <init>(android.content.Context,android.app.Notification,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,android.widget.RemoteViews,int,android.app.PendingIntent,android.app.PendingIntent,android.graphics.Bitmap,int,int,boolean,boolean,int,java.lang.CharSequence,boolean,android.os.Bundle,java.lang.String,boolean,java.lang.String) -> <init>
+    void addAction(android.support.v4.app.NotificationCompatBase$Action) -> a
+    android.app.Notification$Builder getBuilder() -> a
+    android.app.Notification build() -> b
+android.support.v4.app.NotificationCompatKitKat -> android.support.v4.a.ck:
+android.support.v4.app.NotificationCompatKitKat$Builder -> android.support.v4.a.cl:
+    android.app.Notification$Builder b -> a
+    android.os.Bundle mExtras -> b
+    java.util.List mActionExtrasList -> c
+    void <init>(android.content.Context,android.app.Notification,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,android.widget.RemoteViews,int,android.app.PendingIntent,android.app.PendingIntent,android.graphics.Bitmap,int,int,boolean,boolean,boolean,int,java.lang.CharSequence,boolean,java.util.ArrayList,android.os.Bundle,java.lang.String,boolean,java.lang.String) -> <init>
+    void addAction(android.support.v4.app.NotificationCompatBase$Action) -> a
+    android.app.Notification$Builder getBuilder() -> a
+    android.app.Notification build() -> b
+android.support.v4.app.RemoteInput -> android.support.v4.a.cm:
+    java.lang.String mResultKey -> b
+    java.lang.CharSequence mLabel -> c
+    java.lang.CharSequence[] mChoices -> d
+    boolean mAllowFreeFormInput -> e
+    android.os.Bundle mExtras -> f
+    android.support.v4.app.RemoteInput$Impl IMPL -> g
+    android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory FACTORY -> a
+    java.lang.String getResultKey() -> a
+    java.lang.CharSequence getLabel() -> b
+    java.lang.CharSequence[] getChoices() -> c
+    boolean getAllowFreeFormInput() -> d
+    android.os.Bundle getExtras() -> e
+    void <clinit>() -> <clinit>
+android.support.v4.app.RemoteInput$1 -> android.support.v4.a.cn:
+    void <init>() -> <init>
+android.support.v4.app.RemoteInput$Impl -> android.support.v4.a.co:
+android.support.v4.app.RemoteInput$ImplApi20 -> android.support.v4.a.cp:
+    void <init>() -> <init>
+android.support.v4.app.RemoteInput$ImplBase -> android.support.v4.a.cq:
+    void <init>() -> <init>
+android.support.v4.app.RemoteInput$ImplJellybean -> android.support.v4.a.cr:
+    void <init>() -> <init>
+android.support.v4.app.RemoteInputCompatApi20 -> android.support.v4.a.cs:
+    android.app.RemoteInput[] fromCompat(android.support.v4.app.RemoteInputCompatBase$RemoteInput[]) -> a
+android.support.v4.app.RemoteInputCompatBase -> android.support.v4.a.ct:
+android.support.v4.app.RemoteInputCompatBase$RemoteInput -> android.support.v4.a.cu:
+    java.lang.String getResultKey() -> a
+    java.lang.CharSequence getLabel() -> b
+    java.lang.CharSequence[] getChoices() -> c
+    boolean getAllowFreeFormInput() -> d
+    android.os.Bundle getExtras() -> e
+android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory -> android.support.v4.a.cv:
+android.support.v4.app.RemoteInputCompatJellybean -> android.support.v4.a.cw:
+    android.os.Bundle toBundle(android.support.v4.app.RemoteInputCompatBase$RemoteInput) -> a
+    android.os.Bundle[] toBundleArray(android.support.v4.app.RemoteInputCompatBase$RemoteInput[]) -> a
+android.support.v4.app.SharedElementCallback -> android.support.v4.a.cx:
     int MAX_IMAGE_SIZE -> a
     void onSharedElementStart(java.util.List,java.util.List,java.util.List) -> a
     void onSharedElementEnd(java.util.List,java.util.List,java.util.List) -> b
     void onMapSharedElements(java.util.List,java.util.Map) -> a
     void <clinit>() -> <clinit>
-android.support.v4.app.SuperNotCalledException -> android.support.v4.a.be:
+android.support.v4.app.SuperNotCalledException -> android.support.v4.a.cy:
     void <init>(java.lang.String) -> <init>
-android.support.v4.app.TaskStackBuilder -> android.support.v4.a.bf:
+android.support.v4.app.TaskStackBuilder -> android.support.v4.a.cz:
     android.support.v4.app.TaskStackBuilder$TaskStackBuilderImpl IMPL -> a
     java.util.ArrayList mIntents -> b
     android.content.Context mSourceContext -> c
@@ -767,12 +980,12 @@ android.support.v4.app.TaskStackBuilder -> android.support.v4.a.bf:
     void startActivities() -> a
     void startActivities(android.os.Bundle) -> a
     void <clinit>() -> <clinit>
-android.support.v4.app.TaskStackBuilder$SupportParentable -> android.support.v4.a.bg:
+android.support.v4.app.TaskStackBuilder$SupportParentable -> android.support.v4.a.da:
     android.content.Intent getSupportParentActivityIntent() -> a
-android.support.v4.app.TaskStackBuilder$TaskStackBuilderImpl -> android.support.v4.a.bh:
-android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplBase -> android.support.v4.a.bi:
+android.support.v4.app.TaskStackBuilder$TaskStackBuilderImpl -> android.support.v4.a.db:
+android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplBase -> android.support.v4.a.dc:
     void <init>() -> <init>
-android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplHoneycomb -> android.support.v4.a.bj:
+android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplHoneycomb -> android.support.v4.a.dd:
     void <init>() -> <init>
 android.support.v4.content.ContextCompat -> android.support.v4.b.a:
     boolean startActivities(android.content.Context,android.content.Intent[],android.os.Bundle) -> a
@@ -6749,6 +6962,12 @@ com.prasilabs.screenlocker.VApp$VAdmin -> com.prasilabs.screenlocker.VApp$VAdmin
     void <init>() -> <init>
     void onEnabled(android.content.Context,android.content.Intent) -> onEnabled
     void onDisabled(android.content.Context,android.content.Intent) -> onDisabled
+com.prasilabs.screenlocker.constants.NotificationConstant -> com.prasilabs.screenlocker.a.a:
+    int SCREEN_LOCK_NOTIFICATION -> a
+    void <clinit>() -> <clinit>
+com.prasilabs.screenlocker.notifications.ScreenLockNotification -> com.prasilabs.screenlocker.b.a:
+    void createNotification(android.content.Context) -> a
+    void cancelNotification(android.content.Context) -> b
 com.prasilabs.screenlocker.services.MediaButtonIntentReciever -> com.prasilabs.screenlocker.services.MediaButtonIntentReciever:
     java.lang.String TAG -> a
     boolean isScreenOn -> b
@@ -6770,12 +6989,12 @@ com.prasilabs.screenlocker.services.ScreenLockService -> com.prasilabs.screenloc
     void startService(android.content.Context) -> a
     void stopService() -> a
     void <clinit>() -> <clinit>
-com.prasilabs.screenlocker.utils.MyLogger -> com.prasilabs.screenlocker.a.a:
+com.prasilabs.screenlocker.utils.MyLogger -> com.prasilabs.screenlocker.c.a:
     void l(java.lang.String,java.lang.String) -> a
     void lw(java.lang.String,java.lang.String) -> b
     void e(java.lang.Exception) -> a
     void writeToFile(java.lang.String,java.lang.String) -> c
-com.prasilabs.screenlocker.utils.PhoneData -> com.prasilabs.screenlocker.a.b:
+com.prasilabs.screenlocker.utils.PhoneData -> com.prasilabs.screenlocker.c.b:
     java.lang.String TAG -> a
     void <init>() -> <init>
     void savePhoneData(android.content.Context,java.lang.String,java.lang.String) -> a
@@ -6783,12 +7002,13 @@ com.prasilabs.screenlocker.utils.PhoneData -> com.prasilabs.screenlocker.a.b:
     void savePhoneData(android.content.Context,java.lang.String,boolean) -> a
     boolean getPhoneData(android.content.Context,java.lang.String,boolean) -> b
     void <clinit>() -> <clinit>
-com.prasilabs.screenlocker.utils.VUtil -> com.prasilabs.screenlocker.a.c:
+com.prasilabs.screenlocker.utils.VUtil -> com.prasilabs.screenlocker.c.c:
     java.lang.String TAG -> a
     void <init>() -> <init>
     boolean checkisDeviceAdminEnabled() -> a
-    void lockDevice() -> b
+    boolean lockDevice() -> b
     void openDeviceManagerEnableAction(android.app.Activity) -> a
+    void openDeviceManagerEnableAction(android.app.Activity,int) -> a
     void <clinit>() -> <clinit>
 com.prasilabs.screenlocker.view.MainActivity -> com.prasilabs.screenlocker.view.MainActivity:
     java.lang.String TAG -> i
@@ -6798,11 +7018,13 @@ com.prasilabs.screenlocker.view.MainActivity -> com.prasilabs.screenlocker.view.
     android.widget.CheckBox checkBox -> m
     android.widget.Switch notificatinSwitch -> n
     android.widget.Switch volumeSwitch -> o
+    long prevTime -> p
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
     void renderView() -> j
     void onActivityResult(int,int,android.content.Intent) -> onActivityResult
     void manageNotificationLock() -> k
+    void onBackPressed() -> onBackPressed
     void access$000(com.prasilabs.screenlocker.view.MainActivity) -> a
     void access$100(com.prasilabs.screenlocker.view.MainActivity) -> b
     void <clinit>() -> <clinit>

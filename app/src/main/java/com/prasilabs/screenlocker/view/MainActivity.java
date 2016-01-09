@@ -1,19 +1,19 @@
 package com.prasilabs.screenlocker.view;
 
-import android.app.admin.DevicePolicyManager;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.prasilabs.screenlocker.VApp;
-import com.prasilabs.screenlocker.constants.Constant;
+import com.prasilabs.screenlocker.constants.KeyConstant;
+import com.prasilabs.screenlocker.constants.RequestFor;
+import com.prasilabs.screenlocker.notifications.ScreenLockNotification;
 import com.prasilabs.screenlocker.utils.PhoneData;
 import com.prasilabs.screenlocker.R;
 import com.prasilabs.screenlocker.services.ScreenLockService;
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView statusText, shareBtn, pageBtn;
     private CheckBox checkBox;
     private Switch notificatinSwitch, volumeSwitch;
+    private long prevTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                PhoneData.savePhoneData(MainActivity.this, Constant.UNLOCK_STR, isChecked);
+                PhoneData.savePhoneData(MainActivity.this, KeyConstant.UNLOCK_STR, isChecked);
 
                 renderView();
             }
@@ -75,10 +76,10 @@ public class MainActivity extends AppCompatActivity {
         volumeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                PhoneData.savePhoneData(MainActivity.this, Constant.VOLUME_LOCK_ENABLE_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(MainActivity.this, KeyConstant.VOLUME_LOCK_ENABLE_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
 
                 if (isChecked && !VUtil.checkisDeviceAdminEnabled()) {
-                    VUtil.openDeviceManagerEnableAction(MainActivity.this);
+                    VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_VOLUME_ENABLE);
                 }
             }
         });
@@ -86,10 +87,10 @@ public class MainActivity extends AppCompatActivity {
         notificatinSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                PhoneData.savePhoneData(MainActivity.this, Constant.NOTIF_LOCK_ENABLE_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(MainActivity.this, KeyConstant.NOTIF_LOCK_ENABLE_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
 
                 if (isChecked && !VUtil.checkisDeviceAdminEnabled()) {
-                    VUtil.openDeviceManagerEnableAction(MainActivity.this);
+                    VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_NOTIF_ENABLE);
                 }
 
                 manageNotificationLock();
@@ -97,11 +98,19 @@ public class MainActivity extends AppCompatActivity {
         });
 
         renderView();
+
+        if(getIntent() != null && getIntent().getExtras() != null)
+        {
+            if(getIntent().getExtras().getInt(KeyConstant.REQUEST_FOR_STR) == RequestFor.ACTIVATE_DEVICE_ADMIN)
+            {
+                VUtil.openDeviceManagerEnableAction(this);
+            }
+        }
     }
 
     private void renderView()
     {
-        boolean isChecked = PhoneData.getPhoneData(this, Constant.UNLOCK_STR, false);
+        boolean isChecked = PhoneData.getPhoneData(this, KeyConstant.UNLOCK_STR, false);
 
         String text = isChecked ? getString(R.string.enabled_str) : getString(R.string.disabled_str);
         int color = isChecked ? getResources().getColor(R.color.green) : getResources().getColor(R.color.red);
@@ -119,30 +128,30 @@ public class MainActivity extends AppCompatActivity {
             ScreenLockService.stopService();
         }
 
-        boolean isNotifEnabled = PhoneData.getPhoneData(this, Constant.NOTIF_LOCK_ENABLE_STR, false);
-        boolean isKeyEnabled = PhoneData.getPhoneData(this, Constant.VOLUME_LOCK_ENABLE_STR, false);
+        boolean isNotifEnabled = PhoneData.getPhoneData(this, KeyConstant.NOTIF_LOCK_ENABLE_STR, false);
+        boolean isKeyEnabled = PhoneData.getPhoneData(this, KeyConstant.VOLUME_LOCK_ENABLE_STR, false);
 
-        notificatinSwitch.setChecked(isNotifEnabled);
-        volumeSwitch.setChecked(isKeyEnabled);
+        notificatinSwitch.setChecked(isNotifEnabled && VUtil.checkisDeviceAdminEnabled());
+        volumeSwitch.setChecked(isKeyEnabled && VUtil.checkisDeviceAdminEnabled());
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
-        if(requestCode == Constant.REQUEST_VOLUME_ENABLE)
+        if(requestCode == RequestFor.REQUEST_VOLUME_ENABLE)
         {
             if(volumeSwitch != null)
             {
                 volumeSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
-                PhoneData.savePhoneData(this, Constant.VOLUME_LOCK_ENABLE_STR, VUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(this, KeyConstant.VOLUME_LOCK_ENABLE_STR, VUtil.checkisDeviceAdminEnabled());
             }
         }
-        else if(requestCode == Constant.REQUEST_NOTIF_ENABLE)
+        else if(requestCode == RequestFor.REQUEST_NOTIF_ENABLE)
         {
             if(notificatinSwitch != null)
             {
                 notificatinSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
-                PhoneData.savePhoneData(this, Constant.NOTIF_LOCK_ENABLE_STR, VUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(this, KeyConstant.NOTIF_LOCK_ENABLE_STR, VUtil.checkisDeviceAdminEnabled());
             }
         }
 
@@ -151,16 +160,31 @@ public class MainActivity extends AppCompatActivity {
 
     private void manageNotificationLock()
     {
-        if(PhoneData.getPhoneData(this, Constant.NOTIF_LOCK_ENABLE_STR, false) && VUtil.checkisDeviceAdminEnabled())
+        if(PhoneData.getPhoneData(this, KeyConstant.NOTIF_LOCK_ENABLE_STR, false) && VUtil.checkisDeviceAdminEnabled())
         {
-            //TODO show notification
+            ScreenLockNotification.createNotification(this);
         }
         else
         {
-            //TODO Cancel Notification
+            ScreenLockNotification.cancelNotification(this);
         }
     }
 
+    @Override
+    public void onBackPressed()
+    {
+        if(System.currentTimeMillis() - prevTime < 1000)
+        {
+            super.onBackPressed();
+
+        }
+        else
+        {
+            Toast.makeText(this, "Press Again to Exit ", Toast.LENGTH_SHORT).show();
+        }
+
+        prevTime = System.currentTimeMillis();
+    }
 }
 
 

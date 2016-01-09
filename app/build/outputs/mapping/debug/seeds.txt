@@ -2347,6 +2347,7 @@ com.prasilabs.screenlocker.R$string: int abc_toolbar_collapse_description
 com.prasilabs.screenlocker.R$string: int app_name
 com.prasilabs.screenlocker.R$string: int disabled_str
 com.prasilabs.screenlocker.R$string: int enabled_str
+com.prasilabs.screenlocker.R$string: int notification_screen_lock_message
 com.prasilabs.screenlocker.R$string: int status_bar_notification_info_overflow
 com.prasilabs.screenlocker.R$style: int AlertDialog_AppCompat
 com.prasilabs.screenlocker.R$style: int AlertDialog_AppCompat_Light

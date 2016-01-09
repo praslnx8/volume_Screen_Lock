@@ -1,21 +1,20 @@
 package com.prasilabs.screenlocker.services;
 
-import android.app.Activity;
-import android.app.admin.DevicePolicyManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.PowerManager;
-import android.util.Log;
+import android.view.KeyEvent;
 import android.widget.Toast;
 
-import com.prasilabs.screenlocker.VApp;
-import com.prasilabs.screenlocker.constants.Constant;
+import com.prasilabs.screenlocker.constants.KeyConstant;
+import com.prasilabs.screenlocker.constants.IntentConstant;
+import com.prasilabs.screenlocker.constants.RequestFor;
+import com.prasilabs.screenlocker.notifications.ScreenLockNotification;
 import com.prasilabs.screenlocker.utils.MyLogger;
 import com.prasilabs.screenlocker.utils.PhoneData;
 import com.prasilabs.screenlocker.utils.VUtil;
-
-import java.util.logging.Logger;
+import com.prasilabs.screenlocker.view.MainActivity;
 
 public class MediaButtonIntentReciever extends BroadcastReceiver
 {
@@ -55,47 +54,69 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
             else if(intent.getAction().equals("android.media.VOLUME_CHANGED_ACTION"))
             {
                 MyLogger.l(TAG, "media button action recieved");
-
-                boolean isEnabled = PhoneData.getPhoneData(context, Constant.UNLOCK_STR, false);
-
-                if(!isScreenOn && isEnabled)
+                if(intent.getExtras() != null)
                 {
-                    if(pm == null)
+                    int prevVolume = intent.getExtras().getInt("android.media.EXTRA_PREV_VOLUME_STREAM_VALUE", 0);
+                    int currentValue = intent.getExtras().getInt("android.media.EXTRA_VOLUME_STREAM_VALUE", 0);
+
+
+                    if(currentValue != 0 && prevVolume != 0 && currentValue != prevVolume)
                     {
-                        pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+                        boolean isEnabled = PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false);
 
-                        MyLogger.l(TAG, "power manager is initialized");
+                        if (!isScreenOn && isEnabled)
+                        {
+                            if (pm == null) {
+                                pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+
+                                MyLogger.l(TAG, "power manager is initialized");
+                            }
+                            PowerManager.WakeLock wakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, KeyConstant.WAKE_TAG_STR);
+                            wakeLock.acquire();
+                            wakeLock.release();
+
+                            MyLogger.l(TAG, "wake lock done");
+                        }
+                        else if (isScreenOn && PhoneData.getPhoneData(context, KeyConstant.VOLUME_LOCK_ENABLE_STR, false))
+                        {
+                            if (System.currentTimeMillis() - prevTime < 1000)
+                            {
+                                lockScreenNow(context);
+                            }
+                            else
+                            {
+                                MyLogger.l(TAG, "not a rapic action");
+                            }
+
+                            prevTime = System.currentTimeMillis();
+                        }
                     }
-                    PowerManager.WakeLock wakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, Constant.WAKE_TAG);
-                    wakeLock.acquire();
-                    wakeLock.release();
 
-                    MyLogger.l(TAG, "wake lock done");
-                }
-                else if(PhoneData.getPhoneData(context, Constant.VOLUME_LOCK_ENABLE_STR, false))
-                {
-
-                    if(System.currentTimeMillis() - prevTime < 1000)
-                    {
-                        lockScreenNow(context);
-                    }
-                    else
-                    {
-                        MyLogger.l(TAG, "not a rapic action");
-                    }
-
-                    prevTime = System.currentTimeMillis();
                 }
             }
-            else if(intent.getAction().equals(Constant.LOCK_SCREEN_ACTION_INTENT))
+            else if(intent.getAction().equals(IntentConstant.LOCK_SCREEN_ACTION_INTENT))
             {
-                lockScreenNow(context);
+                if(VUtil.checkisDeviceAdminEnabled())
+                {
+                    lockScreenNow(context);
+                }
+                else
+                {
+                    Intent activityIntent = new Intent(context, MainActivity.class);
+                    activityIntent.putExtra(KeyConstant.REQUEST_FOR_STR, RequestFor.ACTIVATE_DEVICE_ADMIN);
+                    activityIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(activityIntent);
+                }
             }
             else if(intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED))
             {
                 MyLogger.lw(TAG, "boot action recieved");
-                if(PhoneData.getPhoneData(context, Constant.UNLOCK_STR, false))
+                if(PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false))
                 {
+                    if(PhoneData.getPhoneData(context, KeyConstant.NOTIF_LOCK_ENABLE_STR, false) && VUtil.checkisDeviceAdminEnabled())
+                    {
+                        ScreenLockNotification.createNotification(context);
+                    }
                     ScreenLockService.startService(context);
                 }
             }

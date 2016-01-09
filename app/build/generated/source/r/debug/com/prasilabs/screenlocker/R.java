@@ -1865,6 +1865,7 @@ containing a value of this type.
         public static final int app_name=0x7f080012;
         public static final int disabled_str=0x7f080013;
         public static final int enabled_str=0x7f080014;
+        public static final int notification_screen_lock_message=0x7f080015;
         public static final int status_bar_notification_info_overflow=0x7f080011;
     }
     public static final class style {

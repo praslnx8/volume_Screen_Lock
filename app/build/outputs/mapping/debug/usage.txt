@@ -399,54 +399,314 @@ android.support.v4.app.NavUtils:
     307:308:private NavUtils()
 android.support.v4.app.NavUtilsJB:
     23:23:NavUtilsJB()
-android.support.v4.app.NotificationBuilderWithActions
-android.support.v4.app.NotificationBuilderWithBuilderAccessor
-android.support.v4.app.NotificationCompat
+android.support.v4.app.NotificationCompat:
+    public static final int DEFAULT_ALL
+    public static final int DEFAULT_SOUND
+    public static final int DEFAULT_VIBRATE
+    public static final int DEFAULT_LIGHTS
+    public static final int STREAM_DEFAULT
+    public static final int FLAG_SHOW_LIGHTS
+    public static final int FLAG_ONGOING_EVENT
+    public static final int FLAG_INSISTENT
+    public static final int FLAG_ONLY_ALERT_ONCE
+    public static final int FLAG_AUTO_CANCEL
+    public static final int FLAG_NO_CLEAR
+    public static final int FLAG_FOREGROUND_SERVICE
+    public static final int FLAG_HIGH_PRIORITY
+    public static final int FLAG_LOCAL_ONLY
+    public static final int FLAG_GROUP_SUMMARY
+    public static final int PRIORITY_DEFAULT
+    public static final int PRIORITY_LOW
+    public static final int PRIORITY_MIN
+    public static final int PRIORITY_HIGH
+    public static final int PRIORITY_MAX
+    public static final java.lang.String EXTRA_TITLE
+    public static final java.lang.String EXTRA_TITLE_BIG
+    public static final java.lang.String EXTRA_TEXT
+    public static final java.lang.String EXTRA_SUB_TEXT
+    public static final java.lang.String EXTRA_INFO_TEXT
+    public static final java.lang.String EXTRA_SUMMARY_TEXT
+    public static final java.lang.String EXTRA_BIG_TEXT
+    public static final java.lang.String EXTRA_SMALL_ICON
+    public static final java.lang.String EXTRA_LARGE_ICON
+    public static final java.lang.String EXTRA_LARGE_ICON_BIG
+    public static final java.lang.String EXTRA_PROGRESS
+    public static final java.lang.String EXTRA_PROGRESS_MAX
+    public static final java.lang.String EXTRA_PROGRESS_INDETERMINATE
+    public static final java.lang.String EXTRA_SHOW_CHRONOMETER
+    public static final java.lang.String EXTRA_SHOW_WHEN
+    public static final java.lang.String EXTRA_PICTURE
+    public static final java.lang.String EXTRA_TEXT_LINES
+    public static final java.lang.String EXTRA_TEMPLATE
+    public static final java.lang.String EXTRA_PEOPLE
+    public static final java.lang.String EXTRA_BACKGROUND_IMAGE_URI
+    public static final java.lang.String EXTRA_MEDIA_SESSION
+    public static final java.lang.String EXTRA_COMPACT_ACTIONS
+    public static final int COLOR_DEFAULT
+    public static final int VISIBILITY_PUBLIC
+    public static final int VISIBILITY_PRIVATE
+    public static final int VISIBILITY_SECRET
+    public static final java.lang.String CATEGORY_CALL
+    public static final java.lang.String CATEGORY_MESSAGE
+    public static final java.lang.String CATEGORY_EMAIL
+    public static final java.lang.String CATEGORY_EVENT
+    public static final java.lang.String CATEGORY_PROMO
+    public static final java.lang.String CATEGORY_ALARM
+    public static final java.lang.String CATEGORY_PROGRESS
+    public static final java.lang.String CATEGORY_SOCIAL
+    public static final java.lang.String CATEGORY_ERROR
+    public static final java.lang.String CATEGORY_TRANSPORT
+    public static final java.lang.String CATEGORY_SYSTEM
+    public static final java.lang.String CATEGORY_SERVICE
+    public static final java.lang.String CATEGORY_RECOMMENDATION
+    public static final java.lang.String CATEGORY_STATUS
+    42:2940:public NotificationCompat()
+    3272:3281:private static android.app.Notification[] getNotificationArrayFromBundle(android.os.Bundle,java.lang.String)
+    3290:3290:public static android.os.Bundle getExtras(android.app.Notification)
+    3298:3298:public static int getActionCount(android.app.Notification)
+    3308:3308:public static android.support.v4.app.NotificationCompat$Action getAction(android.app.Notification,int)
+    3317:3317:public static java.lang.String getCategory(android.app.Notification)
+    3327:3327:public static boolean getLocalOnly(android.app.Notification)
+    3335:3335:public static java.lang.String getGroup(android.app.Notification)
+    3345:3345:public static boolean isGroupSummary(android.app.Notification)
+    3361:3361:public static java.lang.String getSortKey(android.app.Notification)
+    42:42:static synthetic android.app.Notification[] access$500(android.os.Bundle,java.lang.String)
 android.support.v4.app.NotificationCompat$1
-android.support.v4.app.NotificationCompat$Action
-android.support.v4.app.NotificationCompat$Action$1
+android.support.v4.app.NotificationCompat$Action:
+    1827:1828:public NotificationCompat$Action(int,java.lang.CharSequence,android.app.PendingIntent)
+    1831:1837:private NotificationCompat$Action(int,java.lang.CharSequence,android.app.PendingIntent,android.os.Bundle,android.support.v4.app.RemoteInput[])
+    1808:1808:static synthetic android.os.Bundle access$300(android.support.v4.app.NotificationCompat$Action)
+    1808:1808:synthetic NotificationCompat$Action(int,java.lang.CharSequence,android.app.PendingIntent,android.os.Bundle,android.support.v4.app.RemoteInput[],android.support.v4.app.NotificationCompat$1)
+android.support.v4.app.NotificationCompat$Action$1:
+    2176:2176:public android.support.v4.app.NotificationCompat$Action build(int,java.lang.CharSequence,android.app.PendingIntent,android.os.Bundle,android.support.v4.app.RemoteInputCompatBase$RemoteInput[])
+    2182:2182:public android.support.v4.app.NotificationCompat$Action[] newArray(int)
+    2171:2171:public bridge synthetic android.support.v4.app.NotificationCompatBase$Action[] newArray(int)
+    2171:2171:public bridge synthetic android.support.v4.app.NotificationCompatBase$Action build(int,java.lang.CharSequence,android.app.PendingIntent,android.os.Bundle,android.support.v4.app.RemoteInputCompatBase$RemoteInput[])
 android.support.v4.app.NotificationCompat$Action$Builder
 android.support.v4.app.NotificationCompat$Action$Extender
 android.support.v4.app.NotificationCompat$Action$WearableExtender
-android.support.v4.app.NotificationCompat$BigPictureStyle
-android.support.v4.app.NotificationCompat$BigTextStyle
-android.support.v4.app.NotificationCompat$Builder
-android.support.v4.app.NotificationCompat$BuilderExtender
+android.support.v4.app.NotificationCompat$BigPictureStyle:
+    1639:1641:public NotificationCompat$BigPictureStyle(android.support.v4.app.NotificationCompat$Builder)
+    1648:1649:public android.support.v4.app.NotificationCompat$BigPictureStyle setBigContentTitle(java.lang.CharSequence)
+    1656:1658:public android.support.v4.app.NotificationCompat$BigPictureStyle setSummaryText(java.lang.CharSequence)
+    1665:1666:public android.support.v4.app.NotificationCompat$BigPictureStyle bigPicture(android.graphics.Bitmap)
+    1673:1675:public android.support.v4.app.NotificationCompat$BigPictureStyle bigLargeIcon(android.graphics.Bitmap)
+android.support.v4.app.NotificationCompat$BigTextStyle:
+    1706:1708:public NotificationCompat$BigTextStyle(android.support.v4.app.NotificationCompat$Builder)
+    1715:1716:public android.support.v4.app.NotificationCompat$BigTextStyle setBigContentTitle(java.lang.CharSequence)
+    1723:1725:public android.support.v4.app.NotificationCompat$BigTextStyle setSummaryText(java.lang.CharSequence)
+    1733:1734:public android.support.v4.app.NotificationCompat$BigTextStyle bigText(java.lang.CharSequence)
+android.support.v4.app.NotificationCompat$Builder:
+    private static final int MAX_CHARSEQUENCE_LENGTH
+    950:951:public android.support.v4.app.NotificationCompat$Builder setWhen(long)
+    959:960:public android.support.v4.app.NotificationCompat$Builder setShowWhen(boolean)
+    975:976:public android.support.v4.app.NotificationCompat$Builder setUsesChronometer(boolean)
+    1002:1004:public android.support.v4.app.NotificationCompat$Builder setSmallIcon(int,int)
+    1033:1034:public android.support.v4.app.NotificationCompat$Builder setSubText(java.lang.CharSequence)
+    1043:1044:public android.support.v4.app.NotificationCompat$Builder setNumber(int)
+    1051:1052:public android.support.v4.app.NotificationCompat$Builder setContentInfo(java.lang.CharSequence)
+    1060:1063:public android.support.v4.app.NotificationCompat$Builder setProgress(int,int,boolean)
+    1070:1071:public android.support.v4.app.NotificationCompat$Builder setContent(android.widget.RemoteViews)
+    1095:1096:public android.support.v4.app.NotificationCompat$Builder setDeleteIntent(android.app.PendingIntent)
+    1118:1120:public android.support.v4.app.NotificationCompat$Builder setFullScreenIntent(android.app.PendingIntent,boolean)
+    1128:1129:public android.support.v4.app.NotificationCompat$Builder setTicker(java.lang.CharSequence)
+    1138:1140:public android.support.v4.app.NotificationCompat$Builder setTicker(java.lang.CharSequence,android.widget.RemoteViews)
+    1147:1148:public android.support.v4.app.NotificationCompat$Builder setLargeIcon(android.graphics.Bitmap)
+    1160:1162:public android.support.v4.app.NotificationCompat$Builder setSound(android.net.Uri)
+    1177:1179:public android.support.v4.app.NotificationCompat$Builder setSound(android.net.Uri,int)
+    1194:1195:public android.support.v4.app.NotificationCompat$Builder setVibrate(long[])
+    1204:1210:public android.support.v4.app.NotificationCompat$Builder setLights(int,int,int)
+    1225:1226:public android.support.v4.app.NotificationCompat$Builder setOngoing(boolean)
+    1234:1235:public android.support.v4.app.NotificationCompat$Builder setOnlyAlertOnce(boolean)
+    1256:1257:public android.support.v4.app.NotificationCompat$Builder setLocalOnly(boolean)
+    1268:1269:public android.support.v4.app.NotificationCompat$Builder setCategory(java.lang.String)
+    1283:1287:public android.support.v4.app.NotificationCompat$Builder setDefaults(int)
+    1316:1317:public android.support.v4.app.NotificationCompat$Builder setPriority(int)
+    1343:1344:public android.support.v4.app.NotificationCompat$Builder addPerson(java.lang.String)
+    1359:1360:public android.support.v4.app.NotificationCompat$Builder setGroup(java.lang.String)
+    1371:1372:public android.support.v4.app.NotificationCompat$Builder setGroupSummary(boolean)
+    1388:1389:public android.support.v4.app.NotificationCompat$Builder setSortKey(java.lang.String)
+    1400:1407:public android.support.v4.app.NotificationCompat$Builder addExtras(android.os.Bundle)
+    1423:1424:public android.support.v4.app.NotificationCompat$Builder setExtras(android.os.Bundle)
+    1438:1441:public android.os.Bundle getExtras()
+    1461:1462:public android.support.v4.app.NotificationCompat$Builder addAction(int,java.lang.CharSequence,android.app.PendingIntent)
+    1480:1481:public android.support.v4.app.NotificationCompat$Builder addAction(android.support.v4.app.NotificationCompat$Action)
+    1493:1499:public android.support.v4.app.NotificationCompat$Builder setStyle(android.support.v4.app.NotificationCompat$Style)
+    1510:1511:public android.support.v4.app.NotificationCompat$Builder setColor(int)
+    1522:1523:public android.support.v4.app.NotificationCompat$Builder setVisibility(int)
+    1535:1536:public android.support.v4.app.NotificationCompat$Builder setPublicVersion(android.app.Notification)
+    1544:1545:public android.support.v4.app.NotificationCompat$Builder extend(android.support.v4.app.NotificationCompat$Extender)
+    1553:1553:public android.app.Notification getNotification()
 android.support.v4.app.NotificationCompat$CarExtender
 android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation
 android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation$1
 android.support.v4.app.NotificationCompat$CarExtender$UnreadConversation$Builder
 android.support.v4.app.NotificationCompat$Extender
-android.support.v4.app.NotificationCompat$InboxStyle
-android.support.v4.app.NotificationCompat$NotificationCompatImpl
-android.support.v4.app.NotificationCompat$NotificationCompatImplApi20
-android.support.v4.app.NotificationCompat$NotificationCompatImplApi21
-android.support.v4.app.NotificationCompat$NotificationCompatImplBase
-android.support.v4.app.NotificationCompat$NotificationCompatImplGingerbread
-android.support.v4.app.NotificationCompat$NotificationCompatImplHoneycomb
-android.support.v4.app.NotificationCompat$NotificationCompatImplIceCreamSandwich
-android.support.v4.app.NotificationCompat$NotificationCompatImplJellybean
-android.support.v4.app.NotificationCompat$NotificationCompatImplKitKat
-android.support.v4.app.NotificationCompat$Style
+android.support.v4.app.NotificationCompat$InboxStyle:
+    1763:1770:public NotificationCompat$InboxStyle(android.support.v4.app.NotificationCompat$Builder)
+    1777:1778:public android.support.v4.app.NotificationCompat$InboxStyle setBigContentTitle(java.lang.CharSequence)
+    1785:1787:public android.support.v4.app.NotificationCompat$InboxStyle setSummaryText(java.lang.CharSequence)
+    1794:1795:public android.support.v4.app.NotificationCompat$InboxStyle addLine(java.lang.CharSequence)
+android.support.v4.app.NotificationCompat$NotificationCompatImpl:
+    public abstract android.os.Bundle getExtras(android.app.Notification)
+    public abstract int getActionCount(android.app.Notification)
+    public abstract android.support.v4.app.NotificationCompat$Action getAction(android.app.Notification,int)
+    public abstract android.support.v4.app.NotificationCompat$Action[] getActionsFromParcelableArrayList(java.util.ArrayList)
+    public abstract java.util.ArrayList getParcelableArrayListForActions(android.support.v4.app.NotificationCompat$Action[])
+    public abstract java.lang.String getCategory(android.app.Notification)
+    public abstract boolean getLocalOnly(android.app.Notification)
+    public abstract java.lang.String getGroup(android.app.Notification)
+    public abstract boolean isGroupSummary(android.app.Notification)
+    public abstract java.lang.String getSortKey(android.app.Notification)
+    public abstract android.os.Bundle getBundleForUnreadConversation(android.support.v4.app.NotificationCompatBase$UnreadConversation)
+    public abstract android.support.v4.app.NotificationCompatBase$UnreadConversation getUnreadConversationFromBundle(android.os.Bundle,android.support.v4.app.NotificationCompatBase$UnreadConversation$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+android.support.v4.app.NotificationCompat$NotificationCompatImplApi20:
+    720:720:public android.support.v4.app.NotificationCompat$Action getAction(android.app.Notification,int)
+    727:727:public android.support.v4.app.NotificationCompat$Action[] getActionsFromParcelableArrayList(java.util.ArrayList)
+    734:734:public java.util.ArrayList getParcelableArrayListForActions(android.support.v4.app.NotificationCompat$Action[])
+    739:739:public boolean getLocalOnly(android.app.Notification)
+    744:744:public java.lang.String getGroup(android.app.Notification)
+    749:749:public boolean isGroupSummary(android.app.Notification)
+    754:754:public java.lang.String getSortKey(android.app.Notification)
+android.support.v4.app.NotificationCompat$NotificationCompatImplApi21:
+    775:775:public java.lang.String getCategory(android.app.Notification)
+    780:780:public android.os.Bundle getBundleForUnreadConversation(android.support.v4.app.NotificationCompatBase$UnreadConversation)
+    787:787:public android.support.v4.app.NotificationCompatBase$UnreadConversation getUnreadConversationFromBundle(android.os.Bundle,android.support.v4.app.NotificationCompatBase$UnreadConversation$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+android.support.v4.app.NotificationCompat$NotificationCompatImplBase:
+    490:490:public android.os.Bundle getExtras(android.app.Notification)
+    495:495:public int getActionCount(android.app.Notification)
+    500:500:public android.support.v4.app.NotificationCompat$Action getAction(android.app.Notification,int)
+    506:506:public android.support.v4.app.NotificationCompat$Action[] getActionsFromParcelableArrayList(java.util.ArrayList)
+    511:511:public java.util.ArrayList getParcelableArrayListForActions(android.support.v4.app.NotificationCompat$Action[])
+    516:516:public java.lang.String getCategory(android.app.Notification)
+    521:521:public boolean getLocalOnly(android.app.Notification)
+    526:526:public java.lang.String getGroup(android.app.Notification)
+    531:531:public boolean isGroupSummary(android.app.Notification)
+    536:536:public java.lang.String getSortKey(android.app.Notification)
+    541:541:public android.os.Bundle getBundleForUnreadConversation(android.support.v4.app.NotificationCompatBase$UnreadConversation)
+    548:548:public android.support.v4.app.NotificationCompatBase$UnreadConversation getUnreadConversationFromBundle(android.os.Bundle,android.support.v4.app.NotificationCompatBase$UnreadConversation$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+android.support.v4.app.NotificationCompat$NotificationCompatImplJellybean:
+    605:605:public android.os.Bundle getExtras(android.app.Notification)
+    610:610:public int getActionCount(android.app.Notification)
+    615:615:public android.support.v4.app.NotificationCompat$Action getAction(android.app.Notification,int)
+    622:622:public android.support.v4.app.NotificationCompat$Action[] getActionsFromParcelableArrayList(java.util.ArrayList)
+    629:629:public java.util.ArrayList getParcelableArrayListForActions(android.support.v4.app.NotificationCompat$Action[])
+    634:634:public boolean getLocalOnly(android.app.Notification)
+    639:639:public java.lang.String getGroup(android.app.Notification)
+    644:644:public boolean isGroupSummary(android.app.Notification)
+    649:649:public java.lang.String getSortKey(android.app.Notification)
+android.support.v4.app.NotificationCompat$NotificationCompatImplKitKat:
+    669:669:public android.os.Bundle getExtras(android.app.Notification)
+    674:674:public int getActionCount(android.app.Notification)
+    679:679:public android.support.v4.app.NotificationCompat$Action getAction(android.app.Notification,int)
+    685:685:public boolean getLocalOnly(android.app.Notification)
+    690:690:public java.lang.String getGroup(android.app.Notification)
+    695:695:public boolean isGroupSummary(android.app.Notification)
+    700:700:public java.lang.String getSortKey(android.app.Notification)
+android.support.v4.app.NotificationCompat$Style:
+    android.support.v4.app.NotificationCompat$Builder mBuilder
+    1594:1600:public void setBuilder(android.support.v4.app.NotificationCompat$Builder)
+    1603:1607:public android.app.Notification build()
 android.support.v4.app.NotificationCompat$WearableExtender
-android.support.v4.app.NotificationCompatApi20
-android.support.v4.app.NotificationCompatApi20$Builder
-android.support.v4.app.NotificationCompatApi21
-android.support.v4.app.NotificationCompatApi21$Builder
-android.support.v4.app.NotificationCompatBase
-android.support.v4.app.NotificationCompatBase$Action
-android.support.v4.app.NotificationCompatBase$Action$Factory
+android.support.v4.app.NotificationCompatApi20:
+    30:31:NotificationCompatApi20()
+    119:119:public static android.support.v4.app.NotificationCompatBase$Action getAction(android.app.Notification,int,android.support.v4.app.NotificationCompatBase$Action$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+    125:127:private static android.support.v4.app.NotificationCompatBase$Action getActionCompatFromAction(android.app.Notification$Action,android.support.v4.app.NotificationCompatBase$Action$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+    133:143:private static android.app.Notification$Action getActionFromActionCompat(android.support.v4.app.NotificationCompatBase$Action)
+    156:164:public static android.support.v4.app.NotificationCompatBase$Action[] getActionsFromParcelableArrayList(java.util.ArrayList,android.support.v4.app.NotificationCompatBase$Action$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+    174:181:public static java.util.ArrayList getParcelableArrayListForActions(android.support.v4.app.NotificationCompatBase$Action[])
+    185:185:public static boolean getLocalOnly(android.app.Notification)
+    189:189:public static java.lang.String getGroup(android.app.Notification)
+    193:193:public static boolean isGroupSummary(android.app.Notification)
+    197:197:public static java.lang.String getSortKey(android.app.Notification)
+android.support.v4.app.NotificationCompatApi21:
+    public static final java.lang.String CATEGORY_CALL
+    public static final java.lang.String CATEGORY_MESSAGE
+    public static final java.lang.String CATEGORY_EMAIL
+    public static final java.lang.String CATEGORY_EVENT
+    public static final java.lang.String CATEGORY_PROMO
+    public static final java.lang.String CATEGORY_ALARM
+    public static final java.lang.String CATEGORY_PROGRESS
+    public static final java.lang.String CATEGORY_SOCIAL
+    public static final java.lang.String CATEGORY_ERROR
+    public static final java.lang.String CATEGORY_TRANSPORT
+    public static final java.lang.String CATEGORY_SYSTEM
+    public static final java.lang.String CATEGORY_SERVICE
+    public static final java.lang.String CATEGORY_RECOMMENDATION
+    public static final java.lang.String CATEGORY_STATUS
+    private static final java.lang.String KEY_AUTHOR
+    private static final java.lang.String KEY_TEXT
+    private static final java.lang.String KEY_MESSAGES
+    private static final java.lang.String KEY_REMOTE_INPUT
+    private static final java.lang.String KEY_ON_REPLY
+    private static final java.lang.String KEY_ON_READ
+    private static final java.lang.String KEY_PARTICIPANTS
+    private static final java.lang.String KEY_TIMESTAMP
+    29:55:NotificationCompatApi21()
+    125:125:public static java.lang.String getCategory(android.app.Notification)
+    129:153:static android.os.Bundle getBundleForUnreadConversation(android.support.v4.app.NotificationCompatBase$UnreadConversation)
+    159:196:static android.support.v4.app.NotificationCompatBase$UnreadConversation getUnreadConversationFromBundle(android.os.Bundle,android.support.v4.app.NotificationCompatBase$UnreadConversation$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+    206:206:private static android.app.RemoteInput fromCompatRemoteInput(android.support.v4.app.RemoteInputCompatBase$RemoteInput)
+    217:217:private static android.support.v4.app.RemoteInputCompatBase$RemoteInput toCompatRemoteInput(android.app.RemoteInput,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+android.support.v4.app.NotificationCompatBase:
+    25:41:public NotificationCompatBase()
+android.support.v4.app.NotificationCompatBase$Action:
+    27:34:public NotificationCompatBase$Action()
+android.support.v4.app.NotificationCompatBase$Action$Factory:
+    public abstract android.support.v4.app.NotificationCompatBase$Action build(int,java.lang.CharSequence,android.app.PendingIntent,android.os.Bundle,android.support.v4.app.RemoteInputCompatBase$RemoteInput[])
+    public abstract android.support.v4.app.NotificationCompatBase$Action[] newArray(int)
 android.support.v4.app.NotificationCompatBase$UnreadConversation
 android.support.v4.app.NotificationCompatBase$UnreadConversation$Factory
 android.support.v4.app.NotificationCompatExtras
-android.support.v4.app.NotificationCompatGingerbread
-android.support.v4.app.NotificationCompatHoneycomb
-android.support.v4.app.NotificationCompatIceCreamSandwich
-android.support.v4.app.NotificationCompatIceCreamSandwich$Builder
-android.support.v4.app.NotificationCompatJellybean
-android.support.v4.app.NotificationCompatJellybean$Builder
-android.support.v4.app.NotificationCompatKitKat
-android.support.v4.app.NotificationCompatKitKat$Builder
+android.support.v4.app.NotificationCompatGingerbread:
+    23:23:NotificationCompatGingerbread()
+android.support.v4.app.NotificationCompatHoneycomb:
+    25:25:NotificationCompatHoneycomb()
+android.support.v4.app.NotificationCompatIceCreamSandwich:
+    25:27:NotificationCompatIceCreamSandwich()
+android.support.v4.app.NotificationCompatJellybean:
+    public static final java.lang.String TAG
+    static final java.lang.String EXTRA_LOCAL_ONLY
+    static final java.lang.String EXTRA_ACTION_EXTRAS
+    static final java.lang.String EXTRA_REMOTE_INPUTS
+    static final java.lang.String EXTRA_GROUP_KEY
+    static final java.lang.String EXTRA_GROUP_SUMMARY
+    static final java.lang.String EXTRA_SORT_KEY
+    static final java.lang.String EXTRA_USE_SIDE_CHANNEL
+    private static final java.lang.String KEY_ICON
+    private static final java.lang.String KEY_TITLE
+    private static final java.lang.String KEY_ACTION_INTENT
+    private static final java.lang.String KEY_EXTRAS
+    private static final java.lang.String KEY_REMOTE_INPUTS
+    private static java.lang.Class sActionClass
+    private static java.lang.reflect.Field sActionsField
+    private static java.lang.reflect.Field sActionIconField
+    private static java.lang.reflect.Field sActionTitleField
+    private static java.lang.reflect.Field sActionIntentField
+    private static boolean sActionsAccessFailed
+    33:64:NotificationCompatJellybean()
+    247:253:public static android.support.v4.app.NotificationCompatBase$Action readAction(android.support.v4.app.NotificationCompatBase$Action$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory,int,java.lang.CharSequence,android.app.PendingIntent,android.os.Bundle)
+    268:271:public static int getActionCount(android.app.Notification)
+    277:299:public static android.support.v4.app.NotificationCompatBase$Action getAction(android.app.Notification,int,android.support.v4.app.NotificationCompatBase$Action$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+    303:314:private static java.lang.Object[] getActionObjectsLocked(android.app.Notification)
+    318:337:private static boolean ensureActionReflectionReadyLocked()
+    344:352:public static android.support.v4.app.NotificationCompatBase$Action[] getActionsFromParcelableArrayList(java.util.ArrayList,android.support.v4.app.NotificationCompatBase$Action$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+    358:358:private static android.support.v4.app.NotificationCompatBase$Action getActionFromBundle(android.os.Bundle,android.support.v4.app.NotificationCompatBase$Action$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+    370:377:public static java.util.ArrayList getParcelableArrayListForActions(android.support.v4.app.NotificationCompatBase$Action[])
+    381:388:private static android.os.Bundle getBundleForAction(android.support.v4.app.NotificationCompatBase$Action)
+    392:392:public static boolean getLocalOnly(android.app.Notification)
+    396:396:public static java.lang.String getGroup(android.app.Notification)
+    400:400:public static boolean isGroupSummary(android.app.Notification)
+    404:404:public static java.lang.String getSortKey(android.app.Notification)
+android.support.v4.app.NotificationCompatKitKat:
+    30:31:NotificationCompatKitKat()
+    120:120:public static android.os.Bundle getExtras(android.app.Notification)
+    124:124:public static int getActionCount(android.app.Notification)
+    130:137:public static android.support.v4.app.NotificationCompatBase$Action getAction(android.app.Notification,int,android.support.v4.app.NotificationCompatBase$Action$Factory,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+    142:142:public static boolean getLocalOnly(android.app.Notification)
+    146:146:public static java.lang.String getGroup(android.app.Notification)
+    150:150:public static boolean isGroupSummary(android.app.Notification)
+    154:154:public static java.lang.String getSortKey(android.app.Notification)
 android.support.v4.app.NotificationCompatSideChannelService
 android.support.v4.app.NotificationCompatSideChannelService$1
 android.support.v4.app.NotificationCompatSideChannelService$NotificationSideChannelStub
@@ -463,18 +723,56 @@ android.support.v4.app.NotificationManagerCompat$SideChannelManager$ListenerReco
 android.support.v4.app.NotificationManagerCompat$Task
 android.support.v4.app.NotificationManagerCompatEclair
 android.support.v4.app.NotificationManagerCompatIceCreamSandwich
-android.support.v4.app.RemoteInput
-android.support.v4.app.RemoteInput$1
+android.support.v4.app.RemoteInput:
+    private static final java.lang.String TAG
+    public static final java.lang.String RESULTS_CLIP_LABEL
+    public static final java.lang.String EXTRA_RESULTS_DATA
+    44:50:RemoteInput(java.lang.String,java.lang.CharSequence,java.lang.CharSequence[],boolean,android.os.Bundle)
+    188:188:public static android.os.Bundle getResultsFromIntent(android.content.Intent)
+    204:205:public static void addResultsToIntent(android.support.v4.app.RemoteInput[],android.content.Intent,android.os.Bundle)
+android.support.v4.app.RemoteInput$1:
+    268:268:public android.support.v4.app.RemoteInput build(java.lang.String,java.lang.CharSequence,java.lang.CharSequence[],boolean,android.os.Bundle)
+    273:273:public android.support.v4.app.RemoteInput[] newArray(int)
+    263:263:public bridge synthetic android.support.v4.app.RemoteInputCompatBase$RemoteInput[] newArray(int)
+    263:263:public bridge synthetic android.support.v4.app.RemoteInputCompatBase$RemoteInput build(java.lang.String,java.lang.CharSequence,java.lang.CharSequence[],boolean,android.os.Bundle)
 android.support.v4.app.RemoteInput$Builder
-android.support.v4.app.RemoteInput$Impl
-android.support.v4.app.RemoteInput$ImplApi20
-android.support.v4.app.RemoteInput$ImplBase
-android.support.v4.app.RemoteInput$ImplJellybean
-android.support.v4.app.RemoteInputCompatApi20
-android.support.v4.app.RemoteInputCompatBase
-android.support.v4.app.RemoteInputCompatBase$RemoteInput
-android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory
-android.support.v4.app.RemoteInputCompatJellybean
+android.support.v4.app.RemoteInput$Impl:
+    public abstract android.os.Bundle getResultsFromIntent(android.content.Intent)
+    public abstract void addResultsToIntent(android.support.v4.app.RemoteInput[],android.content.Intent,android.os.Bundle)
+android.support.v4.app.RemoteInput$ImplApi20:
+    243:243:public android.os.Bundle getResultsFromIntent(android.content.Intent)
+    248:249:public void addResultsToIntent(android.support.v4.app.RemoteInput[],android.content.Intent,android.os.Bundle)
+android.support.v4.app.RemoteInput$ImplBase:
+    218:219:public android.os.Bundle getResultsFromIntent(android.content.Intent)
+    224:225:public void addResultsToIntent(android.support.v4.app.RemoteInput[],android.content.Intent,android.os.Bundle)
+android.support.v4.app.RemoteInput$ImplJellybean:
+    231:231:public android.os.Bundle getResultsFromIntent(android.content.Intent)
+    236:237:public void addResultsToIntent(android.support.v4.app.RemoteInput[],android.content.Intent,android.os.Bundle)
+android.support.v4.app.RemoteInputCompatApi20:
+    23:23:RemoteInputCompatApi20()
+    26:35:static android.support.v4.app.RemoteInputCompatBase$RemoteInput[] toCompat(android.app.RemoteInput[],android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+    56:56:static android.os.Bundle getResultsFromIntent(android.content.Intent)
+    61:62:static void addResultsToIntent(android.support.v4.app.RemoteInputCompatBase$RemoteInput[],android.content.Intent,android.os.Bundle)
+android.support.v4.app.RemoteInputCompatBase:
+    21:23:RemoteInputCompatBase()
+android.support.v4.app.RemoteInputCompatBase$RemoteInput:
+    23:30:public RemoteInputCompatBase$RemoteInput()
+android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory:
+    public abstract android.support.v4.app.RemoteInputCompatBase$RemoteInput build(java.lang.String,java.lang.CharSequence,java.lang.CharSequence[],boolean,android.os.Bundle)
+    public abstract android.support.v4.app.RemoteInputCompatBase$RemoteInput[] newArray(int)
+android.support.v4.app.RemoteInputCompatJellybean:
+    public static final java.lang.String RESULTS_CLIP_LABEL
+    public static final java.lang.String EXTRA_RESULTS_DATA
+    private static final java.lang.String KEY_RESULT_KEY
+    private static final java.lang.String KEY_LABEL
+    private static final java.lang.String KEY_CHOICES
+    private static final java.lang.String KEY_ALLOW_FREE_FORM_INPUT
+    private static final java.lang.String KEY_EXTRAS
+    24:24:RemoteInputCompatJellybean()
+    39:39:static android.support.v4.app.RemoteInputCompatBase$RemoteInput fromBundle(android.os.Bundle,android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+    58:65:static android.support.v4.app.RemoteInputCompatBase$RemoteInput[] fromBundleArray(android.os.Bundle[],android.support.v4.app.RemoteInputCompatBase$RemoteInput$Factory)
+    80:91:static android.os.Bundle getResultsFromIntent(android.content.Intent)
+    96:106:static void addResultsToIntent(android.support.v4.app.RemoteInputCompatBase$RemoteInput[],android.content.Intent,android.os.Bundle)
 android.support.v4.app.ServiceCompat
 android.support.v4.app.ShareCompat
 android.support.v4.app.ShareCompat$IntentBuilder
@@ -3250,9 +3548,15 @@ com.prasilabs.screenlocker.VApp:
     23:23:public static com.prasilabs.screenlocker.VApp getsInstance()
     27:27:public static android.content.Context getAppContext()
 com.prasilabs.screenlocker.constants.Constant
-com.prasilabs.screenlocker.notifications.ScreenLockNotification
+com.prasilabs.screenlocker.constants.IntentConstant
+com.prasilabs.screenlocker.constants.KeyConstant
+com.prasilabs.screenlocker.constants.NotificationConstant:
+    6:6:public NotificationConstant()
+com.prasilabs.screenlocker.constants.RequestFor
+com.prasilabs.screenlocker.notifications.ScreenLockNotification:
+    17:17:public ScreenLockNotification()
 com.prasilabs.screenlocker.utils.MyLogger:
-    17:17:public MyLogger()
+    21:21:public MyLogger()
 com.prasilabs.screenlocker.utils.PhoneData:
     54:55:public static void savePhoneData(android.content.Context,java.lang.String,int)
     59:60:public static void savePhoneData(android.content.Context,java.lang.String,long)

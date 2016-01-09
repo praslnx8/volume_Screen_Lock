@@ -43,7 +43,6 @@
     <dimen name="tabHeight">70dp</dimen>
 
 
-    <!-- TODO Check if there is a better way to handle the grid size for different screen sizes -->
     <dimen name="grid_item_width">150dp</dimen>
     <dimen name="grid_item_height">150dp</dimen>
     <dimen name="linear_item_height">100dp</dimen>

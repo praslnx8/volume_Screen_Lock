@@ -31,6 +31,7 @@
                 <action android:name="android.media.VOLUME_CHANGED_ACTION" />
                 <action android:name="ANDROID.INTENT.ACTION.SCREEN_OFF" />
                 <action android:name="ANDROID.INTENT.ACTION.SCREEN_ON" />
+                <action android:name="LOCK_SCREEN_ACTION_INTENT" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>

@@ -3,6 +3,7 @@
 
     <string name="enabled_str">Enabled</string>
     <string name="disabled_str">Disabled</string>
+    <string name="notification_screen_lock_message">Press to Lock the Screen</string>
 
 
 </resources>

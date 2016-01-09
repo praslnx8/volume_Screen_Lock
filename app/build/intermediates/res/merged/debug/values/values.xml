@@ -386,6 +386,7 @@
     <string name="app_name">ScreenLocker</string>
     <string name="disabled_str">Disabled</string>
     <string name="enabled_str">Enabled</string>
+    <string name="notification_screen_lock_message">Press to Lock the Screen</string>
     <!-- From: file:/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
