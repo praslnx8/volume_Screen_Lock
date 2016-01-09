@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ScreenLocker</string>
+
+    <string name="enabled_str">Enabled</string>
+    <string name="disabled_str">Disabled</string>
+
+
+</resources>

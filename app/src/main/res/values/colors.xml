@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="gp_red">#dd4b39</color>
+
+    <color name="brand">#679DE0</color>
+    <!-- Interesting material colors to be used -->
+    <color name="lime">#CDDC39</color>
+    <color name="green">#84AA74</color>
+    <color name="darkGreen">#6F985D</color>
+    <color name="yellow">#F2EFA7</color>
+    <color name="lightYellow">#f4f4b2</color>
+    <color name="amber">#FFC107</color>
+    <color name="orange">#FF5722</color>
+    <color name="red">#F74D48</color>
+    <color name="maroon">#CD100E</color>
+    <color name="pink">#FF4081</color>
+    <color name="purple">#9C27B0</color>
+    <color name="blue">#679DE0</color>
+    <color name="darkBlue">#4587D9</color>
+    <color name="lightBlue">#03A9F4</color>
+    <color name="SenderMessage">#E5E7Eb</color>
+
+
+    <color name="linkTextColor">@color/primary</color>
+
+    <color name="statusBar">@color/darkBlue</color>
+    <color name="actionBar">@color/brand</color>
+
+    <color name="primary">@color/brand</color>
+    <color name="primaryDark">#4383D1</color>
+    <color name="primaryText">#4383D1</color>
+    <color name="tprimary">#AA88BAF7</color>
+    <color name="accent">@color/green</color>
+
+    <color name="secondary">@color/green</color>
+    <color name="secondaryDark">@color/darkGreen</color>
+    <color name="tsecondary">#AAA1BE95</color>
+
+    <color name="black">#000000</color>
+    <color name="gray1">#18171c</color>
+    <color name="gray2">#31302F</color>
+    <color name="gray3">#484554</color>
+    <color name="gray4">#6C687D</color>
+    <color name="gray5">#9390a2</color>
+    <color name="lgray1">#FAFAFA</color>
+    <color name="lgray2">#EDEDED</color>
+    <color name="lgray3">#DEDEDE</color>
+    <color name="lgray4">#D6D6D6</color>
+    <color name="lgray5">#CACACA</color>
+    <color name="lgray6">#B6B6B6</color>
+    <color name="lgray7">#AAAAAA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="textColor">@color/gray4</color>
+    <color name="titleColor">@color/gray2</color>
+
+    <!-- Transparent shades of all colors used -->
+    <color name="tblack">#66000000</color>
+    <color name="tgray1">#3318171c</color>
+    <color name="tgray2">#AA31302F</color>
+    <color name="tgray3">#AA484554</color>
+    <color name="tgray4">#AA6C687D</color>
+    <color name="tgray5">#AA9390a2</color>
+    <color name="tlgray1">#DDF3F3F3</color>
+    <color name="tlgray2">#66EEEEEE</color>
+    <color name="tlgray3">#CCDEDEDE</color>
+    <color name="tlgray4">#CCD6D6D6</color>
+    <color name="tlgray5">#AACACACA</color>
+    <color name="tlgray6">#AAB6B6B6</color>
+    <color name="tlgray7">#AAAAAAAA</color>
+    <color name="twhite">#CCFFFFFF</color>
+    <color name="tbrand">#16679DE0</color>
+
+    <color name="gradientStart">#dd111111</color>
+    <color name="gradientEnd">#66111111</color>
+</resources>

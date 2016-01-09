@@ -1,0 +1,265 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="Widget.CardContent" parent="android:Widget">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">24dp</item>
+        <item name="android:paddingBottom">24dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="button.primary" parent="Base.Widget.AppCompat.Button.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:background">@drawable/primary_btn</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:minHeight">24dip</item>
+        <item name="android:minWidth">48dip</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:colorPressedHighlight">@color/tgray1</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+    <style name="button.primary.small" parent="button.primary">
+        <item name="android:background">@drawable/primary_btn_small</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingBottom">@dimen/button_small_padding_tb</item>
+        <item name="android:paddingTop">@dimen/button_small_padding_tb</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="button.primary.big" parent="button.primary">
+        <item name="android:background">@drawable/primary_btn_big</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="button.secondary" parent="button.primary">
+        <item name="android:background">@drawable/secondary_btn</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="button.secondary.big" parent="button.secondary">
+        <item name="android:background">@drawable/secondary_btn_big</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="button.secondary.small" parent="button.secondary">
+        <item name="android:background">@drawable/secondary_btn_small</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="button.primary.transparent" parent="button.primary">
+        <item name="android:background">@drawable/primary_transparent_btn</item>
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="button.primary.transparent.small" parent="button.primary.small">
+        <item name="android:background">@drawable/primary_transparent_btn_small</item>
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="button.secondary.transparent" parent="button.secondary">
+        <item name="android:background">@drawable/secondary_transparent_btn</item>
+        <item name="android:textColor">@color/secondary</item>
+    </style>
+
+    <style name="button.secondary.transparent.big" parent="button.secondary.big">
+        <item name="android:background">@drawable/secondary_transparent_btn_big</item>
+        <item name="android:textColor">@color/secondary</item>
+    </style>
+
+    <style name="button.secondary.transparent.small" parent="button.secondary.transparent">
+        <item name="android:background">@drawable/secondary_transparent_btn_small</item>
+        <item name="android:textColor">@color/secondary</item>
+    </style>
+
+    <style name="button.transparent.white" parent="button.primary.transparent">
+        <item name="android:background">@drawable/white_transparent_btn</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="button.transparent.gray" parent="button.primary">
+        <item name="android:background">@drawable/gray_transparent_btn</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="button.transparent.gray.small" parent="button.primary.small">
+        <item name="android:background">@drawable/gray_transparent_btn_small</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="textM">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:paddingBottom">@dimen/paddingS</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:lineSpacingMultiplier">1.3</item>
+    </style>
+
+    <style name="textM.primary" parent="textM">
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="textM.secondary" parent="textM">
+        <item name="android:textColor">@color/secondary</item>
+    </style>
+
+    <style name="textM.title" parent="textM">
+        <item name="android:textColor">@color/titleColor</item>
+    </style>
+
+    <style name="textM.black" parent="textM">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textMB" parent="textM">
+    </style>
+
+    <style name="textMB.black" parent="textMB">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textMB.title" parent="textMB">
+        <item name="android:textColor">@color/titleColor</item>
+    </style>
+
+    <style name="textMB.secondary" parent="textMB">
+        <item name="android:textColor">@color/secondary</item>
+    </style>
+
+    <style name="textL" parent="textM">
+        <item name="android:textColor">@color/titleColor</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="textL.primary" parent="textL">
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="textL.light" parent="textL">
+    </style>
+
+    <style name="textLB" parent="textL">
+    </style>
+
+    <style name="textXL" parent="textM">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="textXL.upper" parent="textXL">
+        <item name="android:letterSpacing">0.06</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="textXL.light" parent="textXL">
+    </style>
+
+    <style name="textXLB.secondary" parent="textXL">
+        <item name="android:textColor">@color/secondary</item>
+    </style>
+
+    <style name="textXL.primary" parent="textXL">
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="textS" parent="textM">
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:paddingBottom">@dimen/paddingXS</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+    </style>
+
+    <style name="textS.primary" parent="textS">
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="textS.black" parent="textS">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textS.title" parent="textS">
+        <item name="android:textColor">@color/titleColor</item>
+    </style>
+
+    <style name="textSB" parent="textS">
+    </style>
+
+    <style name="textSB.white" parent="textSB">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="textSB.black" parent="textSB">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textSB.primary" parent="textSB">
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="textSB.secondary" parent="textSB">
+        <item name="android:textColor">@color/secondary</item>
+    </style>
+
+    <style name="textSB.title" parent="textSB">
+        <item name="android:textColor">@color/titleColor</item>
+    </style>
+
+    <style name="textL.upper" parent="textL">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:letterSpacing">0.05</item>
+    </style>
+
+
+    <style name="textXS" parent="textS">
+        <item name="android:textColor">@color/gray5</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingBottom">@dimen/zero</item>
+    </style>
+
+    <style name="textXS.white" parent="textXS">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="textXS.primary" parent="textXS">
+        <item name="android:textColor">@color/primaryText</item>
+    </style>
+
+    <style name="textXXS" parent="textXS">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="textXXS.white" parent="textXXS">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+    <style name="textXXL" parent="textM">
+        <item name="android:textColor">@color/titleColor</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:paddingBottom">@dimen/zero</item>
+    </style>
+
+    <style name="textXXLB" parent="textXXL">
+    </style>
+
+    <style name="textXXXL" parent="textM">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,65 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="zero">0dp</dimen>
+    <dimen name="one">1dp</dimen>
+    <dimen name="default_elevation">10dp</dimen>
+    <dimen name="small_radius">3dp</dimen>
+
+    <dimen name="paddingCard">15dp</dimen>
+    <dimen name="npaddingS">-10dp</dimen>
+    <dimen name="paddingS">10dp</dimen>
+    <dimen name="paddingM">20dp</dimen>
+    <dimen name="paddingL">40dp</dimen>
+    <dimen name="paddingXL">60dp</dimen>
+    <dimen name="paddingXS">5dp</dimen>
+    <dimen name="paddingXXS">3dp</dimen>
+    <dimen name="paddingXXXS">1dp</dimen>
+
+    <dimen name="button_padding_tb">8dp</dimen>
+    <dimen name="button_padding_lr">15dp</dimen>
+    <dimen name="button_small_padding_tb">3dp</dimen>
+    <dimen name="button_small_padding_lr">10dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="spacing_xsmall">2dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="spacing_large">16dp</dimen>
+    <dimen name="spacing_xlarge">32dp</dimen>
+
+    <dimen name="elevation_low">9dp</dimen>
+    <dimen name="elevation_high">12dp</dimen>
+    <dimen name="status_bar_height">0dp</dimen>
+
+    <dimen name="pictureXS">40dp</dimen>
+    <dimen name="pictureS">50dp</dimen>
+    <dimen name="pictureM">100dp</dimen>
+    <dimen name="pictureL">150dp</dimen>
+    <dimen name="pictureXL">200dp</dimen>
+    <dimen name="pictureXXL">250dp</dimen>
+
+    <dimen name="tabHeight">70dp</dimen>
+
+
+    <!-- TODO Check if there is a better way to handle the grid size for different screen sizes -->
+    <dimen name="grid_item_width">150dp</dimen>
+    <dimen name="grid_item_height">150dp</dimen>
+    <dimen name="linear_item_height">100dp</dimen>
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="profile_backdrop_height">200dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="card_button_padding">40dp</dimen>
+    <dimen name="form_element_margin">10dp</dimen>
+    <dimen name="top_padding">10dp</dimen>
+
+    <!-- business app specific dimension -->
+    <dimen name="hulk">40sp</dimen>
+    <dimen name="button_min_width">48dp</dimen>
+    <dimen name="keyboard_height">250dip</dimen>
+    <dimen name="user_profile_big">100dp</dimen>
+    <dimen name="Photo250dp">250dp</dimen>
+
+</resources>

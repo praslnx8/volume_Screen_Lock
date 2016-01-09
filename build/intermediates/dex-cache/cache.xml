@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/pre-dexed/debug/classes-6f2b91c89e50f8bbd56d978a747a78981f33aece.jar" />
+    </item>
+    <item
+        jar="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/pre-dexed/debug/classes-a2fab640643bb326238e5d9c6e54929b11154d40.jar" />
+    </item>
+    <item
+        jar="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-1042d4e865741423af72532061dffbab55b11e8d.jar" />
+    </item>
+    <item
+        jar="/home/prasi/Application/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-798d8584fccd9052905a1356cabbea584c3520b6.jar" />
+    </item>
+
+</items>

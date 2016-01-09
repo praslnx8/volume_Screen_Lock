@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/screen_lock_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableRight="@android:drawable/ic_lock_idle_lock"/>
+
+</LinearLayout><!-- From: file:/home/prasi/WorkSpace/ScreenLocker/app/src/main/res/layout/widget_screen_lock.xml -->
