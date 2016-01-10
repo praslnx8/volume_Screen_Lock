@@ -107,11 +107,11 @@ public class MainActivity extends AppCompatActivity
 
         deviceAdminBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 VUtil.openDeviceManagerEnableAction(MainActivity.this);
             }
         });
+
 
         LayoutTransition transition = new LayoutTransition();
         transition.setDuration(LayoutTransition.CHANGING, 1000);

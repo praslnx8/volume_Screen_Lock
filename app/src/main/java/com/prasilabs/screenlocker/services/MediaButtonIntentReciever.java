@@ -3,7 +3,7 @@ package com.prasilabs.screenlocker.services;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
+import android.media.AudioManager;
 import android.os.PowerManager;
 import android.widget.Toast;
 
@@ -24,6 +24,8 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
 
     private static PowerManager pm;
 
+    private static boolean isSingleCall = false;
+
     public MediaButtonIntentReciever()
     {
 
@@ -39,21 +41,42 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
                 MyLogger.l(TAG, "media button action recieved");
                 if(intent.getExtras() != null)
                 {
+
+                    if (pm == null)
+                    {
+                        pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+
+                        MyLogger.l(TAG, "power manager is initialized");
+                    }
+
                     int prevVolume = intent.getExtras().getInt("android.media.EXTRA_PREV_VOLUME_STREAM_VALUE", 0);
                     int currentValue = intent.getExtras().getInt("android.media.EXTRA_VOLUME_STREAM_VALUE", 0);
 
-                    if(currentValue != 0 && prevVolume != 0 && currentValue != prevVolume)
+                    AudioManager audio = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+                    int maxVolume = audio.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
+
+                    //Forunlocking only one event will trigger. When phone is open ui popup will also trigger the volume change
+                    boolean volumeAction = false;
+                    if((currentValue == 0 && prevVolume == 0) || currentValue == maxVolume && prevVolume == maxVolume)
+                    {
+                        if(!isSingleCall)
+                        {
+                            isSingleCall = true; // Wait for ui volume change call
+                        }
+                        else
+                        {
+                            isSingleCall = false;   //Resetting value
+                            volumeAction = true;
+                        }
+                    }
+                    else if(currentValue != 0 && prevVolume != 0 && currentValue != prevVolume)
+                    {
+                        volumeAction = true;
+                    }
+
+                    if(volumeAction || !isScreenOn(pm)) //when screen is off ui volume change will not happen
                     {
                         boolean isEnabled = PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false);
-
-
-                        if (pm == null)
-                        {
-                            pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-
-                            MyLogger.l(TAG, "power manager is initialized");
-                        }
-
 
                         if (!isScreenOn(pm) && isEnabled)
                         {
@@ -126,6 +149,7 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
         }
     }
 
+    @SuppressWarnings("deprecation")
     private boolean isScreenOn(PowerManager pm)
     {
         boolean isScreenOn;

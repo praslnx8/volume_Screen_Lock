@@ -22,15 +22,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/paddingXS"
-                android:layout_margin="@dimen/paddingXS"
                 android:background="@drawable/gcard"
                 android:elevation="@dimen/paddingS"
                 android:orientation="vertical">
 
+                <TextView
+                    style="@style/textXS.primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primaryDark"
+                    android:text="To UNlOCK screen"/>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/paddingM"
+                    android:padding="@dimen/paddingS"
                     android:orientation="horizontal">
 
                     <TextView
@@ -58,15 +64,15 @@
                     android:gravity="center">
 
                     <TextView
-                        style="@style/textM.black"
+                        style="@style/textS.black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="STATUS"/>
+                        android:text="VOLUME KEY UNLOCK"/>
 
                     <TextView
-                        style="@style/textM.black"
+                        style="@style/textS.black"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -75,7 +81,7 @@
 
                     <TextView
                         android:id="@+id/status_text"
-                        style="@style/textM"
+                        style="@style/textS"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -84,21 +90,27 @@
                 </LinearLayout>
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/paddingS" />
+
             <LinearLayout
                 android:id="@+id/other_menu_layout"
+                style="@style/button.primary.transparent.small"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/paddingS"
                 android:orientation="vertical">
 
                 <TextView
-                    style="@style/textXL.light"
+                    style="@style/textXS.primary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:text="@string/enable_screen_lock_option_message"/>
 
                 <LinearLayout
-                    android:padding="@dimen/paddingS"
+                    android:padding="@dimen/paddingXS"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -110,16 +122,21 @@
                         android:text="@string/double_press_volume_lock_message"
                         android:layout_weight="3"/>
 
+                    <View
+                        android:layout_width="@dimen/paddingXS"
+                        android:layout_height="0dp" />
+
                     <Switch
                         android:id="@+id/volume_key_switch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:layout_weight="1"/>
 
                 </LinearLayout>
 
                 <LinearLayout
-                    android:padding="@dimen/paddingS"
+                    android:padding="@dimen/paddingXS"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -131,43 +148,53 @@
                         android:text="@string/notification_lock_message"
                         android:layout_weight="3"/>
 
+                    <View
+                        android:layout_width="@dimen/paddingXS"
+                        android:layout_height="0dp" />
+
                     <Switch
                         android:id="@+id/notification_switch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:gravity="center"
                         android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/pink"
+                        android:text="Try the app shortcut to lock screen instantly" />
 
                 </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
+                    android:layout_margin="@dimen/paddingXS"
                     android:background="@color/gray5" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/paddingS"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/textL.primary"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:text="Try the app widget to lock screen" />
-
-
-                </LinearLayout>
 
                 <TextView
                     android:id="@+id/device_admin_btn"
-                    style="@style/button.transparent.gray"
+                    android:layout_margin="@dimen/paddingS"
+                    style="@style/button.transparent.gray.small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:layout_gravity="center"
-                    android:text="DISABLE DEVICE ADMIN"/>
+                    android:text="UNISNTALL APP"/>
 
 
             </LinearLayout>
@@ -177,6 +204,7 @@
     </ScrollView>
 
     <LinearLayout
+        android:visibility="gone"
         android:id="@+id/bottom_layout"
         android:padding="@dimen/paddingXS"
         android:layout_margin="@dimen/paddingXS"

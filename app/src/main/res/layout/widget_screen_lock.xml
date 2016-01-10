@@ -10,4 +10,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="@drawable/ic_launcher_small"/>
+
 </LinearLayout>

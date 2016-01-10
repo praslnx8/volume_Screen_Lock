@@ -6971,23 +6971,23 @@ com.prasilabs.screenlocker.notifications.ScreenLockNotification -> com.prasilabs
     void cancelNotification(android.content.Context) -> c
 com.prasilabs.screenlocker.services.MediaButtonIntentReciever -> com.prasilabs.screenlocker.services.MediaButtonIntentReciever:
     java.lang.String TAG -> a
-    boolean isScreenOn -> b
-    long prevTime -> c
-    android.os.PowerManager pm -> d
+    long prevTime -> b
+    android.os.PowerManager pm -> c
+    boolean isSingleCall -> d
     void <init>() -> <init>
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
     void lockScreenNow(android.content.Context) -> a
+    boolean isScreenOn(android.os.PowerManager) -> a
     void <clinit>() -> <clinit>
 com.prasilabs.screenlocker.services.ScreenLockService -> com.prasilabs.screenlocker.services.ScreenLockService:
     java.lang.String TAG -> a
     com.prasilabs.screenlocker.services.ScreenLockService screenLockService -> b
     android.media.MediaPlayer mediaPlayer -> c
-    com.prasilabs.screenlocker.services.MediaButtonIntentReciever mediaButtonIntentReciever -> d
     void <init>() -> <init>
     void onCreate() -> onCreate
     android.os.IBinder onBind(android.content.Intent) -> onBind
     void onDestroy() -> onDestroy
-    void startService(android.content.Context) -> a
+    void manageService(android.content.Context) -> a
     void stopService() -> a
     void <clinit>() -> <clinit>
 com.prasilabs.screenlocker.utils.MyLogger -> com.prasilabs.screenlocker.c.a:
@@ -7010,6 +7010,7 @@ com.prasilabs.screenlocker.utils.VUtil -> com.prasilabs.screenlocker.c.c:
     boolean lockDevice() -> b
     void openDeviceManagerEnableAction(android.app.Activity) -> a
     void openDeviceManagerEnableAction(android.app.Activity,int) -> a
+    void createShortCut(android.app.Activity) -> b
     void <clinit>() -> <clinit>
 com.prasilabs.screenlocker.view.MainActivity -> com.prasilabs.screenlocker.view.MainActivity:
     java.lang.String TAG -> i
@@ -7055,6 +7056,9 @@ com.prasilabs.screenlocker.view.MainActivity$6 -> com.prasilabs.screenlocker.vie
     com.prasilabs.screenlocker.view.MainActivity this$0 -> a
     void <init>(com.prasilabs.screenlocker.view.MainActivity) -> <init>
     void onClick(android.view.View) -> onClick
+com.prasilabs.screenlocker.widgets.LockNowActivity -> com.prasilabs.screenlocker.widgets.LockNowActivity:
+    void <init>() -> <init>
+    void onCreate(android.os.Bundle) -> onCreate
 com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider -> com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider:
     java.lang.String TAG -> a
     void <init>() -> <init>
@@ -7063,3 +7067,6 @@ com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider -> com.prasilabs.scr
     void pushWidgetUpdate(android.content.Context,android.widget.RemoteViews) -> a
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
     void <clinit>() -> <clinit>
+com.prasilabs.screenlocker.widgets.ShortCutActivity -> com.prasilabs.screenlocker.widgets.ShortCutActivity:
+    void <init>() -> <init>
+    void onCreate(android.os.Bundle) -> onCreate

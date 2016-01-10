@@ -6,8 +6,10 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.util.Log;
 
+import com.prasilabs.screenlocker.R;
 import com.prasilabs.screenlocker.VApp;
 import com.prasilabs.screenlocker.constants.RequestFor;
+import com.prasilabs.screenlocker.widgets.LockNowActivity;
 
 /**
  * Created by prasi on 9/1/16.
@@ -92,5 +94,18 @@ public class VUtil
                 MyLogger.e(e);
             }
         }
+    }
+
+    public static void createShortCut(Activity activity)
+    {
+        Intent i= new Intent();
+        Intent shortcutActivity = new Intent(activity, LockNowActivity.class);
+        shortcutActivity.setAction(Intent.ACTION_MAIN);
+        shortcutActivity.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        i.putExtra(Intent.EXTRA_SHORTCUT_INTENT, shortcutActivity);
+        i.putExtra(Intent.EXTRA_SHORTCUT_NAME, "Lock Now");
+        i.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, Intent.ShortcutIconResource.fromContext(activity, R.drawable.ic_launcher_small));
+        activity.setResult(Activity.RESULT_OK, i);
     }
 }

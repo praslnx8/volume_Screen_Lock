@@ -6976,6 +6976,7 @@ com.prasilabs.screenlocker.services.MediaButtonIntentReciever -> com.prasilabs.s
     java.lang.String TAG -> a
     long prevTime -> b
     android.os.PowerManager pm -> c
+    boolean isSingleCall -> d
     void <init>() -> <init>
     void onReceive(android.content.Context,android.content.Intent) -> onReceive
     void lockScreenNow(android.content.Context) -> a
@@ -7012,6 +7013,7 @@ com.prasilabs.screenlocker.utils.VUtil -> com.prasilabs.screenlocker.c.c:
     boolean lockDevice() -> b
     void openDeviceManagerEnableAction(android.app.Activity) -> a
     void openDeviceManagerEnableAction(android.app.Activity,int) -> a
+    void createShortCut(android.app.Activity) -> b
     void <clinit>() -> <clinit>
 com.prasilabs.screenlocker.view.MainActivity -> com.prasilabs.screenlocker.view.MainActivity:
     java.lang.String TAG -> i

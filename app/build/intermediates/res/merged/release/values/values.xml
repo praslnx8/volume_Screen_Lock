@@ -387,11 +387,11 @@
     <string name="btn_disable_device_admin">Disable Device Admin</string>
     <string name="btn_enable_device_admin">Enable Device Admin</string>
     <string name="disabled_str">Disabled</string>
-    <string name="double_press_volume_lock_message">Double Press Volume Key to lock</string>
+    <string name="double_press_volume_lock_message">Double Press VOLUME Key to LOCK</string>
     <string name="enable_message">Enable/Disable Screen waker</string>
-    <string name="enable_screen_lock_option_message">Enable Screen Lock Option</string>
+    <string name="enable_screen_lock_option_message">To LOCK screen</string>
     <string name="enabled_str">Enabled</string>
-    <string name="notification_lock_message">Enable Notification to lock screen</string>
+    <string name="notification_lock_message">Enable NOTIFICATION to LOCK screen</string>
     <string name="notification_screen_lock_message">Press to Lock the Screen</string>
     <!-- From: file:/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>

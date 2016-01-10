@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:2:1-83:12
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:2:1-81:12
 	xmlns:android
 		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:2:11-69
 	package
@@ -21,136 +21,134 @@ uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
 ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:6:5-81
 	android:name
 		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:6:22-78
-uses-permission#com.android.launcher.permission.INSTALL_SHORTCUT
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:7:5-88
-	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:7:22-85
 application
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:9:5-81:19
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:8:5-79:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] /home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] /home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
 	android:supportsRtl
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:13:9-35
 	android:label
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:13:9-41
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:12:9-41
 	android:allowBackup
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:10:9-35
 	android:icon
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:12:9-43
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:11:9-43
 	android:theme
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:15:9-40
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:14:9-40
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:10:9-29
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:9:9-29
 activity#com.prasilabs.screenlocker.view.MainActivity
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:16:9-21:20
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:15:9-20:20
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:16:19-52
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:15:19-52
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:17:13-20:29
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:16:13-19:29
 action#android.intent.action.MAIN
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:18:17-69
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:17:17-69
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:18:25-66
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:17:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:19:17-77
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:19:27-74
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:18:27-74
 activity#com.prasilabs.screenlocker.widgets.ShortCutActivity
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:23:9-30:20
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:22:9-29:20
 	android:label
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:24:13-37
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:23:13-37
 	android:exported
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:25:13-36
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:24:13-36
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:23:19-59
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:22:19-59
 intent-filter#android.intent.action.CREATE_SHORTCUT+android.intent.category.DEFAULT
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:26:13-29:29
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:25:13-28:29
 action#android.intent.action.CREATE_SHORTCUT
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:27:17-80
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:26:17-80
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:27:25-77
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:26:25-77
 category#android.intent.category.DEFAULT
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:28:17-76
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:27:17-76
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:28:27-73
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:27:27-73
 activity#com.prasilabs.screenlocker.widgets.LockNowActivity
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:32:9-40:20
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:31:9-38:20
 	android:label
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:34:13-37
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:33:13-37
 	android:theme
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:35:13-61
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:34:13-61
 	android:exported
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:33:13-36
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:32:13-36
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:32:19-58
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:31:19-58
+intent-filter#android.intent.category.DEFAULT
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:35:13-37:29
 receiver#com.prasilabs.screenlocker.services.MediaButtonIntentReciever
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:42:9-51:20
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:40:9-49:20
 	android:exported
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:45:13-36
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:43:13-36
 	android:enabled
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:44:13-35
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:42:13-35
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:43:13-63
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:41:13-63
 intent-filter#LOCK_SCREEN_ACTION_INTENT+android.intent.action.BOOT_COMPLETED+android.media.VOLUME_CHANGED_ACTION
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:46:13-50:29
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:44:13-48:29
 action#android.media.VOLUME_CHANGED_ACTION
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:47:17-78
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:45:17-78
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:47:25-75
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:45:25-75
 action#LOCK_SCREEN_ACTION_INTENT
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:48:17-68
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:46:17-68
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:48:25-65
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:46:25-65
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:49:17-79
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:47:17-79
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:49:25-76
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:47:25-76
 service#com.prasilabs.screenlocker.services.ScreenLockService
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:53:9-57:19
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:51:9-55:19
 	android:exported
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:56:13-37
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:54:13-37
 	android:enabled
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:55:13-35
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:53:13-35
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:54:13-55
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:52:13-55
 receiver#com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:60:9-68:20
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:58:9-66:20
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:61:13-61
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:59:13-61
 intent-filter#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:62:13-64:29
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:60:13-62:29
 action#android.appwidget.action.APPWIDGET_UPDATE
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:63:17-84
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:61:17-84
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:63:25-81
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:61:25-81
 meta-data#android.appwidget.provider
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:65:13-67:62
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:63:13-65:62
 	android:resource
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:67:17-59
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:65:17-59
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:66:17-58
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:64:17-58
 receiver#com.prasilabs.screenlocker.VApp$VAdmin
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:70:9-80:20
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:68:9-78:20
 	android:label
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:71:13-45
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:69:13-45
 	android:description
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:72:13-51
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:70:13-51
 	android:permission
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:73:13-70
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:71:13-70
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:70:19-46
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:68:19-46
 meta-data#android.app.device_admin
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:74:13-76:50
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:72:13-74:50
 	android:resource
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:76:17-47
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:74:17-47
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:75:17-56
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:73:17-56
 intent-filter#android.app.action.DEVICE_ADMIN_ENABLED
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:77:13-79:29
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:75:13-77:29
 action#android.app.action.DEVICE_ADMIN_ENABLED
-ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:78:17-82
+ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:76:17-82
 	android:name
-		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:78:25-79
+		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:76:25-79
 uses-sdk
 INJECTED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:appcompat-v7:23.0.1] /home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43
