@@ -3527,7 +3527,13 @@ android.support.v7.widget.Toolbar$LayoutParams:
     static final int EXPANDED
     1866:1880:public Toolbar$LayoutParams(int,int,int)
     1883:1884:public Toolbar$LayoutParams(int)
-com.prasilabs.screenlocker.BuildConfig
+com.prasilabs.screenlocker.BuildConfig:
+    public static final java.lang.String APPLICATION_ID
+    public static final java.lang.String BUILD_TYPE
+    public static final java.lang.String FLAVOR
+    public static final int VERSION_CODE
+    public static final java.lang.String VERSION_NAME
+    6:6:public BuildConfig()
 com.prasilabs.screenlocker.R
 com.prasilabs.screenlocker.R$anim
 com.prasilabs.screenlocker.R$attr

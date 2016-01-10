@@ -16,7 +16,7 @@ public class VApp extends Application
     public static DevicePolicyManager devicePolicyManager;
     public static ComponentName mAdminName;
 
-    public static boolean appDebug = false;
+    public static boolean appDebug = BuildConfig.DEBUG;
 
     private static VApp sInstance;
 

@@ -64,18 +64,24 @@
 # view AndroidManifest.xml #generated:15
 -keep class com.prasilabs.screenlocker.VApp { <init>(...); }
 
-# view AndroidManifest.xml #generated:58
+# view AndroidManifest.xml #generated:77
 -keep class com.prasilabs.screenlocker.VApp$VAdmin { <init>(...); }
 
-# view AndroidManifest.xml #generated:30
+# view AndroidManifest.xml #generated:51
 -keep class com.prasilabs.screenlocker.services.MediaButtonIntentReciever { <init>(...); }
 
-# view AndroidManifest.xml #generated:43
+# view AndroidManifest.xml #generated:62
 -keep class com.prasilabs.screenlocker.services.ScreenLockService { <init>(...); }
 
 # view AndroidManifest.xml #generated:22
 -keep class com.prasilabs.screenlocker.view.MainActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:49
+# view AndroidManifest.xml #generated:39
+-keep class com.prasilabs.screenlocker.widgets.LockNowActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:68
 -keep class com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:29
+-keep class com.prasilabs.screenlocker.widgets.ShortCutActivity { <init>(...); }
 

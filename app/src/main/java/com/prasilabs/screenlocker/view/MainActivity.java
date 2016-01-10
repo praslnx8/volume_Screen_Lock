@@ -107,7 +107,8 @@ public class MainActivity extends AppCompatActivity
 
         deviceAdminBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 VUtil.openDeviceManagerEnableAction(MainActivity.this);
             }
         });
@@ -137,14 +138,15 @@ public class MainActivity extends AppCompatActivity
         statusText.setText(text);
         statusText.setTextColor(color);
 
+        ScreenLockService.manageService(this);
+        ScreenLockNotification.manageNotification(this);
+
         if(isChecked)
         {
-            ScreenLockService.startService(this);
             otherMenuLayout.setVisibility(View.VISIBLE);
         }
         else
         {
-            ScreenLockService.stopService();
             otherMenuLayout.setVisibility(View.GONE);
         }
 
@@ -156,11 +158,11 @@ public class MainActivity extends AppCompatActivity
 
         if(VUtil.checkisDeviceAdminEnabled())
         {
-            deviceAdminBtn.setText(R.string.btn_disable_device_admin);
+            deviceAdminBtn.setVisibility(View.VISIBLE);
         }
         else
         {
-            deviceAdminBtn.setText(R.string.btn_enable_device_admin);
+            deviceAdminBtn.setVisibility(View.GONE);
         }
     }
 

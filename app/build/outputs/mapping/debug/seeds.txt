@@ -3039,5 +3039,9 @@ com.prasilabs.screenlocker.services.ScreenLockService
 com.prasilabs.screenlocker.services.ScreenLockService: ScreenLockService()
 com.prasilabs.screenlocker.view.MainActivity
 com.prasilabs.screenlocker.view.MainActivity: MainActivity()
+com.prasilabs.screenlocker.widgets.LockNowActivity
+com.prasilabs.screenlocker.widgets.LockNowActivity: LockNowActivity()
 com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider
 com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider: ScreenLockWidgetProvider()
+com.prasilabs.screenlocker.widgets.ShortCutActivity
+com.prasilabs.screenlocker.widgets.ShortCutActivity: ShortCutActivity()

@@ -7,7 +7,7 @@
     <string name="btn_enable_device_admin">Enable Device Admin</string>
     <string name="btn_disable_device_admin">Disable Device Admin</string>
     <string name="enable_message">Enable/Disable Screen waker</string>
-    <string name="enable_screen_lock_option_message">Enable Screen Lock Option</string>
-    <string name="double_press_volume_lock_message">Double Press Volume Key to lock</string>
-    <string name="notification_lock_message">Enable Notification to lock screen</string>
+    <string name="enable_screen_lock_option_message">To LOCK screen</string>
+    <string name="double_press_volume_lock_message">Double Press VOLUME Key to LOCK</string>
+    <string name="notification_lock_message">Enable NOTIFICATION to LOCK screen</string>
 </resources>

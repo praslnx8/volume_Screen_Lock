@@ -20,7 +20,6 @@ public class ScreenLockService extends Service
 
     private static ScreenLockService screenLockService;
     private MediaPlayer mediaPlayer;
-    private MediaButtonIntentReciever mediaButtonIntentReciever;
 
     public ScreenLockService()
     {
@@ -42,16 +41,6 @@ public class ScreenLockService extends Service
         }
 
         mediaPlayer.start();
-
-        if(mediaButtonIntentReciever == null)
-        {
-            mediaButtonIntentReciever = new MediaButtonIntentReciever();
-        }
-
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
-        intentFilter.addAction(Intent.ACTION_SCREEN_ON);
-        registerReceiver(mediaButtonIntentReciever, intentFilter);
     }
 
 
@@ -70,15 +59,10 @@ public class ScreenLockService extends Service
             mediaPlayer.stop();
         }
 
-        if(mediaButtonIntentReciever != null)
-        {
-            unregisterReceiver(mediaButtonIntentReciever);
-        }
-
         super.onDestroy();
     }
 
-    public static void startService(Context context)
+    public static void manageService(Context context)
     {
         if(PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false))
         {
@@ -86,13 +70,23 @@ public class ScreenLockService extends Service
             context.startService(intent);
             MyLogger.lw(TAG, "Service started");
         }
+        else
+        {
+            stopService();
+        }
     }
 
-    public static void stopService()
+    private static void stopService()
     {
-        if(screenLockService != null)
+        try
+        {   //safety
+            if (screenLockService != null)
+            {
+                screenLockService.stopSelf();
+            }
+        }catch (Exception e)
         {
-            screenLockService.stopSelf();
+            MyLogger.e(e);
         }
     }
 

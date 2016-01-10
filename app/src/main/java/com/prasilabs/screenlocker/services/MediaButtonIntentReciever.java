@@ -3,6 +3,7 @@ package com.prasilabs.screenlocker.services;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.PowerManager;
 import android.widget.Toast;
 
@@ -19,7 +20,6 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
 {
     private static final String TAG = MediaButtonIntentReciever.class.getSimpleName();
 
-    private static boolean isScreenOn = false;
     private static long prevTime;
 
     private static PowerManager pm;
@@ -32,25 +32,9 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
     @Override
     public void onReceive(Context context, Intent intent)
     {
-        MyLogger.l(TAG, "Intent recieved");
-
         if(intent != null)
         {
-            MyLogger.l(TAG, "Intent recieved is: " + intent.getAction());
-
-            if(intent.getAction().equals(Intent.ACTION_SCREEN_ON))
-            {
-                MyLogger.l(TAG, "screen on action recieved");
-
-                isScreenOn = true;
-            }
-            else if(intent.getAction().equals(Intent.ACTION_SCREEN_OFF))
-            {
-                MyLogger.l(TAG, "screen off action recieved");
-
-                isScreenOn = false;
-            }
-            else if(intent.getAction().equals("android.media.VOLUME_CHANGED_ACTION"))
+            if(intent.getAction().equals("android.media.VOLUME_CHANGED_ACTION"))
             {
                 MyLogger.l(TAG, "media button action recieved");
                 if(intent.getExtras() != null)
@@ -58,25 +42,29 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
                     int prevVolume = intent.getExtras().getInt("android.media.EXTRA_PREV_VOLUME_STREAM_VALUE", 0);
                     int currentValue = intent.getExtras().getInt("android.media.EXTRA_VOLUME_STREAM_VALUE", 0);
 
-
                     if(currentValue != 0 && prevVolume != 0 && currentValue != prevVolume)
                     {
                         boolean isEnabled = PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false);
 
-                        if (!isScreenOn && isEnabled)
-                        {
-                            if (pm == null) {
-                                pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
 
-                                MyLogger.l(TAG, "power manager is initialized");
-                            }
+                        if (pm == null)
+                        {
+                            pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
+
+                            MyLogger.l(TAG, "power manager is initialized");
+                        }
+
+
+                        if (!isScreenOn(pm) && isEnabled)
+                        {
+
                             PowerManager.WakeLock wakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, KeyConstant.WAKE_TAG_STR);
                             wakeLock.acquire();
                             wakeLock.release();
 
                             MyLogger.l(TAG, "wake lock done");
                         }
-                        else if (isScreenOn && PhoneData.getPhoneData(context, KeyConstant.VOLUME_LOCK_ENABLE_STR, false) && isEnabled)
+                        else if (isScreenOn(pm) && PhoneData.getPhoneData(context, KeyConstant.VOLUME_LOCK_ENABLE_STR, false) && isEnabled)
                         {
                             if (System.currentTimeMillis() - prevTime < 1000)
                             {
@@ -113,7 +101,7 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
 
                 ScreenLockNotification.manageNotification(context);
 
-                ScreenLockService.startService(context);
+                ScreenLockService.manageService(context);
             }
             else
             {
@@ -138,5 +126,19 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
         }
     }
 
+    private boolean isScreenOn(PowerManager pm)
+    {
+        boolean isScreenOn;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT_WATCH)
+        {
+            isScreenOn = pm.isInteractive();
+        }
+        else
+        {
+            isScreenOn = pm.isScreenOn();
+        }
+
+        return isScreenOn;
+    }
 
 }
