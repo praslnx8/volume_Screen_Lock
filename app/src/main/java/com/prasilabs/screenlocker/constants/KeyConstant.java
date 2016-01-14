@@ -13,4 +13,6 @@ public class KeyConstant
     public static final String REQUEST_FOR_STR = "REQUEST_FOR";
     public static final String LOGFILENAME_STR = "MYAPP";
     public static final String WAKE_TAG_STR = "wake";
+    public static final String SHAKE_LOCK_STR = "shake_lock";
+    public static final String SHAKE_THRESOLD_STR = "shake_thresold";
 }

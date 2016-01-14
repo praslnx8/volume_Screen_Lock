@@ -2261,6 +2261,7 @@ com.prasilabs.screenlocker.R$id: int search_plate
 com.prasilabs.screenlocker.R$id: int search_src_text
 com.prasilabs.screenlocker.R$id: int search_voice_btn
 com.prasilabs.screenlocker.R$id: int select_dialog_listview
+com.prasilabs.screenlocker.R$id: int shake_switch
 com.prasilabs.screenlocker.R$id: int share_btn
 com.prasilabs.screenlocker.R$id: int shortcut
 com.prasilabs.screenlocker.R$id: int showCustom

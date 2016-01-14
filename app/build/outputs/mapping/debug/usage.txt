@@ -2720,8 +2720,6 @@ android.support.v7.app.AlertDialog:
 android.support.v7.app.AlertDialog$Builder:
     304:305:public android.support.v7.app.AlertDialog$Builder setTitle(int)
     339:340:public android.support.v7.app.AlertDialog$Builder setMessage(int)
-    349:350:public android.support.v7.app.AlertDialog$Builder setMessage(java.lang.CharSequence)
-    361:362:public android.support.v7.app.AlertDialog$Builder setIcon(int)
     385:388:public android.support.v7.app.AlertDialog$Builder setIconAttribute(int)
     399:401:public android.support.v7.app.AlertDialog$Builder setPositiveButton(int,android.content.DialogInterface$OnClickListener)
     412:414:public android.support.v7.app.AlertDialog$Builder setPositiveButton(java.lang.CharSequence,android.content.DialogInterface$OnClickListener)
@@ -3553,6 +3551,8 @@ com.prasilabs.screenlocker.R$xml
 com.prasilabs.screenlocker.VApp:
     25:25:public static com.prasilabs.screenlocker.VApp getsInstance()
     29:29:public static android.content.Context getAppContext()
+com.prasilabs.screenlocker.components.VDialog:
+    11:11:public VDialog()
 com.prasilabs.screenlocker.constants.Constant
 com.prasilabs.screenlocker.constants.IntentConstant
 com.prasilabs.screenlocker.constants.KeyConstant
@@ -3567,4 +3567,5 @@ com.prasilabs.screenlocker.utils.PhoneData:
     55:56:public static void savePhoneData(android.content.Context,java.lang.String,int)
     60:61:public static void savePhoneData(android.content.Context,java.lang.String,long)
     78:85:public static long getPhoneData(android.content.Context,java.lang.String,long)
-    90:97:public static int getPhoneData(android.content.Context,java.lang.String,int)
+com.prasilabs.screenlocker.utils.VUtil:
+    87:88:public static void openDeviceManagerEnableAction(android.app.Activity)

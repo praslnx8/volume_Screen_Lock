@@ -11,4 +11,5 @@ public class RequestFor
    public static final int ACTIVATE_DEVICE_ADMIN = 2;
    public static final int REQUEST_VOLUME_ENABLE = 3;
    public static final int REQUEST_NOTIF_ENABLE = 4;
+   public static final int REQUEST_SHAKE_ENABLE = 5;
 }

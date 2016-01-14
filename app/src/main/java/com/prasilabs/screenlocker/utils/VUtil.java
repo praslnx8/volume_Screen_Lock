@@ -3,8 +3,9 @@ package com.prasilabs.screenlocker.utils;
 import android.app.Activity;
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
-import android.util.Log;
+import android.net.Uri;
 
 import com.prasilabs.screenlocker.R;
 import com.prasilabs.screenlocker.VApp;
@@ -49,20 +50,36 @@ public class VUtil
             if (VApp.devicePolicyManager.isAdminActive(VApp.mAdminName))
             {
                 VApp.devicePolicyManager.lockNow();
-                Log.d(TAG, "Device is locked");
+                MyLogger.l(TAG, "Device is locked");
                 isLocked = true;
             }
             else
             {
-                Log.d(TAG, "no permisioon unable to lock");
+                MyLogger.l(TAG, "no permisioon unable to lock");
             }
         }
         else
         {
-            Log.d(TAG, "device policy is null, cannot lock device");
+            MyLogger.l(TAG, "device policy is null, cannot lock device");
         }
 
         return isLocked;
+    }
+
+    public static void removeAdminAndUninstall(Context context)
+    {
+        if(VApp.devicePolicyManager != null && VApp.mAdminName != null)
+        {
+            if (VApp.devicePolicyManager.isAdminActive(VApp.mAdminName))
+            {
+                VApp.devicePolicyManager.removeActiveAdmin(VApp.mAdminName);
+            }
+        }
+
+        String packageName = context.getPackageName();
+        Intent intent = new Intent(Intent.ACTION_DELETE);
+        intent.setData(Uri.parse("package:" + packageName));
+        context.startActivity(intent);
     }
 
     public static void openDeviceManagerEnableAction(Activity activity)

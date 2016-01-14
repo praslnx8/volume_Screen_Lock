@@ -13,6 +13,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.prasilabs.screenlocker.components.VDialog;
 import com.prasilabs.screenlocker.constants.KeyConstant;
 import com.prasilabs.screenlocker.constants.RequestFor;
 import com.prasilabs.screenlocker.notifications.ScreenLockNotification;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity
 
     private TextView statusText, shareBtn, pageBtn, deviceAdminBtn;
     private CheckBox checkBox;
-    private Switch notificatinSwitch, volumeSwitch;
+    private Switch notificatinSwitch, volumeSwitch, shakeSwitch;
     private LinearLayout otherMenuLayout, transitionParentLayout;
     private long prevTime;
 
@@ -45,15 +46,19 @@ public class MainActivity extends AppCompatActivity
         deviceAdminBtn = (TextView) findViewById(R.id.device_admin_btn);
         notificatinSwitch = (Switch) findViewById(R.id.notification_switch);
         volumeSwitch = (Switch) findViewById(R.id.volume_key_switch);
+        shakeSwitch = (Switch) findViewById(R.id.shake_switch);
         otherMenuLayout = (LinearLayout) findViewById(R.id.other_menu_layout);
         transitionParentLayout = (LinearLayout) findViewById(R.id.transition_parent_layout);
 
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
+        {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.UNLOCK_STR, isChecked);
 
-                renderView();
+                ScreenLockService.manageService(MainActivity.this);
+                //renderView();
             }
         });
 
@@ -84,7 +89,10 @@ public class MainActivity extends AppCompatActivity
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.VOLUME_LOCK_ENABLE_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
 
-                if (isChecked && !VUtil.checkisDeviceAdminEnabled()) {
+                VDialog.showExperimentalDialog(MainActivity.this);
+
+                if (isChecked && !VUtil.checkisDeviceAdminEnabled())
+                {
                     VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_VOLUME_ENABLE);
                 }
             }
@@ -105,10 +113,26 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        shakeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                PhoneData.savePhoneData(MainActivity.this, KeyConstant.SHAKE_LOCK_STR, isChecked);
+
+                if(isChecked && !VUtil.checkisDeviceAdminEnabled())
+                {
+                    VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_SHAKE_ENABLE);
+                }
+
+                ScreenLockService.manageService(MainActivity.this);
+            }
+        });
+
         deviceAdminBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                VUtil.openDeviceManagerEnableAction(MainActivity.this);
+            public void onClick(View v)
+            {
+                VUtil.removeAdminAndUninstall(MainActivity.this);
+                //VUtil.openDeviceManagerEnableAction(MainActivity.this);
             }
         });
 
@@ -138,17 +162,16 @@ public class MainActivity extends AppCompatActivity
         statusText.setText(text);
         statusText.setTextColor(color);
 
-        ScreenLockService.manageService(this);
-        ScreenLockNotification.manageNotification(this);
+        //ScreenLockNotification.manageNotification(this);
 
-        if(isChecked)
+        /*if(isChecked)
         {
             otherMenuLayout.setVisibility(View.VISIBLE);
         }
         else
         {
             otherMenuLayout.setVisibility(View.GONE);
-        }
+        }*/
 
         boolean isNotifEnabled = PhoneData.getPhoneData(this, KeyConstant.NOTIF_LOCK_ENABLE_STR, false);
         boolean isKeyEnabled = PhoneData.getPhoneData(this, KeyConstant.VOLUME_LOCK_ENABLE_STR, false);
@@ -192,6 +215,15 @@ public class MainActivity extends AppCompatActivity
                 notificatinSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
                 PhoneData.savePhoneData(this, KeyConstant.NOTIF_LOCK_ENABLE_STR, VUtil.checkisDeviceAdminEnabled());
                 ScreenLockNotification.manageNotification(this);
+            }
+        }
+        else if(requestCode == RequestFor.REQUEST_SHAKE_ENABLE)
+        {
+            if(shakeSwitch != null)
+            {
+                notificatinSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(this, KeyConstant.SHAKE_LOCK_STR, VUtil.checkisDeviceAdminEnabled());
+                ScreenLockService.manageService(this);
             }
         }
 
