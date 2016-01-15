@@ -9,6 +9,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/ic_launcher_small"/>
+        android:background="@mipmap/ic_launcher"/>
 
 </LinearLayout><!-- From: file:/home/prasi/WorkSpace/ScreenLocker/app/src/main/res/layout/widget_screen_lock.xml -->

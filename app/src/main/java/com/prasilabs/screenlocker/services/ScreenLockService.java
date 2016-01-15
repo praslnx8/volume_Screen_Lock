@@ -104,6 +104,8 @@ public class ScreenLockService extends Service implements SensorEventListener
 
         flushShakeListener();
 
+        WindowManagerUtil.removeFloatingButton();
+
         super.onDestroy();
     }
 

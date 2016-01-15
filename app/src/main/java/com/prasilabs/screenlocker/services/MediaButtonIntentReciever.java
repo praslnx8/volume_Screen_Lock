@@ -11,9 +11,9 @@ import com.prasilabs.screenlocker.constants.KeyConstant;
 import com.prasilabs.screenlocker.constants.IntentConstant;
 import com.prasilabs.screenlocker.constants.RequestFor;
 import com.prasilabs.screenlocker.notifications.ScreenLockNotification;
+import com.prasilabs.screenlocker.utils.DeviceAdminUtil;
 import com.prasilabs.screenlocker.utils.MyLogger;
 import com.prasilabs.screenlocker.utils.PhoneData;
-import com.prasilabs.screenlocker.utils.VUtil;
 import com.prasilabs.screenlocker.view.MainActivity;
 
 public class MediaButtonIntentReciever extends BroadcastReceiver
@@ -106,7 +106,7 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
             }
             else if(intent.getAction().equals(IntentConstant.LOCK_SCREEN_ACTION_INTENT))
             {
-                if(VUtil.checkisDeviceAdminEnabled()) //Dont check for isEnabled
+                if(DeviceAdminUtil.checkisDeviceAdminEnabled()) //Dont check for isEnabled
                 {
                     lockScreenNow(context);
                 }
@@ -139,9 +139,9 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
 
     private void lockScreenNow(Context context)
     {
-        if(VUtil.checkisDeviceAdminEnabled())
+        if(DeviceAdminUtil.checkisDeviceAdminEnabled())
         {
-            VUtil.lockDevice();
+            DeviceAdminUtil.lockDevice();
         }
         else
         {

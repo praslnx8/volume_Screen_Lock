@@ -2,7 +2,6 @@ package com.prasilabs.screenlocker.view;
 
 import android.animation.LayoutTransition;
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -20,6 +19,7 @@ import com.prasilabs.screenlocker.components.VDialog;
 import com.prasilabs.screenlocker.constants.KeyConstant;
 import com.prasilabs.screenlocker.constants.RequestFor;
 import com.prasilabs.screenlocker.notifications.ScreenLockNotification;
+import com.prasilabs.screenlocker.utils.DeviceAdminUtil;
 import com.prasilabs.screenlocker.utils.MyLogger;
 import com.prasilabs.screenlocker.utils.PhoneData;
 import com.prasilabs.screenlocker.R;
@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity
         otherMenuLayout = (LinearLayout) findViewById(R.id.other_menu_layout);
         transitionParentLayout = (LinearLayout) findViewById(R.id.transition_parent_layout);
 
+        renderView(); //for not making too many popup on setChecked
+
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
@@ -78,14 +80,14 @@ public class MainActivity extends AppCompatActivity
         volumeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                PhoneData.savePhoneData(MainActivity.this, KeyConstant.VOLUME_LOCK_ENABLE_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(MainActivity.this, KeyConstant.VOLUME_LOCK_ENABLE_STR, isChecked && DeviceAdminUtil.checkisDeviceAdminEnabled());
 
                 if (isChecked) {
                     VDialog.showExperimentalDialog(MainActivity.this);
                 }
 
-                if (isChecked && !VUtil.checkisDeviceAdminEnabled()) {
-                    VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_VOLUME_ENABLE);
+                if (isChecked && !DeviceAdminUtil.checkisDeviceAdminEnabled()) {
+                    DeviceAdminUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_VOLUME_ENABLE);
                 }
             }
         });
@@ -93,10 +95,10 @@ public class MainActivity extends AppCompatActivity
         notificatinSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                PhoneData.savePhoneData(MainActivity.this, KeyConstant.NOTIF_LOCK_ENABLE_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(MainActivity.this, KeyConstant.NOTIF_LOCK_ENABLE_STR, isChecked && DeviceAdminUtil.checkisDeviceAdminEnabled());
 
-                if (isChecked && !VUtil.checkisDeviceAdminEnabled()) {
-                    VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_NOTIF_ENABLE);
+                if (isChecked && !DeviceAdminUtil.checkisDeviceAdminEnabled()) {
+                    DeviceAdminUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_NOTIF_ENABLE);
                 }
 
                 ScreenLockNotification.manageNotification(MainActivity.this);
@@ -107,11 +109,11 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                PhoneData.savePhoneData(MainActivity.this, KeyConstant.FLOATING_LOCK_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(MainActivity.this, KeyConstant.FLOATING_LOCK_STR, isChecked && DeviceAdminUtil.checkisDeviceAdminEnabled());
 
-                if (isChecked && !VUtil.checkisDeviceAdminEnabled())
+                if (isChecked && !DeviceAdminUtil.checkisDeviceAdminEnabled())
                 {
-                    VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_FLOATING_ENABLE);
+                    DeviceAdminUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_FLOATING_ENABLE);
                 }
 
                 ScreenLockService.manageService(MainActivity.this);
@@ -123,8 +125,8 @@ public class MainActivity extends AppCompatActivity
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.SHAKE_LOCK_STR, isChecked);
 
-                if (isChecked && !VUtil.checkisDeviceAdminEnabled()) {
-                    VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_SHAKE_ENABLE);
+                if (isChecked && !DeviceAdminUtil.checkisDeviceAdminEnabled()) {
+                    DeviceAdminUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_SHAKE_ENABLE);
                 } else if (isChecked) {
                     VDialog.setThresoldBar(MainActivity.this);
                 }
@@ -137,7 +139,7 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                VUtil.removeAdminAndUninstall(MainActivity.this);
+                DeviceAdminUtil.removeAdminAndUninstall(MainActivity.this);
             }
         });
 
@@ -172,12 +174,12 @@ public class MainActivity extends AppCompatActivity
         boolean isShakeEnabled = PhoneData.getPhoneData(this, KeyConstant.SHAKE_LOCK_STR, false);
         boolean isFloatingEnabed = PhoneData.getPhoneData(this, KeyConstant.FLOATING_LOCK_STR, false);
 
-        notificatinSwitch.setChecked(isNotifEnabled && VUtil.checkisDeviceAdminEnabled());
-        volumeSwitch.setChecked(isKeyEnabled && VUtil.checkisDeviceAdminEnabled());
-        shakeSwitch.setChecked(isShakeEnabled && VUtil.checkisDeviceAdminEnabled());
-        floatingSwitch.setChecked(isFloatingEnabed && VUtil.checkisDeviceAdminEnabled());
+        notificatinSwitch.setChecked(isNotifEnabled && DeviceAdminUtil.checkisDeviceAdminEnabled());
+        volumeSwitch.setChecked(isKeyEnabled && DeviceAdminUtil.checkisDeviceAdminEnabled());
+        shakeSwitch.setChecked(isShakeEnabled && DeviceAdminUtil.checkisDeviceAdminEnabled());
+        floatingSwitch.setChecked(isFloatingEnabed && DeviceAdminUtil.checkisDeviceAdminEnabled());
 
-        if(VUtil.checkisDeviceAdminEnabled())
+        if(DeviceAdminUtil.checkisDeviceAdminEnabled())
         {
             deviceAdminBtn.setVisibility(View.VISIBLE);
         }
@@ -227,16 +229,16 @@ public class MainActivity extends AppCompatActivity
         {
             if(volumeSwitch != null)
             {
-                volumeSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
-                PhoneData.savePhoneData(this, KeyConstant.VOLUME_LOCK_ENABLE_STR, VUtil.checkisDeviceAdminEnabled());
+                volumeSwitch.setChecked(DeviceAdminUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(this, KeyConstant.VOLUME_LOCK_ENABLE_STR, DeviceAdminUtil.checkisDeviceAdminEnabled());
             }
         }
         else if(requestCode == RequestFor.REQUEST_NOTIF_ENABLE)
         {
             if(notificatinSwitch != null)
             {
-                notificatinSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
-                PhoneData.savePhoneData(this, KeyConstant.NOTIF_LOCK_ENABLE_STR, VUtil.checkisDeviceAdminEnabled());
+                notificatinSwitch.setChecked(DeviceAdminUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(this, KeyConstant.NOTIF_LOCK_ENABLE_STR, DeviceAdminUtil.checkisDeviceAdminEnabled());
                 ScreenLockNotification.manageNotification(this);
             }
         }
@@ -244,11 +246,11 @@ public class MainActivity extends AppCompatActivity
         {
             if(shakeSwitch != null)
             {
-                notificatinSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
-                PhoneData.savePhoneData(this, KeyConstant.SHAKE_LOCK_STR, VUtil.checkisDeviceAdminEnabled());
+                notificatinSwitch.setChecked(DeviceAdminUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(this, KeyConstant.SHAKE_LOCK_STR, DeviceAdminUtil.checkisDeviceAdminEnabled());
                 ScreenLockService.manageService(this);
 
-                if(VUtil.checkisDeviceAdminEnabled())
+                if(DeviceAdminUtil.checkisDeviceAdminEnabled())
                 {
                     VDialog.setThresoldBar(this);
                 }
@@ -258,8 +260,8 @@ public class MainActivity extends AppCompatActivity
         {
             if(floatingSwitch != null)
             {
-                floatingSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
-                PhoneData.savePhoneData(this, KeyConstant.FLOATING_LOCK_STR, VUtil.checkisDeviceAdminEnabled());
+                floatingSwitch.setChecked(DeviceAdminUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(this, KeyConstant.FLOATING_LOCK_STR, DeviceAdminUtil.checkisDeviceAdminEnabled());
                 ScreenLockService.manageService(this);
             }
         }

@@ -2172,8 +2172,6 @@ com.prasilabs.screenlocker.R$drawable: int gcard
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn_small
 com.prasilabs.screenlocker.R$drawable: int ic_action_favorite
-com.prasilabs.screenlocker.R$drawable: int ic_launcher
-com.prasilabs.screenlocker.R$drawable: int ic_launcher_small
 com.prasilabs.screenlocker.R$drawable: int ic_social_person_outline
 com.prasilabs.screenlocker.R$drawable: int ic_social_share
 com.prasilabs.screenlocker.R$drawable: int notification_template_icon_bg

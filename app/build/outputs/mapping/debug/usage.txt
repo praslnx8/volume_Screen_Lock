@@ -3567,8 +3567,6 @@ com.prasilabs.screenlocker.utils.PhoneData:
     60:61:public static void savePhoneData(android.content.Context,java.lang.String,long)
     78:85:public static long getPhoneData(android.content.Context,java.lang.String,long)
 com.prasilabs.screenlocker.utils.ShareUtil:
-    11:11:public ShareUtil()
-com.prasilabs.screenlocker.utils.VUtil:
-    91:92:public static void openDeviceManagerEnableAction(android.app.Activity)
+    12:12:public ShareUtil()
 com.prasilabs.screenlocker.utils.WindowManagerUtil:
     private static final int MAX_CLICK_DURATION

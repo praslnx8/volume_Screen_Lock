@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/share_btn" android:icon="@drawable/ic_social_share" android:title="SHARE VPL"  android:onClick="menuClick"/>
-    <item android:id="@+id/rate_btn" android:icon="@drawable/ic_action_favorite" android:title="RATE US" android:onClick="menuClick"/>
-    <item android:id="@+id/about_btn" android:icon="@drawable/ic_social_person_outline" android:title="ABOUT US" android:onClick="menuClick"/>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/share_btn" android:icon="@drawable/ic_social_share" android:title="SHARE VPL"  android:onClick="menuClick" app:showAsAction="ifRoom"/>
+    <item android:id="@+id/rate_btn" android:icon="@drawable/ic_action_favorite" android:title="RATE US" android:onClick="menuClick" app:showAsAction="ifRoom"/>
+    <item android:id="@+id/about_btn" android:icon="@drawable/ic_social_person_outline" android:title="ABOUT US" android:onClick="menuClick" app:showAsAction="ifRoom"/>
 </menu>

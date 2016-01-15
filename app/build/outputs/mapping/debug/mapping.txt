@@ -7012,12 +7012,21 @@ com.prasilabs.screenlocker.services.ScreenLockService -> com.prasilabs.screenloc
     void onSensorChanged(android.hardware.SensorEvent) -> onSensorChanged
     void onAccuracyChanged(android.hardware.Sensor,int) -> onAccuracyChanged
     void <clinit>() -> <clinit>
-com.prasilabs.screenlocker.utils.MyLogger -> com.prasilabs.screenlocker.d.a:
+com.prasilabs.screenlocker.utils.DeviceAdminUtil -> com.prasilabs.screenlocker.d.a:
+    java.lang.String TAG -> a
+    void <init>() -> <init>
+    boolean checkisDeviceAdminEnabled() -> a
+    boolean lockDevice() -> b
+    void removeAdminAndUninstall(android.content.Context) -> a
+    void openDeviceManagerEnableAction(android.app.Activity) -> a
+    void openDeviceManagerEnableAction(android.app.Activity,int) -> a
+    void <clinit>() -> <clinit>
+com.prasilabs.screenlocker.utils.MyLogger -> com.prasilabs.screenlocker.d.b:
     void l(java.lang.String,java.lang.String) -> a
     void lw(java.lang.String,java.lang.String) -> b
     void e(java.lang.Exception) -> a
     void writeToFile(java.lang.String,java.lang.String) -> c
-com.prasilabs.screenlocker.utils.PhoneData -> com.prasilabs.screenlocker.d.b:
+com.prasilabs.screenlocker.utils.PhoneData -> com.prasilabs.screenlocker.d.c:
     java.lang.String TAG -> a
     void <init>() -> <init>
     void savePhoneData(android.content.Context,java.lang.String,java.lang.String) -> a
@@ -7027,7 +7036,7 @@ com.prasilabs.screenlocker.utils.PhoneData -> com.prasilabs.screenlocker.d.b:
     boolean getPhoneData(android.content.Context,java.lang.String,boolean) -> b
     int getPhoneData(android.content.Context,java.lang.String,int) -> b
     void <clinit>() -> <clinit>
-com.prasilabs.screenlocker.utils.ShakeSensorUtil -> com.prasilabs.screenlocker.d.c:
+com.prasilabs.screenlocker.utils.ShakeSensorUtil -> com.prasilabs.screenlocker.d.d:
     java.lang.String TAG -> a
     long lastUpdate -> b
     float x -> c
@@ -7040,20 +7049,16 @@ com.prasilabs.screenlocker.utils.ShakeSensorUtil -> com.prasilabs.screenlocker.d
     void handleShake(android.content.Context,android.hardware.SensorEvent) -> a
     float Round(float,int) -> a
     void <clinit>() -> <clinit>
-com.prasilabs.screenlocker.utils.ShareUtil -> com.prasilabs.screenlocker.d.d:
+com.prasilabs.screenlocker.utils.ShareUtil -> com.prasilabs.screenlocker.d.e:
     void shareApp(android.content.Context) -> a
     void gotoPage(android.content.Context) -> b
     void rateApp(android.content.Context) -> c
-com.prasilabs.screenlocker.utils.VUtil -> com.prasilabs.screenlocker.d.e:
+com.prasilabs.screenlocker.utils.VUtil -> com.prasilabs.screenlocker.d.f:
     java.lang.String TAG -> a
     void <init>() -> <init>
-    boolean checkisDeviceAdminEnabled() -> a
-    boolean lockDevice() -> b
-    void removeAdminAndUninstall(android.content.Context) -> a
-    void openDeviceManagerEnableAction(android.app.Activity,int) -> a
     void createShortCut(android.app.Activity) -> a
     void <clinit>() -> <clinit>
-com.prasilabs.screenlocker.utils.WindowManagerUtil -> com.prasilabs.screenlocker.d.f:
+com.prasilabs.screenlocker.utils.WindowManagerUtil -> com.prasilabs.screenlocker.d.g:
     java.lang.String TAG -> a
     android.widget.ImageView imageView -> b
     long startClickTime -> c
@@ -7065,7 +7070,7 @@ com.prasilabs.screenlocker.utils.WindowManagerUtil -> com.prasilabs.screenlocker
     long access$100() -> c
     android.widget.ImageView access$200() -> d
     void <clinit>() -> <clinit>
-com.prasilabs.screenlocker.utils.WindowManagerUtil$1 -> com.prasilabs.screenlocker.d.g:
+com.prasilabs.screenlocker.utils.WindowManagerUtil$1 -> com.prasilabs.screenlocker.d.h:
     int initialX -> c
     int initialY -> d
     float initialTouchX -> e

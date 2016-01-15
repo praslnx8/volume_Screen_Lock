@@ -11,8 +11,8 @@ import com.prasilabs.screenlocker.R;
 import com.prasilabs.screenlocker.constants.KeyConstant;
 import com.prasilabs.screenlocker.constants.NotificationConstant;
 import com.prasilabs.screenlocker.constants.IntentConstant;
+import com.prasilabs.screenlocker.utils.DeviceAdminUtil;
 import com.prasilabs.screenlocker.utils.PhoneData;
-import com.prasilabs.screenlocker.utils.VUtil;
 
 /**
  * Created by prasi on 9/1/16.
@@ -26,7 +26,7 @@ public class ScreenLockNotification
         boolean isEnabled = PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false);
         boolean isNotifEnabled = PhoneData.getPhoneData(context, KeyConstant.NOTIF_LOCK_ENABLE_STR, false);
 
-        if(isEnabled && isNotifEnabled && VUtil.checkisDeviceAdminEnabled())
+        if(isEnabled && isNotifEnabled && DeviceAdminUtil.checkisDeviceAdminEnabled())
         {
             createNotification(context);
             isShowNotification = true;
@@ -55,6 +55,7 @@ public class ScreenLockNotification
 
         Notification notification = mBuilder.build();
         notification.flags = Notification.FLAG_ONGOING_EVENT;
+        notification.priority = Notification.PRIORITY_HIGH;
 
         NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.cancel(NotificationConstant.SCREEN_LOCK_NOTIFICATION);

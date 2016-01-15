@@ -6,9 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.prasilabs.screenlocker.constants.Constant;
 import com.prasilabs.screenlocker.constants.IntentConstant;
+import com.prasilabs.screenlocker.utils.DeviceAdminUtil;
 
 /**
  * Created by prasi on 10/1/16.
+ * For doing lock now action
  */
 public class LockNowActivity extends AppCompatActivity
 {
@@ -17,9 +19,14 @@ public class LockNowActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
 
-        Intent intent = new Intent();
-        intent.setAction(IntentConstant.LOCK_SCREEN_ACTION_INTENT);
-        sendBroadcast(intent);
+        if(DeviceAdminUtil.checkisDeviceAdminEnabled())
+        {
+            DeviceAdminUtil.lockDevice();
+        }
+        else
+        {
+            DeviceAdminUtil.openDeviceManagerEnableAction(this);
+        }
 
         finish();
     }

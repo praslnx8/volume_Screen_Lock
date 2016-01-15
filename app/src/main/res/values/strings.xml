@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">Volume Power Button</string>
-
+    <string name="app_name">Volume Screen Lock</string>
 
     <string name="enabled_str">Enabled</string>
     <string name="disabled_str">Disabled</string>

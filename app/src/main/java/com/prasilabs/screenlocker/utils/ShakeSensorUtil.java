@@ -4,7 +4,6 @@ import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorManager;
-import android.widget.Toast;
 
 import com.prasilabs.screenlocker.constants.KeyConstant;
 
@@ -62,7 +61,7 @@ public class ShakeSensorUtil
                 if (speed > shakeThresold)
                 {
                     MyLogger.l(TAG, "shake detected w/ speed: " + speed);
-                    VUtil.lockDevice();
+                    DeviceAdminUtil.lockDevice();
                 }
                 last_x = x;
                 last_y = y;

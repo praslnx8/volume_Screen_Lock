@@ -5,4 +5,4 @@
     android:minHeight="40dp"
     android:updatePeriodMillis="1800000"
     android:resizeMode="horizontal|vertical"
-    android:previewImage="@drawable/ic_launcher_small" />
+    android:previewImage="@mipmap/ic_launcher" />

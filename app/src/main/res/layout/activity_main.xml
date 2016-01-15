@@ -250,8 +250,8 @@
 
     <LinearLayout
         android:id="@+id/bottom_layout"
-        android:padding="@dimen/paddingXXS"
-        android:layout_margin="@dimen/paddingXXXS"
+        android:paddingTop="@dimen/paddingXXS"
+        android:layout_marginTop="@dimen/paddingXXXS"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

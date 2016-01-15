@@ -3,7 +3,6 @@ package com.prasilabs.screenlocker.utils;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.os.Build;
-import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
@@ -13,6 +12,7 @@ import com.prasilabs.screenlocker.R;
 
 /**
  * Created by prasi on 15/1/16.
+ * Deals with the floating button
  */
 public class WindowManagerUtil
 {
@@ -28,16 +28,16 @@ public class WindowManagerUtil
             imageView = new ImageView(context);
             imageView.setClickable(true);
 
-            imageView.setMaxWidth(70);
-            imageView.setMaxHeight(70);
+            imageView.setMaxWidth(40);
+            imageView.setMaxHeight(40);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             {
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_launcher_small, null));
+                imageView.setImageDrawable(context.getResources().getDrawable(R.mipmap.ic_launcher, null));
             }
             else
             {
                 //noinspection deprecation
-                imageView.setImageDrawable(context.getResources().getDrawable(R.drawable.ic_launcher_small));
+                imageView.setImageDrawable(context.getResources().getDrawable(R.mipmap.ic_launcher));
             }
         }
 
@@ -45,8 +45,6 @@ public class WindowManagerUtil
         if(!imageView.isShown())
         {
             final WindowManager.LayoutParams params = new WindowManager.LayoutParams(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.TYPE_PHONE, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, PixelFormat.TRANSLUCENT);
-            params.x = 10;
-            params.y = 10;
             params.setTitle("");
             final WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
 
@@ -83,7 +81,7 @@ public class WindowManagerUtil
                             if (clickDuration < MAX_CLICK_DURATION)
                             {
                                 MyLogger.l(TAG, "clicked");
-                                VUtil.lockDevice();
+                                DeviceAdminUtil.lockDevice();
                             }
 
                             break;
@@ -112,8 +110,11 @@ public class WindowManagerUtil
     {
         if(imageView != null && imageView.getContext() != null)
         {
-            final WindowManager wm = (WindowManager) imageView.getContext().getSystemService(Context.WINDOW_SERVICE);
-            wm.removeView(imageView);
+            if(imageView.isShown())
+            {
+                WindowManager wm = (WindowManager) imageView.getContext().getSystemService(Context.WINDOW_SERVICE);
+                wm.removeViewImmediate(imageView);
+            }
         }
     }
 }

@@ -383,7 +383,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <!-- From: file:/home/prasi/WorkSpace/ScreenLocker/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="app_name">Volume Power Button</string>
+    <string name="app_name">Volume Screen Lock</string>
     <string name="btn_disable_device_admin">Disable Device Admin</string>
     <string name="btn_enable_device_admin">Enable Device Admin</string>
     <string name="disabled_str">Disabled</string>

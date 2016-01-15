@@ -20,8 +20,8 @@ public class VDialog
         AlertDialog.Builder alertBuilder = new AlertDialog.Builder(context);
 
         alertBuilder.setTitle("Experimental Feature");
-        alertBuilder.setMessage("Double press volume key to lock screen. \n Use it with caution. If not working uncheck it.. :) \n Have a happy day");
-        alertBuilder.setIcon(R.drawable.ic_launcher);
+        alertBuilder.setMessage("Double press volume key to lock screen. \n Use it with caution.");
+        alertBuilder.setIcon(R.mipmap.ic_launcher);
 
         AlertDialog alertDialog = alertBuilder.create();
         alertDialog.show();
