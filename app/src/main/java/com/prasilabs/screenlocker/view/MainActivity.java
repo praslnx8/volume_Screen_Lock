@@ -1,7 +1,7 @@
 package com.prasilabs.screenlocker.view;
 
-import android.animation.LayoutTransition;
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,7 +10,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,7 +24,6 @@ import com.prasilabs.screenlocker.utils.PhoneData;
 import com.prasilabs.screenlocker.R;
 import com.prasilabs.screenlocker.services.ScreenLockService;
 import com.prasilabs.screenlocker.utils.ShareUtil;
-import com.prasilabs.screenlocker.utils.VUtil;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -34,7 +32,6 @@ public class MainActivity extends AppCompatActivity
     private TextView statusText, pageBtn, deviceAdminBtn;
     private CheckBox checkBox;
     private Switch notificatinSwitch, volumeSwitch, shakeSwitch, floatingSwitch;
-    private LinearLayout otherMenuLayout, transitionParentLayout;
     private long prevTime;
 
     @Override
@@ -51,20 +48,17 @@ public class MainActivity extends AppCompatActivity
         volumeSwitch = (Switch) findViewById(R.id.volume_key_switch);
         shakeSwitch = (Switch) findViewById(R.id.shake_switch);
         floatingSwitch = (Switch) findViewById(R.id.floating_switch);
-        otherMenuLayout = (LinearLayout) findViewById(R.id.other_menu_layout);
-        transitionParentLayout = (LinearLayout) findViewById(R.id.transition_parent_layout);
 
         renderView(); //for not making too many popup on setChecked
 
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
-            {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.UNLOCK_STR, isChecked);
                 ScreenLockService.manageService(MainActivity.this);
 
                 String text = isChecked ? getString(R.string.enabled_str) : getString(R.string.disabled_str);
-                int color = isChecked ? getResources().getColor(R.color.green) : getResources().getColor(R.color.red);
+                int color = isChecked ? ContextCompat.getColor(MainActivity.this, R.color.green) : ContextCompat.getColor(MainActivity.this, R.color.red);
                 statusText.setText(text);
                 statusText.setTextColor(color);
             }
@@ -107,12 +101,10 @@ public class MainActivity extends AppCompatActivity
 
         floatingSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
-            {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.FLOATING_LOCK_STR, isChecked && DeviceAdminUtil.checkisDeviceAdminEnabled());
 
-                if (isChecked && !DeviceAdminUtil.checkisDeviceAdminEnabled())
-                {
+                if (isChecked && !DeviceAdminUtil.checkisDeviceAdminEnabled()) {
                     DeviceAdminUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_FLOATING_ENABLE);
                 }
 
@@ -137,23 +129,17 @@ public class MainActivity extends AppCompatActivity
 
         deviceAdminBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 DeviceAdminUtil.removeAdminAndUninstall(MainActivity.this);
             }
         });
-
-
-        LayoutTransition transition = new LayoutTransition();
-        transition.setDuration(LayoutTransition.CHANGING, 1000);
-        transition.addChild(transitionParentLayout, otherMenuLayout);
 
         if(getIntent() != null && getIntent().getExtras() != null)
         {
             MyLogger.l(TAG, "Intent came");
             if(getIntent().getExtras().getInt(KeyConstant.REQUEST_FOR_STR) == RequestFor.ACTIVATE_DEVICE_ADMIN)
             {
-               deviceAdminBtn.performClick();
+                DeviceAdminUtil.openDeviceManagerEnableAction(this);
             }
         }
     }
@@ -163,7 +149,7 @@ public class MainActivity extends AppCompatActivity
         boolean isChecked = PhoneData.getPhoneData(this, KeyConstant.UNLOCK_STR, false);
 
         String text = isChecked ? getString(R.string.enabled_str) : getString(R.string.disabled_str);
-        int color = isChecked ? getResources().getColor(R.color.green) : getResources().getColor(R.color.red);
+        int color = isChecked ? ContextCompat.getColor(this, R.color.green) : ContextCompat.getColor(this, R.color.red);
 
         checkBox.setChecked(isChecked);
         statusText.setText(text);
@@ -187,6 +173,8 @@ public class MainActivity extends AppCompatActivity
         {
             deviceAdminBtn.setVisibility(View.GONE);
         }
+
+        ScreenLockService.manageService(this);
     }
 
     @Override

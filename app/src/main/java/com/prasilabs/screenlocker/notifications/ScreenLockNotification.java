@@ -23,10 +23,9 @@ public class ScreenLockNotification
     public static boolean manageNotification(Context context)
     {
         boolean isShowNotification = false;
-        boolean isEnabled = PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false);
         boolean isNotifEnabled = PhoneData.getPhoneData(context, KeyConstant.NOTIF_LOCK_ENABLE_STR, false);
 
-        if(isEnabled && isNotifEnabled && DeviceAdminUtil.checkisDeviceAdminEnabled())
+        if(isNotifEnabled && DeviceAdminUtil.checkisDeviceAdminEnabled())
         {
             createNotification(context);
             isShowNotification = true;

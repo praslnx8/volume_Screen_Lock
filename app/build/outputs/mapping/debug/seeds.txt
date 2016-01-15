@@ -2244,7 +2244,6 @@ com.prasilabs.screenlocker.R$id: int never
 com.prasilabs.screenlocker.R$id: int none
 com.prasilabs.screenlocker.R$id: int normal
 com.prasilabs.screenlocker.R$id: int notification_switch
-com.prasilabs.screenlocker.R$id: int other_menu_layout
 com.prasilabs.screenlocker.R$id: int page_btn
 com.prasilabs.screenlocker.R$id: int parentPanel
 com.prasilabs.screenlocker.R$id: int progress_circular
@@ -2287,7 +2286,6 @@ com.prasilabs.screenlocker.R$id: int time
 com.prasilabs.screenlocker.R$id: int title
 com.prasilabs.screenlocker.R$id: int title_template
 com.prasilabs.screenlocker.R$id: int topPanel
-com.prasilabs.screenlocker.R$id: int transition_parent_layout
 com.prasilabs.screenlocker.R$id: int up
 com.prasilabs.screenlocker.R$id: int useLogo
 com.prasilabs.screenlocker.R$id: int volume_key_switch

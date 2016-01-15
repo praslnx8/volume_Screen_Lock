@@ -834,7 +834,6 @@ android.support.v4.content.ContextCompat:
     280:291:public static java.io.File[] getExternalCacheDirs(android.content.Context)
     296:304:private static varargs java.io.File buildPath(java.io.File,java.lang.String[])
     342:346:public static final android.content.res.ColorStateList getColorStateList(android.content.Context,int)
-    364:368:public static final int getColor(android.content.Context,int)
     383:387:public static int checkSelfPermission(android.content.Context,java.lang.String)
     407:412:public final java.io.File getNoBackupFilesDir(android.content.Context)
     432:437:public final java.io.File getCodeCacheDir(android.content.Context)
@@ -843,7 +842,9 @@ android.support.v4.content.ContextCompatApi21:
     24:24:ContextCompatApi21()
     30:30:public static java.io.File getNoBackupFilesDir(android.content.Context)
     34:34:public static java.io.File getCodeCacheDir(android.content.Context)
-android.support.v4.content.ContextCompatApi23
+android.support.v4.content.ContextCompatApi23:
+    25:25:ContextCompatApi23()
+    27:27:public static android.content.res.ColorStateList getColorStateList(android.content.Context,int)
 android.support.v4.content.ContextCompatFroyo
 android.support.v4.content.ContextCompatHoneycomb:
     27:27:ContextCompatHoneycomb()

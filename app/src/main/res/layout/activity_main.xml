@@ -13,7 +13,6 @@
         android:layout_above="@+id/bottom_layout">
 
         <LinearLayout
-            android:id="@+id/transition_parent_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -94,7 +93,6 @@
                 android:layout_height="@dimen/paddingS" />
 
             <LinearLayout
-                android:id="@+id/other_menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/paddingS"
@@ -108,32 +106,6 @@
                     android:layout_height="wrap_content"
 
                     android:text="@string/enable_screen_lock_option_message"/>
-
-                <LinearLayout
-                    android:padding="@dimen/paddingXS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/textL.primary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/double_press_volume_lock_message"
-                        android:layout_weight="3"/>
-
-                    <View
-                        android:layout_width="@dimen/paddingXS"
-                        android:layout_height="0dp" />
-
-                    <Switch
-                        android:id="@+id/volume_key_switch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_weight="1"/>
-
-                </LinearLayout>
 
                 <LinearLayout
                     android:padding="@dimen/paddingXS"
@@ -206,6 +178,32 @@
 
                     <Switch
                         android:id="@+id/floating_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:padding="@dimen/paddingXS"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/textL.primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/double_press_volume_lock_message"
+                        android:layout_weight="3"/>
+
+                    <View
+                        android:layout_width="@dimen/paddingXS"
+                        android:layout_height="0dp" />
+
+                    <Switch
+                        android:id="@+id/volume_key_switch"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"

@@ -990,29 +990,32 @@ android.support.v4.app.TaskStackBuilder$TaskStackBuilderImplHoneycomb -> android
 android.support.v4.content.ContextCompat -> android.support.v4.b.a:
     boolean startActivities(android.content.Context,android.content.Intent[],android.os.Bundle) -> a
     android.graphics.drawable.Drawable getDrawable(android.content.Context,int) -> a
+    int getColor(android.content.Context,int) -> b
 android.support.v4.content.ContextCompatApi21 -> android.support.v4.b.b:
     android.graphics.drawable.Drawable getDrawable(android.content.Context,int) -> a
-android.support.v4.content.ContextCompatHoneycomb -> android.support.v4.b.c:
+android.support.v4.content.ContextCompatApi23 -> android.support.v4.b.c:
+    int getColor(android.content.Context,int) -> a
+android.support.v4.content.ContextCompatHoneycomb -> android.support.v4.b.d:
     void startActivities(android.content.Context,android.content.Intent[]) -> a
-android.support.v4.content.ContextCompatJellybean -> android.support.v4.b.d:
+android.support.v4.content.ContextCompatJellybean -> android.support.v4.b.e:
     void startActivities(android.content.Context,android.content.Intent[],android.os.Bundle) -> a
-android.support.v4.content.IntentCompat -> android.support.v4.b.e:
+android.support.v4.content.IntentCompat -> android.support.v4.b.f:
     android.support.v4.content.IntentCompat$IntentCompatImpl IMPL -> a
     android.content.Intent makeMainActivity(android.content.ComponentName) -> a
     void <clinit>() -> <clinit>
-android.support.v4.content.IntentCompat$IntentCompatImpl -> android.support.v4.b.f:
+android.support.v4.content.IntentCompat$IntentCompatImpl -> android.support.v4.b.g:
     android.content.Intent makeMainActivity(android.content.ComponentName) -> a
-android.support.v4.content.IntentCompat$IntentCompatImplBase -> android.support.v4.b.g:
+android.support.v4.content.IntentCompat$IntentCompatImplBase -> android.support.v4.b.h:
     void <init>() -> <init>
     android.content.Intent makeMainActivity(android.content.ComponentName) -> a
-android.support.v4.content.IntentCompat$IntentCompatImplHC -> android.support.v4.b.h:
+android.support.v4.content.IntentCompat$IntentCompatImplHC -> android.support.v4.b.i:
     void <init>() -> <init>
     android.content.Intent makeMainActivity(android.content.ComponentName) -> a
-android.support.v4.content.IntentCompat$IntentCompatImplIcsMr1 -> android.support.v4.b.i:
+android.support.v4.content.IntentCompat$IntentCompatImplIcsMr1 -> android.support.v4.b.j:
     void <init>() -> <init>
-android.support.v4.content.IntentCompatHoneycomb -> android.support.v4.b.j:
+android.support.v4.content.IntentCompatHoneycomb -> android.support.v4.b.k:
     android.content.Intent makeMainActivity(android.content.ComponentName) -> a
-android.support.v4.content.Loader -> android.support.v4.b.k:
+android.support.v4.content.Loader -> android.support.v4.b.l:
     int mId -> a
     android.support.v4.content.Loader$OnLoadCompleteListener mListener -> b
     android.support.v4.content.Loader$OnLoadCanceledListener mOnLoadCanceledListener -> c
@@ -1034,8 +1037,8 @@ android.support.v4.content.Loader -> android.support.v4.b.k:
     java.lang.String dataToString(java.lang.Object) -> a
     java.lang.String toString() -> toString
     void dump(java.lang.String,java.io.FileDescriptor,java.io.PrintWriter,java.lang.String[]) -> a
-android.support.v4.content.Loader$OnLoadCanceledListener -> android.support.v4.b.l:
-android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.b.m:
+android.support.v4.content.Loader$OnLoadCanceledListener -> android.support.v4.b.m:
+android.support.v4.content.Loader$OnLoadCompleteListener -> android.support.v4.b.n:
 android.support.v4.graphics.ColorUtils -> android.support.v4.c.a:
     int compositeColors(int,int) -> a
     int compositeAlpha(int,int) -> c
@@ -7086,9 +7089,7 @@ com.prasilabs.screenlocker.view.MainActivity -> com.prasilabs.screenlocker.view.
     android.widget.Switch volumeSwitch -> o
     android.widget.Switch shakeSwitch -> p
     android.widget.Switch floatingSwitch -> q
-    android.widget.LinearLayout otherMenuLayout -> r
-    android.widget.LinearLayout transitionParentLayout -> s
-    long prevTime -> t
+    long prevTime -> r
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
     void renderView() -> j

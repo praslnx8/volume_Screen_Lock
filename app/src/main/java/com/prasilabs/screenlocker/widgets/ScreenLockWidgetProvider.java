@@ -22,6 +22,7 @@ public class ScreenLockWidgetProvider extends AppWidgetProvider
     private static final String TAG = ScreenLockWidgetProvider.class.getSimpleName();
 
 
+
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds)
     {
