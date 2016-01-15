@@ -76,10 +76,14 @@ public class VUtil
             }
         }
 
-        String packageName = context.getPackageName();
+        Intent intent = new Intent(android.provider.Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+        intent.setData(Uri.parse("package:" + context.getPackageName()));
+        context.startActivity(intent);
+        //intentionally dont direclty uninstall
+        /*String packageName = context.getPackageName();
         Intent intent = new Intent(Intent.ACTION_DELETE);
         intent.setData(Uri.parse("package:" + packageName));
-        context.startActivity(intent);
+        context.startActivity(intent);*/
     }
 
     public static void openDeviceManagerEnableAction(Activity activity)

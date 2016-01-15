@@ -85,3 +85,8 @@
 # view AndroidManifest.xml #generated:28
 -keep class com.prasilabs.screenlocker.widgets.ShortCutActivity { <init>(...); }
 
+# onClick res/menu/main_menu.xml #generated:3
+# onClick res/menu/main_menu.xml #generated:4
+# onClick res/menu/main_menu.xml #generated:5
+-keepclassmembers class * { *** menuClick(...); }
+

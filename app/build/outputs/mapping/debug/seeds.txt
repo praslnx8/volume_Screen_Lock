@@ -2171,8 +2171,11 @@ com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_material
 com.prasilabs.screenlocker.R$drawable: int gcard
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn_small
+com.prasilabs.screenlocker.R$drawable: int ic_action_favorite
 com.prasilabs.screenlocker.R$drawable: int ic_launcher
 com.prasilabs.screenlocker.R$drawable: int ic_launcher_small
+com.prasilabs.screenlocker.R$drawable: int ic_social_person_outline
+com.prasilabs.screenlocker.R$drawable: int ic_social_share
 com.prasilabs.screenlocker.R$drawable: int notification_template_icon_bg
 com.prasilabs.screenlocker.R$drawable: int primary_btn
 com.prasilabs.screenlocker.R$drawable: int primary_btn_big
@@ -2186,6 +2189,7 @@ com.prasilabs.screenlocker.R$drawable: int secondary_transparent_btn
 com.prasilabs.screenlocker.R$drawable: int secondary_transparent_btn_big
 com.prasilabs.screenlocker.R$drawable: int secondary_transparent_btn_small
 com.prasilabs.screenlocker.R$drawable: int white_transparent_btn
+com.prasilabs.screenlocker.R$id: int about_btn
 com.prasilabs.screenlocker.R$id: int action0
 com.prasilabs.screenlocker.R$id: int action_bar
 com.prasilabs.screenlocker.R$id: int action_bar_activity_content
@@ -2247,6 +2251,7 @@ com.prasilabs.screenlocker.R$id: int parentPanel
 com.prasilabs.screenlocker.R$id: int progress_circular
 com.prasilabs.screenlocker.R$id: int progress_horizontal
 com.prasilabs.screenlocker.R$id: int radio
+com.prasilabs.screenlocker.R$id: int rate_btn
 com.prasilabs.screenlocker.R$id: int screen
 com.prasilabs.screenlocker.R$id: int screen_lock_btn
 com.prasilabs.screenlocker.R$id: int scrollView
@@ -2262,6 +2267,7 @@ com.prasilabs.screenlocker.R$id: int search_src_text
 com.prasilabs.screenlocker.R$id: int search_voice_btn
 com.prasilabs.screenlocker.R$id: int select_dialog_listview
 com.prasilabs.screenlocker.R$id: int shake_switch
+com.prasilabs.screenlocker.R$id: int shake_thresold_seek_bar
 com.prasilabs.screenlocker.R$id: int share_btn
 com.prasilabs.screenlocker.R$id: int shortcut
 com.prasilabs.screenlocker.R$id: int showCustom
@@ -2326,11 +2332,13 @@ com.prasilabs.screenlocker.R$layout: int notification_template_lines
 com.prasilabs.screenlocker.R$layout: int notification_template_media
 com.prasilabs.screenlocker.R$layout: int notification_template_part_chronometer
 com.prasilabs.screenlocker.R$layout: int notification_template_part_time
+com.prasilabs.screenlocker.R$layout: int seek_bar_layout
 com.prasilabs.screenlocker.R$layout: int select_dialog_item_material
 com.prasilabs.screenlocker.R$layout: int select_dialog_multichoice_material
 com.prasilabs.screenlocker.R$layout: int select_dialog_singlechoice_material
 com.prasilabs.screenlocker.R$layout: int support_simple_spinner_dropdown_item
 com.prasilabs.screenlocker.R$layout: int widget_screen_lock
+com.prasilabs.screenlocker.R$menu: int main_menu
 com.prasilabs.screenlocker.R$mipmap: int ic_launcher
 com.prasilabs.screenlocker.R$raw: int sound
 com.prasilabs.screenlocker.R$string: int abc_action_bar_home_description
@@ -3040,6 +3048,7 @@ com.prasilabs.screenlocker.services.ScreenLockService
 com.prasilabs.screenlocker.services.ScreenLockService: ScreenLockService()
 com.prasilabs.screenlocker.view.MainActivity
 com.prasilabs.screenlocker.view.MainActivity: MainActivity()
+com.prasilabs.screenlocker.view.MainActivity: void menuClick(android.view.MenuItem)
 com.prasilabs.screenlocker.widgets.LockNowActivity
 com.prasilabs.screenlocker.widgets.LockNowActivity: LockNowActivity()
 com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider

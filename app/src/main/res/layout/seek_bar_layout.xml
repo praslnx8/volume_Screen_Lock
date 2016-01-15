@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gcard"
+    android:layout_margin="@dimen/paddingS"
+    android:padding="@dimen/paddingS"
+    android:elevation="@dimen/paddingS">
+
+    <TextView
+        style="@style/textMB.title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="select shake sensitivity"/>
+
+    <SeekBar
+        android:id="@+id/shake_thresold_seek_bar"
+        android:layout_marginTop="@dimen/paddingS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

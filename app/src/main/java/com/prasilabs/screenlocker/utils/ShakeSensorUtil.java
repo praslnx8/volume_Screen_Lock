@@ -1,9 +1,12 @@
 package com.prasilabs.screenlocker.utils;
 
+import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorManager;
 import android.widget.Toast;
+
+import com.prasilabs.screenlocker.constants.KeyConstant;
 
 /**
  * Created by prasi on 15/1/16.
@@ -16,8 +19,14 @@ public class ShakeSensorUtil
     private static float x, y, z;
     private static float last_x, last_y, last_z;
 
-    public static void handleShake(SensorEvent event, int shakeThresold)
+    public static void handleShake(Context context, SensorEvent event)
     {
+        int shakeThresold = PhoneData.getPhoneData(context, KeyConstant.SHAKE_THRESOLD_STR, 1000);
+        if(shakeThresold < 500)
+        {
+            shakeThresold = 500;
+        }
+
         Sensor sensor = event.sensor;
         float[] values = event.values;
 

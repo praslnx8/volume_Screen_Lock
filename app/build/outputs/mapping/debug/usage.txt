@@ -2742,7 +2742,6 @@ android.support.v7.app.AlertDialog$Builder:
     771:775:public android.support.v7.app.AlertDialog$Builder setSingleChoiceItems(android.widget.ListAdapter,int,android.content.DialogInterface$OnClickListener)
     787:788:public android.support.v7.app.AlertDialog$Builder setOnItemSelectedListener(android.widget.AdapterView$OnItemSelectedListener)
     800:803:public android.support.v7.app.AlertDialog$Builder setView(int)
-    814:817:public android.support.v7.app.AlertDialog$Builder setView(android.view.View)
     844:851:public android.support.v7.app.AlertDialog$Builder setView(android.view.View,int,int,int,int)
     862:863:public android.support.v7.app.AlertDialog$Builder setInverseBackgroundForced(boolean)
     870:871:public android.support.v7.app.AlertDialog$Builder setRecycleOnMeasureEnabled(boolean)
@@ -3542,6 +3541,7 @@ com.prasilabs.screenlocker.R$drawable
 com.prasilabs.screenlocker.R$id
 com.prasilabs.screenlocker.R$integer
 com.prasilabs.screenlocker.R$layout
+com.prasilabs.screenlocker.R$menu
 com.prasilabs.screenlocker.R$mipmap
 com.prasilabs.screenlocker.R$raw
 com.prasilabs.screenlocker.R$string
@@ -3552,7 +3552,7 @@ com.prasilabs.screenlocker.VApp:
     25:25:public static com.prasilabs.screenlocker.VApp getsInstance()
     29:29:public static android.content.Context getAppContext()
 com.prasilabs.screenlocker.components.VDialog:
-    11:11:public VDialog()
+    16:16:public VDialog()
 com.prasilabs.screenlocker.constants.Constant
 com.prasilabs.screenlocker.constants.IntentConstant
 com.prasilabs.screenlocker.constants.KeyConstant
@@ -3564,8 +3564,9 @@ com.prasilabs.screenlocker.notifications.ScreenLockNotification:
 com.prasilabs.screenlocker.utils.MyLogger:
     21:21:public MyLogger()
 com.prasilabs.screenlocker.utils.PhoneData:
-    55:56:public static void savePhoneData(android.content.Context,java.lang.String,int)
     60:61:public static void savePhoneData(android.content.Context,java.lang.String,long)
     78:85:public static long getPhoneData(android.content.Context,java.lang.String,long)
+com.prasilabs.screenlocker.utils.ShareUtil:
+    11:11:public ShareUtil()
 com.prasilabs.screenlocker.utils.VUtil:
-    87:88:public static void openDeviceManagerEnableAction(android.app.Activity)
+    91:92:public static void openDeviceManagerEnableAction(android.app.Activity)

@@ -27,8 +27,6 @@ public class ScreenLockService extends Service implements SensorEventListener
     private MediaPlayer mediaPlayer;
     private SensorManager sensorManager;
 
-    private int shakeThresold;
-
     public ScreenLockService()
     {
         screenLockService = this;
@@ -49,7 +47,6 @@ public class ScreenLockService extends Service implements SensorEventListener
             sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
             Sensor accelSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
             sensorManager.registerListener(this, accelSensor, SensorManager.SENSOR_DELAY_NORMAL);
-            shakeThresold = PhoneData.getPhoneData(this, KeyConstant.SHAKE_THRESOLD_STR, 1000);
         }
         else
         {
@@ -145,7 +142,7 @@ public class ScreenLockService extends Service implements SensorEventListener
     @Override
     public void onSensorChanged(SensorEvent event)
     {
-        ShakeSensorUtil.handleShake(event, shakeThresold);
+        ShakeSensorUtil.handleShake(this, event);
     }
 
     @Override

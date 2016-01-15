@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
@@ -21,13 +24,14 @@ import com.prasilabs.screenlocker.utils.MyLogger;
 import com.prasilabs.screenlocker.utils.PhoneData;
 import com.prasilabs.screenlocker.R;
 import com.prasilabs.screenlocker.services.ScreenLockService;
+import com.prasilabs.screenlocker.utils.ShareUtil;
 import com.prasilabs.screenlocker.utils.VUtil;
 
 public class MainActivity extends AppCompatActivity
 {
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    private TextView statusText, shareBtn, pageBtn, deviceAdminBtn;
+    private TextView statusText, pageBtn, deviceAdminBtn;
     private CheckBox checkBox;
     private Switch notificatinSwitch, volumeSwitch, shakeSwitch;
     private LinearLayout otherMenuLayout, transitionParentLayout;
@@ -41,7 +45,6 @@ public class MainActivity extends AppCompatActivity
 
         checkBox = (CheckBox) findViewById(R.id.check_box);
         statusText = (TextView) findViewById(R.id.status_text);
-        shareBtn = (TextView) findViewById(R.id.share_btn);
         pageBtn = (TextView) findViewById(R.id.page_btn);
         deviceAdminBtn = (TextView) findViewById(R.id.device_admin_btn);
         notificatinSwitch = (Switch) findViewById(R.id.notification_switch);
@@ -50,37 +53,26 @@ public class MainActivity extends AppCompatActivity
         otherMenuLayout = (LinearLayout) findViewById(R.id.other_menu_layout);
         transitionParentLayout = (LinearLayout) findViewById(R.id.transition_parent_layout);
 
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener()
-        {
+        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.UNLOCK_STR, isChecked);
-
                 ScreenLockService.manageService(MainActivity.this);
-                //renderView();
+
+                String text = isChecked ? getString(R.string.enabled_str) : getString(R.string.disabled_str);
+                int color = isChecked ? getResources().getColor(R.color.green) : getResources().getColor(R.color.red);
+                statusText.setText(text);
+                statusText.setTextColor(color);
             }
         });
 
-        shareBtn.setOnClickListener(new View.OnClickListener() {
+        pageBtn.setOnClickListener(new View.OnClickListener()
+        {
             @Override
-            public void onClick(View v) {
-                String message = "Check this app for power unlock via Volume keys.. :) https://play.google.com/store/apps/details?id=com.prasilabs.screenlocker ";
-                Intent i = new Intent();
-                i.setAction(Intent.ACTION_SEND);
-                i.putExtra(Intent.EXTRA_TEXT, message);
-                i.setType("text/plain");
-                startActivity(i);
-            }
-        });
-
-        pageBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String url = "http://www.facebook.com/prasilabs";
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
-                startActivity(i);
+            public void onClick(View v)
+            {
+                ShareUtil.gotoPage(MainActivity.this);
             }
         });
 
@@ -89,10 +81,11 @@ public class MainActivity extends AppCompatActivity
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.VOLUME_LOCK_ENABLE_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
 
-                VDialog.showExperimentalDialog(MainActivity.this);
+                if (isChecked) {
+                    VDialog.showExperimentalDialog(MainActivity.this);
+                }
 
-                if (isChecked && !VUtil.checkisDeviceAdminEnabled())
-                {
+                if (isChecked && !VUtil.checkisDeviceAdminEnabled()) {
                     VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_VOLUME_ENABLE);
                 }
             }
@@ -100,12 +93,10 @@ public class MainActivity extends AppCompatActivity
 
         notificatinSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
-            {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.NOTIF_LOCK_ENABLE_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
 
-                if (isChecked && !VUtil.checkisDeviceAdminEnabled())
-                {
+                if (isChecked && !VUtil.checkisDeviceAdminEnabled()) {
                     VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_NOTIF_ENABLE);
                 }
 
@@ -118,9 +109,10 @@ public class MainActivity extends AppCompatActivity
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.SHAKE_LOCK_STR, isChecked);
 
-                if(isChecked && !VUtil.checkisDeviceAdminEnabled())
-                {
+                if (isChecked && !VUtil.checkisDeviceAdminEnabled()) {
                     VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_SHAKE_ENABLE);
+                } else if (isChecked) {
+                    VDialog.setThresoldBar(MainActivity.this);
                 }
 
                 ScreenLockService.manageService(MainActivity.this);
@@ -132,7 +124,6 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v)
             {
                 VUtil.removeAdminAndUninstall(MainActivity.this);
-                //VUtil.openDeviceManagerEnableAction(MainActivity.this);
             }
         });
 
@@ -190,6 +181,31 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu)
+    {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+
+        return true;
+    }
+
+    public void menuClick(MenuItem item)
+    {
+        if(item.getItemId() == R.id.share_btn)
+        {
+            ShareUtil.shareApp(this);
+        }
+        else if(item.getItemId() == R.id.rate_btn)
+        {
+            ShareUtil.rateApp(this);
+        }
+        else if(item.getItemId() == R.id.about_btn)
+        {
+            ShareUtil.gotoPage(this);
+        }
+    }
+
+    @Override
     protected void onResume()
     {
         super.onResume();
@@ -224,6 +240,11 @@ public class MainActivity extends AppCompatActivity
                 notificatinSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
                 PhoneData.savePhoneData(this, KeyConstant.SHAKE_LOCK_STR, VUtil.checkisDeviceAdminEnabled());
                 ScreenLockService.manageService(this);
+
+                if(VUtil.checkisDeviceAdminEnabled())
+                {
+                    VDialog.setThresoldBar(this);
+                }
             }
         }
 
@@ -245,6 +266,8 @@ public class MainActivity extends AppCompatActivity
 
         prevTime = System.currentTimeMillis();
     }
+
+
 }
 
 
