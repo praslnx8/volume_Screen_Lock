@@ -15,4 +15,5 @@ public class KeyConstant
     public static final String WAKE_TAG_STR = "wake";
     public static final String SHAKE_LOCK_STR = "shake_lock";
     public static final String SHAKE_THRESOLD_STR = "shake_thresold";
+    public static final String FLOATING_LOCK_STR = "floating_lock";
 }

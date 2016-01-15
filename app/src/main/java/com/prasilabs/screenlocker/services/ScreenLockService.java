@@ -18,6 +18,7 @@ import com.prasilabs.screenlocker.constants.KeyConstant;
 import com.prasilabs.screenlocker.utils.MyLogger;
 import com.prasilabs.screenlocker.utils.PhoneData;
 import com.prasilabs.screenlocker.utils.ShakeSensorUtil;
+import com.prasilabs.screenlocker.utils.WindowManagerUtil;
 
 public class ScreenLockService extends Service implements SensorEventListener
 {
@@ -44,7 +45,10 @@ public class ScreenLockService extends Service implements SensorEventListener
     {
         if(PhoneData.getPhoneData(this, KeyConstant.SHAKE_LOCK_STR, false))
         {
-            sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+            if(sensorManager == null)
+            {
+                sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+            }
             Sensor accelSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
             sensorManager.registerListener(this, accelSensor, SensorManager.SENSOR_DELAY_NORMAL);
         }
@@ -63,12 +67,25 @@ public class ScreenLockService extends Service implements SensorEventListener
                 mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
             }
 
-            mediaPlayer.start();
+            if(!mediaPlayer.isPlaying())
+            {
+                mediaPlayer.start();
+            }
         }
         else
         {
             stopMediaPlay();
         }
+
+        if(PhoneData.getPhoneData(this, KeyConstant.FLOATING_LOCK_STR, false))
+        {
+            WindowManagerUtil.showFloatingButton(this);
+        }
+        else
+        {
+            WindowManagerUtil.removeFloatingButton();
+        }
+
 
         return super.onStartCommand(intent, flags, startId);
     }
@@ -105,6 +122,7 @@ public class ScreenLockService extends Service implements SensorEventListener
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT)
             {
                 sensorManager.flush(this);
+                sensorManager.unregisterListener(this);
             }
             else
             {
@@ -115,7 +133,7 @@ public class ScreenLockService extends Service implements SensorEventListener
 
     public static void manageService(Context context)
     {
-        if (PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false) || (PhoneData.getPhoneData(context, KeyConstant.SHAKE_LOCK_STR, false)))
+        if (PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false) || (PhoneData.getPhoneData(context, KeyConstant.SHAKE_LOCK_STR, false)) || (PhoneData.getPhoneData(context, KeyConstant.FLOATING_LOCK_STR, false)))
         {
             Intent intent = new Intent(context, ScreenLockService.class);
             context.startService(intent);

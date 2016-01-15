@@ -66,7 +66,7 @@ public class PhoneData
 
         if(!TextUtils.isEmpty(value)) {
             try {
-                defaultValue = Boolean.parseBoolean(value);
+                defaultValue = Boolean.valueOf(value);
             } catch (Exception e) {}
         }
 

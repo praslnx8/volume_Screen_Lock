@@ -3570,3 +3570,5 @@ com.prasilabs.screenlocker.utils.ShareUtil:
     11:11:public ShareUtil()
 com.prasilabs.screenlocker.utils.VUtil:
     91:92:public static void openDeviceManagerEnableAction(android.app.Activity)
+com.prasilabs.screenlocker.utils.WindowManagerUtil:
+    private static final int MAX_CLICK_DURATION

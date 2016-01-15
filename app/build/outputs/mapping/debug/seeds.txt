@@ -2228,6 +2228,7 @@ com.prasilabs.screenlocker.R$id: int end
 com.prasilabs.screenlocker.R$id: int end_padder
 com.prasilabs.screenlocker.R$id: int expand_activities_button
 com.prasilabs.screenlocker.R$id: int expanded_menu
+com.prasilabs.screenlocker.R$id: int floating_switch
 com.prasilabs.screenlocker.R$id: int home
 com.prasilabs.screenlocker.R$id: int homeAsUp
 com.prasilabs.screenlocker.R$id: int icon

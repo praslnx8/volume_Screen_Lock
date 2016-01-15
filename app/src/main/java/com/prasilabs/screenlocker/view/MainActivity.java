@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity
 
     private TextView statusText, pageBtn, deviceAdminBtn;
     private CheckBox checkBox;
-    private Switch notificatinSwitch, volumeSwitch, shakeSwitch;
+    private Switch notificatinSwitch, volumeSwitch, shakeSwitch, floatingSwitch;
     private LinearLayout otherMenuLayout, transitionParentLayout;
     private long prevTime;
 
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity
         notificatinSwitch = (Switch) findViewById(R.id.notification_switch);
         volumeSwitch = (Switch) findViewById(R.id.volume_key_switch);
         shakeSwitch = (Switch) findViewById(R.id.shake_switch);
+        floatingSwitch = (Switch) findViewById(R.id.floating_switch);
         otherMenuLayout = (LinearLayout) findViewById(R.id.other_menu_layout);
         transitionParentLayout = (LinearLayout) findViewById(R.id.transition_parent_layout);
 
@@ -67,11 +68,9 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        pageBtn.setOnClickListener(new View.OnClickListener()
-        {
+        pageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
+            public void onClick(View v) {
                 ShareUtil.gotoPage(MainActivity.this);
             }
         });
@@ -101,6 +100,21 @@ public class MainActivity extends AppCompatActivity
                 }
 
                 ScreenLockNotification.manageNotification(MainActivity.this);
+            }
+        });
+
+        floatingSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                PhoneData.savePhoneData(MainActivity.this, KeyConstant.FLOATING_LOCK_STR, isChecked && VUtil.checkisDeviceAdminEnabled());
+
+                if (isChecked && !VUtil.checkisDeviceAdminEnabled())
+                {
+                    VUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_FLOATING_ENABLE);
+                }
+
+                ScreenLockService.manageService(MainActivity.this);
             }
         });
 
@@ -153,22 +167,15 @@ public class MainActivity extends AppCompatActivity
         statusText.setText(text);
         statusText.setTextColor(color);
 
-        //ScreenLockNotification.manageNotification(this);
-
-        /*if(isChecked)
-        {
-            otherMenuLayout.setVisibility(View.VISIBLE);
-        }
-        else
-        {
-            otherMenuLayout.setVisibility(View.GONE);
-        }*/
-
         boolean isNotifEnabled = PhoneData.getPhoneData(this, KeyConstant.NOTIF_LOCK_ENABLE_STR, false);
         boolean isKeyEnabled = PhoneData.getPhoneData(this, KeyConstant.VOLUME_LOCK_ENABLE_STR, false);
+        boolean isShakeEnabled = PhoneData.getPhoneData(this, KeyConstant.SHAKE_LOCK_STR, false);
+        boolean isFloatingEnabed = PhoneData.getPhoneData(this, KeyConstant.FLOATING_LOCK_STR, false);
 
         notificatinSwitch.setChecked(isNotifEnabled && VUtil.checkisDeviceAdminEnabled());
         volumeSwitch.setChecked(isKeyEnabled && VUtil.checkisDeviceAdminEnabled());
+        shakeSwitch.setChecked(isShakeEnabled && VUtil.checkisDeviceAdminEnabled());
+        floatingSwitch.setChecked(isFloatingEnabed && VUtil.checkisDeviceAdminEnabled());
 
         if(VUtil.checkisDeviceAdminEnabled())
         {
@@ -245,6 +252,15 @@ public class MainActivity extends AppCompatActivity
                 {
                     VDialog.setThresoldBar(this);
                 }
+            }
+        }
+        else if(requestCode == RequestFor.REQUEST_FLOATING_ENABLE)
+        {
+            if(floatingSwitch != null)
+            {
+                floatingSwitch.setChecked(VUtil.checkisDeviceAdminEnabled());
+                PhoneData.savePhoneData(this, KeyConstant.FLOATING_LOCK_STR, VUtil.checkisDeviceAdminEnabled());
+                ScreenLockService.manageService(this);
             }
         }
 

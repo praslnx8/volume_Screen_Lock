@@ -7053,6 +7053,27 @@ com.prasilabs.screenlocker.utils.VUtil -> com.prasilabs.screenlocker.d.e:
     void openDeviceManagerEnableAction(android.app.Activity,int) -> a
     void createShortCut(android.app.Activity) -> a
     void <clinit>() -> <clinit>
+com.prasilabs.screenlocker.utils.WindowManagerUtil -> com.prasilabs.screenlocker.d.f:
+    java.lang.String TAG -> a
+    android.widget.ImageView imageView -> b
+    long startClickTime -> c
+    void <init>() -> <init>
+    void showFloatingButton(android.content.Context) -> a
+    void removeFloatingButton() -> a
+    java.lang.String access$000() -> b
+    long access$102(long) -> a
+    long access$100() -> c
+    android.widget.ImageView access$200() -> d
+    void <clinit>() -> <clinit>
+com.prasilabs.screenlocker.utils.WindowManagerUtil$1 -> com.prasilabs.screenlocker.d.g:
+    int initialX -> c
+    int initialY -> d
+    float initialTouchX -> e
+    float initialTouchY -> f
+    android.view.WindowManager$LayoutParams val$params -> a
+    android.view.WindowManager val$wm -> b
+    void <init>(android.view.WindowManager$LayoutParams,android.view.WindowManager) -> <init>
+    boolean onTouch(android.view.View,android.view.MotionEvent) -> onTouch
 com.prasilabs.screenlocker.view.MainActivity -> com.prasilabs.screenlocker.view.MainActivity:
     java.lang.String TAG -> i
     android.widget.TextView statusText -> j
@@ -7062,9 +7083,10 @@ com.prasilabs.screenlocker.view.MainActivity -> com.prasilabs.screenlocker.view.
     android.widget.Switch notificatinSwitch -> n
     android.widget.Switch volumeSwitch -> o
     android.widget.Switch shakeSwitch -> p
-    android.widget.LinearLayout otherMenuLayout -> q
-    android.widget.LinearLayout transitionParentLayout -> r
-    long prevTime -> s
+    android.widget.Switch floatingSwitch -> q
+    android.widget.LinearLayout otherMenuLayout -> r
+    android.widget.LinearLayout transitionParentLayout -> s
+    long prevTime -> t
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
     void renderView() -> j
@@ -7096,6 +7118,10 @@ com.prasilabs.screenlocker.view.MainActivity$5 -> com.prasilabs.screenlocker.vie
     void <init>(com.prasilabs.screenlocker.view.MainActivity) -> <init>
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
 com.prasilabs.screenlocker.view.MainActivity$6 -> com.prasilabs.screenlocker.view.f:
+    com.prasilabs.screenlocker.view.MainActivity this$0 -> a
+    void <init>(com.prasilabs.screenlocker.view.MainActivity) -> <init>
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.prasilabs.screenlocker.view.MainActivity$7 -> com.prasilabs.screenlocker.view.g:
     com.prasilabs.screenlocker.view.MainActivity this$0 -> a
     void <init>(com.prasilabs.screenlocker.view.MainActivity) -> <init>
     void onClick(android.view.View) -> onClick
