@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lgray2"
-    android:padding="@dimen/paddingS"
-    tools:context=".MainActivity">
+    android:padding="@dimen/paddingS">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -254,6 +253,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/github_btn"
+            style="@style/button.primary.transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GITHUB"/>
 
         <TextView
             android:id="@+id/page_btn"
