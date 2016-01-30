@@ -386,16 +386,27 @@
     <string name="app_name">Volume Screen Lock</string>
     <string name="btn_disable_device_admin">Disable Device Admin</string>
     <string name="btn_enable_device_admin">Enable Device Admin</string>
+    <string name="developed_by_prasilabs">DEVELOPED BY PRASILABS</string>
     <string name="disabled_str">Disabled</string>
     <string name="double_press_volume_lock_message">Use volume key to lock</string>
     <string name="enable_message">Enable/Disable Screen wake</string>
     <string name="enable_screen_lock_option_message">To LOCK screen</string>
     <string name="enabled_str">Enabled</string>
+    <string name="floating_button_lock">Floating button lock</string>
+    <string name="github_src_code">GITHUB SRC CODE</string>
+    <string name="github_src_url">https://github.com/praslnx8/volume_Screen_Lock</string>
     <string name="notification_lock_message">Lock via notification</string>
     <string name="notification_screen_lock_message">Press to Lock the Screen</string>
+    <string name="shake_to_lock_screen">Shake to Lock Screen</string>
     <!-- From: file:/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <!-- From: file:/home/prasi/WorkSpace/ScreenLocker/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="try_the_app_shortcut_to_lock_screen_instantly">Try the app shortcut to lock screen instantly</string>
+    <string name="uninstall_app">UNINSTALL APP</string>
+    <!-- From: file:/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
@@ -1650,13 +1661,6 @@
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
     <!-- From: file:/home/prasi/WorkSpace/ScreenLocker/app/src/main/res/values/styles.xml -->
     <eat-comment/>
-    <style name="Widget.CardContent" parent="android:Widget">
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
-        <item name="android:paddingTop">24dp</item>
-        <item name="android:paddingBottom">24dp</item>
-        <item name="android:orientation">vertical</item>
-    </style>
     <style name="button.primary" parent="Base.Widget.AppCompat.Button.Small">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
@@ -1669,11 +1673,6 @@
         <item name="android:textSize">15sp</item>
         <item name="android:colorPressedHighlight">@color/tgray1</item>
         <item name="android:letterSpacing">0.05</item>
-    </style>
-    <style name="button.primary.big" parent="button.primary">
-        <item name="android:background">@drawable/primary_btn_big</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/white</item>
     </style>
     <style name="button.primary.small" parent="button.primary">
         <item name="android:background">@drawable/primary_btn_small</item>
@@ -1694,20 +1693,12 @@
         <item name="android:background">@drawable/secondary_btn</item>
         <item name="android:textColor">@color/white</item>
     </style>
-    <style name="button.secondary.big" parent="button.secondary">
-        <item name="android:background">@drawable/secondary_btn_big</item>
-        <item name="android:textSize">18sp</item>
-    </style>
     <style name="button.secondary.small" parent="button.secondary">
         <item name="android:background">@drawable/secondary_btn_small</item>
         <item name="android:textSize">13sp</item>
     </style>
     <style name="button.secondary.transparent" parent="button.secondary">
         <item name="android:background">@drawable/secondary_transparent_btn</item>
-        <item name="android:textColor">@color/secondary</item>
-    </style>
-    <style name="button.secondary.transparent.big" parent="button.secondary.big">
-        <item name="android:background">@drawable/secondary_transparent_btn_big</item>
         <item name="android:textColor">@color/secondary</item>
     </style>
     <style name="button.secondary.transparent.small" parent="button.secondary.transparent">
@@ -1721,10 +1712,6 @@
     <style name="button.transparent.gray.small" parent="button.primary.small">
         <item name="android:background">@drawable/gray_transparent_btn_small</item>
         <item name="android:textColor">@color/textColor</item>
-    </style>
-    <style name="button.transparent.white" parent="button.primary.transparent">
-        <item name="android:background">@drawable/white_transparent_btn</item>
-        <item name="android:textColor">@color/white</item>
     </style>
     <style name="textL" parent="textM">
         <item name="android:textColor">@color/titleColor</item>

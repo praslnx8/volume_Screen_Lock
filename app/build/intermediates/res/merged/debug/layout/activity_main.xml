@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lgray2"
-    android:padding="@dimen/paddingS"
-    tools:context=".MainActivity">
+    android:padding="@dimen/paddingS">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -143,7 +142,7 @@
                         style="@style/textL.primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Shake to lock Screen"
+                        android:text="@string/shake_to_lock_screen"
                         android:layout_weight="3"/>
 
                     <View
@@ -169,7 +168,7 @@
                         style="@style/textL.primary"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Floating button lock"
+                        android:text="@string/floating_button_lock"
                         android:layout_weight="3"/>
 
                     <View
@@ -224,7 +223,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:layout_gravity="center"
-                        android:text="Try the app shortcut to lock screen instantly" />
+                        android:text="@string/try_the_app_shortcut_to_lock_screen_instantly" />
 
                 </LinearLayout>
 
@@ -237,7 +236,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:layout_gravity="center"
-                    android:text="UNINSTALL APP"/>
+                    android:text="@string/uninstall_app"/>
 
 
             </LinearLayout>
@@ -256,11 +255,20 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/github_btn"
+            style="@style/button.primary.transparent.small"
+            android:drawableLeft="@drawable/ic_github"
+            android:layout_width="match_parent"
+            android:padding="@dimen/paddingXS"
+            android:layout_height="wrap_content"
+            android:text="@string/github_src_code"/>
+
+        <TextView
             android:id="@+id/page_btn"
-            style="@style/button.primary.transparent"
+            style="@style/button.primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="DEVELOPED BY PRASILABS"/>
+            android:text="@string/developed_by_prasilabs"/>
 
     </LinearLayout>
 

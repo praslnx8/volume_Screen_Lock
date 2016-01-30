@@ -8,27 +8,16 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-
-    <style name="Widget.CardContent" parent="android:Widget">
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
-        <item name="android:paddingTop">24dp</item>
-        <item name="android:paddingBottom">24dp</item>
-        <item name="android:orientation">vertical</item>
-    </style>
-
     <style name="button.primary" parent="Base.Widget.AppCompat.Button.Small">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
-        <item name="android:stateListAnimator">@null</item>
         <item name="android:background">@drawable/primary_btn</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:minHeight">24dip</item>
         <item name="android:minWidth">48dip</item>
         <item name="android:textSize">15sp</item>
         <item name="android:colorPressedHighlight">@color/tgray1</item>
-        <item name="android:letterSpacing">0.05</item>
     </style>
 
     <style name="button.primary.small" parent="button.primary">
@@ -39,20 +28,9 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="button.primary.big" parent="button.primary">
-        <item name="android:background">@drawable/primary_btn_big</item>
-        <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/white</item>
-    </style>
-
     <style name="button.secondary" parent="button.primary">
         <item name="android:background">@drawable/secondary_btn</item>
         <item name="android:textColor">@color/white</item>
-    </style>
-
-    <style name="button.secondary.big" parent="button.secondary">
-        <item name="android:background">@drawable/secondary_btn_big</item>
-        <item name="android:textSize">18sp</item>
     </style>
 
     <style name="button.secondary.small" parent="button.secondary">
@@ -75,19 +53,9 @@
         <item name="android:textColor">@color/secondary</item>
     </style>
 
-    <style name="button.secondary.transparent.big" parent="button.secondary.big">
-        <item name="android:background">@drawable/secondary_transparent_btn_big</item>
-        <item name="android:textColor">@color/secondary</item>
-    </style>
-
     <style name="button.secondary.transparent.small" parent="button.secondary.transparent">
         <item name="android:background">@drawable/secondary_transparent_btn_small</item>
         <item name="android:textColor">@color/secondary</item>
-    </style>
-
-    <style name="button.transparent.white" parent="button.primary.transparent">
-        <item name="android:background">@drawable/white_transparent_btn</item>
-        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="button.transparent.gray" parent="button.primary">
@@ -160,7 +128,6 @@
     </style>
 
     <style name="textXL.upper" parent="textXL">
-        <item name="android:letterSpacing">0.06</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/primary</item>
     </style>
@@ -220,7 +187,6 @@
 
     <style name="textL.upper" parent="textL">
         <item name="android:textAllCaps">true</item>
-        <item name="android:letterSpacing">0.05</item>
     </style>
 
 

@@ -7086,13 +7086,14 @@ com.prasilabs.screenlocker.view.MainActivity -> com.prasilabs.screenlocker.view.
     java.lang.String TAG -> i
     android.widget.TextView statusText -> j
     android.widget.TextView pageBtn -> k
-    android.widget.TextView deviceAdminBtn -> l
-    android.widget.CheckBox checkBox -> m
-    android.widget.Switch notificatinSwitch -> n
-    android.widget.Switch volumeSwitch -> o
-    android.widget.Switch shakeSwitch -> p
-    android.widget.Switch floatingSwitch -> q
-    long prevTime -> r
+    android.widget.TextView gitHubBtn -> l
+    android.widget.TextView deviceAdminBtn -> m
+    android.widget.CheckBox checkBox -> n
+    android.widget.Switch notificatinSwitch -> o
+    android.widget.Switch volumeSwitch -> p
+    android.widget.Switch shakeSwitch -> q
+    android.widget.Switch floatingSwitch -> r
+    long prevTime -> s
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
     void renderView() -> j
@@ -7114,7 +7115,7 @@ com.prasilabs.screenlocker.view.MainActivity$2 -> com.prasilabs.screenlocker.vie
 com.prasilabs.screenlocker.view.MainActivity$3 -> com.prasilabs.screenlocker.view.c:
     com.prasilabs.screenlocker.view.MainActivity this$0 -> a
     void <init>(com.prasilabs.screenlocker.view.MainActivity) -> <init>
-    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+    void onClick(android.view.View) -> onClick
 com.prasilabs.screenlocker.view.MainActivity$4 -> com.prasilabs.screenlocker.view.d:
     com.prasilabs.screenlocker.view.MainActivity this$0 -> a
     void <init>(com.prasilabs.screenlocker.view.MainActivity) -> <init>
@@ -7128,6 +7129,10 @@ com.prasilabs.screenlocker.view.MainActivity$6 -> com.prasilabs.screenlocker.vie
     void <init>(com.prasilabs.screenlocker.view.MainActivity) -> <init>
     void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
 com.prasilabs.screenlocker.view.MainActivity$7 -> com.prasilabs.screenlocker.view.g:
+    com.prasilabs.screenlocker.view.MainActivity this$0 -> a
+    void <init>(com.prasilabs.screenlocker.view.MainActivity) -> <init>
+    void onCheckedChanged(android.widget.CompoundButton,boolean) -> onCheckedChanged
+com.prasilabs.screenlocker.view.MainActivity$8 -> com.prasilabs.screenlocker.view.h:
     com.prasilabs.screenlocker.view.MainActivity this$0 -> a
     void <init>(com.prasilabs.screenlocker.view.MainActivity) -> <init>
     void onClick(android.view.View) -> onClick

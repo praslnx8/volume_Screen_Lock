@@ -1,6 +1,7 @@
 package com.prasilabs.screenlocker.view;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,7 +30,7 @@ public class MainActivity extends AppCompatActivity
 {
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    private TextView statusText, pageBtn, deviceAdminBtn;
+    private TextView statusText, pageBtn,gitHubBtn,  deviceAdminBtn;
     private CheckBox checkBox;
     private Switch notificatinSwitch, volumeSwitch, shakeSwitch, floatingSwitch;
     private long prevTime;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity
         checkBox = (CheckBox) findViewById(R.id.check_box);
         statusText = (TextView) findViewById(R.id.status_text);
         pageBtn = (TextView) findViewById(R.id.page_btn);
+        gitHubBtn = (TextView) findViewById(R.id.github_btn);
         deviceAdminBtn = (TextView) findViewById(R.id.device_admin_btn);
         notificatinSwitch = (Switch) findViewById(R.id.notification_switch);
         volumeSwitch = (Switch) findViewById(R.id.volume_key_switch);
@@ -70,6 +72,15 @@ public class MainActivity extends AppCompatActivity
                 ShareUtil.gotoPage(MainActivity.this);
             }
         });
+
+        gitHubBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.github_src_url)));
+                startActivity(browserIntent);
+            }
+        });
+
 
         volumeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

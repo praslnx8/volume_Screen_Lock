@@ -10,4 +10,14 @@
     <string name="enable_screen_lock_option_message">To LOCK screen</string>
     <string name="double_press_volume_lock_message">Use volume key to lock</string>
     <string name="notification_lock_message">Lock via notification</string>
+    <string name="github_src_url">https://github.com/praslnx8/volume_Screen_Lock</string>
+    <string name="shake_to_lock_screen">Shake to Lock Screen</string>
+    <string name="floating_button_lock">Floating button lock</string>
+    <string name="try_the_app_shortcut_to_lock_screen_instantly">Try the app shortcut to lock screen instantly</string>
+    <string name="uninstall_app">UNINSTALL APP</string>
+    <string name="developed_by_prasilabs">DEVELOPED BY PRASILABS</string>
+    <string name="github_src_code">GITHUB SRC CODE</string>
+    <string name="to_unlock_screen">To UnLock screen</string>
+    <string name="volume_key_unlock">VOLUME KEY UNLOCK</string>
+    <string name="disabled">DISABLED</string>
 </resources>
