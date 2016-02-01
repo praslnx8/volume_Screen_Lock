@@ -1914,20 +1914,23 @@ containing a value of this type.
         public static final int btn_disable_device_admin=0x7f080015;
         public static final int btn_enable_device_admin=0x7f080016;
         public static final int developed_by_prasilabs=0x7f080017;
-        public static final int disabled_str=0x7f080018;
-        public static final int double_press_volume_lock_message=0x7f080019;
-        public static final int enable_message=0x7f08001a;
-        public static final int enable_screen_lock_option_message=0x7f08001b;
-        public static final int enabled_str=0x7f08001c;
-        public static final int floating_button_lock=0x7f08001d;
-        public static final int github_src_code=0x7f08001e;
-        public static final int github_src_url=0x7f08001f;
-        public static final int notification_lock_message=0x7f080020;
-        public static final int notification_screen_lock_message=0x7f080021;
-        public static final int shake_to_lock_screen=0x7f080022;
+        public static final int disabled=0x7f080018;
+        public static final int disabled_str=0x7f080019;
+        public static final int double_press_volume_lock_message=0x7f08001a;
+        public static final int enable_message=0x7f08001b;
+        public static final int enable_screen_lock_option_message=0x7f08001c;
+        public static final int enabled_str=0x7f08001d;
+        public static final int floating_button_lock=0x7f08001e;
+        public static final int github_src_code=0x7f08001f;
+        public static final int github_src_url=0x7f080020;
+        public static final int notification_lock_message=0x7f080021;
+        public static final int notification_screen_lock_message=0x7f080022;
+        public static final int shake_to_lock_screen=0x7f080023;
         public static final int status_bar_notification_info_overflow=0x7f080013;
-        public static final int try_the_app_shortcut_to_lock_screen_instantly=0x7f080023;
-        public static final int uninstall_app=0x7f080024;
+        public static final int to_unlock_screen=0x7f080024;
+        public static final int try_the_app_shortcut_to_lock_screen_instantly=0x7f080025;
+        public static final int uninstall_app=0x7f080026;
+        public static final int volume_key_unlock=0x7f080027;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0b007d;

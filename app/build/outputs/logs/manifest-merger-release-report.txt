@@ -27,8 +27,8 @@ ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:7
 		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:7:22-75
 application
 ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:9:5-80:19
-MERGED from [com.android.support:appcompat-v7:23.0.1] /home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.0.1] /home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.1.1] /home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.1.1] /home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
 	android:supportsRtl
 		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
@@ -155,8 +155,8 @@ ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:7
 		ADDED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml:77:25-79
 uses-sdk
 INJECTED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.android.support:appcompat-v7:23.0.1] /home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.0.1] /home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.1.1] /home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.1.1] /home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		INJECTED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml
 		INJECTED from /home/prasi/WorkSpace/ScreenLocker/app/src/main/AndroidManifest.xml

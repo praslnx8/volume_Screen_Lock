@@ -9,6 +9,7 @@ android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.wid
 android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
+android.support.v4.media.MediaBrowserCompat$MediaItem: android.os.Parcelable$Creator CREATOR
 android.support.v4.media.MediaDescriptionCompat: android.os.Parcelable$Creator CREATOR
 android.support.v4.media.MediaMetadataCompat: android.os.Parcelable$Creator CREATOR
 android.support.v4.media.RatingCompat: android.os.Parcelable$Creator CREATOR
@@ -18,6 +19,7 @@ android.support.v4.media.session.MediaSessionCompat$Token: android.os.Parcelable
 android.support.v4.media.session.ParcelableVolumeInfo: android.os.Parcelable$Creator CREATOR
 android.support.v4.media.session.PlaybackStateCompat: android.os.Parcelable$Creator CREATOR
 android.support.v4.media.session.PlaybackStateCompat$CustomAction: android.os.Parcelable$Creator CREATOR
+android.support.v4.os.ResultReceiver: android.os.Parcelable$Creator CREATOR
 android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
 android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
 android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
@@ -62,11 +64,16 @@ android.support.v4.widget.DrawerLayout: android.graphics.drawable.Drawable getSt
 android.support.v4.widget.DrawerLayout: void setStatusBarBackground(int)
 android.support.v4.widget.DrawerLayout: void setStatusBarBackgroundColor(int)
 android.support.v4.widget.DrawerLayout$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v4.widget.NestedScrollView
+android.support.v4.widget.NestedScrollView: NestedScrollView(android.content.Context)
+android.support.v4.widget.NestedScrollView: NestedScrollView(android.content.Context,android.util.AttributeSet)
+android.support.v4.widget.NestedScrollView: NestedScrollView(android.content.Context,android.util.AttributeSet,int)
 android.support.v4.widget.NestedScrollView: void setNestedScrollingEnabled(boolean)
 android.support.v4.widget.NestedScrollView: int getNestedScrollAxes()
 android.support.v4.widget.NestedScrollView: float getTopFadingEdgeStrength()
 android.support.v4.widget.NestedScrollView: float getBottomFadingEdgeStrength()
 android.support.v4.widget.NestedScrollView: int getMaxScrollAmount()
+android.support.v4.widget.NestedScrollView: void setOnScrollChangeListener(android.support.v4.widget.NestedScrollView$OnScrollChangeListener)
 android.support.v4.widget.NestedScrollView: void setFillViewport(boolean)
 android.support.v4.widget.NestedScrollView: void setSmoothScrollingEnabled(boolean)
 android.support.v4.widget.NestedScrollView: float getVerticalScrollFactorCompat()
@@ -156,6 +163,7 @@ android.support.v7.appcompat.R$attr: int alertDialogButtonGroupStyle
 android.support.v7.appcompat.R$attr: int alertDialogCenterButtons
 android.support.v7.appcompat.R$attr: int alertDialogStyle
 android.support.v7.appcompat.R$attr: int alertDialogTheme
+android.support.v7.appcompat.R$attr: int allowStacking
 android.support.v7.appcompat.R$attr: int arrowHeadLength
 android.support.v7.appcompat.R$attr: int arrowShaftLength
 android.support.v7.appcompat.R$attr: int autoCompleteTextViewStyle
@@ -223,6 +231,7 @@ android.support.v7.appcompat.R$attr: int homeAsUpIndicator
 android.support.v7.appcompat.R$attr: int homeLayout
 android.support.v7.appcompat.R$attr: int icon
 android.support.v7.appcompat.R$attr: int iconifiedByDefault
+android.support.v7.appcompat.R$attr: int imageButtonStyle
 android.support.v7.appcompat.R$attr: int indeterminateProgressStyle
 android.support.v7.appcompat.R$attr: int initialActivityCount
 android.support.v7.appcompat.R$attr: int isLightTheme
@@ -265,6 +274,7 @@ android.support.v7.appcompat.R$attr: int ratingBarStyle
 android.support.v7.appcompat.R$attr: int searchHintIcon
 android.support.v7.appcompat.R$attr: int searchIcon
 android.support.v7.appcompat.R$attr: int searchViewStyle
+android.support.v7.appcompat.R$attr: int seekBarStyle
 android.support.v7.appcompat.R$attr: int selectableItemBackground
 android.support.v7.appcompat.R$attr: int selectableItemBackgroundBorderless
 android.support.v7.appcompat.R$attr: int showAsAction
@@ -324,6 +334,7 @@ android.support.v7.appcompat.R$attr: int windowNoTitle
 android.support.v7.appcompat.R$bool: int abc_action_bar_embed_tabs
 android.support.v7.appcompat.R$bool: int abc_action_bar_embed_tabs_pre_jb
 android.support.v7.appcompat.R$bool: int abc_action_bar_expanded_action_views_exclusive
+android.support.v7.appcompat.R$bool: int abc_allow_stacked_button_bar
 android.support.v7.appcompat.R$bool: int abc_config_actionMenuItemAllCaps
 android.support.v7.appcompat.R$bool: int abc_config_allowActionMenuItemTextWithIcon
 android.support.v7.appcompat.R$bool: int abc_config_closeDialogWhenTouchOutside
@@ -422,6 +433,10 @@ android.support.v7.appcompat.R$dimen: int abc_config_prefDialogWidth
 android.support.v7.appcompat.R$dimen: int abc_control_corner_material
 android.support.v7.appcompat.R$dimen: int abc_control_inset_material
 android.support.v7.appcompat.R$dimen: int abc_control_padding_material
+android.support.v7.appcompat.R$dimen: int abc_dialog_fixed_height_major
+android.support.v7.appcompat.R$dimen: int abc_dialog_fixed_height_minor
+android.support.v7.appcompat.R$dimen: int abc_dialog_fixed_width_major
+android.support.v7.appcompat.R$dimen: int abc_dialog_fixed_width_minor
 android.support.v7.appcompat.R$dimen: int abc_dialog_list_padding_vertical_material
 android.support.v7.appcompat.R$dimen: int abc_dialog_min_width_major
 android.support.v7.appcompat.R$dimen: int abc_dialog_min_width_minor
@@ -440,6 +455,9 @@ android.support.v7.appcompat.R$dimen: int abc_list_item_padding_horizontal_mater
 android.support.v7.appcompat.R$dimen: int abc_panel_menu_list_width
 android.support.v7.appcompat.R$dimen: int abc_search_view_preferred_width
 android.support.v7.appcompat.R$dimen: int abc_search_view_text_min_width
+android.support.v7.appcompat.R$dimen: int abc_seekbar_track_background_height_material
+android.support.v7.appcompat.R$dimen: int abc_seekbar_track_progress_height_material
+android.support.v7.appcompat.R$dimen: int abc_select_dialog_padding_start_material
 android.support.v7.appcompat.R$dimen: int abc_switch_padding
 android.support.v7.appcompat.R$dimen: int abc_text_size_body_1_material
 android.support.v7.appcompat.R$dimen: int abc_text_size_body_2_material
@@ -458,10 +476,6 @@ android.support.v7.appcompat.R$dimen: int abc_text_size_subhead_material
 android.support.v7.appcompat.R$dimen: int abc_text_size_subtitle_material_toolbar
 android.support.v7.appcompat.R$dimen: int abc_text_size_title_material
 android.support.v7.appcompat.R$dimen: int abc_text_size_title_material_toolbar
-android.support.v7.appcompat.R$dimen: int dialog_fixed_height_major
-android.support.v7.appcompat.R$dimen: int dialog_fixed_height_minor
-android.support.v7.appcompat.R$dimen: int dialog_fixed_width_major
-android.support.v7.appcompat.R$dimen: int dialog_fixed_width_minor
 android.support.v7.appcompat.R$dimen: int disabled_alpha_material_dark
 android.support.v7.appcompat.R$dimen: int disabled_alpha_material_light
 android.support.v7.appcompat.R$dimen: int highlight_alpha_material_colored
@@ -520,6 +534,13 @@ android.support.v7.appcompat.R$drawable: int abc_list_selector_holo_light
 android.support.v7.appcompat.R$drawable: int abc_menu_hardkey_panel_mtrl_mult
 android.support.v7.appcompat.R$drawable: int abc_popup_background_mtrl_mult
 android.support.v7.appcompat.R$drawable: int abc_ratingbar_full_material
+android.support.v7.appcompat.R$drawable: int abc_scrubber_control_off_mtrl_alpha
+android.support.v7.appcompat.R$drawable: int abc_scrubber_control_to_pressed_mtrl_000
+android.support.v7.appcompat.R$drawable: int abc_scrubber_control_to_pressed_mtrl_005
+android.support.v7.appcompat.R$drawable: int abc_scrubber_primary_mtrl_alpha
+android.support.v7.appcompat.R$drawable: int abc_scrubber_track_mtrl_alpha
+android.support.v7.appcompat.R$drawable: int abc_seekbar_thumb_material
+android.support.v7.appcompat.R$drawable: int abc_seekbar_track_material
 android.support.v7.appcompat.R$drawable: int abc_spinner_mtrl_am_alpha
 android.support.v7.appcompat.R$drawable: int abc_spinner_textfield_background_material
 android.support.v7.appcompat.R$drawable: int abc_switch_thumb_material
@@ -589,6 +610,8 @@ android.support.v7.appcompat.R$id: int progress_circular
 android.support.v7.appcompat.R$id: int progress_horizontal
 android.support.v7.appcompat.R$id: int radio
 android.support.v7.appcompat.R$id: int screen
+android.support.v7.appcompat.R$id: int scrollIndicatorDown
+android.support.v7.appcompat.R$id: int scrollIndicatorUp
 android.support.v7.appcompat.R$id: int scrollView
 android.support.v7.appcompat.R$id: int search_badge
 android.support.v7.appcompat.R$id: int search_bar
@@ -605,6 +628,7 @@ android.support.v7.appcompat.R$id: int shortcut
 android.support.v7.appcompat.R$id: int showCustom
 android.support.v7.appcompat.R$id: int showHome
 android.support.v7.appcompat.R$id: int showTitle
+android.support.v7.appcompat.R$id: int spacer
 android.support.v7.appcompat.R$id: int split_action_bar
 android.support.v7.appcompat.R$id: int src_atop
 android.support.v7.appcompat.R$id: int src_in
@@ -637,6 +661,7 @@ android.support.v7.appcompat.R$layout: int abc_action_mode_bar
 android.support.v7.appcompat.R$layout: int abc_action_mode_close_item_material
 android.support.v7.appcompat.R$layout: int abc_activity_chooser_view
 android.support.v7.appcompat.R$layout: int abc_activity_chooser_view_list_item
+android.support.v7.appcompat.R$layout: int abc_alert_dialog_button_bar_material
 android.support.v7.appcompat.R$layout: int abc_alert_dialog_material
 android.support.v7.appcompat.R$layout: int abc_dialog_title_material
 android.support.v7.appcompat.R$layout: int abc_expanded_menu_layout
@@ -672,6 +697,8 @@ android.support.v7.appcompat.R$string: int abc_action_menu_overflow_description
 android.support.v7.appcompat.R$string: int abc_action_mode_done
 android.support.v7.appcompat.R$string: int abc_activity_chooser_view_see_all
 android.support.v7.appcompat.R$string: int abc_activitychooserview_choose_application
+android.support.v7.appcompat.R$string: int abc_capital_off
+android.support.v7.appcompat.R$string: int abc_capital_on
 android.support.v7.appcompat.R$string: int abc_search_hint
 android.support.v7.appcompat.R$string: int abc_searchview_description_clear
 android.support.v7.appcompat.R$string: int abc_searchview_description_query
@@ -799,6 +826,7 @@ android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_DrawerArrowToggl
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_DrawerArrowToggle_Common
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_DropDownItem_Spinner
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_EditText
+android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_ImageButton
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_ActionBar
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_ActionBar_Solid
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabBar
@@ -819,6 +847,7 @@ android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_ProgressBar_Hori
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_RatingBar
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_SearchView
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_SearchView_ActionBar
+android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_SeekBar
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Spinner
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_Spinner_Underlined
 android.support.v7.appcompat.R$style: int Base_Widget_AppCompat_TextView_SpinnerItem
@@ -836,7 +865,6 @@ android.support.v7.appcompat.R$style: int Platform_V14_AppCompat_Light
 android.support.v7.appcompat.R$style: int Platform_Widget_AppCompat_Spinner
 android.support.v7.appcompat.R$style: int RtlOverlay_DialogWindowTitle_AppCompat
 android.support.v7.appcompat.R$style: int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem
-android.support.v7.appcompat.R$style: int RtlOverlay_Widget_AppCompat_ActionButton_Overflow
 android.support.v7.appcompat.R$style: int RtlOverlay_Widget_AppCompat_DialogTitle_Icon
 android.support.v7.appcompat.R$style: int RtlOverlay_Widget_AppCompat_PopupMenuItem
 android.support.v7.appcompat.R$style: int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup
@@ -847,6 +875,8 @@ android.support.v7.appcompat.R$style: int RtlOverlay_Widget_AppCompat_Search_Dro
 android.support.v7.appcompat.R$style: int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2
 android.support.v7.appcompat.R$style: int RtlOverlay_Widget_AppCompat_Search_DropDown_Query
 android.support.v7.appcompat.R$style: int RtlOverlay_Widget_AppCompat_Search_DropDown_Text
+android.support.v7.appcompat.R$style: int RtlUnderlay_Widget_AppCompat_ActionButton
+android.support.v7.appcompat.R$style: int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Body1
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Body2
@@ -943,6 +973,7 @@ android.support.v7.appcompat.R$style: int Widget_AppCompat_CompoundButton_Switch
 android.support.v7.appcompat.R$style: int Widget_AppCompat_DrawerArrowToggle
 android.support.v7.appcompat.R$style: int Widget_AppCompat_DropDownItem_Spinner
 android.support.v7.appcompat.R$style: int Widget_AppCompat_EditText
+android.support.v7.appcompat.R$style: int Widget_AppCompat_ImageButton
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Light_ActionBar
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Light_ActionBar_Solid
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Light_ActionBar_Solid_Inverse
@@ -977,6 +1008,7 @@ android.support.v7.appcompat.R$style: int Widget_AppCompat_ProgressBar_Horizonta
 android.support.v7.appcompat.R$style: int Widget_AppCompat_RatingBar
 android.support.v7.appcompat.R$style: int Widget_AppCompat_SearchView
 android.support.v7.appcompat.R$style: int Widget_AppCompat_SearchView_ActionBar
+android.support.v7.appcompat.R$style: int Widget_AppCompat_SeekBar
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Spinner
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Spinner_DropDown
 android.support.v7.appcompat.R$style: int Widget_AppCompat_Spinner_DropDown_ActionBar
@@ -1037,6 +1069,8 @@ android.support.v7.appcompat.R$styleable: int AlertDialog_singleChoiceItemLayout
 android.support.v7.appcompat.R$styleable: int[] AppCompatTextView
 android.support.v7.appcompat.R$styleable: int AppCompatTextView_android_textAppearance
 android.support.v7.appcompat.R$styleable: int AppCompatTextView_textAllCaps
+android.support.v7.appcompat.R$styleable: int[] ButtonBarLayout
+android.support.v7.appcompat.R$styleable: int ButtonBarLayout_allowStacking
 android.support.v7.appcompat.R$styleable: int[] CompoundButton
 android.support.v7.appcompat.R$styleable: int CompoundButton_android_button
 android.support.v7.appcompat.R$styleable: int CompoundButton_buttonTint
@@ -1142,6 +1176,10 @@ android.support.v7.appcompat.R$styleable: int SwitchCompat_switchTextAppearance
 android.support.v7.appcompat.R$styleable: int SwitchCompat_thumbTextPadding
 android.support.v7.appcompat.R$styleable: int SwitchCompat_track
 android.support.v7.appcompat.R$styleable: int[] TextAppearance
+android.support.v7.appcompat.R$styleable: int TextAppearance_android_shadowColor
+android.support.v7.appcompat.R$styleable: int TextAppearance_android_shadowDx
+android.support.v7.appcompat.R$styleable: int TextAppearance_android_shadowDy
+android.support.v7.appcompat.R$styleable: int TextAppearance_android_shadowRadius
 android.support.v7.appcompat.R$styleable: int TextAppearance_android_textColor
 android.support.v7.appcompat.R$styleable: int TextAppearance_android_textSize
 android.support.v7.appcompat.R$styleable: int TextAppearance_android_textStyle
@@ -1215,6 +1253,7 @@ android.support.v7.appcompat.R$styleable: int Theme_editTextBackground
 android.support.v7.appcompat.R$styleable: int Theme_editTextColor
 android.support.v7.appcompat.R$styleable: int Theme_editTextStyle
 android.support.v7.appcompat.R$styleable: int Theme_homeAsUpIndicator
+android.support.v7.appcompat.R$styleable: int Theme_imageButtonStyle
 android.support.v7.appcompat.R$styleable: int Theme_listChoiceBackgroundIndicator
 android.support.v7.appcompat.R$styleable: int Theme_listDividerAlertDialog
 android.support.v7.appcompat.R$styleable: int Theme_listPopupWindowStyle
@@ -1231,6 +1270,7 @@ android.support.v7.appcompat.R$styleable: int Theme_popupWindowStyle
 android.support.v7.appcompat.R$styleable: int Theme_radioButtonStyle
 android.support.v7.appcompat.R$styleable: int Theme_ratingBarStyle
 android.support.v7.appcompat.R$styleable: int Theme_searchViewStyle
+android.support.v7.appcompat.R$styleable: int Theme_seekBarStyle
 android.support.v7.appcompat.R$styleable: int Theme_selectableItemBackground
 android.support.v7.appcompat.R$styleable: int Theme_selectableItemBackgroundBorderless
 android.support.v7.appcompat.R$styleable: int Theme_spinnerDropDownItemStyle
@@ -1296,135 +1336,81 @@ android.support.v7.appcompat.R$styleable: int View_android_theme
 android.support.v7.appcompat.R$styleable: int View_paddingEnd
 android.support.v7.appcompat.R$styleable: int View_paddingStart
 android.support.v7.appcompat.R$styleable: int View_theme
-android.support.v7.internal.view.menu.ActionMenuItemView
-android.support.v7.internal.view.menu.ActionMenuItemView: ActionMenuItemView(android.content.Context)
-android.support.v7.internal.view.menu.ActionMenuItemView: ActionMenuItemView(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.view.menu.ActionMenuItemView: ActionMenuItemView(android.content.Context,android.util.AttributeSet,int)
-android.support.v7.internal.view.menu.ActionMenuItemView: android.support.v7.internal.view.menu.MenuItemImpl getItemData()
-android.support.v7.internal.view.menu.ActionMenuItemView: void setItemInvoker(android.support.v7.internal.view.menu.MenuBuilder$ItemInvoker)
-android.support.v7.internal.view.menu.ActionMenuItemView: void setPopupCallback(android.support.v7.internal.view.menu.ActionMenuItemView$PopupCallback)
-android.support.v7.internal.view.menu.ActionMenuItemView: void setCheckable(boolean)
-android.support.v7.internal.view.menu.ActionMenuItemView: void setChecked(boolean)
-android.support.v7.internal.view.menu.ActionMenuItemView: void setExpandedFormat(boolean)
-android.support.v7.internal.view.menu.ActionMenuItemView: void setIcon(android.graphics.drawable.Drawable)
-android.support.v7.internal.view.menu.ActionMenuItemView: void setTitle(java.lang.CharSequence)
-android.support.v7.internal.view.menu.ExpandedMenuView
-android.support.v7.internal.view.menu.ExpandedMenuView: ExpandedMenuView(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.view.menu.ExpandedMenuView: ExpandedMenuView(android.content.Context,android.util.AttributeSet,int)
-android.support.v7.internal.view.menu.ExpandedMenuView: int getWindowAnimations()
-android.support.v7.internal.view.menu.ListMenuItemView
-android.support.v7.internal.view.menu.ListMenuItemView: ListMenuItemView(android.content.Context,android.util.AttributeSet,int)
-android.support.v7.internal.view.menu.ListMenuItemView: ListMenuItemView(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.view.menu.ListMenuItemView: void setForceShowIcon(boolean)
-android.support.v7.internal.view.menu.ListMenuItemView: void setTitle(java.lang.CharSequence)
-android.support.v7.internal.view.menu.ListMenuItemView: android.support.v7.internal.view.menu.MenuItemImpl getItemData()
-android.support.v7.internal.view.menu.ListMenuItemView: void setCheckable(boolean)
-android.support.v7.internal.view.menu.ListMenuItemView: void setChecked(boolean)
-android.support.v7.internal.view.menu.ListMenuItemView: void setIcon(android.graphics.drawable.Drawable)
-android.support.v7.internal.view.menu.ListMenuItemView: android.view.LayoutInflater getInflater()
-android.support.v7.internal.widget.AbsActionBarView: AbsActionBarView(android.content.Context)
-android.support.v7.internal.widget.AbsActionBarView: AbsActionBarView(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.widget.AbsActionBarView: AbsActionBarView(android.content.Context,android.util.AttributeSet,int)
-android.support.v7.internal.widget.AbsActionBarView: void setContentHeight(int)
-android.support.v7.internal.widget.AbsActionBarView: int getContentHeight()
-android.support.v7.internal.widget.AbsActionBarView: int getAnimatedVisibility()
-android.support.v7.internal.widget.AbsActionBarView: void setVisibility(int)
-android.support.v7.internal.widget.ActionBarContainer
-android.support.v7.internal.widget.ActionBarContainer: ActionBarContainer(android.content.Context)
-android.support.v7.internal.widget.ActionBarContainer: ActionBarContainer(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.widget.ActionBarContainer: void setPrimaryBackground(android.graphics.drawable.Drawable)
-android.support.v7.internal.widget.ActionBarContainer: void setStackedBackground(android.graphics.drawable.Drawable)
-android.support.v7.internal.widget.ActionBarContainer: void setSplitBackground(android.graphics.drawable.Drawable)
-android.support.v7.internal.widget.ActionBarContainer: void setVisibility(int)
-android.support.v7.internal.widget.ActionBarContainer: void setTransitioning(boolean)
-android.support.v7.internal.widget.ActionBarContainer: void setTabContainer(android.support.v7.internal.widget.ScrollingTabContainerView)
-android.support.v7.internal.widget.ActionBarContainer: android.view.View getTabContainer()
-android.support.v7.internal.widget.ActionBarContextView
-android.support.v7.internal.widget.ActionBarContextView: ActionBarContextView(android.content.Context)
-android.support.v7.internal.widget.ActionBarContextView: ActionBarContextView(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.widget.ActionBarContextView: ActionBarContextView(android.content.Context,android.util.AttributeSet,int)
-android.support.v7.internal.widget.ActionBarContextView: void setContentHeight(int)
-android.support.v7.internal.widget.ActionBarContextView: void setCustomView(android.view.View)
-android.support.v7.internal.widget.ActionBarContextView: void setTitle(java.lang.CharSequence)
-android.support.v7.internal.widget.ActionBarContextView: void setSubtitle(java.lang.CharSequence)
-android.support.v7.internal.widget.ActionBarContextView: java.lang.CharSequence getTitle()
-android.support.v7.internal.widget.ActionBarContextView: java.lang.CharSequence getSubtitle()
-android.support.v7.internal.widget.ActionBarContextView: void setTitleOptional(boolean)
-android.support.v7.internal.widget.ActionBarContextView: void setVisibility(int)
-android.support.v7.internal.widget.ActionBarContextView: int getAnimatedVisibility()
-android.support.v7.internal.widget.ActionBarContextView: int getContentHeight()
-android.support.v7.internal.widget.ActionBarOverlayLayout
-android.support.v7.internal.widget.ActionBarOverlayLayout: ActionBarOverlayLayout(android.content.Context)
-android.support.v7.internal.widget.ActionBarOverlayLayout: ActionBarOverlayLayout(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setActionBarVisibilityCallback(android.support.v7.internal.widget.ActionBarOverlayLayout$ActionBarVisibilityCallback)
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setOverlayMode(boolean)
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setHasNonEmbeddedTabs(boolean)
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setShowingForActionMode(boolean)
-android.support.v7.internal.widget.ActionBarOverlayLayout: int getNestedScrollAxes()
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setHideOnContentScrollEnabled(boolean)
-android.support.v7.internal.widget.ActionBarOverlayLayout: int getActionBarHideOffset()
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setActionBarHideOffset(int)
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setWindowCallback(android.view.Window$Callback)
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setWindowTitle(java.lang.CharSequence)
-android.support.v7.internal.widget.ActionBarOverlayLayout: java.lang.CharSequence getTitle()
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setUiOptions(int)
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setIcon(int)
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setIcon(android.graphics.drawable.Drawable)
-android.support.v7.internal.widget.ActionBarOverlayLayout: void setLogo(int)
-android.support.v7.internal.widget.ActivityChooserView: void setActivityChooserModel(android.support.v7.internal.widget.ActivityChooserModel)
-android.support.v7.internal.widget.ActivityChooserView: void setExpandActivityOverflowButtonDrawable(android.graphics.drawable.Drawable)
-android.support.v7.internal.widget.ActivityChooserView: void setExpandActivityOverflowButtonContentDescription(int)
-android.support.v7.internal.widget.ActivityChooserView: void setProvider(android.support.v4.view.ActionProvider)
-android.support.v7.internal.widget.ActivityChooserView: android.support.v7.internal.widget.ActivityChooserModel getDataModel()
-android.support.v7.internal.widget.ActivityChooserView: void setOnDismissListener(android.widget.PopupWindow$OnDismissListener)
-android.support.v7.internal.widget.ActivityChooserView: void setInitialActivityCount(int)
-android.support.v7.internal.widget.ActivityChooserView: void setDefaultActionButtonContentDescription(int)
-android.support.v7.internal.widget.ActivityChooserView: android.support.v7.widget.ListPopupWindow getListPopupWindow()
-android.support.v7.internal.widget.ActivityChooserView$InnerLayout
-android.support.v7.internal.widget.ActivityChooserView$InnerLayout: ActivityChooserView$InnerLayout(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.widget.ContentFrameLayout
-android.support.v7.internal.widget.ContentFrameLayout: ContentFrameLayout(android.content.Context)
-android.support.v7.internal.widget.ContentFrameLayout: ContentFrameLayout(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.widget.ContentFrameLayout: ContentFrameLayout(android.content.Context,android.util.AttributeSet,int)
-android.support.v7.internal.widget.ContentFrameLayout: android.util.TypedValue getMinWidthMajor()
-android.support.v7.internal.widget.ContentFrameLayout: android.util.TypedValue getMinWidthMinor()
-android.support.v7.internal.widget.ContentFrameLayout: android.util.TypedValue getFixedWidthMajor()
-android.support.v7.internal.widget.ContentFrameLayout: android.util.TypedValue getFixedWidthMinor()
-android.support.v7.internal.widget.ContentFrameLayout: android.util.TypedValue getFixedHeightMajor()
-android.support.v7.internal.widget.ContentFrameLayout: android.util.TypedValue getFixedHeightMinor()
-android.support.v7.internal.widget.DialogTitle
-android.support.v7.internal.widget.DialogTitle: DialogTitle(android.content.Context,android.util.AttributeSet,int)
-android.support.v7.internal.widget.DialogTitle: DialogTitle(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.widget.DialogTitle: DialogTitle(android.content.Context)
-android.support.v7.internal.widget.FitWindowsFrameLayout
-android.support.v7.internal.widget.FitWindowsFrameLayout: FitWindowsFrameLayout(android.content.Context)
-android.support.v7.internal.widget.FitWindowsFrameLayout: FitWindowsFrameLayout(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.widget.FitWindowsFrameLayout: void setOnFitSystemWindowsListener(android.support.v7.internal.widget.FitWindowsViewGroup$OnFitSystemWindowsListener)
-android.support.v7.internal.widget.FitWindowsLinearLayout
-android.support.v7.internal.widget.FitWindowsLinearLayout: FitWindowsLinearLayout(android.content.Context)
-android.support.v7.internal.widget.FitWindowsLinearLayout: FitWindowsLinearLayout(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.widget.FitWindowsLinearLayout: void setOnFitSystemWindowsListener(android.support.v7.internal.widget.FitWindowsViewGroup$OnFitSystemWindowsListener)
-android.support.v7.internal.widget.ListViewCompat: void setSelector(android.graphics.drawable.Drawable)
-android.support.v7.internal.widget.ListViewCompat: void setSelectorEnabled(boolean)
-android.support.v7.internal.widget.ScrollingTabContainerView: void setAllowCollapse(boolean)
-android.support.v7.internal.widget.ScrollingTabContainerView: void setTabSelected(int)
-android.support.v7.internal.widget.ScrollingTabContainerView: void setContentHeight(int)
-android.support.v7.internal.widget.TintImageView
-android.support.v7.internal.widget.TintImageView: TintImageView(android.content.Context)
-android.support.v7.internal.widget.TintImageView: TintImageView(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.widget.TintImageView: TintImageView(android.content.Context,android.util.AttributeSet,int)
-android.support.v7.internal.widget.TintImageView: void setImageResource(int)
-android.support.v7.internal.widget.ViewStubCompat
-android.support.v7.internal.widget.ViewStubCompat: ViewStubCompat(android.content.Context,android.util.AttributeSet)
-android.support.v7.internal.widget.ViewStubCompat: ViewStubCompat(android.content.Context,android.util.AttributeSet,int)
-android.support.v7.internal.widget.ViewStubCompat: int getInflatedId()
-android.support.v7.internal.widget.ViewStubCompat: void setInflatedId(int)
-android.support.v7.internal.widget.ViewStubCompat: int getLayoutResource()
-android.support.v7.internal.widget.ViewStubCompat: void setLayoutResource(int)
-android.support.v7.internal.widget.ViewStubCompat: void setLayoutInflater(android.view.LayoutInflater)
-android.support.v7.internal.widget.ViewStubCompat: android.view.LayoutInflater getLayoutInflater()
-android.support.v7.internal.widget.ViewStubCompat: void setVisibility(int)
-android.support.v7.internal.widget.ViewStubCompat: void setOnInflateListener(android.support.v7.internal.widget.ViewStubCompat$OnInflateListener)
+android.support.v7.view.menu.ActionMenuItemView
+android.support.v7.view.menu.ActionMenuItemView: ActionMenuItemView(android.content.Context)
+android.support.v7.view.menu.ActionMenuItemView: ActionMenuItemView(android.content.Context,android.util.AttributeSet)
+android.support.v7.view.menu.ActionMenuItemView: ActionMenuItemView(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.view.menu.ActionMenuItemView: android.support.v7.view.menu.MenuItemImpl getItemData()
+android.support.v7.view.menu.ActionMenuItemView: void setItemInvoker(android.support.v7.view.menu.MenuBuilder$ItemInvoker)
+android.support.v7.view.menu.ActionMenuItemView: void setPopupCallback(android.support.v7.view.menu.ActionMenuItemView$PopupCallback)
+android.support.v7.view.menu.ActionMenuItemView: void setCheckable(boolean)
+android.support.v7.view.menu.ActionMenuItemView: void setChecked(boolean)
+android.support.v7.view.menu.ActionMenuItemView: void setExpandedFormat(boolean)
+android.support.v7.view.menu.ActionMenuItemView: void setIcon(android.graphics.drawable.Drawable)
+android.support.v7.view.menu.ActionMenuItemView: void setTitle(java.lang.CharSequence)
+android.support.v7.view.menu.ExpandedMenuView
+android.support.v7.view.menu.ExpandedMenuView: ExpandedMenuView(android.content.Context,android.util.AttributeSet)
+android.support.v7.view.menu.ExpandedMenuView: ExpandedMenuView(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.view.menu.ExpandedMenuView: int getWindowAnimations()
+android.support.v7.view.menu.ListMenuItemView
+android.support.v7.view.menu.ListMenuItemView: ListMenuItemView(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.view.menu.ListMenuItemView: ListMenuItemView(android.content.Context,android.util.AttributeSet)
+android.support.v7.view.menu.ListMenuItemView: void setForceShowIcon(boolean)
+android.support.v7.view.menu.ListMenuItemView: void setTitle(java.lang.CharSequence)
+android.support.v7.view.menu.ListMenuItemView: android.support.v7.view.menu.MenuItemImpl getItemData()
+android.support.v7.view.menu.ListMenuItemView: void setCheckable(boolean)
+android.support.v7.view.menu.ListMenuItemView: void setChecked(boolean)
+android.support.v7.view.menu.ListMenuItemView: void setIcon(android.graphics.drawable.Drawable)
+android.support.v7.view.menu.ListMenuItemView: android.view.LayoutInflater getInflater()
+android.support.v7.widget.AbsActionBarView: AbsActionBarView(android.content.Context)
+android.support.v7.widget.AbsActionBarView: AbsActionBarView(android.content.Context,android.util.AttributeSet)
+android.support.v7.widget.AbsActionBarView: AbsActionBarView(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.widget.AbsActionBarView: void setContentHeight(int)
+android.support.v7.widget.AbsActionBarView: int getContentHeight()
+android.support.v7.widget.AbsActionBarView: int getAnimatedVisibility()
+android.support.v7.widget.AbsActionBarView: void setVisibility(int)
+android.support.v7.widget.ActionBarContainer
+android.support.v7.widget.ActionBarContainer: ActionBarContainer(android.content.Context)
+android.support.v7.widget.ActionBarContainer: ActionBarContainer(android.content.Context,android.util.AttributeSet)
+android.support.v7.widget.ActionBarContainer: void setPrimaryBackground(android.graphics.drawable.Drawable)
+android.support.v7.widget.ActionBarContainer: void setStackedBackground(android.graphics.drawable.Drawable)
+android.support.v7.widget.ActionBarContainer: void setSplitBackground(android.graphics.drawable.Drawable)
+android.support.v7.widget.ActionBarContainer: void setVisibility(int)
+android.support.v7.widget.ActionBarContainer: void setTransitioning(boolean)
+android.support.v7.widget.ActionBarContainer: void setTabContainer(android.support.v7.widget.ScrollingTabContainerView)
+android.support.v7.widget.ActionBarContainer: android.view.View getTabContainer()
+android.support.v7.widget.ActionBarContextView
+android.support.v7.widget.ActionBarContextView: ActionBarContextView(android.content.Context)
+android.support.v7.widget.ActionBarContextView: ActionBarContextView(android.content.Context,android.util.AttributeSet)
+android.support.v7.widget.ActionBarContextView: ActionBarContextView(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.widget.ActionBarContextView: void setContentHeight(int)
+android.support.v7.widget.ActionBarContextView: void setCustomView(android.view.View)
+android.support.v7.widget.ActionBarContextView: void setTitle(java.lang.CharSequence)
+android.support.v7.widget.ActionBarContextView: void setSubtitle(java.lang.CharSequence)
+android.support.v7.widget.ActionBarContextView: java.lang.CharSequence getTitle()
+android.support.v7.widget.ActionBarContextView: java.lang.CharSequence getSubtitle()
+android.support.v7.widget.ActionBarContextView: void setTitleOptional(boolean)
+android.support.v7.widget.ActionBarContextView: void setVisibility(int)
+android.support.v7.widget.ActionBarContextView: int getAnimatedVisibility()
+android.support.v7.widget.ActionBarContextView: int getContentHeight()
+android.support.v7.widget.ActionBarOverlayLayout
+android.support.v7.widget.ActionBarOverlayLayout: ActionBarOverlayLayout(android.content.Context)
+android.support.v7.widget.ActionBarOverlayLayout: ActionBarOverlayLayout(android.content.Context,android.util.AttributeSet)
+android.support.v7.widget.ActionBarOverlayLayout: void setActionBarVisibilityCallback(android.support.v7.widget.ActionBarOverlayLayout$ActionBarVisibilityCallback)
+android.support.v7.widget.ActionBarOverlayLayout: void setOverlayMode(boolean)
+android.support.v7.widget.ActionBarOverlayLayout: void setHasNonEmbeddedTabs(boolean)
+android.support.v7.widget.ActionBarOverlayLayout: void setShowingForActionMode(boolean)
+android.support.v7.widget.ActionBarOverlayLayout: int getNestedScrollAxes()
+android.support.v7.widget.ActionBarOverlayLayout: void setHideOnContentScrollEnabled(boolean)
+android.support.v7.widget.ActionBarOverlayLayout: int getActionBarHideOffset()
+android.support.v7.widget.ActionBarOverlayLayout: void setActionBarHideOffset(int)
+android.support.v7.widget.ActionBarOverlayLayout: void setWindowCallback(android.view.Window$Callback)
+android.support.v7.widget.ActionBarOverlayLayout: void setWindowTitle(java.lang.CharSequence)
+android.support.v7.widget.ActionBarOverlayLayout: java.lang.CharSequence getTitle()
+android.support.v7.widget.ActionBarOverlayLayout: void setUiOptions(int)
+android.support.v7.widget.ActionBarOverlayLayout: void setIcon(int)
+android.support.v7.widget.ActionBarOverlayLayout: void setIcon(android.graphics.drawable.Drawable)
+android.support.v7.widget.ActionBarOverlayLayout: void setLogo(int)
 android.support.v7.widget.ActionMenuPresenter$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v7.widget.ActionMenuView
 android.support.v7.widget.ActionMenuView: ActionMenuView(android.content.Context)
@@ -1439,6 +1425,17 @@ android.support.v7.widget.ActionMenuView: void setOverflowReserved(boolean)
 android.support.v7.widget.ActionMenuView: int getWindowAnimations()
 android.support.v7.widget.ActionMenuView: android.view.Menu getMenu()
 android.support.v7.widget.ActionMenuView: void setExpandedActionViewsExclusive(boolean)
+android.support.v7.widget.ActivityChooserView: void setActivityChooserModel(android.support.v7.widget.ActivityChooserModel)
+android.support.v7.widget.ActivityChooserView: void setExpandActivityOverflowButtonDrawable(android.graphics.drawable.Drawable)
+android.support.v7.widget.ActivityChooserView: void setExpandActivityOverflowButtonContentDescription(int)
+android.support.v7.widget.ActivityChooserView: void setProvider(android.support.v4.view.ActionProvider)
+android.support.v7.widget.ActivityChooserView: android.support.v7.widget.ActivityChooserModel getDataModel()
+android.support.v7.widget.ActivityChooserView: void setOnDismissListener(android.widget.PopupWindow$OnDismissListener)
+android.support.v7.widget.ActivityChooserView: void setInitialActivityCount(int)
+android.support.v7.widget.ActivityChooserView: void setDefaultActionButtonContentDescription(int)
+android.support.v7.widget.ActivityChooserView: android.support.v7.widget.ListPopupWindow getListPopupWindow()
+android.support.v7.widget.ActivityChooserView$InnerLayout
+android.support.v7.widget.ActivityChooserView$InnerLayout: ActivityChooserView$InnerLayout(android.content.Context,android.util.AttributeSet)
 android.support.v7.widget.AppCompatAutoCompleteTextView: AppCompatAutoCompleteTextView(android.content.Context)
 android.support.v7.widget.AppCompatAutoCompleteTextView: AppCompatAutoCompleteTextView(android.content.Context,android.util.AttributeSet)
 android.support.v7.widget.AppCompatAutoCompleteTextView: AppCompatAutoCompleteTextView(android.content.Context,android.util.AttributeSet,int)
@@ -1470,6 +1467,20 @@ android.support.v7.widget.AppCompatEditText: void setSupportBackgroundTintList(a
 android.support.v7.widget.AppCompatEditText: android.content.res.ColorStateList getSupportBackgroundTintList()
 android.support.v7.widget.AppCompatEditText: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
 android.support.v7.widget.AppCompatEditText: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+android.support.v7.widget.AppCompatImageButton: void setImageResource(int)
+android.support.v7.widget.AppCompatImageButton: void setBackgroundResource(int)
+android.support.v7.widget.AppCompatImageButton: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v7.widget.AppCompatImageButton: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+android.support.v7.widget.AppCompatImageButton: android.content.res.ColorStateList getSupportBackgroundTintList()
+android.support.v7.widget.AppCompatImageButton: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+android.support.v7.widget.AppCompatImageButton: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+android.support.v7.widget.AppCompatImageView: void setImageResource(int)
+android.support.v7.widget.AppCompatImageView: void setBackgroundResource(int)
+android.support.v7.widget.AppCompatImageView: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v7.widget.AppCompatImageView: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+android.support.v7.widget.AppCompatImageView: android.content.res.ColorStateList getSupportBackgroundTintList()
+android.support.v7.widget.AppCompatImageView: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+android.support.v7.widget.AppCompatImageView: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
 android.support.v7.widget.AppCompatMultiAutoCompleteTextView: void setDropDownBackgroundResource(int)
 android.support.v7.widget.AppCompatMultiAutoCompleteTextView: void setBackgroundResource(int)
 android.support.v7.widget.AppCompatMultiAutoCompleteTextView: void setBackgroundDrawable(android.graphics.drawable.Drawable)
@@ -1484,7 +1495,6 @@ android.support.v7.widget.AppCompatRadioButton: void setSupportButtonTintList(an
 android.support.v7.widget.AppCompatRadioButton: android.content.res.ColorStateList getSupportButtonTintList()
 android.support.v7.widget.AppCompatRadioButton: void setSupportButtonTintMode(android.graphics.PorterDuff$Mode)
 android.support.v7.widget.AppCompatRadioButton: android.graphics.PorterDuff$Mode getSupportButtonTintMode()
-android.support.v7.widget.AppCompatRatingBar: android.graphics.drawable.shapes.Shape getDrawableShape()
 android.support.v7.widget.AppCompatSpinner: android.content.Context getPopupContext()
 android.support.v7.widget.AppCompatSpinner: void setPopupBackgroundDrawable(android.graphics.drawable.Drawable)
 android.support.v7.widget.AppCompatSpinner: void setPopupBackgroundResource(int)
@@ -1508,6 +1518,39 @@ android.support.v7.widget.AppCompatSpinner: void setAdapter(android.widget.Adapt
 android.support.v7.widget.AppCompatTextView: AppCompatTextView(android.content.Context)
 android.support.v7.widget.AppCompatTextView: AppCompatTextView(android.content.Context,android.util.AttributeSet)
 android.support.v7.widget.AppCompatTextView: AppCompatTextView(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.widget.AppCompatTextView: void setBackgroundResource(int)
+android.support.v7.widget.AppCompatTextView: void setBackgroundDrawable(android.graphics.drawable.Drawable)
+android.support.v7.widget.AppCompatTextView: void setSupportBackgroundTintList(android.content.res.ColorStateList)
+android.support.v7.widget.AppCompatTextView: android.content.res.ColorStateList getSupportBackgroundTintList()
+android.support.v7.widget.AppCompatTextView: void setSupportBackgroundTintMode(android.graphics.PorterDuff$Mode)
+android.support.v7.widget.AppCompatTextView: android.graphics.PorterDuff$Mode getSupportBackgroundTintMode()
+android.support.v7.widget.ButtonBarLayout
+android.support.v7.widget.ButtonBarLayout: ButtonBarLayout(android.content.Context,android.util.AttributeSet)
+android.support.v7.widget.ButtonBarLayout: void setAllowStacking(boolean)
+android.support.v7.widget.ButtonBarLayout: void setStacked(boolean)
+android.support.v7.widget.ContentFrameLayout
+android.support.v7.widget.ContentFrameLayout: ContentFrameLayout(android.content.Context)
+android.support.v7.widget.ContentFrameLayout: ContentFrameLayout(android.content.Context,android.util.AttributeSet)
+android.support.v7.widget.ContentFrameLayout: ContentFrameLayout(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.widget.ContentFrameLayout: void setAttachListener(android.support.v7.widget.ContentFrameLayout$OnAttachListener)
+android.support.v7.widget.ContentFrameLayout: android.util.TypedValue getMinWidthMajor()
+android.support.v7.widget.ContentFrameLayout: android.util.TypedValue getMinWidthMinor()
+android.support.v7.widget.ContentFrameLayout: android.util.TypedValue getFixedWidthMajor()
+android.support.v7.widget.ContentFrameLayout: android.util.TypedValue getFixedWidthMinor()
+android.support.v7.widget.ContentFrameLayout: android.util.TypedValue getFixedHeightMajor()
+android.support.v7.widget.ContentFrameLayout: android.util.TypedValue getFixedHeightMinor()
+android.support.v7.widget.DialogTitle
+android.support.v7.widget.DialogTitle: DialogTitle(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.widget.DialogTitle: DialogTitle(android.content.Context,android.util.AttributeSet)
+android.support.v7.widget.DialogTitle: DialogTitle(android.content.Context)
+android.support.v7.widget.FitWindowsFrameLayout
+android.support.v7.widget.FitWindowsFrameLayout: FitWindowsFrameLayout(android.content.Context)
+android.support.v7.widget.FitWindowsFrameLayout: FitWindowsFrameLayout(android.content.Context,android.util.AttributeSet)
+android.support.v7.widget.FitWindowsFrameLayout: void setOnFitSystemWindowsListener(android.support.v7.widget.FitWindowsViewGroup$OnFitSystemWindowsListener)
+android.support.v7.widget.FitWindowsLinearLayout
+android.support.v7.widget.FitWindowsLinearLayout: FitWindowsLinearLayout(android.content.Context)
+android.support.v7.widget.FitWindowsLinearLayout: FitWindowsLinearLayout(android.content.Context,android.util.AttributeSet)
+android.support.v7.widget.FitWindowsLinearLayout: void setOnFitSystemWindowsListener(android.support.v7.widget.FitWindowsViewGroup$OnFitSystemWindowsListener)
 android.support.v7.widget.LinearLayoutCompat: LinearLayoutCompat(android.content.Context)
 android.support.v7.widget.LinearLayoutCompat: LinearLayoutCompat(android.content.Context,android.util.AttributeSet)
 android.support.v7.widget.LinearLayoutCompat: LinearLayoutCompat(android.content.Context,android.util.AttributeSet,int)
@@ -1531,6 +1574,11 @@ android.support.v7.widget.LinearLayoutCompat: int getOrientation()
 android.support.v7.widget.LinearLayoutCompat: void setGravity(int)
 android.support.v7.widget.LinearLayoutCompat: void setHorizontalGravity(int)
 android.support.v7.widget.LinearLayoutCompat: void setVerticalGravity(int)
+android.support.v7.widget.ListViewCompat: void setSelector(android.graphics.drawable.Drawable)
+android.support.v7.widget.ListViewCompat: void setSelectorEnabled(boolean)
+android.support.v7.widget.ScrollingTabContainerView: void setAllowCollapse(boolean)
+android.support.v7.widget.ScrollingTabContainerView: void setTabSelected(int)
+android.support.v7.widget.ScrollingTabContainerView: void setContentHeight(int)
 android.support.v7.widget.SearchView: int getSuggestionRowLayout()
 android.support.v7.widget.SearchView: int getSuggestionCommitIconResId()
 android.support.v7.widget.SearchView: void setSearchableInfo(android.app.SearchableInfo)
@@ -1628,9 +1676,20 @@ android.support.v7.widget.Toolbar: int getContentInsetStart()
 android.support.v7.widget.Toolbar: int getContentInsetEnd()
 android.support.v7.widget.Toolbar: int getContentInsetLeft()
 android.support.v7.widget.Toolbar: int getContentInsetRight()
-android.support.v7.widget.Toolbar: android.support.v7.internal.widget.DecorToolbar getWrapper()
+android.support.v7.widget.Toolbar: android.support.v7.widget.DecorToolbar getWrapper()
 android.support.v7.widget.Toolbar: void setCollapsible(boolean)
 android.support.v7.widget.Toolbar$SavedState: android.os.Parcelable$Creator CREATOR
+android.support.v7.widget.ViewStubCompat
+android.support.v7.widget.ViewStubCompat: ViewStubCompat(android.content.Context,android.util.AttributeSet)
+android.support.v7.widget.ViewStubCompat: ViewStubCompat(android.content.Context,android.util.AttributeSet,int)
+android.support.v7.widget.ViewStubCompat: int getInflatedId()
+android.support.v7.widget.ViewStubCompat: void setInflatedId(int)
+android.support.v7.widget.ViewStubCompat: int getLayoutResource()
+android.support.v7.widget.ViewStubCompat: void setLayoutResource(int)
+android.support.v7.widget.ViewStubCompat: void setLayoutInflater(android.view.LayoutInflater)
+android.support.v7.widget.ViewStubCompat: android.view.LayoutInflater getLayoutInflater()
+android.support.v7.widget.ViewStubCompat: void setVisibility(int)
+android.support.v7.widget.ViewStubCompat: void setOnInflateListener(android.support.v7.widget.ViewStubCompat$OnInflateListener)
 com.prasilabs.screenlocker.R$anim: int abc_fade_in
 com.prasilabs.screenlocker.R$anim: int abc_fade_out
 com.prasilabs.screenlocker.R$anim: int abc_grow_fade_in_from_bottom
@@ -1679,6 +1738,7 @@ com.prasilabs.screenlocker.R$attr: int alertDialogButtonGroupStyle
 com.prasilabs.screenlocker.R$attr: int alertDialogCenterButtons
 com.prasilabs.screenlocker.R$attr: int alertDialogStyle
 com.prasilabs.screenlocker.R$attr: int alertDialogTheme
+com.prasilabs.screenlocker.R$attr: int allowStacking
 com.prasilabs.screenlocker.R$attr: int arrowHeadLength
 com.prasilabs.screenlocker.R$attr: int arrowShaftLength
 com.prasilabs.screenlocker.R$attr: int autoCompleteTextViewStyle
@@ -1746,6 +1806,7 @@ com.prasilabs.screenlocker.R$attr: int homeAsUpIndicator
 com.prasilabs.screenlocker.R$attr: int homeLayout
 com.prasilabs.screenlocker.R$attr: int icon
 com.prasilabs.screenlocker.R$attr: int iconifiedByDefault
+com.prasilabs.screenlocker.R$attr: int imageButtonStyle
 com.prasilabs.screenlocker.R$attr: int indeterminateProgressStyle
 com.prasilabs.screenlocker.R$attr: int initialActivityCount
 com.prasilabs.screenlocker.R$attr: int isLightTheme
@@ -1788,6 +1849,7 @@ com.prasilabs.screenlocker.R$attr: int ratingBarStyle
 com.prasilabs.screenlocker.R$attr: int searchHintIcon
 com.prasilabs.screenlocker.R$attr: int searchIcon
 com.prasilabs.screenlocker.R$attr: int searchViewStyle
+com.prasilabs.screenlocker.R$attr: int seekBarStyle
 com.prasilabs.screenlocker.R$attr: int selectableItemBackground
 com.prasilabs.screenlocker.R$attr: int selectableItemBackgroundBorderless
 com.prasilabs.screenlocker.R$attr: int showAsAction
@@ -1847,6 +1909,7 @@ com.prasilabs.screenlocker.R$attr: int windowNoTitle
 com.prasilabs.screenlocker.R$bool: int abc_action_bar_embed_tabs
 com.prasilabs.screenlocker.R$bool: int abc_action_bar_embed_tabs_pre_jb
 com.prasilabs.screenlocker.R$bool: int abc_action_bar_expanded_action_views_exclusive
+com.prasilabs.screenlocker.R$bool: int abc_allow_stacked_button_bar
 com.prasilabs.screenlocker.R$bool: int abc_config_actionMenuItemAllCaps
 com.prasilabs.screenlocker.R$bool: int abc_config_allowActionMenuItemTextWithIcon
 com.prasilabs.screenlocker.R$bool: int abc_config_closeDialogWhenTouchOutside
@@ -2011,6 +2074,10 @@ com.prasilabs.screenlocker.R$dimen: int abc_config_prefDialogWidth
 com.prasilabs.screenlocker.R$dimen: int abc_control_corner_material
 com.prasilabs.screenlocker.R$dimen: int abc_control_inset_material
 com.prasilabs.screenlocker.R$dimen: int abc_control_padding_material
+com.prasilabs.screenlocker.R$dimen: int abc_dialog_fixed_height_major
+com.prasilabs.screenlocker.R$dimen: int abc_dialog_fixed_height_minor
+com.prasilabs.screenlocker.R$dimen: int abc_dialog_fixed_width_major
+com.prasilabs.screenlocker.R$dimen: int abc_dialog_fixed_width_minor
 com.prasilabs.screenlocker.R$dimen: int abc_dialog_list_padding_vertical_material
 com.prasilabs.screenlocker.R$dimen: int abc_dialog_min_width_major
 com.prasilabs.screenlocker.R$dimen: int abc_dialog_min_width_minor
@@ -2029,6 +2096,9 @@ com.prasilabs.screenlocker.R$dimen: int abc_list_item_padding_horizontal_materia
 com.prasilabs.screenlocker.R$dimen: int abc_panel_menu_list_width
 com.prasilabs.screenlocker.R$dimen: int abc_search_view_preferred_width
 com.prasilabs.screenlocker.R$dimen: int abc_search_view_text_min_width
+com.prasilabs.screenlocker.R$dimen: int abc_seekbar_track_background_height_material
+com.prasilabs.screenlocker.R$dimen: int abc_seekbar_track_progress_height_material
+com.prasilabs.screenlocker.R$dimen: int abc_select_dialog_padding_start_material
 com.prasilabs.screenlocker.R$dimen: int abc_switch_padding
 com.prasilabs.screenlocker.R$dimen: int abc_text_size_body_1_material
 com.prasilabs.screenlocker.R$dimen: int abc_text_size_body_2_material
@@ -2058,10 +2128,6 @@ com.prasilabs.screenlocker.R$dimen: int card_button_padding
 com.prasilabs.screenlocker.R$dimen: int card_margin
 com.prasilabs.screenlocker.R$dimen: int default_elevation
 com.prasilabs.screenlocker.R$dimen: int detail_backdrop_height
-com.prasilabs.screenlocker.R$dimen: int dialog_fixed_height_major
-com.prasilabs.screenlocker.R$dimen: int dialog_fixed_height_minor
-com.prasilabs.screenlocker.R$dimen: int dialog_fixed_width_major
-com.prasilabs.screenlocker.R$dimen: int dialog_fixed_width_minor
 com.prasilabs.screenlocker.R$dimen: int disabled_alpha_material_dark
 com.prasilabs.screenlocker.R$dimen: int disabled_alpha_material_light
 com.prasilabs.screenlocker.R$dimen: int elevation_high
@@ -2156,6 +2222,13 @@ com.prasilabs.screenlocker.R$drawable: int abc_list_selector_holo_light
 com.prasilabs.screenlocker.R$drawable: int abc_menu_hardkey_panel_mtrl_mult
 com.prasilabs.screenlocker.R$drawable: int abc_popup_background_mtrl_mult
 com.prasilabs.screenlocker.R$drawable: int abc_ratingbar_full_material
+com.prasilabs.screenlocker.R$drawable: int abc_scrubber_control_off_mtrl_alpha
+com.prasilabs.screenlocker.R$drawable: int abc_scrubber_control_to_pressed_mtrl_000
+com.prasilabs.screenlocker.R$drawable: int abc_scrubber_control_to_pressed_mtrl_005
+com.prasilabs.screenlocker.R$drawable: int abc_scrubber_primary_mtrl_alpha
+com.prasilabs.screenlocker.R$drawable: int abc_scrubber_track_mtrl_alpha
+com.prasilabs.screenlocker.R$drawable: int abc_seekbar_thumb_material
+com.prasilabs.screenlocker.R$drawable: int abc_seekbar_track_material
 com.prasilabs.screenlocker.R$drawable: int abc_spinner_mtrl_am_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_spinner_textfield_background_material
 com.prasilabs.screenlocker.R$drawable: int abc_switch_thumb_material
@@ -2254,6 +2327,8 @@ com.prasilabs.screenlocker.R$id: int radio
 com.prasilabs.screenlocker.R$id: int rate_btn
 com.prasilabs.screenlocker.R$id: int screen
 com.prasilabs.screenlocker.R$id: int screen_lock_btn
+com.prasilabs.screenlocker.R$id: int scrollIndicatorDown
+com.prasilabs.screenlocker.R$id: int scrollIndicatorUp
 com.prasilabs.screenlocker.R$id: int scrollView
 com.prasilabs.screenlocker.R$id: int search_badge
 com.prasilabs.screenlocker.R$id: int search_bar
@@ -2273,6 +2348,7 @@ com.prasilabs.screenlocker.R$id: int shortcut
 com.prasilabs.screenlocker.R$id: int showCustom
 com.prasilabs.screenlocker.R$id: int showHome
 com.prasilabs.screenlocker.R$id: int showTitle
+com.prasilabs.screenlocker.R$id: int spacer
 com.prasilabs.screenlocker.R$id: int split_action_bar
 com.prasilabs.screenlocker.R$id: int src_atop
 com.prasilabs.screenlocker.R$id: int src_in
@@ -2307,6 +2383,7 @@ com.prasilabs.screenlocker.R$layout: int abc_action_mode_bar
 com.prasilabs.screenlocker.R$layout: int abc_action_mode_close_item_material
 com.prasilabs.screenlocker.R$layout: int abc_activity_chooser_view
 com.prasilabs.screenlocker.R$layout: int abc_activity_chooser_view_list_item
+com.prasilabs.screenlocker.R$layout: int abc_alert_dialog_button_bar_material
 com.prasilabs.screenlocker.R$layout: int abc_alert_dialog_material
 com.prasilabs.screenlocker.R$layout: int abc_dialog_title_material
 com.prasilabs.screenlocker.R$layout: int abc_expanded_menu_layout
@@ -2348,6 +2425,8 @@ com.prasilabs.screenlocker.R$string: int abc_action_menu_overflow_description
 com.prasilabs.screenlocker.R$string: int abc_action_mode_done
 com.prasilabs.screenlocker.R$string: int abc_activity_chooser_view_see_all
 com.prasilabs.screenlocker.R$string: int abc_activitychooserview_choose_application
+com.prasilabs.screenlocker.R$string: int abc_capital_off
+com.prasilabs.screenlocker.R$string: int abc_capital_on
 com.prasilabs.screenlocker.R$string: int abc_search_hint
 com.prasilabs.screenlocker.R$string: int abc_searchview_description_clear
 com.prasilabs.screenlocker.R$string: int abc_searchview_description_query
@@ -2361,6 +2440,7 @@ com.prasilabs.screenlocker.R$string: int app_name
 com.prasilabs.screenlocker.R$string: int btn_disable_device_admin
 com.prasilabs.screenlocker.R$string: int btn_enable_device_admin
 com.prasilabs.screenlocker.R$string: int developed_by_prasilabs
+com.prasilabs.screenlocker.R$string: int disabled
 com.prasilabs.screenlocker.R$string: int disabled_str
 com.prasilabs.screenlocker.R$string: int double_press_volume_lock_message
 com.prasilabs.screenlocker.R$string: int enable_message
@@ -2373,8 +2453,10 @@ com.prasilabs.screenlocker.R$string: int notification_lock_message
 com.prasilabs.screenlocker.R$string: int notification_screen_lock_message
 com.prasilabs.screenlocker.R$string: int shake_to_lock_screen
 com.prasilabs.screenlocker.R$string: int status_bar_notification_info_overflow
+com.prasilabs.screenlocker.R$string: int to_unlock_screen
 com.prasilabs.screenlocker.R$string: int try_the_app_shortcut_to_lock_screen_instantly
 com.prasilabs.screenlocker.R$string: int uninstall_app
+com.prasilabs.screenlocker.R$string: int volume_key_unlock
 com.prasilabs.screenlocker.R$style: int AlertDialog_AppCompat
 com.prasilabs.screenlocker.R$style: int AlertDialog_AppCompat_Light
 com.prasilabs.screenlocker.R$style: int Animation_AppCompat_Dialog
@@ -2493,6 +2575,7 @@ com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_DrawerArrowToggle
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_DrawerArrowToggle_Common
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_DropDownItem_Spinner
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_EditText
+com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_ImageButton
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_Light_ActionBar
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_Light_ActionBar_Solid
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_Light_ActionBar_TabBar
@@ -2513,6 +2596,7 @@ com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_ProgressBar_Horizo
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_RatingBar
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_SearchView
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_SearchView_ActionBar
+com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_SeekBar
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_Spinner
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_Spinner_Underlined
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_TextView_SpinnerItem
@@ -2530,7 +2614,6 @@ com.prasilabs.screenlocker.R$style: int Platform_V14_AppCompat_Light
 com.prasilabs.screenlocker.R$style: int Platform_Widget_AppCompat_Spinner
 com.prasilabs.screenlocker.R$style: int RtlOverlay_DialogWindowTitle_AppCompat
 com.prasilabs.screenlocker.R$style: int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem
-com.prasilabs.screenlocker.R$style: int RtlOverlay_Widget_AppCompat_ActionButton_Overflow
 com.prasilabs.screenlocker.R$style: int RtlOverlay_Widget_AppCompat_DialogTitle_Icon
 com.prasilabs.screenlocker.R$style: int RtlOverlay_Widget_AppCompat_PopupMenuItem
 com.prasilabs.screenlocker.R$style: int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup
@@ -2541,6 +2624,8 @@ com.prasilabs.screenlocker.R$style: int RtlOverlay_Widget_AppCompat_Search_DropD
 com.prasilabs.screenlocker.R$style: int RtlOverlay_Widget_AppCompat_Search_DropDown_Query
 com.prasilabs.screenlocker.R$style: int RtlOverlay_Widget_AppCompat_Search_DropDown_Text
 com.prasilabs.screenlocker.R$style: int RtlOverlay_Widget_AppCompat_SearchView_MagIcon
+com.prasilabs.screenlocker.R$style: int RtlUnderlay_Widget_AppCompat_ActionButton
+com.prasilabs.screenlocker.R$style: int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow
 com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat
 com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Body1
 com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Body2
@@ -2637,6 +2722,7 @@ com.prasilabs.screenlocker.R$style: int Widget_AppCompat_CompoundButton_Switch
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_DrawerArrowToggle
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_DropDownItem_Spinner
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_EditText
+com.prasilabs.screenlocker.R$style: int Widget_AppCompat_ImageButton
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_Light_ActionBar
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_Light_ActionBar_Solid
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_Light_ActionBar_Solid_Inverse
@@ -2671,6 +2757,7 @@ com.prasilabs.screenlocker.R$style: int Widget_AppCompat_ProgressBar_Horizontal
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_RatingBar
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_SearchView
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_SearchView_ActionBar
+com.prasilabs.screenlocker.R$style: int Widget_AppCompat_SeekBar
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_Spinner
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_Spinner_DropDown
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_Spinner_DropDown_ActionBar
@@ -2778,6 +2865,8 @@ com.prasilabs.screenlocker.R$styleable: int AlertDialog_singleChoiceItemLayout
 com.prasilabs.screenlocker.R$styleable: int[] AppCompatTextView
 com.prasilabs.screenlocker.R$styleable: int AppCompatTextView_android_textAppearance
 com.prasilabs.screenlocker.R$styleable: int AppCompatTextView_textAllCaps
+com.prasilabs.screenlocker.R$styleable: int[] ButtonBarLayout
+com.prasilabs.screenlocker.R$styleable: int ButtonBarLayout_allowStacking
 com.prasilabs.screenlocker.R$styleable: int[] CompoundButton
 com.prasilabs.screenlocker.R$styleable: int CompoundButton_android_button
 com.prasilabs.screenlocker.R$styleable: int CompoundButton_buttonTint
@@ -2883,6 +2972,10 @@ com.prasilabs.screenlocker.R$styleable: int SwitchCompat_switchTextAppearance
 com.prasilabs.screenlocker.R$styleable: int SwitchCompat_thumbTextPadding
 com.prasilabs.screenlocker.R$styleable: int SwitchCompat_track
 com.prasilabs.screenlocker.R$styleable: int[] TextAppearance
+com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_shadowColor
+com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_shadowDx
+com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_shadowDy
+com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_shadowRadius
 com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_textColor
 com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_textSize
 com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_textStyle
@@ -2956,6 +3049,7 @@ com.prasilabs.screenlocker.R$styleable: int Theme_editTextBackground
 com.prasilabs.screenlocker.R$styleable: int Theme_editTextColor
 com.prasilabs.screenlocker.R$styleable: int Theme_editTextStyle
 com.prasilabs.screenlocker.R$styleable: int Theme_homeAsUpIndicator
+com.prasilabs.screenlocker.R$styleable: int Theme_imageButtonStyle
 com.prasilabs.screenlocker.R$styleable: int Theme_listChoiceBackgroundIndicator
 com.prasilabs.screenlocker.R$styleable: int Theme_listDividerAlertDialog
 com.prasilabs.screenlocker.R$styleable: int Theme_listPopupWindowStyle
@@ -2972,6 +3066,7 @@ com.prasilabs.screenlocker.R$styleable: int Theme_popupWindowStyle
 com.prasilabs.screenlocker.R$styleable: int Theme_radioButtonStyle
 com.prasilabs.screenlocker.R$styleable: int Theme_ratingBarStyle
 com.prasilabs.screenlocker.R$styleable: int Theme_searchViewStyle
+com.prasilabs.screenlocker.R$styleable: int Theme_seekBarStyle
 com.prasilabs.screenlocker.R$styleable: int Theme_selectableItemBackground
 com.prasilabs.screenlocker.R$styleable: int Theme_selectableItemBackgroundBorderless
 com.prasilabs.screenlocker.R$styleable: int Theme_spinnerDropDownItemStyle

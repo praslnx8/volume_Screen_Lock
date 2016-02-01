@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/lgray2"
     android:padding="@dimen/paddingS">
@@ -28,7 +28,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/primaryDark"
-                    android:text="To UNlOCK screen"/>
+                    android:text="@string/to_unlock_screen"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -66,7 +66,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="VOLUME KEY UNLOCK"/>
+                        android:text="@string/volume_key_unlock"/>
 
                     <TextView
                         style="@style/textS.black"
@@ -83,7 +83,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="DISABLED"/>
+                        android:text="@string/disabled"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -257,6 +257,7 @@
         <TextView
             android:id="@+id/github_btn"
             style="@style/button.primary.transparent.small"
+            android:drawableStart="@drawable/ic_github"
             android:drawableLeft="@drawable/ic_github"
             android:layout_width="match_parent"
             android:padding="@dimen/paddingXS"
