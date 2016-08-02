@@ -20,4 +20,4 @@
     <size android:height="2dp"
           android:width="2dp"/>
     <solid android:color="@android:color/white"/>
-</shape><!-- From: file:/usr/local/google/buildbot/src/googleplex-android/mnc-supportlib-release/frameworks/support/v7/appcompat/res/drawable/abc_text_cursor_material.xml --><!-- From: file:/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_text_cursor_material.xml -->
+</shape>

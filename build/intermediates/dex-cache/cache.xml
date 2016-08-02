@@ -2,32 +2,46 @@
 <items version="2" >
 
     <item
-        jar="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
-        jumboMode="false"
+        jar="/home/prasi/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="true"
         revision="23.0.1"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/pre-dexed/debug/classes-6f2b91c89e50f8bbd56d978a747a78981f33aece.jar" />
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/home/prasi/WorkSpace/volume_Screen_Lock/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_1089352826ef2c41c565a2a451ec93ee69171cb8.jar" />
     </item>
     <item
-        jar="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
-        jumboMode="false"
+        jar="/home/prasi/WorkSpace/volume_Screen_Lock/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="true"
         revision="23.0.1"
-        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
-        <dex dex="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/pre-dexed/debug/classes-a2fab640643bb326238e5d9c6e54929b11154d40.jar" />
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/home/prasi/WorkSpace/volume_Screen_Lock/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_566b3c42b6a942ce887485163f6099c2318580fa.jar" />
     </item>
     <item
-        jar="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="false"
+        jar="/home/prasi/WorkSpace/volume_Screen_Lock/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="true"
         revision="23.0.1"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1-1042d4e865741423af72532061dffbab55b11e8d.jar" />
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/home/prasi/WorkSpace/volume_Screen_Lock/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_ca99984666b5dbf3442eb8a560f889e7ba7deb3a.jar" />
     </item>
     <item
-        jar="/home/prasi/Application/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
-        jumboMode="false"
+        jar="/home/prasi/WorkSpace/volume_Screen_Lock/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="true"
         revision="23.0.1"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1-798d8584fccd9052905a1356cabbea584c3520b6.jar" />
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/home/prasi/WorkSpace/volume_Screen_Lock/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_53dd05dc37bbfd3823aed5bf75a965a770a4a220.jar" />
+    </item>
+    <item
+        jar="/home/prasi/WorkSpace/volume_Screen_Lock/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="3d28718838f25492f0392d0d22b26113018151de">
+        <dex dex="/home/prasi/WorkSpace/volume_Screen_Lock/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_2fa25e91140fb08eea0e6acd3786381f2ea07af4.jar" />
+    </item>
+    <item
+        jar="/home/prasi/WorkSpace/volume_Screen_Lock/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.1"
+        sha1="a5bb833095a8934e8eb1dc70174e2ca47064c6f8">
+        <dex dex="/home/prasi/WorkSpace/volume_Screen_Lock/app/build/intermediates/pre-dexed/debug/instant-run_8eccac16781dfc2f6b0389cea6f0c4f8a9a08778.jar" />
     </item>
 
 </items>

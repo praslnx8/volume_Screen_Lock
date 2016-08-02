@@ -56,7 +56,16 @@
 
     </RelativeLayout>
 
+    <ImageView
+            android:id="@+id/submenuarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:scaleType="center"
+            android:visibility="gone" />
+
     <!-- Checkbox, and/or radio button will be inserted here. -->
 
 </android.support.v7.view.menu.ListMenuItemView>
-<!-- From: file:/usr/local/google/buildbot/src/googleplex-android/mnc-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_popup_menu_item_layout.xml --><!-- From: file:/home/prasi/WorkSpace/ScreenLocker/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_popup_menu_item_layout.xml -->

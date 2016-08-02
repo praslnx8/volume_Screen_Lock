@@ -1,7 +1,7 @@
 # view res/layout/abc_alert_dialog_material.xml #generated:75
 -keep class android.support.v4.widget.NestedScrollView { <init>(...); }
 
-# view res/layout/abc_alert_dialog_button_bar_material.xml #generated:40
+# view res/layout/abc_alert_dialog_button_bar_material.xml #generated:39
 -keep class android.support.v4.widget.Space { <init>(...); }
 
 # view res/layout/abc_action_menu_item_layout.xml #generated:17
@@ -46,7 +46,7 @@
 # view res/layout/abc_screen_simple.xml #generated:17
 -keep class android.support.v7.widget.FitWindowsLinearLayout { <init>(...); }
 
-# view res/layout/abc_search_view.xml #generated:78
+# view res/layout/abc_search_view.xml #generated:75
 -keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
 
 # view res/layout/abc_screen_toolbar.xml #generated:36
@@ -59,25 +59,25 @@
 # view AndroidManifest.xml #generated:15
 -keep class com.prasilabs.screenlocker.VApp { <init>(...); }
 
-# view AndroidManifest.xml #generated:75
+# view AndroidManifest.xml #generated:81
 -keep class com.prasilabs.screenlocker.VApp$VAdmin { <init>(...); }
 
-# view AndroidManifest.xml #generated:49
+# view AndroidManifest.xml #generated:52
 -keep class com.prasilabs.screenlocker.services.MediaButtonIntentReciever { <init>(...); }
 
-# view AndroidManifest.xml #generated:60
+# view AndroidManifest.xml #generated:63
 -keep class com.prasilabs.screenlocker.services.ScreenLockService { <init>(...); }
 
-# view AndroidManifest.xml #generated:22
+# view AndroidManifest.xml #generated:23
 -keep class com.prasilabs.screenlocker.view.MainActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:39
+# view AndroidManifest.xml #generated:41
 -keep class com.prasilabs.screenlocker.widgets.LockNowActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:66
+# view AndroidManifest.xml #generated:69
 -keep class com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider { <init>(...); }
 
-# view AndroidManifest.xml #generated:29
+# view AndroidManifest.xml #generated:30
 -keep class com.prasilabs.screenlocker.widgets.ShortCutActivity { <init>(...); }
 
 # onClick res/menu/main_menu.xml #generated:4
