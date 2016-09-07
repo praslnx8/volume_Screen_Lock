@@ -2,13 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lgray2"
-    android:padding="@dimen/paddingS">
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@color/lgray2">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"
+        android:padding="@dimen/paddingXXS"
         android:layout_above="@+id/bottom_layout">
 
         <LinearLayout
@@ -254,6 +255,16 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id">
+        </com.google.android.gms.ads.AdView>
+
         <TextView
             android:id="@+id/github_btn"
             style="@style/button.primary.transparent.small"
@@ -261,6 +272,7 @@
             android:drawableLeft="@drawable/ic_github"
             android:layout_width="match_parent"
             android:padding="@dimen/paddingXS"
+            android:visibility="gone"
             android:layout_height="wrap_content"
             android:text="@string/github_src_code"/>
 

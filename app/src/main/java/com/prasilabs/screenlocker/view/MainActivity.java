@@ -1,15 +1,10 @@
 package com.prasilabs.screenlocker.view;
 
-import android.app.AlarmManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ServiceInfo;
 import android.net.Uri;
-import android.os.SystemClock;
+import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,18 +16,28 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.prasilabs.screenlocker.R;
+import com.prasilabs.screenlocker.VApp;
 import com.prasilabs.screenlocker.components.VDialog;
 import com.prasilabs.screenlocker.constants.KeyConstant;
 import com.prasilabs.screenlocker.constants.RequestFor;
 import com.prasilabs.screenlocker.notifications.ScreenLockNotification;
+import com.prasilabs.screenlocker.services.ScreenLockService;
 import com.prasilabs.screenlocker.utils.DeviceAdminUtil;
 import com.prasilabs.screenlocker.utils.MyLogger;
 import com.prasilabs.screenlocker.utils.PhoneData;
-import com.prasilabs.screenlocker.R;
-import com.prasilabs.screenlocker.services.ScreenLockService;
 import com.prasilabs.screenlocker.utils.ShareUtil;
+import com.purplebrain.adbuddiz.sdk.AdBuddiz;
+import com.purplebrain.adbuddiz.sdk.AdBuddizDelegate;
+import com.purplebrain.adbuddiz.sdk.AdBuddizError;
+import com.purplebrain.adbuddiz.sdk.AdBuddizLogLevel;
+import com.purplebrain.adbuddiz.sdk.AdBuddizRewardedVideoDelegate;
+import com.purplebrain.adbuddiz.sdk.AdBuddizRewardedVideoError;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends AppCompatActivity implements AdBuddizRewardedVideoDelegate, AdBuddizDelegate
 {
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -40,12 +45,45 @@ public class MainActivity extends AppCompatActivity
     private CheckBox checkBox;
     private Switch notificatinSwitch, volumeSwitch, shakeSwitch, floatingSwitch;
     private long prevTime;
+    private long lastAdTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(VApp.getAppContext(), "ca-app-pub-9278716690121470~1246954143");
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest.Builder adBuilder = new AdRequest.Builder();
+        if(VApp.appDebug)
+        {
+            adBuilder.addTestDevice("794C17700249AE1D7CE8F8A532B090B6");
+        }
+        AdRequest adRequest = adBuilder.build();
+        mAdView.loadAd(adRequest);
+
+        AdBuddiz.setPublisherKey("b770e723-ed1b-4903-86cc-7e019dc3a41a");
+
+        if(VApp.appDebug)
+        {
+            AdBuddiz.setTestModeActive();
+            AdBuddiz.setLogLevel(AdBuddizLogLevel.Info);    // or Error, Silent
+        }
+        AdBuddiz.cacheAds(this);
+        AdBuddiz.setDelegate(this);
+        AdBuddiz.RewardedVideo.fetch(this);
+        AdBuddiz.setDelegate(this);
+        AdBuddiz.RewardedVideo.setDelegate(this);
+        if (AdBuddiz.isReadyToShowAd(this)) { // this = current Activity
+            /*if(isShowAdByTime()) {
+                AdBuddiz.showAd(this); // showAd will always display an ad
+            }*/
+
+            //Disabled
+        } else {
+            Log.d(TAG, "no ads to display now");
+        }
 
         checkBox = (CheckBox) findViewById(R.id.check_box);
         statusText = (TextView) findViewById(R.id.status_text);
@@ -61,7 +99,13 @@ public class MainActivity extends AppCompatActivity
 
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if(isChecked && isShowAdByTime())
+                {
+                    AdBuddiz.RewardedVideo.show(MainActivity.this);
+                }
+
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.UNLOCK_STR, isChecked);
                 ScreenLockService.manageService(MainActivity.this);
 
@@ -90,7 +134,13 @@ public class MainActivity extends AppCompatActivity
 
         volumeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if(isChecked && isShowAdByTime())
+                {
+                    AdBuddiz.showAd(MainActivity.this);
+                }
+
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.VOLUME_LOCK_ENABLE_STR, isChecked && DeviceAdminUtil.checkisDeviceAdminEnabled());
 
                 if (isChecked) {
@@ -105,7 +155,13 @@ public class MainActivity extends AppCompatActivity
 
         notificatinSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if(isChecked && isShowAdByTime())
+                {
+                    AdBuddiz.showAd(MainActivity.this);
+                }
+
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.NOTIF_LOCK_ENABLE_STR, isChecked && DeviceAdminUtil.checkisDeviceAdminEnabled());
 
                 if (isChecked && !DeviceAdminUtil.checkisDeviceAdminEnabled()) {
@@ -118,7 +174,13 @@ public class MainActivity extends AppCompatActivity
 
         floatingSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if(isChecked && isShowAdByTime())
+                {
+                    AdBuddiz.showAd(MainActivity.this);
+                }
+
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.FLOATING_LOCK_STR, isChecked && DeviceAdminUtil.checkisDeviceAdminEnabled());
 
                 if (isChecked && !DeviceAdminUtil.checkisDeviceAdminEnabled()) {
@@ -131,7 +193,13 @@ public class MainActivity extends AppCompatActivity
 
         shakeSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
+            {
+                if(isChecked && isShowAdByTime())
+                {
+                    AdBuddiz.showAd(MainActivity.this);
+                }
+
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.SHAKE_LOCK_STR, isChecked);
 
                 if (isChecked && !DeviceAdminUtil.checkisDeviceAdminEnabled()) {
@@ -290,7 +358,62 @@ public class MainActivity extends AppCompatActivity
         prevTime = System.currentTimeMillis();
     }
 
+    private boolean isShowAdByTime()
+    {
+        boolean status =  System.currentTimeMillis() - lastAdTime > 10000;
 
+        return status;
+    }
+
+
+    @Override
+    public void didFetch()
+    {
+
+    }
+
+    @Override
+    public void didFail(AdBuddizRewardedVideoError adBuddizRewardedVideoError) {
+
+    }
+
+    @Override
+    public void didComplete()
+    {
+        lastAdTime = System.currentTimeMillis();
+    }
+
+    @Override
+    public void didNotComplete()
+    {
+
+    }
+
+    @Override
+    public void didCacheAd() {
+
+    }
+
+    @Override
+    public void didShowAd()
+    {
+        lastAdTime = System.currentTimeMillis();
+    }
+
+    @Override
+    public void didFailToShowAd(AdBuddizError adBuddizError) {
+
+    }
+
+    @Override
+    public void didClick() {
+
+    }
+
+    @Override
+    public void didHideAd() {
+
+    }
 }
 
 
