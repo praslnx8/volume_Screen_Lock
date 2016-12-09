@@ -78,4 +78,6 @@
 
     <color name="gradientStart">#dd111111</color>
     <color name="gradientEnd">#66111111</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

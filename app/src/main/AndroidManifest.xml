@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.prasilabs.screenlocker" >
+    package="com.prasilabs.screenlocker">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -8,49 +8,48 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-
     <application
         android:name=".VApp"
         android:allowBackup="true"
+        android:enabled="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:enabled="true">
-        <activity android:name=".view.MainActivity" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".view.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".widgets.ShortCutActivity"
-            android:label="Lock Now"
+        <activity
+            android:name=".widgets.ShortCutActivity"
+            android:enabled="true"
             android:exported="true"
-            android:enabled="true">
+            android:label="Lock Now">
             <intent-filter>
                 <action android:name="android.intent.action.CREATE_SHORTCUT" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".widgets.LockNowActivity"
-            android:exported="true"
+        <activity
+            android:name=".widgets.LockNowActivity"
             android:enabled="true"
+            android:exported="true"
             android:label="Lock Now"
-            android:theme = "@android:style/Theme.NoDisplay" >
+            android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
-        <activity android:name="com.purplebrain.adbuddiz.sdk.AdBuddizActivity"
-            android:theme="@android:style/Theme.Translucent" />
 
         <receiver
             android:name=".services.MediaButtonIntentReciever"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.media.VOLUME_CHANGED_ACTION" />
                 <action android:name="LOCK_SCREEN_ACTION_INTENT" />
@@ -61,9 +60,7 @@
         <service
             android:name=".services.ScreenLockService"
             android:enabled="true"
-            android:exported="true" >
-        </service>
-
+            android:exported="true" />
 
         <receiver
             android:name=".widgets.ScreenLockWidgetProvider"
@@ -72,24 +69,27 @@
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/screen_lock_widget" />
         </receiver>
-
-        <receiver android:name=".VApp$VAdmin"
-            android:label="@string/app_name"
+        <receiver
+            android:name=".VApp$VAdmin"
             android:description="@string/app_name"
-            android:permission="android.permission.BIND_DEVICE_ADMIN"
             android:enabled="true"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/app_name"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
             <meta-data
                 android:name="android.app.device_admin"
                 android:resource="@xml/vadmin" />
+
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
         </receiver>
+
     </application>
 
 </manifest>

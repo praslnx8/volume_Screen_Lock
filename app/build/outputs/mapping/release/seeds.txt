@@ -1,48 +1,71 @@
 android.support.annotation.Keep
-android.support.v4.app.BackStackState
+android.support.annotation.RestrictTo$Scope: android.support.annotation.RestrictTo$Scope[] values()
+android.support.annotation.RestrictTo$Scope: android.support.annotation.RestrictTo$Scope valueOf(java.lang.String)
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: int getStrokeColor()
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: void setStrokeColor(int)
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: float getStrokeWidth()
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: void setStrokeWidth(float)
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: float getStrokeAlpha()
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: void setStrokeAlpha(float)
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: int getFillColor()
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: void setFillColor(int)
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: float getFillAlpha()
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: void setFillAlpha(float)
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: float getTrimPathStart()
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: void setTrimPathStart(float)
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: float getTrimPathEnd()
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: void setTrimPathEnd(float)
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: float getTrimPathOffset()
+android.support.graphics.drawable.VectorDrawableCompat$VFullPath: void setTrimPathOffset(float)
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: java.lang.String getGroupName()
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: android.graphics.Matrix getLocalMatrix()
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: float getRotation()
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: void setRotation(float)
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: float getPivotX()
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: void setPivotX(float)
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: float getPivotY()
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: void setPivotY(float)
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: float getScaleX()
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: void setScaleX(float)
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: float getScaleY()
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: void setScaleY(float)
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: float getTranslateX()
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: void setTranslateX(float)
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: float getTranslateY()
+android.support.graphics.drawable.VectorDrawableCompat$VGroup: void setTranslateY(float)
+android.support.graphics.drawable.VectorDrawableCompat$VPath: java.lang.String getPathName()
+android.support.graphics.drawable.VectorDrawableCompat$VPath: android.support.graphics.drawable.PathParser$PathDataNode[] getPathData()
+android.support.graphics.drawable.VectorDrawableCompat$VPath: void setPathData(android.support.graphics.drawable.PathParser$PathDataNode[])
+android.support.graphics.drawable.VectorDrawableCompat$VPathRenderer: void setRootAlpha(int)
+android.support.graphics.drawable.VectorDrawableCompat$VPathRenderer: int getRootAlpha()
+android.support.graphics.drawable.VectorDrawableCompat$VPathRenderer: void setAlpha(float)
+android.support.graphics.drawable.VectorDrawableCompat$VPathRenderer: float getAlpha()
+android.support.graphics.drawable.VectorDrawableCompat$VectorDrawableCompatState: int getChangingConfigurations()
+android.support.graphics.drawable.VectorDrawableCompat$VectorDrawableDelegateState: int getChangingConfigurations()
 android.support.v4.app.BackStackState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.BaseFragmentActivityGingerbread: BaseFragmentActivityGingerbread()
 android.support.v4.app.BaseFragmentActivityHoneycomb: BaseFragmentActivityHoneycomb()
 android.support.v4.app.BaseFragmentActivityJB: BaseFragmentActivityJB()
-android.support.v4.app.Fragment$SavedState
 android.support.v4.app.Fragment$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.FragmentActivity: FragmentActivity()
-android.support.v4.app.FragmentManagerState
 android.support.v4.app.FragmentManagerState: android.os.Parcelable$Creator CREATOR
-android.support.v4.app.FragmentState
 android.support.v4.app.FragmentState: android.os.Parcelable$Creator CREATOR
 android.support.v4.app.FragmentTabHost: void setOnTabChangedListener(android.widget.TabHost$OnTabChangeListener)
-android.support.v4.app.FragmentTabHost$SavedState
 android.support.v4.app.FragmentTabHost$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status[] values()
 android.support.v4.content.ModernAsyncTask$Status: android.support.v4.content.ModernAsyncTask$Status valueOf(java.lang.String)
-android.support.v4.content.WakefulBroadcastReceiver: WakefulBroadcastReceiver()
-android.support.v4.media.MediaBrowserCompat$ItemReceiver
-android.support.v4.media.MediaBrowserCompat$MediaItem
 android.support.v4.media.MediaBrowserCompat$MediaItem: android.os.Parcelable$Creator CREATOR
-android.support.v4.media.MediaDescriptionCompat
 android.support.v4.media.MediaDescriptionCompat: android.os.Parcelable$Creator CREATOR
-android.support.v4.media.MediaMetadataCompat
 android.support.v4.media.MediaMetadataCompat: android.os.Parcelable$Creator CREATOR
-android.support.v4.media.RatingCompat
 android.support.v4.media.RatingCompat: android.os.Parcelable$Creator CREATOR
-android.support.v4.media.session.MediaSessionCompat$QueueItem
 android.support.v4.media.session.MediaSessionCompat$QueueItem: android.os.Parcelable$Creator CREATOR
-android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper
 android.support.v4.media.session.MediaSessionCompat$ResultReceiverWrapper: android.os.Parcelable$Creator CREATOR
-android.support.v4.media.session.MediaSessionCompat$Token
 android.support.v4.media.session.MediaSessionCompat$Token: android.os.Parcelable$Creator CREATOR
-android.support.v4.media.session.ParcelableVolumeInfo
 android.support.v4.media.session.ParcelableVolumeInfo: android.os.Parcelable$Creator CREATOR
-android.support.v4.media.session.PlaybackStateCompat
 android.support.v4.media.session.PlaybackStateCompat: android.os.Parcelable$Creator CREATOR
-android.support.v4.media.session.PlaybackStateCompat$CustomAction
 android.support.v4.media.session.PlaybackStateCompat$CustomAction: android.os.Parcelable$Creator CREATOR
-android.support.v4.os.ResultReceiver
 android.support.v4.os.ResultReceiver: android.os.Parcelable$Creator CREATOR
-android.support.v4.view.AbsSavedState
 android.support.v4.view.AbsSavedState: android.os.Parcelable$Creator CREATOR
-android.support.v4.view.AbsSavedState$1
 android.support.v4.view.PagerTabStrip: void setTabIndicatorColor(int)
 android.support.v4.view.PagerTabStrip: void setTabIndicatorColorResource(int)
 android.support.v4.view.PagerTabStrip: int getTabIndicatorColor()
@@ -75,7 +98,6 @@ android.support.v4.view.ViewPager: int getPageMargin()
 android.support.v4.view.ViewPager: void setPageMarginDrawable(android.graphics.drawable.Drawable)
 android.support.v4.view.ViewPager: void setPageMarginDrawable(int)
 android.support.v4.view.ViewPager: void setScrollingCacheEnabled(boolean)
-android.support.v4.view.ViewPager$SavedState
 android.support.v4.view.ViewPager$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.widget.DrawerLayout: void setDrawerElevation(float)
 android.support.v4.widget.DrawerLayout: float getDrawerElevation()
@@ -86,7 +108,6 @@ android.support.v4.widget.DrawerLayout: void setStatusBarBackground(android.grap
 android.support.v4.widget.DrawerLayout: android.graphics.drawable.Drawable getStatusBarBackgroundDrawable()
 android.support.v4.widget.DrawerLayout: void setStatusBarBackground(int)
 android.support.v4.widget.DrawerLayout: void setStatusBarBackgroundColor(int)
-android.support.v4.widget.DrawerLayout$SavedState
 android.support.v4.widget.DrawerLayout$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.widget.NestedScrollView
 android.support.v4.widget.NestedScrollView: NestedScrollView(android.content.Context)
@@ -102,7 +123,6 @@ android.support.v4.widget.NestedScrollView: void setFillViewport(boolean)
 android.support.v4.widget.NestedScrollView: void setSmoothScrollingEnabled(boolean)
 android.support.v4.widget.NestedScrollView: float getVerticalScrollFactorCompat()
 android.support.v4.widget.NestedScrollView: int getScrollRange()
-android.support.v4.widget.NestedScrollView$SavedState
 android.support.v4.widget.NestedScrollView$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.widget.SlidingPaneLayout: void setParallaxDistance(int)
 android.support.v4.widget.SlidingPaneLayout: int getParallaxDistance()
@@ -117,7 +137,6 @@ android.support.v4.widget.SlidingPaneLayout: void setShadowDrawableRight(android
 android.support.v4.widget.SlidingPaneLayout: void setShadowResource(int)
 android.support.v4.widget.SlidingPaneLayout: void setShadowResourceLeft(int)
 android.support.v4.widget.SlidingPaneLayout: void setShadowResourceRight(int)
-android.support.v4.widget.SlidingPaneLayout$SavedState
 android.support.v4.widget.SlidingPaneLayout$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v4.widget.Space
 android.support.v4.widget.Space: Space(android.content.Context,android.util.AttributeSet,int)
@@ -125,6 +144,8 @@ android.support.v4.widget.Space: Space(android.content.Context,android.util.Attr
 android.support.v4.widget.Space: Space(android.content.Context)
 android.support.v4.widget.SwipeRefreshLayout: void setEnabled(boolean)
 android.support.v4.widget.SwipeRefreshLayout: void setColorViewAlpha(int)
+android.support.v4.widget.SwipeRefreshLayout: int getProgressViewStartOffset()
+android.support.v4.widget.SwipeRefreshLayout: int getProgressViewEndOffset()
 android.support.v4.widget.SwipeRefreshLayout: void setSize(int)
 android.support.v4.widget.SwipeRefreshLayout: void setOnRefreshListener(android.support.v4.widget.SwipeRefreshLayout$OnRefreshListener)
 android.support.v4.widget.SwipeRefreshLayout: void setRefreshing(boolean)
@@ -142,7 +163,6 @@ android.support.v4.widget.SwipeRefreshLayout: int getNestedScrollAxes()
 android.support.v4.widget.SwipeRefreshLayout: void setNestedScrollingEnabled(boolean)
 android.support.v7.app.AppCompatActivity: AppCompatActivity()
 android.support.v7.app.AppCompatActivity: void setContentView(android.view.View)
-android.support.v7.app.AppCompatDelegateImplV9$PanelFeatureState$SavedState
 android.support.v7.app.AppCompatDelegateImplV9$PanelFeatureState$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v7.appcompat.R$anim: int abc_fade_in
 android.support.v7.appcompat.R$anim: int abc_fade_out
@@ -388,6 +408,8 @@ android.support.v7.appcompat.R$color: int abc_background_cache_hint_selector_mat
 android.support.v7.appcompat.R$color: int abc_background_cache_hint_selector_material_light
 android.support.v7.appcompat.R$color: int abc_btn_colored_borderless_text_material
 android.support.v7.appcompat.R$color: int abc_color_highlight_material
+android.support.v7.appcompat.R$color: int abc_hint_foreground_material_dark
+android.support.v7.appcompat.R$color: int abc_hint_foreground_material_light
 android.support.v7.appcompat.R$color: int abc_input_method_navigation_guard
 android.support.v7.appcompat.R$color: int abc_primary_text_disable_only_material_dark
 android.support.v7.appcompat.R$color: int abc_primary_text_disable_only_material_light
@@ -428,8 +450,6 @@ android.support.v7.appcompat.R$color: int foreground_material_dark
 android.support.v7.appcompat.R$color: int foreground_material_light
 android.support.v7.appcompat.R$color: int highlighted_text_material_dark
 android.support.v7.appcompat.R$color: int highlighted_text_material_light
-android.support.v7.appcompat.R$color: int hint_foreground_material_dark
-android.support.v7.appcompat.R$color: int hint_foreground_material_light
 android.support.v7.appcompat.R$color: int material_blue_grey_800
 android.support.v7.appcompat.R$color: int material_blue_grey_900
 android.support.v7.appcompat.R$color: int material_blue_grey_950
@@ -442,6 +462,9 @@ android.support.v7.appcompat.R$color: int material_grey_600
 android.support.v7.appcompat.R$color: int material_grey_800
 android.support.v7.appcompat.R$color: int material_grey_850
 android.support.v7.appcompat.R$color: int material_grey_900
+android.support.v7.appcompat.R$color: int notification_action_color_filter
+android.support.v7.appcompat.R$color: int notification_icon_bg_color
+android.support.v7.appcompat.R$color: int notification_material_background_media_default_color
 android.support.v7.appcompat.R$color: int primary_dark_material_dark
 android.support.v7.appcompat.R$color: int primary_dark_material_light
 android.support.v7.appcompat.R$color: int primary_material_dark
@@ -539,9 +562,25 @@ android.support.v7.appcompat.R$dimen: int disabled_alpha_material_light
 android.support.v7.appcompat.R$dimen: int highlight_alpha_material_colored
 android.support.v7.appcompat.R$dimen: int highlight_alpha_material_dark
 android.support.v7.appcompat.R$dimen: int highlight_alpha_material_light
+android.support.v7.appcompat.R$dimen: int hint_alpha_material_dark
+android.support.v7.appcompat.R$dimen: int hint_alpha_material_light
+android.support.v7.appcompat.R$dimen: int hint_pressed_alpha_material_dark
+android.support.v7.appcompat.R$dimen: int hint_pressed_alpha_material_light
+android.support.v7.appcompat.R$dimen: int notification_action_icon_size
+android.support.v7.appcompat.R$dimen: int notification_action_text_size
+android.support.v7.appcompat.R$dimen: int notification_big_circle_margin
+android.support.v7.appcompat.R$dimen: int notification_content_margin_start
 android.support.v7.appcompat.R$dimen: int notification_large_icon_height
 android.support.v7.appcompat.R$dimen: int notification_large_icon_width
+android.support.v7.appcompat.R$dimen: int notification_main_column_padding_top
+android.support.v7.appcompat.R$dimen: int notification_media_narrow_margin
+android.support.v7.appcompat.R$dimen: int notification_right_icon_size
+android.support.v7.appcompat.R$dimen: int notification_right_side_padding_top
+android.support.v7.appcompat.R$dimen: int notification_small_icon_background_padding
+android.support.v7.appcompat.R$dimen: int notification_small_icon_size_as_large
 android.support.v7.appcompat.R$dimen: int notification_subtext_size
+android.support.v7.appcompat.R$dimen: int notification_top_pad
+android.support.v7.appcompat.R$dimen: int notification_top_pad_large_text
 android.support.v7.appcompat.R$drawable: int abc_ab_share_pack_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_action_bar_item_background_material
 android.support.v7.appcompat.R$drawable: int abc_btn_borderless_material
@@ -613,16 +652,30 @@ android.support.v7.appcompat.R$drawable: int abc_switch_track_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_tab_indicator_material
 android.support.v7.appcompat.R$drawable: int abc_tab_indicator_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_text_cursor_material
-android.support.v7.appcompat.R$drawable: int abc_text_select_handle_left_mtrl_alpha
-android.support.v7.appcompat.R$drawable: int abc_text_select_handle_middle_mtrl_alpha
-android.support.v7.appcompat.R$drawable: int abc_text_select_handle_right_mtrl_alpha
+android.support.v7.appcompat.R$drawable: int abc_text_select_handle_left_mtrl_dark
+android.support.v7.appcompat.R$drawable: int abc_text_select_handle_left_mtrl_light
+android.support.v7.appcompat.R$drawable: int abc_text_select_handle_middle_mtrl_dark
+android.support.v7.appcompat.R$drawable: int abc_text_select_handle_middle_mtrl_light
+android.support.v7.appcompat.R$drawable: int abc_text_select_handle_right_mtrl_dark
+android.support.v7.appcompat.R$drawable: int abc_text_select_handle_right_mtrl_light
 android.support.v7.appcompat.R$drawable: int abc_textfield_activated_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_textfield_default_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_textfield_search_activated_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_textfield_search_default_mtrl_alpha
 android.support.v7.appcompat.R$drawable: int abc_textfield_search_material
 android.support.v7.appcompat.R$drawable: int abc_vector_test
+android.support.v7.appcompat.R$drawable: int notification_action_background
+android.support.v7.appcompat.R$drawable: int notification_bg
+android.support.v7.appcompat.R$drawable: int notification_bg_low
+android.support.v7.appcompat.R$drawable: int notification_bg_low_normal
+android.support.v7.appcompat.R$drawable: int notification_bg_low_pressed
+android.support.v7.appcompat.R$drawable: int notification_bg_normal
+android.support.v7.appcompat.R$drawable: int notification_bg_normal_pressed
+android.support.v7.appcompat.R$drawable: int notification_icon_background
 android.support.v7.appcompat.R$drawable: int notification_template_icon_bg
+android.support.v7.appcompat.R$drawable: int notification_template_icon_low_bg
+android.support.v7.appcompat.R$drawable: int notification_tile_bg
+android.support.v7.appcompat.R$drawable: int notify_panel_notification_icon_bg
 android.support.v7.appcompat.R$id: int action0
 android.support.v7.appcompat.R$id: int action_bar
 android.support.v7.appcompat.R$id: int action_bar_activity_content
@@ -631,13 +684,17 @@ android.support.v7.appcompat.R$id: int action_bar_root
 android.support.v7.appcompat.R$id: int action_bar_spinner
 android.support.v7.appcompat.R$id: int action_bar_subtitle
 android.support.v7.appcompat.R$id: int action_bar_title
+android.support.v7.appcompat.R$id: int action_container
 android.support.v7.appcompat.R$id: int action_context_bar
 android.support.v7.appcompat.R$id: int action_divider
+android.support.v7.appcompat.R$id: int action_image
 android.support.v7.appcompat.R$id: int action_menu_divider
 android.support.v7.appcompat.R$id: int action_menu_presenter
 android.support.v7.appcompat.R$id: int action_mode_bar
 android.support.v7.appcompat.R$id: int action_mode_bar_stub
 android.support.v7.appcompat.R$id: int action_mode_close_button
+android.support.v7.appcompat.R$id: int action_text
+android.support.v7.appcompat.R$id: int actions
 android.support.v7.appcompat.R$id: int activity_chooser_view_content
 android.support.v7.appcompat.R$id: int add
 android.support.v7.appcompat.R$id: int alertTitle
@@ -663,6 +720,7 @@ android.support.v7.appcompat.R$id: int expanded_menu
 android.support.v7.appcompat.R$id: int home
 android.support.v7.appcompat.R$id: int homeAsUp
 android.support.v7.appcompat.R$id: int icon
+android.support.v7.appcompat.R$id: int icon_group
 android.support.v7.appcompat.R$id: int ifRoom
 android.support.v7.appcompat.R$id: int image
 android.support.v7.appcompat.R$id: int info
@@ -676,10 +734,15 @@ android.support.v7.appcompat.R$id: int multiply
 android.support.v7.appcompat.R$id: int never
 android.support.v7.appcompat.R$id: int none
 android.support.v7.appcompat.R$id: int normal
+android.support.v7.appcompat.R$id: int notification_background
+android.support.v7.appcompat.R$id: int notification_main_column
+android.support.v7.appcompat.R$id: int notification_main_column_container
 android.support.v7.appcompat.R$id: int parentPanel
 android.support.v7.appcompat.R$id: int progress_circular
 android.support.v7.appcompat.R$id: int progress_horizontal
 android.support.v7.appcompat.R$id: int radio
+android.support.v7.appcompat.R$id: int right_icon
+android.support.v7.appcompat.R$id: int right_side
 android.support.v7.appcompat.R$id: int screen
 android.support.v7.appcompat.R$id: int scrollIndicatorDown
 android.support.v7.appcompat.R$id: int scrollIndicatorUp
@@ -750,12 +813,19 @@ android.support.v7.appcompat.R$layout: int abc_screen_toolbar
 android.support.v7.appcompat.R$layout: int abc_search_dropdown_item_icons_2line
 android.support.v7.appcompat.R$layout: int abc_search_view
 android.support.v7.appcompat.R$layout: int abc_select_dialog_material
+android.support.v7.appcompat.R$layout: int notification_action
+android.support.v7.appcompat.R$layout: int notification_action_tombstone
 android.support.v7.appcompat.R$layout: int notification_media_action
 android.support.v7.appcompat.R$layout: int notification_media_cancel_action
 android.support.v7.appcompat.R$layout: int notification_template_big_media
+android.support.v7.appcompat.R$layout: int notification_template_big_media_custom
 android.support.v7.appcompat.R$layout: int notification_template_big_media_narrow
-android.support.v7.appcompat.R$layout: int notification_template_lines
+android.support.v7.appcompat.R$layout: int notification_template_big_media_narrow_custom
+android.support.v7.appcompat.R$layout: int notification_template_custom_big
+android.support.v7.appcompat.R$layout: int notification_template_icon_group
+android.support.v7.appcompat.R$layout: int notification_template_lines_media
 android.support.v7.appcompat.R$layout: int notification_template_media
+android.support.v7.appcompat.R$layout: int notification_template_media_custom
 android.support.v7.appcompat.R$layout: int notification_template_part_chronometer
 android.support.v7.appcompat.R$layout: int notification_template_part_time
 android.support.v7.appcompat.R$layout: int select_dialog_item_material
@@ -958,6 +1028,10 @@ android.support.v7.appcompat.R$style: int Platform_V11_AppCompat
 android.support.v7.appcompat.R$style: int Platform_V11_AppCompat_Light
 android.support.v7.appcompat.R$style: int Platform_V14_AppCompat
 android.support.v7.appcompat.R$style: int Platform_V14_AppCompat_Light
+android.support.v7.appcompat.R$style: int Platform_V21_AppCompat
+android.support.v7.appcompat.R$style: int Platform_V21_AppCompat_Light
+android.support.v7.appcompat.R$style: int Platform_V25_AppCompat
+android.support.v7.appcompat.R$style: int Platform_V25_AppCompat_Light
 android.support.v7.appcompat.R$style: int Platform_Widget_AppCompat_Spinner
 android.support.v7.appcompat.R$style: int RtlOverlay_DialogWindowTitle_AppCompat
 android.support.v7.appcompat.R$style: int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem
@@ -993,6 +1067,16 @@ android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Light_Widget_
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Medium
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Medium_Inverse
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Menu
+android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Notification
+android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Notification_Info
+android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Notification_Info_Media
+android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Notification_Line2
+android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Notification_Line2_Media
+android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Notification_Media
+android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Notification_Time
+android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Notification_Time_Media
+android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Notification_Title
+android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Notification_Title_Media
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_SearchResult_Subtitle
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_SearchResult_Title
 android.support.v7.appcompat.R$style: int TextAppearance_AppCompat_Small
@@ -1107,6 +1191,8 @@ android.support.v7.appcompat.R$style: int Widget_AppCompat_ListPopupWindow
 android.support.v7.appcompat.R$style: int Widget_AppCompat_ListView
 android.support.v7.appcompat.R$style: int Widget_AppCompat_ListView_DropDown
 android.support.v7.appcompat.R$style: int Widget_AppCompat_ListView_Menu
+android.support.v7.appcompat.R$style: int Widget_AppCompat_NotificationActionContainer
+android.support.v7.appcompat.R$style: int Widget_AppCompat_NotificationActionText
 android.support.v7.appcompat.R$style: int Widget_AppCompat_PopupMenu
 android.support.v7.appcompat.R$style: int Widget_AppCompat_PopupMenu_Overflow
 android.support.v7.appcompat.R$style: int Widget_AppCompat_PopupWindow
@@ -1436,6 +1522,7 @@ android.support.v7.appcompat.R$styleable: int TextAppearance_android_shadowDx
 android.support.v7.appcompat.R$styleable: int TextAppearance_android_shadowDy
 android.support.v7.appcompat.R$styleable: int TextAppearance_android_shadowRadius
 android.support.v7.appcompat.R$styleable: int TextAppearance_android_textColor
+android.support.v7.appcompat.R$styleable: int TextAppearance_android_textColorHint
 android.support.v7.appcompat.R$styleable: int TextAppearance_android_textSize
 android.support.v7.appcompat.R$styleable: int TextAppearance_android_textStyle
 android.support.v7.appcompat.R$styleable: int TextAppearance_android_typeface
@@ -1560,7 +1647,6 @@ android.support.v7.widget.ActionBarOverlayLayout: void setUiOptions(int)
 android.support.v7.widget.ActionBarOverlayLayout: void setIcon(int)
 android.support.v7.widget.ActionBarOverlayLayout: void setIcon(android.graphics.drawable.Drawable)
 android.support.v7.widget.ActionBarOverlayLayout: void setLogo(int)
-android.support.v7.widget.ActionMenuPresenter$SavedState
 android.support.v7.widget.ActionMenuPresenter$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v7.widget.ActionMenuView
 android.support.v7.widget.ActionMenuView: ActionMenuView(android.content.Context)
@@ -1759,7 +1845,6 @@ android.support.v7.widget.SearchView: int getPreferredWidth()
 android.support.v7.widget.SearchView: int getPreferredHeight()
 android.support.v7.widget.SearchView: void setImeVisibility(boolean)
 android.support.v7.widget.SearchView: void setQuery(java.lang.CharSequence)
-android.support.v7.widget.SearchView$SavedState
 android.support.v7.widget.SearchView$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v7.widget.SearchView$SearchAutoComplete
 android.support.v7.widget.SearchView$SearchAutoComplete: SearchView$SearchAutoComplete(android.content.Context)
@@ -1858,7 +1943,6 @@ android.support.v7.widget.Toolbar: int getCurrentContentInsetLeft()
 android.support.v7.widget.Toolbar: int getCurrentContentInsetRight()
 android.support.v7.widget.Toolbar: android.support.v7.widget.DecorToolbar getWrapper()
 android.support.v7.widget.Toolbar: void setCollapsible(boolean)
-android.support.v7.widget.Toolbar$SavedState
 android.support.v7.widget.Toolbar$SavedState: android.os.Parcelable$Creator CREATOR
 android.support.v7.widget.ViewStubCompat
 android.support.v7.widget.ViewStubCompat: ViewStubCompat(android.content.Context,android.util.AttributeSet)
@@ -1871,478 +1955,6 @@ android.support.v7.widget.ViewStubCompat: void setLayoutInflater(android.view.La
 android.support.v7.widget.ViewStubCompat: android.view.LayoutInflater getLayoutInflater()
 android.support.v7.widget.ViewStubCompat: void setVisibility(int)
 android.support.v7.widget.ViewStubCompat: void setOnInflateListener(android.support.v7.widget.ViewStubCompat$OnInflateListener)
-com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode[] values()
-com.google.ads.AdRequest$ErrorCode: com.google.ads.AdRequest$ErrorCode valueOf(java.lang.String)
-com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender[] values()
-com.google.ads.AdRequest$Gender: com.google.ads.AdRequest$Gender valueOf(java.lang.String)
-com.google.ads.mediation.AbstractAdViewAdapter: java.lang.String AD_UNIT_ID_PARAMETER
-com.google.ads.mediation.AbstractAdViewAdapter: com.google.android.gms.ads.AdView zzfb
-com.google.ads.mediation.AbstractAdViewAdapter: com.google.android.gms.ads.InterstitialAd zzfc
-com.google.ads.mediation.AbstractAdViewAdapter: com.google.android.gms.ads.AdLoader zzfd
-com.google.ads.mediation.AbstractAdViewAdapter: android.content.Context zzfe
-com.google.ads.mediation.AbstractAdViewAdapter: com.google.android.gms.ads.InterstitialAd zzff
-com.google.ads.mediation.AbstractAdViewAdapter: com.google.android.gms.ads.reward.mediation.MediationRewardedVideoAdListener zzfg
-com.google.ads.mediation.AbstractAdViewAdapter: com.google.android.gms.ads.reward.RewardedVideoAdListener zzfh
-com.google.ads.mediation.AbstractAdViewAdapter: AbstractAdViewAdapter()
-com.google.ads.mediation.AbstractAdViewAdapter: android.os.Bundle zza(android.os.Bundle,android.os.Bundle)
-com.google.ads.mediation.AbstractAdViewAdapter: com.google.android.gms.ads.AdRequest zza(android.content.Context,com.google.android.gms.ads.mediation.MediationAdRequest,android.os.Bundle,android.os.Bundle)
-com.google.ads.mediation.AbstractAdViewAdapter: void onDestroy()
-com.google.ads.mediation.AbstractAdViewAdapter: void onPause()
-com.google.ads.mediation.AbstractAdViewAdapter: void onResume()
-com.google.ads.mediation.AbstractAdViewAdapter: java.lang.String getAdUnitId(android.os.Bundle)
-com.google.ads.mediation.AbstractAdViewAdapter: void requestBannerAd(android.content.Context,com.google.android.gms.ads.mediation.MediationBannerListener,android.os.Bundle,com.google.android.gms.ads.AdSize,com.google.android.gms.ads.mediation.MediationAdRequest,android.os.Bundle)
-com.google.ads.mediation.AbstractAdViewAdapter: android.view.View getBannerView()
-com.google.ads.mediation.AbstractAdViewAdapter: void requestInterstitialAd(android.content.Context,com.google.android.gms.ads.mediation.MediationInterstitialListener,android.os.Bundle,com.google.android.gms.ads.mediation.MediationAdRequest,android.os.Bundle)
-com.google.ads.mediation.AbstractAdViewAdapter: void showInterstitial()
-com.google.ads.mediation.AbstractAdViewAdapter: android.os.Bundle getInterstitialAdapterInfo()
-com.google.ads.mediation.AbstractAdViewAdapter: void requestNativeAd(android.content.Context,com.google.android.gms.ads.mediation.MediationNativeListener,android.os.Bundle,com.google.android.gms.ads.mediation.NativeMediationAdRequest,android.os.Bundle)
-com.google.ads.mediation.AbstractAdViewAdapter: com.google.android.gms.ads.AdLoader$Builder zza(android.content.Context,java.lang.String)
-com.google.ads.mediation.AbstractAdViewAdapter: void initialize(android.content.Context,com.google.android.gms.ads.mediation.MediationAdRequest,java.lang.String,com.google.android.gms.ads.reward.mediation.MediationRewardedVideoAdListener,android.os.Bundle,android.os.Bundle)
-com.google.ads.mediation.AbstractAdViewAdapter: void loadAd(com.google.android.gms.ads.mediation.MediationAdRequest,android.os.Bundle,android.os.Bundle)
-com.google.ads.mediation.AbstractAdViewAdapter: void showVideo()
-com.google.ads.mediation.AbstractAdViewAdapter: boolean isInitialized()
-com.google.ads.mediation.AbstractAdViewAdapter: com.google.android.gms.ads.reward.mediation.MediationRewardedVideoAdListener zza(com.google.ads.mediation.AbstractAdViewAdapter)
-com.google.ads.mediation.AbstractAdViewAdapter: com.google.android.gms.ads.InterstitialAd zza(com.google.ads.mediation.AbstractAdViewAdapter,com.google.android.gms.ads.InterstitialAd)
-com.google.ads.mediation.AdUrlAdapter
-com.google.ads.mediation.AdUrlAdapter: AdUrlAdapter()
-com.google.ads.mediation.AdUrlAdapter: android.os.Bundle zza(android.os.Bundle,android.os.Bundle)
-com.google.ads.mediation.AdUrlAdapter: java.lang.String getAdUnitId(android.os.Bundle)
-com.google.ads.mediation.admob.AdMobAdapter
-com.google.ads.mediation.admob.AdMobAdapter: AdMobAdapter()
-com.google.ads.mediation.admob.AdMobAdapter: android.os.Bundle zza(android.os.Bundle,android.os.Bundle)
-com.google.ads.mediation.customevent.CustomEventAdapter
-com.google.android.gms.R$attr: int adSize
-com.google.android.gms.R$attr: int adSizes
-com.google.android.gms.R$attr: int adUnitId
-com.google.android.gms.R$attr: int buttonSize
-com.google.android.gms.R$attr: int circleCrop
-com.google.android.gms.R$attr: int colorScheme
-com.google.android.gms.R$attr: int imageAspectRatio
-com.google.android.gms.R$attr: int imageAspectRatioAdjust
-com.google.android.gms.R$attr: int scopeUris
-com.google.android.gms.R$color: int common_google_signin_btn_text_dark
-com.google.android.gms.R$color: int common_google_signin_btn_text_dark_default
-com.google.android.gms.R$color: int common_google_signin_btn_text_dark_disabled
-com.google.android.gms.R$color: int common_google_signin_btn_text_dark_focused
-com.google.android.gms.R$color: int common_google_signin_btn_text_dark_pressed
-com.google.android.gms.R$color: int common_google_signin_btn_text_light
-com.google.android.gms.R$color: int common_google_signin_btn_text_light_default
-com.google.android.gms.R$color: int common_google_signin_btn_text_light_disabled
-com.google.android.gms.R$color: int common_google_signin_btn_text_light_focused
-com.google.android.gms.R$color: int common_google_signin_btn_text_light_pressed
-com.google.android.gms.R$color: int common_plus_signin_btn_text_dark
-com.google.android.gms.R$color: int common_plus_signin_btn_text_dark_default
-com.google.android.gms.R$color: int common_plus_signin_btn_text_dark_disabled
-com.google.android.gms.R$color: int common_plus_signin_btn_text_dark_focused
-com.google.android.gms.R$color: int common_plus_signin_btn_text_dark_pressed
-com.google.android.gms.R$color: int common_plus_signin_btn_text_light
-com.google.android.gms.R$color: int common_plus_signin_btn_text_light_default
-com.google.android.gms.R$color: int common_plus_signin_btn_text_light_disabled
-com.google.android.gms.R$color: int common_plus_signin_btn_text_light_focused
-com.google.android.gms.R$color: int common_plus_signin_btn_text_light_pressed
-com.google.android.gms.R$drawable: int common_full_open_on_phone
-com.google.android.gms.R$drawable: int common_google_signin_btn_icon_dark
-com.google.android.gms.R$drawable: int common_google_signin_btn_icon_dark_disabled
-com.google.android.gms.R$drawable: int common_google_signin_btn_icon_dark_focused
-com.google.android.gms.R$drawable: int common_google_signin_btn_icon_dark_normal
-com.google.android.gms.R$drawable: int common_google_signin_btn_icon_dark_pressed
-com.google.android.gms.R$drawable: int common_google_signin_btn_icon_light
-com.google.android.gms.R$drawable: int common_google_signin_btn_icon_light_disabled
-com.google.android.gms.R$drawable: int common_google_signin_btn_icon_light_focused
-com.google.android.gms.R$drawable: int common_google_signin_btn_icon_light_normal
-com.google.android.gms.R$drawable: int common_google_signin_btn_icon_light_pressed
-com.google.android.gms.R$drawable: int common_google_signin_btn_text_dark
-com.google.android.gms.R$drawable: int common_google_signin_btn_text_dark_disabled
-com.google.android.gms.R$drawable: int common_google_signin_btn_text_dark_focused
-com.google.android.gms.R$drawable: int common_google_signin_btn_text_dark_normal
-com.google.android.gms.R$drawable: int common_google_signin_btn_text_dark_pressed
-com.google.android.gms.R$drawable: int common_google_signin_btn_text_light
-com.google.android.gms.R$drawable: int common_google_signin_btn_text_light_disabled
-com.google.android.gms.R$drawable: int common_google_signin_btn_text_light_focused
-com.google.android.gms.R$drawable: int common_google_signin_btn_text_light_normal
-com.google.android.gms.R$drawable: int common_google_signin_btn_text_light_pressed
-com.google.android.gms.R$drawable: int common_ic_googleplayservices
-com.google.android.gms.R$drawable: int common_plus_signin_btn_icon_dark
-com.google.android.gms.R$drawable: int common_plus_signin_btn_icon_dark_disabled
-com.google.android.gms.R$drawable: int common_plus_signin_btn_icon_dark_focused
-com.google.android.gms.R$drawable: int common_plus_signin_btn_icon_dark_normal
-com.google.android.gms.R$drawable: int common_plus_signin_btn_icon_dark_pressed
-com.google.android.gms.R$drawable: int common_plus_signin_btn_icon_light
-com.google.android.gms.R$drawable: int common_plus_signin_btn_icon_light_disabled
-com.google.android.gms.R$drawable: int common_plus_signin_btn_icon_light_focused
-com.google.android.gms.R$drawable: int common_plus_signin_btn_icon_light_normal
-com.google.android.gms.R$drawable: int common_plus_signin_btn_icon_light_pressed
-com.google.android.gms.R$drawable: int common_plus_signin_btn_text_dark
-com.google.android.gms.R$drawable: int common_plus_signin_btn_text_dark_disabled
-com.google.android.gms.R$drawable: int common_plus_signin_btn_text_dark_focused
-com.google.android.gms.R$drawable: int common_plus_signin_btn_text_dark_normal
-com.google.android.gms.R$drawable: int common_plus_signin_btn_text_dark_pressed
-com.google.android.gms.R$drawable: int common_plus_signin_btn_text_light
-com.google.android.gms.R$drawable: int common_plus_signin_btn_text_light_disabled
-com.google.android.gms.R$drawable: int common_plus_signin_btn_text_light_focused
-com.google.android.gms.R$drawable: int common_plus_signin_btn_text_light_normal
-com.google.android.gms.R$drawable: int common_plus_signin_btn_text_light_pressed
-com.google.android.gms.R$id: int adjust_height
-com.google.android.gms.R$id: int adjust_width
-com.google.android.gms.R$id: int auto
-com.google.android.gms.R$id: int dark
-com.google.android.gms.R$id: int icon_only
-com.google.android.gms.R$id: int light
-com.google.android.gms.R$id: int none
-com.google.android.gms.R$id: int normal
-com.google.android.gms.R$id: int radio
-com.google.android.gms.R$id: int standard
-com.google.android.gms.R$id: int status_text
-com.google.android.gms.R$id: int text
-com.google.android.gms.R$id: int text2
-com.google.android.gms.R$id: int wide
-com.google.android.gms.R$id: int wrap_content
-com.google.android.gms.R$integer: int google_play_services_version
-com.google.android.gms.R$string: int accept
-com.google.android.gms.R$string: int common_google_play_services_enable_button
-com.google.android.gms.R$string: int common_google_play_services_enable_text
-com.google.android.gms.R$string: int common_google_play_services_enable_title
-com.google.android.gms.R$string: int common_google_play_services_install_button
-com.google.android.gms.R$string: int common_google_play_services_install_text_phone
-com.google.android.gms.R$string: int common_google_play_services_install_text_tablet
-com.google.android.gms.R$string: int common_google_play_services_install_title
-com.google.android.gms.R$string: int common_google_play_services_notification_ticker
-com.google.android.gms.R$string: int common_google_play_services_unknown_issue
-com.google.android.gms.R$string: int common_google_play_services_unsupported_text
-com.google.android.gms.R$string: int common_google_play_services_unsupported_title
-com.google.android.gms.R$string: int common_google_play_services_update_button
-com.google.android.gms.R$string: int common_google_play_services_update_text
-com.google.android.gms.R$string: int common_google_play_services_update_title
-com.google.android.gms.R$string: int common_google_play_services_updating_text
-com.google.android.gms.R$string: int common_google_play_services_updating_title
-com.google.android.gms.R$string: int common_google_play_services_wear_update_text
-com.google.android.gms.R$string: int common_open_on_phone
-com.google.android.gms.R$string: int common_signin_button_text
-com.google.android.gms.R$string: int common_signin_button_text_long
-com.google.android.gms.R$string: int create_calendar_message
-com.google.android.gms.R$string: int create_calendar_title
-com.google.android.gms.R$string: int decline
-com.google.android.gms.R$string: int store_picture_message
-com.google.android.gms.R$string: int store_picture_title
-com.google.android.gms.R$style: int Theme_IAPTheme
-com.google.android.gms.R$styleable: int[] AdsAttrs
-com.google.android.gms.R$styleable: int AdsAttrs_adSize
-com.google.android.gms.R$styleable: int AdsAttrs_adSizes
-com.google.android.gms.R$styleable: int AdsAttrs_adUnitId
-com.google.android.gms.R$styleable: int[] LoadingImageView
-com.google.android.gms.R$styleable: int LoadingImageView_circleCrop
-com.google.android.gms.R$styleable: int LoadingImageView_imageAspectRatio
-com.google.android.gms.R$styleable: int LoadingImageView_imageAspectRatioAdjust
-com.google.android.gms.R$styleable: int[] SignInButton
-com.google.android.gms.R$styleable: int SignInButton_buttonSize
-com.google.android.gms.R$styleable: int SignInButton_colorScheme
-com.google.android.gms.R$styleable: int SignInButton_scopeUris
-com.google.android.gms.ads.AdActivity
-com.google.android.gms.ads.AdActivity: AdActivity()
-com.google.android.gms.ads.AdActivity: void setContentView(android.view.View)
-com.google.android.gms.ads.AdView
-com.google.android.gms.ads.AdView: AdView(android.content.Context)
-com.google.android.gms.ads.AdView: AdView(android.content.Context,android.util.AttributeSet)
-com.google.android.gms.ads.AdView: AdView(android.content.Context,android.util.AttributeSet,int)
-com.google.android.gms.ads.AdView: java.lang.String getMediationAdapterClassName()
-com.google.android.gms.ads.AdView: void setInAppPurchaseListener(com.google.android.gms.ads.purchase.InAppPurchaseListener)
-com.google.android.gms.ads.AdView: void setAdUnitId(java.lang.String)
-com.google.android.gms.ads.AdView: void setAdSize(com.google.android.gms.ads.AdSize)
-com.google.android.gms.ads.AdView: void setAdListener(com.google.android.gms.ads.AdListener)
-com.google.android.gms.ads.AdView: com.google.android.gms.ads.purchase.InAppPurchaseListener getInAppPurchaseListener()
-com.google.android.gms.ads.AdView: java.lang.String getAdUnitId()
-com.google.android.gms.ads.AdView: com.google.android.gms.ads.AdSize getAdSize()
-com.google.android.gms.ads.AdView: com.google.android.gms.ads.AdListener getAdListener()
-com.google.android.gms.ads.BaseAdView: BaseAdView(android.content.Context,int)
-com.google.android.gms.ads.BaseAdView: BaseAdView(android.content.Context,android.util.AttributeSet,int)
-com.google.android.gms.ads.BaseAdView: BaseAdView(android.content.Context,android.util.AttributeSet,int,int)
-com.google.android.gms.ads.BaseAdView: com.google.android.gms.ads.AdListener getAdListener()
-com.google.android.gms.ads.BaseAdView: com.google.android.gms.ads.AdSize getAdSize()
-com.google.android.gms.ads.BaseAdView: java.lang.String getAdUnitId()
-com.google.android.gms.ads.BaseAdView: com.google.android.gms.ads.purchase.InAppPurchaseListener getInAppPurchaseListener()
-com.google.android.gms.ads.BaseAdView: void setAdListener(com.google.android.gms.ads.AdListener)
-com.google.android.gms.ads.BaseAdView: void setAdSize(com.google.android.gms.ads.AdSize)
-com.google.android.gms.ads.BaseAdView: void setAdUnitId(java.lang.String)
-com.google.android.gms.ads.BaseAdView: void setInAppPurchaseListener(com.google.android.gms.ads.purchase.InAppPurchaseListener)
-com.google.android.gms.ads.BaseAdView: java.lang.String getMediationAdapterClassName()
-com.google.android.gms.ads.NativeExpressAdView: com.google.android.gms.ads.VideoController getVideoController()
-com.google.android.gms.ads.NativeExpressAdView: void setVideoOptions(com.google.android.gms.ads.VideoOptions)
-com.google.android.gms.ads.NativeExpressAdView: com.google.android.gms.ads.VideoOptions getVideoOptions()
-com.google.android.gms.ads.NativeExpressAdView: java.lang.String getMediationAdapterClassName()
-com.google.android.gms.ads.NativeExpressAdView: void setInAppPurchaseListener(com.google.android.gms.ads.purchase.InAppPurchaseListener)
-com.google.android.gms.ads.NativeExpressAdView: void setAdUnitId(java.lang.String)
-com.google.android.gms.ads.NativeExpressAdView: void setAdSize(com.google.android.gms.ads.AdSize)
-com.google.android.gms.ads.NativeExpressAdView: void setAdListener(com.google.android.gms.ads.AdListener)
-com.google.android.gms.ads.NativeExpressAdView: com.google.android.gms.ads.purchase.InAppPurchaseListener getInAppPurchaseListener()
-com.google.android.gms.ads.NativeExpressAdView: java.lang.String getAdUnitId()
-com.google.android.gms.ads.NativeExpressAdView: com.google.android.gms.ads.AdSize getAdSize()
-com.google.android.gms.ads.NativeExpressAdView: com.google.android.gms.ads.AdListener getAdListener()
-com.google.android.gms.ads.doubleclick.PublisherAdView: com.google.android.gms.ads.AdListener getAdListener()
-com.google.android.gms.ads.doubleclick.PublisherAdView: com.google.android.gms.ads.AdSize getAdSize()
-com.google.android.gms.ads.doubleclick.PublisherAdView: com.google.android.gms.ads.AdSize[] getAdSizes()
-com.google.android.gms.ads.doubleclick.PublisherAdView: java.lang.String getAdUnitId()
-com.google.android.gms.ads.doubleclick.PublisherAdView: com.google.android.gms.ads.doubleclick.AppEventListener getAppEventListener()
-com.google.android.gms.ads.doubleclick.PublisherAdView: com.google.android.gms.ads.doubleclick.OnCustomRenderedAdLoadedListener getOnCustomRenderedAdLoadedListener()
-com.google.android.gms.ads.doubleclick.PublisherAdView: void setManualImpressionsEnabled(boolean)
-com.google.android.gms.ads.doubleclick.PublisherAdView: void setAdListener(com.google.android.gms.ads.AdListener)
-com.google.android.gms.ads.doubleclick.PublisherAdView: void setAdSizes(com.google.android.gms.ads.AdSize[])
-com.google.android.gms.ads.doubleclick.PublisherAdView: void setAdUnitId(java.lang.String)
-com.google.android.gms.ads.doubleclick.PublisherAdView: void setAppEventListener(com.google.android.gms.ads.doubleclick.AppEventListener)
-com.google.android.gms.ads.doubleclick.PublisherAdView: void setCorrelator(com.google.android.gms.ads.Correlator)
-com.google.android.gms.ads.doubleclick.PublisherAdView: void setOnCustomRenderedAdLoadedListener(com.google.android.gms.ads.doubleclick.OnCustomRenderedAdLoadedListener)
-com.google.android.gms.ads.doubleclick.PublisherAdView: java.lang.String getMediationAdapterClassName()
-com.google.android.gms.ads.formats.NativeAdView: void setNativeAd(com.google.android.gms.ads.formats.NativeAd)
-com.google.android.gms.ads.formats.NativeAppInstallAdView: void setHeadlineView(android.view.View)
-com.google.android.gms.ads.formats.NativeAppInstallAdView: void setCallToActionView(android.view.View)
-com.google.android.gms.ads.formats.NativeAppInstallAdView: void setIconView(android.view.View)
-com.google.android.gms.ads.formats.NativeAppInstallAdView: void setBodyView(android.view.View)
-com.google.android.gms.ads.formats.NativeAppInstallAdView: void setStoreView(android.view.View)
-com.google.android.gms.ads.formats.NativeAppInstallAdView: void setPriceView(android.view.View)
-com.google.android.gms.ads.formats.NativeAppInstallAdView: void setImageView(android.view.View)
-com.google.android.gms.ads.formats.NativeAppInstallAdView: void setStarRatingView(android.view.View)
-com.google.android.gms.ads.formats.NativeAppInstallAdView: android.view.View getHeadlineView()
-com.google.android.gms.ads.formats.NativeAppInstallAdView: android.view.View getCallToActionView()
-com.google.android.gms.ads.formats.NativeAppInstallAdView: android.view.View getIconView()
-com.google.android.gms.ads.formats.NativeAppInstallAdView: android.view.View getBodyView()
-com.google.android.gms.ads.formats.NativeAppInstallAdView: android.view.View getStoreView()
-com.google.android.gms.ads.formats.NativeAppInstallAdView: android.view.View getPriceView()
-com.google.android.gms.ads.formats.NativeAppInstallAdView: android.view.View getImageView()
-com.google.android.gms.ads.formats.NativeAppInstallAdView: android.view.View getStarRatingView()
-com.google.android.gms.ads.formats.NativeContentAdView: void setHeadlineView(android.view.View)
-com.google.android.gms.ads.formats.NativeContentAdView: void setBodyView(android.view.View)
-com.google.android.gms.ads.formats.NativeContentAdView: void setCallToActionView(android.view.View)
-com.google.android.gms.ads.formats.NativeContentAdView: void setAdvertiserView(android.view.View)
-com.google.android.gms.ads.formats.NativeContentAdView: void setImageView(android.view.View)
-com.google.android.gms.ads.formats.NativeContentAdView: void setLogoView(android.view.View)
-com.google.android.gms.ads.formats.NativeContentAdView: android.view.View getHeadlineView()
-com.google.android.gms.ads.formats.NativeContentAdView: android.view.View getBodyView()
-com.google.android.gms.ads.formats.NativeContentAdView: android.view.View getCallToActionView()
-com.google.android.gms.ads.formats.NativeContentAdView: android.view.View getAdvertiserView()
-com.google.android.gms.ads.formats.NativeContentAdView: android.view.View getImageView()
-com.google.android.gms.ads.formats.NativeContentAdView: android.view.View getLogoView()
-com.google.android.gms.ads.internal.ClientApi
-com.google.android.gms.ads.internal.ClientApi: ClientApi()
-com.google.android.gms.ads.internal.ClientApi: com.google.android.gms.ads.internal.client.zzu createBannerAdManager(com.google.android.gms.dynamic.zzd,com.google.android.gms.ads.internal.client.AdSizeParcel,java.lang.String,com.google.android.gms.internal.zzgj,int)
-com.google.android.gms.ads.internal.ClientApi: com.google.android.gms.ads.internal.client.zzu createSearchAdManager(com.google.android.gms.dynamic.zzd,com.google.android.gms.ads.internal.client.AdSizeParcel,java.lang.String,int)
-com.google.android.gms.ads.internal.ClientApi: com.google.android.gms.ads.internal.client.zzu createInterstitialAdManager(com.google.android.gms.dynamic.zzd,com.google.android.gms.ads.internal.client.AdSizeParcel,java.lang.String,com.google.android.gms.internal.zzgj,int)
-com.google.android.gms.ads.internal.ClientApi: com.google.android.gms.ads.internal.client.zzs createAdLoaderBuilder(com.google.android.gms.dynamic.zzd,java.lang.String,com.google.android.gms.internal.zzgj,int)
-com.google.android.gms.ads.internal.ClientApi: com.google.android.gms.ads.internal.client.zzz getMobileAdsSettingsManager(com.google.android.gms.dynamic.zzd)
-com.google.android.gms.ads.internal.ClientApi: com.google.android.gms.ads.internal.client.zzz getMobileAdsSettingsManagerWithClientJarVersion(com.google.android.gms.dynamic.zzd,int)
-com.google.android.gms.ads.internal.ClientApi: com.google.android.gms.internal.zzdt createNativeAdViewDelegate(com.google.android.gms.dynamic.zzd,com.google.android.gms.dynamic.zzd)
-com.google.android.gms.ads.internal.ClientApi: com.google.android.gms.ads.internal.reward.client.zzb createRewardedVideoAd(com.google.android.gms.dynamic.zzd,com.google.android.gms.internal.zzgj,int)
-com.google.android.gms.ads.internal.ClientApi: com.google.android.gms.internal.zzhp createInAppPurchaseManager(com.google.android.gms.dynamic.zzd)
-com.google.android.gms.ads.internal.ClientApi: com.google.android.gms.internal.zzhi createAdOverlay(com.google.android.gms.dynamic.zzd)
-com.google.android.gms.ads.internal.InterstitialAdParameterParcel
-com.google.android.gms.ads.internal.InterstitialAdParameterParcel: com.google.android.gms.ads.internal.zzm CREATOR
-com.google.android.gms.ads.internal.client.AdRequestParcel
-com.google.android.gms.ads.internal.client.AdRequestParcel: com.google.android.gms.ads.internal.client.zzg CREATOR
-com.google.android.gms.ads.internal.client.AdSizeParcel
-com.google.android.gms.ads.internal.client.AdSizeParcel: com.google.android.gms.ads.internal.client.zzi CREATOR
-com.google.android.gms.ads.internal.client.SearchAdRequestParcel
-com.google.android.gms.ads.internal.client.SearchAdRequestParcel: com.google.android.gms.ads.internal.client.zzao CREATOR
-com.google.android.gms.ads.internal.client.ThinAdSizeParcel
-com.google.android.gms.ads.internal.client.VideoOptionsParcel
-com.google.android.gms.ads.internal.client.VideoOptionsParcel: com.google.android.gms.ads.internal.client.zzaq CREATOR
-com.google.android.gms.ads.internal.client.zzx$zza: zzx$zza()
-com.google.android.gms.ads.internal.client.zzx$zza: com.google.android.gms.ads.internal.client.zzx asInterface(android.os.IBinder)
-com.google.android.gms.ads.internal.client.zzx$zza: android.os.IBinder asBinder()
-com.google.android.gms.ads.internal.client.zzx$zza: boolean onTransact(int,android.os.Parcel,android.os.Parcel,int)
-com.google.android.gms.ads.internal.formats.NativeAdOptionsParcel
-com.google.android.gms.ads.internal.formats.NativeAdOptionsParcel: com.google.android.gms.ads.internal.formats.zzj CREATOR
-com.google.android.gms.ads.internal.overlay.AdLauncherIntentInfoParcel
-com.google.android.gms.ads.internal.overlay.AdLauncherIntentInfoParcel: com.google.android.gms.ads.internal.overlay.zzb CREATOR
-com.google.android.gms.ads.internal.overlay.AdOverlayInfoParcel
-com.google.android.gms.ads.internal.overlay.AdOverlayInfoParcel: com.google.android.gms.ads.internal.overlay.zzf CREATOR
-com.google.android.gms.ads.internal.overlay.zzc: void setMimeType(java.lang.String)
-com.google.android.gms.ads.internal.overlay.zzc: void setVideoPath(java.lang.String)
-com.google.android.gms.ads.internal.overlay.zzc: void setVideoURI(android.net.Uri)
-com.google.android.gms.ads.internal.overlay.zzc: int getDuration()
-com.google.android.gms.ads.internal.overlay.zzc: int getCurrentPosition()
-com.google.android.gms.ads.internal.overlay.zzc: int getVideoWidth()
-com.google.android.gms.ads.internal.overlay.zzc: int getVideoHeight()
-com.google.android.gms.ads.internal.overlay.zzi: void setMimeType(java.lang.String)
-com.google.android.gms.ads.internal.overlay.zzi: void setVideoPath(java.lang.String)
-com.google.android.gms.ads.internal.overlay.zzi: int getCurrentPosition()
-com.google.android.gms.ads.internal.overlay.zzi: int getDuration()
-com.google.android.gms.ads.internal.overlay.zzi: int getVideoWidth()
-com.google.android.gms.ads.internal.overlay.zzi: int getVideoHeight()
-com.google.android.gms.ads.internal.overlay.zzk: void setMimeType(java.lang.String)
-com.google.android.gms.ads.internal.purchase.GInAppPurchaseManagerInfoParcel
-com.google.android.gms.ads.internal.purchase.GInAppPurchaseManagerInfoParcel: com.google.android.gms.ads.internal.purchase.zza CREATOR
-com.google.android.gms.ads.internal.request.AdRequestInfoParcel
-com.google.android.gms.ads.internal.request.AdRequestInfoParcel: com.google.android.gms.ads.internal.request.zzf CREATOR
-com.google.android.gms.ads.internal.request.AdResponseParcel
-com.google.android.gms.ads.internal.request.AdResponseParcel: com.google.android.gms.ads.internal.request.zzh CREATOR
-com.google.android.gms.ads.internal.request.AutoClickProtectionConfigurationParcel
-com.google.android.gms.ads.internal.request.AutoClickProtectionConfigurationParcel: com.google.android.gms.ads.internal.request.zzi CREATOR
-com.google.android.gms.ads.internal.request.CapabilityParcel
-com.google.android.gms.ads.internal.request.CapabilityParcel: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.ads.internal.request.LargeParcelTeleporter
-com.google.android.gms.ads.internal.request.LargeParcelTeleporter: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.ads.internal.request.StringParcel
-com.google.android.gms.ads.internal.request.StringParcel: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.ads.internal.reward.client.RewardedVideoAdRequestParcel
-com.google.android.gms.ads.internal.reward.client.RewardedVideoAdRequestParcel: com.google.android.gms.ads.internal.reward.client.zzh CREATOR
-com.google.android.gms.ads.internal.reward.mediation.client.RewardItemParcel
-com.google.android.gms.ads.internal.reward.mediation.client.RewardItemParcel: com.google.android.gms.ads.internal.reward.mediation.client.zzc CREATOR
-com.google.android.gms.ads.internal.util.client.VersionInfoParcel
-com.google.android.gms.ads.internal.util.client.VersionInfoParcel: com.google.android.gms.ads.internal.util.client.zzd CREATOR
-com.google.android.gms.ads.mediation.customevent.CustomEventAdapter
-com.google.android.gms.ads.purchase.InAppPurchaseActivity
-com.google.android.gms.ads.purchase.InAppPurchaseActivity: InAppPurchaseActivity()
-com.google.android.gms.ads.search.SearchAdView: com.google.android.gms.ads.AdListener getAdListener()
-com.google.android.gms.ads.search.SearchAdView: com.google.android.gms.ads.AdSize getAdSize()
-com.google.android.gms.ads.search.SearchAdView: java.lang.String getAdUnitId()
-com.google.android.gms.ads.search.SearchAdView: void setAdListener(com.google.android.gms.ads.AdListener)
-com.google.android.gms.ads.search.SearchAdView: void setAdSize(com.google.android.gms.ads.AdSize)
-com.google.android.gms.ads.search.SearchAdView: void setAdUnitId(java.lang.String)
-com.google.android.gms.auth.api.signin.GoogleSignInAccount
-com.google.android.gms.auth.api.signin.GoogleSignInAccount: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.auth.api.signin.GoogleSignInOptions
-com.google.android.gms.auth.api.signin.GoogleSignInOptions: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.clearcut.LogEventParcelable
-com.google.android.gms.clearcut.LogEventParcelable: com.google.android.gms.clearcut.zzd CREATOR
-com.google.android.gms.common.ConnectionResult
-com.google.android.gms.common.ConnectionResult: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.SignInButton: void setSize(int)
-com.google.android.gms.common.SignInButton: void setColorScheme(int)
-com.google.android.gms.common.SignInButton: void setScopes(com.google.android.gms.common.api.Scope[])
-com.google.android.gms.common.SignInButton: void setOnClickListener(android.view.View$OnClickListener)
-com.google.android.gms.common.SignInButton: void setEnabled(boolean)
-com.google.android.gms.common.annotation.KeepName
-com.google.android.gms.common.api.GoogleApiActivity
-com.google.android.gms.common.api.GoogleApiActivity: GoogleApiActivity()
-com.google.android.gms.common.api.Scope
-com.google.android.gms.common.api.Scope: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.api.Status
-com.google.android.gms.common.api.Status: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.data.BitmapTeleporter
-com.google.android.gms.common.data.BitmapTeleporter: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.data.DataHolder
-com.google.android.gms.common.data.DataHolder: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.images.ImageManager$ImageReceiver
-com.google.android.gms.common.images.WebImage
-com.google.android.gms.common.images.WebImage: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.internal.AuthAccountRequest
-com.google.android.gms.common.internal.AuthAccountRequest: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.internal.BinderWrapper
-com.google.android.gms.common.internal.BinderWrapper: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.internal.DowngradeableSafeParcel
-com.google.android.gms.common.internal.GetServiceRequest
-com.google.android.gms.common.internal.GetServiceRequest: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.internal.ReflectedParcelable
-com.google.android.gms.common.internal.ResolveAccountRequest
-com.google.android.gms.common.internal.ResolveAccountRequest: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.internal.ResolveAccountResponse
-com.google.android.gms.common.internal.ResolveAccountResponse: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.internal.SignInButtonConfig
-com.google.android.gms.common.internal.SignInButtonConfig: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.internal.ValidateAccountRequest
-com.google.android.gms.common.internal.ValidateAccountRequest: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable
-com.google.android.gms.common.internal.safeparcel.SafeParcelable
-com.google.android.gms.common.internal.safeparcel.SafeParcelable: java.lang.String NULL
-com.google.android.gms.common.server.FavaDiagnosticsEntity
-com.google.android.gms.common.server.FavaDiagnosticsEntity: com.google.android.gms.common.server.zza CREATOR
-com.google.android.gms.common.server.converter.ConverterWrapper
-com.google.android.gms.common.server.converter.ConverterWrapper: com.google.android.gms.common.server.converter.zza CREATOR
-com.google.android.gms.common.server.converter.StringToIntConverter
-com.google.android.gms.common.server.converter.StringToIntConverter: com.google.android.gms.common.server.converter.zzb CREATOR
-com.google.android.gms.common.server.converter.StringToIntConverter$Entry
-com.google.android.gms.common.server.converter.StringToIntConverter$Entry: com.google.android.gms.common.server.converter.zzc CREATOR
-com.google.android.gms.common.server.response.FastJsonResponse$Field
-com.google.android.gms.common.server.response.FastJsonResponse$Field: com.google.android.gms.common.server.response.zza CREATOR
-com.google.android.gms.common.server.response.FastSafeParcelableJsonResponse
-com.google.android.gms.common.server.response.FieldMappingDictionary
-com.google.android.gms.common.server.response.FieldMappingDictionary: com.google.android.gms.common.server.response.zzc CREATOR
-com.google.android.gms.common.server.response.FieldMappingDictionary$Entry
-com.google.android.gms.common.server.response.FieldMappingDictionary$Entry: com.google.android.gms.common.server.response.zzd CREATOR
-com.google.android.gms.common.server.response.FieldMappingDictionary$FieldMapPair
-com.google.android.gms.common.server.response.FieldMappingDictionary$FieldMapPair: com.google.android.gms.common.server.response.zzb CREATOR
-com.google.android.gms.common.server.response.SafeParcelResponse
-com.google.android.gms.common.server.response.SafeParcelResponse: com.google.android.gms.common.server.response.zze CREATOR
-com.google.android.gms.common.stats.ConnectionEvent
-com.google.android.gms.common.stats.ConnectionEvent: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.stats.StatsEvent
-com.google.android.gms.common.stats.WakeLockEvent
-com.google.android.gms.common.stats.WakeLockEvent: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.common.util.DynamiteApi
-com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite.ModuleDescriptor
-com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite.ModuleDescriptor: java.lang.String MODULE_ID
-com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite.ModuleDescriptor: int MODULE_VERSION
-com.google.android.gms.dynamite.descriptors.com.google.android.gms.ads.dynamite.ModuleDescriptor: ModuleDescriptor()
-com.google.android.gms.dynamite.descriptors.com.google.android.gms.flags.ModuleDescriptor
-com.google.android.gms.dynamite.descriptors.com.google.android.gms.flags.ModuleDescriptor: java.lang.String MODULE_ID
-com.google.android.gms.dynamite.descriptors.com.google.android.gms.flags.ModuleDescriptor: int MODULE_VERSION
-com.google.android.gms.dynamite.descriptors.com.google.android.gms.flags.ModuleDescriptor: ModuleDescriptor()
-com.google.android.gms.flags.impl.FlagProviderImpl
-com.google.android.gms.flags.impl.FlagProviderImpl: FlagProviderImpl()
-com.google.android.gms.flags.impl.FlagProviderImpl: void init(com.google.android.gms.dynamic.zzd)
-com.google.android.gms.flags.impl.FlagProviderImpl: boolean getBooleanFlagValue(java.lang.String,boolean,int)
-com.google.android.gms.flags.impl.FlagProviderImpl: int getIntFlagValue(java.lang.String,int,int)
-com.google.android.gms.flags.impl.FlagProviderImpl: long getLongFlagValue(java.lang.String,long,int)
-com.google.android.gms.flags.impl.FlagProviderImpl: java.lang.String getStringFlagValue(java.lang.String,java.lang.String,int)
-com.google.android.gms.gass.internal.GassRequestParcel
-com.google.android.gms.gass.internal.GassRequestParcel: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.gass.internal.GassResponseParcel
-com.google.android.gms.gass.internal.GassResponseParcel: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.iid.MessengerCompat
-com.google.android.gms.iid.MessengerCompat: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.internal.zzaf: com.google.android.gms.internal.zzaf[] values()
-com.google.android.gms.internal.zzag: com.google.android.gms.internal.zzag[] values()
-com.google.android.gms.internal.zzamn: com.google.android.gms.internal.zzamn[] values()
-com.google.android.gms.internal.zzanf: com.google.android.gms.internal.zzanf[] values()
-com.google.android.gms.internal.zzaon: com.google.android.gms.internal.zzaon[] values()
-com.google.android.gms.internal.zzk$zza: com.google.android.gms.internal.zzk$zza[] values()
-com.google.android.gms.internal.zzty$zza: zzty$zza()
-com.google.android.gms.internal.zzty$zza: com.google.android.gms.internal.zzty asInterface(android.os.IBinder)
-com.google.android.gms.internal.zzty$zza: android.os.IBinder asBinder()
-com.google.android.gms.internal.zzty$zza: boolean onTransact(int,android.os.Parcel,android.os.Parcel,int)
-com.google.android.gms.location.places.PlaceReport
-com.google.android.gms.location.places.PlaceReport: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.measurement.AppMeasurement
-com.google.android.gms.measurement.AppMeasurement: com.google.android.gms.measurement.AppMeasurement getInstance(android.content.Context)
-com.google.android.gms.measurement.AppMeasurementReceiver
-com.google.android.gms.measurement.AppMeasurementReceiver: AppMeasurementReceiver()
-com.google.android.gms.measurement.AppMeasurementService
-com.google.android.gms.measurement.AppMeasurementService: AppMeasurementService()
-com.google.android.gms.measurement.internal.AppMetadata
-com.google.android.gms.measurement.internal.AppMetadata: com.google.android.gms.measurement.internal.zzb CREATOR
-com.google.android.gms.measurement.internal.EventParams
-com.google.android.gms.measurement.internal.EventParams: com.google.android.gms.measurement.internal.zzj CREATOR
-com.google.android.gms.measurement.internal.EventParcel
-com.google.android.gms.measurement.internal.EventParcel: com.google.android.gms.measurement.internal.zzk CREATOR
-com.google.android.gms.measurement.internal.UserAttributeParcel
-com.google.android.gms.measurement.internal.UserAttributeParcel: com.google.android.gms.measurement.internal.zzaj CREATOR
-com.google.android.gms.phenotype.Configuration
-com.google.android.gms.phenotype.Configuration: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.phenotype.Flag
-com.google.android.gms.phenotype.Flag: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.playlog.internal.PlayLoggerContext
-com.google.android.gms.playlog.internal.PlayLoggerContext: com.google.android.gms.playlog.internal.zza CREATOR
-com.google.android.gms.signin.internal.AuthAccountResult
-com.google.android.gms.signin.internal.AuthAccountResult: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.signin.internal.CheckServerAuthResult
-com.google.android.gms.signin.internal.CheckServerAuthResult: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.signin.internal.RecordConsentRequest
-com.google.android.gms.signin.internal.RecordConsentRequest: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.signin.internal.SignInRequest
-com.google.android.gms.signin.internal.SignInRequest: android.os.Parcelable$Creator CREATOR
-com.google.android.gms.signin.internal.SignInResponse
-com.google.android.gms.signin.internal.SignInResponse: android.os.Parcelable$Creator CREATOR
-com.google.firebase.auth.UserProfileChangeRequest
-com.google.firebase.auth.UserProfileChangeRequest: android.os.Parcelable$Creator CREATOR
-com.google.firebase.iid.FirebaseInstanceId
-com.google.firebase.iid.FirebaseInstanceId: com.google.firebase.iid.FirebaseInstanceId getInstance(com.google.firebase.FirebaseApp)
-com.google.firebase.iid.FirebaseInstanceIdInternalReceiver
-com.google.firebase.iid.FirebaseInstanceIdInternalReceiver: FirebaseInstanceIdInternalReceiver()
-com.google.firebase.iid.FirebaseInstanceIdReceiver
-com.google.firebase.iid.FirebaseInstanceIdReceiver: FirebaseInstanceIdReceiver()
-com.google.firebase.iid.FirebaseInstanceIdService
-com.google.firebase.iid.FirebaseInstanceIdService: FirebaseInstanceIdService()
-com.google.firebase.iid.zzb: zzb()
-com.google.firebase.provider.FirebaseInitProvider
-com.google.firebase.provider.FirebaseInitProvider: FirebaseInitProvider()
 com.prasilabs.screenlocker.R$anim: int abc_fade_in
 com.prasilabs.screenlocker.R$anim: int abc_fade_out
 com.prasilabs.screenlocker.R$anim: int abc_grow_fade_in_from_bottom
@@ -2387,9 +1999,6 @@ com.prasilabs.screenlocker.R$attr: int actionOverflowMenuStyle
 com.prasilabs.screenlocker.R$attr: int actionProviderClass
 com.prasilabs.screenlocker.R$attr: int actionViewClass
 com.prasilabs.screenlocker.R$attr: int activityChooserViewStyle
-com.prasilabs.screenlocker.R$attr: int adSize
-com.prasilabs.screenlocker.R$attr: int adSizes
-com.prasilabs.screenlocker.R$attr: int adUnitId
 com.prasilabs.screenlocker.R$attr: int alertDialogButtonGroupStyle
 com.prasilabs.screenlocker.R$attr: int alertDialogCenterButtons
 com.prasilabs.screenlocker.R$attr: int alertDialogStyle
@@ -2413,14 +2022,12 @@ com.prasilabs.screenlocker.R$attr: int buttonBarPositiveButtonStyle
 com.prasilabs.screenlocker.R$attr: int buttonBarStyle
 com.prasilabs.screenlocker.R$attr: int buttonGravity
 com.prasilabs.screenlocker.R$attr: int buttonPanelSideLayout
-com.prasilabs.screenlocker.R$attr: int buttonSize
 com.prasilabs.screenlocker.R$attr: int buttonStyle
 com.prasilabs.screenlocker.R$attr: int buttonStyleSmall
 com.prasilabs.screenlocker.R$attr: int buttonTint
 com.prasilabs.screenlocker.R$attr: int buttonTintMode
 com.prasilabs.screenlocker.R$attr: int checkboxStyle
 com.prasilabs.screenlocker.R$attr: int checkedTextViewStyle
-com.prasilabs.screenlocker.R$attr: int circleCrop
 com.prasilabs.screenlocker.R$attr: int closeIcon
 com.prasilabs.screenlocker.R$attr: int closeItemLayout
 com.prasilabs.screenlocker.R$attr: int collapseContentDescription
@@ -2434,7 +2041,6 @@ com.prasilabs.screenlocker.R$attr: int colorControlHighlight
 com.prasilabs.screenlocker.R$attr: int colorControlNormal
 com.prasilabs.screenlocker.R$attr: int colorPrimary
 com.prasilabs.screenlocker.R$attr: int colorPrimaryDark
-com.prasilabs.screenlocker.R$attr: int colorScheme
 com.prasilabs.screenlocker.R$attr: int colorSwitchThumbNormal
 com.prasilabs.screenlocker.R$attr: int commitIcon
 com.prasilabs.screenlocker.R$attr: int contentInsetEnd
@@ -2470,8 +2076,6 @@ com.prasilabs.screenlocker.R$attr: int homeAsUpIndicator
 com.prasilabs.screenlocker.R$attr: int homeLayout
 com.prasilabs.screenlocker.R$attr: int icon
 com.prasilabs.screenlocker.R$attr: int iconifiedByDefault
-com.prasilabs.screenlocker.R$attr: int imageAspectRatio
-com.prasilabs.screenlocker.R$attr: int imageAspectRatioAdjust
 com.prasilabs.screenlocker.R$attr: int imageButtonStyle
 com.prasilabs.screenlocker.R$attr: int indeterminateProgressStyle
 com.prasilabs.screenlocker.R$attr: int initialActivityCount
@@ -2493,6 +2097,8 @@ com.prasilabs.screenlocker.R$attr: int logo
 com.prasilabs.screenlocker.R$attr: int logoDescription
 com.prasilabs.screenlocker.R$attr: int maxButtonHeight
 com.prasilabs.screenlocker.R$attr: int measureWithLargestChild
+com.prasilabs.screenlocker.R$attr: int metaButtonBarButtonStyle
+com.prasilabs.screenlocker.R$attr: int metaButtonBarStyle
 com.prasilabs.screenlocker.R$attr: int multiChoiceItemLayout
 com.prasilabs.screenlocker.R$attr: int navigationContentDescription
 com.prasilabs.screenlocker.R$attr: int navigationIcon
@@ -2515,7 +2121,6 @@ com.prasilabs.screenlocker.R$attr: int radioButtonStyle
 com.prasilabs.screenlocker.R$attr: int ratingBarStyle
 com.prasilabs.screenlocker.R$attr: int ratingBarStyleIndicator
 com.prasilabs.screenlocker.R$attr: int ratingBarStyleSmall
-com.prasilabs.screenlocker.R$attr: int scopeUris
 com.prasilabs.screenlocker.R$attr: int searchHintIcon
 com.prasilabs.screenlocker.R$attr: int searchIcon
 com.prasilabs.screenlocker.R$attr: int searchViewStyle
@@ -2597,6 +2202,8 @@ com.prasilabs.screenlocker.R$color: int abc_background_cache_hint_selector_mater
 com.prasilabs.screenlocker.R$color: int abc_background_cache_hint_selector_material_light
 com.prasilabs.screenlocker.R$color: int abc_btn_colored_borderless_text_material
 com.prasilabs.screenlocker.R$color: int abc_color_highlight_material
+com.prasilabs.screenlocker.R$color: int abc_hint_foreground_material_dark
+com.prasilabs.screenlocker.R$color: int abc_hint_foreground_material_light
 com.prasilabs.screenlocker.R$color: int abc_input_method_navigation_guard
 com.prasilabs.screenlocker.R$color: int abc_primary_text_disable_only_material_dark
 com.prasilabs.screenlocker.R$color: int abc_primary_text_disable_only_material_light
@@ -2625,6 +2232,7 @@ com.prasilabs.screenlocker.R$color: int background_floating_material_light
 com.prasilabs.screenlocker.R$color: int background_material_dark
 com.prasilabs.screenlocker.R$color: int background_material_light
 com.prasilabs.screenlocker.R$color: int black
+com.prasilabs.screenlocker.R$color: int black_overlay
 com.prasilabs.screenlocker.R$color: int blue
 com.prasilabs.screenlocker.R$color: int brand
 com.prasilabs.screenlocker.R$color: int bright_foreground_disabled_material_dark
@@ -2638,26 +2246,6 @@ com.prasilabs.screenlocker.R$color: int button_material_light
 com.prasilabs.screenlocker.R$color: int colorAccent
 com.prasilabs.screenlocker.R$color: int colorPrimary
 com.prasilabs.screenlocker.R$color: int colorPrimaryDark
-com.prasilabs.screenlocker.R$color: int common_google_signin_btn_text_dark
-com.prasilabs.screenlocker.R$color: int common_google_signin_btn_text_dark_default
-com.prasilabs.screenlocker.R$color: int common_google_signin_btn_text_dark_disabled
-com.prasilabs.screenlocker.R$color: int common_google_signin_btn_text_dark_focused
-com.prasilabs.screenlocker.R$color: int common_google_signin_btn_text_dark_pressed
-com.prasilabs.screenlocker.R$color: int common_google_signin_btn_text_light
-com.prasilabs.screenlocker.R$color: int common_google_signin_btn_text_light_default
-com.prasilabs.screenlocker.R$color: int common_google_signin_btn_text_light_disabled
-com.prasilabs.screenlocker.R$color: int common_google_signin_btn_text_light_focused
-com.prasilabs.screenlocker.R$color: int common_google_signin_btn_text_light_pressed
-com.prasilabs.screenlocker.R$color: int common_plus_signin_btn_text_dark
-com.prasilabs.screenlocker.R$color: int common_plus_signin_btn_text_dark_default
-com.prasilabs.screenlocker.R$color: int common_plus_signin_btn_text_dark_disabled
-com.prasilabs.screenlocker.R$color: int common_plus_signin_btn_text_dark_focused
-com.prasilabs.screenlocker.R$color: int common_plus_signin_btn_text_dark_pressed
-com.prasilabs.screenlocker.R$color: int common_plus_signin_btn_text_light
-com.prasilabs.screenlocker.R$color: int common_plus_signin_btn_text_light_default
-com.prasilabs.screenlocker.R$color: int common_plus_signin_btn_text_light_disabled
-com.prasilabs.screenlocker.R$color: int common_plus_signin_btn_text_light_focused
-com.prasilabs.screenlocker.R$color: int common_plus_signin_btn_text_light_pressed
 com.prasilabs.screenlocker.R$color: int darkBlue
 com.prasilabs.screenlocker.R$color: int darkGreen
 com.prasilabs.screenlocker.R$color: int dim_foreground_disabled_material_dark
@@ -2677,8 +2265,6 @@ com.prasilabs.screenlocker.R$color: int gray5
 com.prasilabs.screenlocker.R$color: int green
 com.prasilabs.screenlocker.R$color: int highlighted_text_material_dark
 com.prasilabs.screenlocker.R$color: int highlighted_text_material_light
-com.prasilabs.screenlocker.R$color: int hint_foreground_material_dark
-com.prasilabs.screenlocker.R$color: int hint_foreground_material_light
 com.prasilabs.screenlocker.R$color: int lgray1
 com.prasilabs.screenlocker.R$color: int lgray2
 com.prasilabs.screenlocker.R$color: int lgray3
@@ -2703,6 +2289,9 @@ com.prasilabs.screenlocker.R$color: int material_grey_600
 com.prasilabs.screenlocker.R$color: int material_grey_800
 com.prasilabs.screenlocker.R$color: int material_grey_850
 com.prasilabs.screenlocker.R$color: int material_grey_900
+com.prasilabs.screenlocker.R$color: int notification_action_color_filter
+com.prasilabs.screenlocker.R$color: int notification_icon_bg_color
+com.prasilabs.screenlocker.R$color: int notification_material_background_media_default_color
 com.prasilabs.screenlocker.R$color: int orange
 com.prasilabs.screenlocker.R$color: int pink
 com.prasilabs.screenlocker.R$color: int primary
@@ -2850,12 +2439,28 @@ com.prasilabs.screenlocker.R$dimen: int grid_item_width
 com.prasilabs.screenlocker.R$dimen: int highlight_alpha_material_colored
 com.prasilabs.screenlocker.R$dimen: int highlight_alpha_material_dark
 com.prasilabs.screenlocker.R$dimen: int highlight_alpha_material_light
+com.prasilabs.screenlocker.R$dimen: int hint_alpha_material_dark
+com.prasilabs.screenlocker.R$dimen: int hint_alpha_material_light
+com.prasilabs.screenlocker.R$dimen: int hint_pressed_alpha_material_dark
+com.prasilabs.screenlocker.R$dimen: int hint_pressed_alpha_material_light
 com.prasilabs.screenlocker.R$dimen: int hulk
 com.prasilabs.screenlocker.R$dimen: int keyboard_height
 com.prasilabs.screenlocker.R$dimen: int linear_item_height
+com.prasilabs.screenlocker.R$dimen: int notification_action_icon_size
+com.prasilabs.screenlocker.R$dimen: int notification_action_text_size
+com.prasilabs.screenlocker.R$dimen: int notification_big_circle_margin
+com.prasilabs.screenlocker.R$dimen: int notification_content_margin_start
 com.prasilabs.screenlocker.R$dimen: int notification_large_icon_height
 com.prasilabs.screenlocker.R$dimen: int notification_large_icon_width
+com.prasilabs.screenlocker.R$dimen: int notification_main_column_padding_top
+com.prasilabs.screenlocker.R$dimen: int notification_media_narrow_margin
+com.prasilabs.screenlocker.R$dimen: int notification_right_icon_size
+com.prasilabs.screenlocker.R$dimen: int notification_right_side_padding_top
+com.prasilabs.screenlocker.R$dimen: int notification_small_icon_background_padding
+com.prasilabs.screenlocker.R$dimen: int notification_small_icon_size_as_large
 com.prasilabs.screenlocker.R$dimen: int notification_subtext_size
+com.prasilabs.screenlocker.R$dimen: int notification_top_pad
+com.prasilabs.screenlocker.R$dimen: int notification_top_pad_large_text
 com.prasilabs.screenlocker.R$dimen: int npaddingS
 com.prasilabs.screenlocker.R$dimen: int one
 com.prasilabs.screenlocker.R$dimen: int paddingCard
@@ -2954,68 +2559,41 @@ com.prasilabs.screenlocker.R$drawable: int abc_switch_track_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_tab_indicator_material
 com.prasilabs.screenlocker.R$drawable: int abc_tab_indicator_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_text_cursor_material
-com.prasilabs.screenlocker.R$drawable: int abc_text_select_handle_left_mtrl_alpha
-com.prasilabs.screenlocker.R$drawable: int abc_text_select_handle_middle_mtrl_alpha
-com.prasilabs.screenlocker.R$drawable: int abc_text_select_handle_right_mtrl_alpha
+com.prasilabs.screenlocker.R$drawable: int abc_text_select_handle_left_mtrl_dark
+com.prasilabs.screenlocker.R$drawable: int abc_text_select_handle_left_mtrl_light
+com.prasilabs.screenlocker.R$drawable: int abc_text_select_handle_middle_mtrl_dark
+com.prasilabs.screenlocker.R$drawable: int abc_text_select_handle_middle_mtrl_light
+com.prasilabs.screenlocker.R$drawable: int abc_text_select_handle_right_mtrl_dark
+com.prasilabs.screenlocker.R$drawable: int abc_text_select_handle_right_mtrl_light
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_activated_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_default_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_activated_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_default_mtrl_alpha
 com.prasilabs.screenlocker.R$drawable: int abc_textfield_search_material
 com.prasilabs.screenlocker.R$drawable: int abc_vector_test
-com.prasilabs.screenlocker.R$drawable: int common_full_open_on_phone
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_icon_dark
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_icon_dark_disabled
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_icon_dark_focused
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_icon_dark_normal
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_icon_dark_pressed
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_icon_light
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_icon_light_disabled
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_icon_light_focused
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_icon_light_normal
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_icon_light_pressed
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_text_dark
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_text_dark_disabled
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_text_dark_focused
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_text_dark_normal
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_text_dark_pressed
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_text_light
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_text_light_disabled
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_text_light_focused
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_text_light_normal
-com.prasilabs.screenlocker.R$drawable: int common_google_signin_btn_text_light_pressed
-com.prasilabs.screenlocker.R$drawable: int common_ic_googleplayservices
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_icon_dark
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_icon_dark_disabled
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_icon_dark_focused
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_icon_dark_normal
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_icon_dark_pressed
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_icon_light
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_icon_light_disabled
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_icon_light_focused
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_icon_light_normal
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_icon_light_pressed
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_text_dark
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_text_dark_disabled
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_text_dark_focused
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_text_dark_normal
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_text_dark_pressed
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_text_light
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_text_light_disabled
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_text_light_focused
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_text_light_normal
-com.prasilabs.screenlocker.R$drawable: int common_plus_signin_btn_text_light_pressed
 com.prasilabs.screenlocker.R$drawable: int gcard
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn
 com.prasilabs.screenlocker.R$drawable: int gray_transparent_btn_small
 com.prasilabs.screenlocker.R$drawable: int ic_action_favorite
+com.prasilabs.screenlocker.R$drawable: int ic_bikr_launcher
 com.prasilabs.screenlocker.R$drawable: int ic_favorite_white_24px
 com.prasilabs.screenlocker.R$drawable: int ic_github
 com.prasilabs.screenlocker.R$drawable: int ic_info_white_24px
 com.prasilabs.screenlocker.R$drawable: int ic_share_white_24px
 com.prasilabs.screenlocker.R$drawable: int ic_social_person_outline
 com.prasilabs.screenlocker.R$drawable: int ic_social_share
+com.prasilabs.screenlocker.R$drawable: int notification_action_background
+com.prasilabs.screenlocker.R$drawable: int notification_bg
+com.prasilabs.screenlocker.R$drawable: int notification_bg_low
+com.prasilabs.screenlocker.R$drawable: int notification_bg_low_normal
+com.prasilabs.screenlocker.R$drawable: int notification_bg_low_pressed
+com.prasilabs.screenlocker.R$drawable: int notification_bg_normal
+com.prasilabs.screenlocker.R$drawable: int notification_bg_normal_pressed
+com.prasilabs.screenlocker.R$drawable: int notification_icon_background
 com.prasilabs.screenlocker.R$drawable: int notification_template_icon_bg
+com.prasilabs.screenlocker.R$drawable: int notification_template_icon_low_bg
+com.prasilabs.screenlocker.R$drawable: int notification_tile_bg
+com.prasilabs.screenlocker.R$drawable: int notify_panel_notification_icon_bg
 com.prasilabs.screenlocker.R$drawable: int primary_btn
 com.prasilabs.screenlocker.R$drawable: int primary_btn_big
 com.prasilabs.screenlocker.R$drawable: int primary_btn_small
@@ -3037,22 +2615,24 @@ com.prasilabs.screenlocker.R$id: int action_bar_root
 com.prasilabs.screenlocker.R$id: int action_bar_spinner
 com.prasilabs.screenlocker.R$id: int action_bar_subtitle
 com.prasilabs.screenlocker.R$id: int action_bar_title
+com.prasilabs.screenlocker.R$id: int action_container
 com.prasilabs.screenlocker.R$id: int action_context_bar
 com.prasilabs.screenlocker.R$id: int action_divider
+com.prasilabs.screenlocker.R$id: int action_image
 com.prasilabs.screenlocker.R$id: int action_menu_divider
 com.prasilabs.screenlocker.R$id: int action_menu_presenter
 com.prasilabs.screenlocker.R$id: int action_mode_bar
 com.prasilabs.screenlocker.R$id: int action_mode_bar_stub
 com.prasilabs.screenlocker.R$id: int action_mode_close_button
+com.prasilabs.screenlocker.R$id: int action_text
+com.prasilabs.screenlocker.R$id: int actions
 com.prasilabs.screenlocker.R$id: int activity_chooser_view_content
-com.prasilabs.screenlocker.R$id: int adView
 com.prasilabs.screenlocker.R$id: int add
-com.prasilabs.screenlocker.R$id: int adjust_height
-com.prasilabs.screenlocker.R$id: int adjust_width
 com.prasilabs.screenlocker.R$id: int alertTitle
 com.prasilabs.screenlocker.R$id: int always
-com.prasilabs.screenlocker.R$id: int auto
 com.prasilabs.screenlocker.R$id: int beginning
+com.prasilabs.screenlocker.R$id: int bikr_install_btn
+com.prasilabs.screenlocker.R$id: int bikr_layout
 com.prasilabs.screenlocker.R$id: int bottom
 com.prasilabs.screenlocker.R$id: int bottom_layout
 com.prasilabs.screenlocker.R$id: int buttonPanel
@@ -3062,9 +2642,9 @@ com.prasilabs.screenlocker.R$id: int checkbox
 com.prasilabs.screenlocker.R$id: int chronometer
 com.prasilabs.screenlocker.R$id: int collapseActionView
 com.prasilabs.screenlocker.R$id: int contentPanel
+com.prasilabs.screenlocker.R$id: int content_view
 com.prasilabs.screenlocker.R$id: int custom
 com.prasilabs.screenlocker.R$id: int customPanel
-com.prasilabs.screenlocker.R$id: int dark
 com.prasilabs.screenlocker.R$id: int decor_content_parent
 com.prasilabs.screenlocker.R$id: int default_activity_button
 com.prasilabs.screenlocker.R$id: int device_admin_btn
@@ -3079,11 +2659,10 @@ com.prasilabs.screenlocker.R$id: int github_btn
 com.prasilabs.screenlocker.R$id: int home
 com.prasilabs.screenlocker.R$id: int homeAsUp
 com.prasilabs.screenlocker.R$id: int icon
-com.prasilabs.screenlocker.R$id: int icon_only
+com.prasilabs.screenlocker.R$id: int icon_group
 com.prasilabs.screenlocker.R$id: int ifRoom
 com.prasilabs.screenlocker.R$id: int image
 com.prasilabs.screenlocker.R$id: int info
-com.prasilabs.screenlocker.R$id: int light
 com.prasilabs.screenlocker.R$id: int line1
 com.prasilabs.screenlocker.R$id: int line3
 com.prasilabs.screenlocker.R$id: int listMode
@@ -3094,6 +2673,9 @@ com.prasilabs.screenlocker.R$id: int multiply
 com.prasilabs.screenlocker.R$id: int never
 com.prasilabs.screenlocker.R$id: int none
 com.prasilabs.screenlocker.R$id: int normal
+com.prasilabs.screenlocker.R$id: int notification_background
+com.prasilabs.screenlocker.R$id: int notification_main_column
+com.prasilabs.screenlocker.R$id: int notification_main_column_container
 com.prasilabs.screenlocker.R$id: int notification_switch
 com.prasilabs.screenlocker.R$id: int page_btn
 com.prasilabs.screenlocker.R$id: int parentPanel
@@ -3101,6 +2683,8 @@ com.prasilabs.screenlocker.R$id: int progress_circular
 com.prasilabs.screenlocker.R$id: int progress_horizontal
 com.prasilabs.screenlocker.R$id: int radio
 com.prasilabs.screenlocker.R$id: int rate_btn
+com.prasilabs.screenlocker.R$id: int right_icon
+com.prasilabs.screenlocker.R$id: int right_side
 com.prasilabs.screenlocker.R$id: int screen
 com.prasilabs.screenlocker.R$id: int screen_lock_btn
 com.prasilabs.screenlocker.R$id: int scrollIndicatorDown
@@ -3125,11 +2709,11 @@ com.prasilabs.screenlocker.R$id: int showCustom
 com.prasilabs.screenlocker.R$id: int showHome
 com.prasilabs.screenlocker.R$id: int showTitle
 com.prasilabs.screenlocker.R$id: int spacer
+com.prasilabs.screenlocker.R$id: int splash_layout
 com.prasilabs.screenlocker.R$id: int split_action_bar
 com.prasilabs.screenlocker.R$id: int src_atop
 com.prasilabs.screenlocker.R$id: int src_in
 com.prasilabs.screenlocker.R$id: int src_over
-com.prasilabs.screenlocker.R$id: int standard
 com.prasilabs.screenlocker.R$id: int status_bar_latest_event_content
 com.prasilabs.screenlocker.R$id: int status_text
 com.prasilabs.screenlocker.R$id: int submenuarrow
@@ -3146,13 +2730,11 @@ com.prasilabs.screenlocker.R$id: int topPanel
 com.prasilabs.screenlocker.R$id: int up
 com.prasilabs.screenlocker.R$id: int useLogo
 com.prasilabs.screenlocker.R$id: int volume_key_switch
-com.prasilabs.screenlocker.R$id: int wide
 com.prasilabs.screenlocker.R$id: int withText
 com.prasilabs.screenlocker.R$id: int wrap_content
 com.prasilabs.screenlocker.R$integer: int abc_config_activityDefaultDur
 com.prasilabs.screenlocker.R$integer: int abc_config_activityShortDur
 com.prasilabs.screenlocker.R$integer: int cancel_button_image_alpha
-com.prasilabs.screenlocker.R$integer: int google_play_services_version
 com.prasilabs.screenlocker.R$integer: int status_bar_notification_info_maxnum
 com.prasilabs.screenlocker.R$layout: int abc_action_bar_title_item
 com.prasilabs.screenlocker.R$layout: int abc_action_bar_up_container
@@ -3181,12 +2763,19 @@ com.prasilabs.screenlocker.R$layout: int abc_search_dropdown_item_icons_2line
 com.prasilabs.screenlocker.R$layout: int abc_search_view
 com.prasilabs.screenlocker.R$layout: int abc_select_dialog_material
 com.prasilabs.screenlocker.R$layout: int activity_main
+com.prasilabs.screenlocker.R$layout: int notification_action
+com.prasilabs.screenlocker.R$layout: int notification_action_tombstone
 com.prasilabs.screenlocker.R$layout: int notification_media_action
 com.prasilabs.screenlocker.R$layout: int notification_media_cancel_action
 com.prasilabs.screenlocker.R$layout: int notification_template_big_media
+com.prasilabs.screenlocker.R$layout: int notification_template_big_media_custom
 com.prasilabs.screenlocker.R$layout: int notification_template_big_media_narrow
-com.prasilabs.screenlocker.R$layout: int notification_template_lines
+com.prasilabs.screenlocker.R$layout: int notification_template_big_media_narrow_custom
+com.prasilabs.screenlocker.R$layout: int notification_template_custom_big
+com.prasilabs.screenlocker.R$layout: int notification_template_icon_group
+com.prasilabs.screenlocker.R$layout: int notification_template_lines_media
 com.prasilabs.screenlocker.R$layout: int notification_template_media
+com.prasilabs.screenlocker.R$layout: int notification_template_media_custom
 com.prasilabs.screenlocker.R$layout: int notification_template_part_chronometer
 com.prasilabs.screenlocker.R$layout: int notification_template_part_time
 com.prasilabs.screenlocker.R$layout: int seek_bar_layout
@@ -3229,51 +2818,29 @@ com.prasilabs.screenlocker.R$string: int abc_searchview_description_voice
 com.prasilabs.screenlocker.R$string: int abc_shareactionprovider_share_with
 com.prasilabs.screenlocker.R$string: int abc_shareactionprovider_share_with_application
 com.prasilabs.screenlocker.R$string: int abc_toolbar_collapse_description
-com.prasilabs.screenlocker.R$string: int accept
 com.prasilabs.screenlocker.R$string: int app_name
 com.prasilabs.screenlocker.R$string: int banner_ad_unit_id
 com.prasilabs.screenlocker.R$string: int btn_disable_device_admin
 com.prasilabs.screenlocker.R$string: int btn_enable_device_admin
-com.prasilabs.screenlocker.R$string: int common_google_play_services_enable_button
-com.prasilabs.screenlocker.R$string: int common_google_play_services_enable_text
-com.prasilabs.screenlocker.R$string: int common_google_play_services_enable_title
-com.prasilabs.screenlocker.R$string: int common_google_play_services_install_button
-com.prasilabs.screenlocker.R$string: int common_google_play_services_install_text_phone
-com.prasilabs.screenlocker.R$string: int common_google_play_services_install_text_tablet
-com.prasilabs.screenlocker.R$string: int common_google_play_services_install_title
-com.prasilabs.screenlocker.R$string: int common_google_play_services_notification_ticker
-com.prasilabs.screenlocker.R$string: int common_google_play_services_unknown_issue
-com.prasilabs.screenlocker.R$string: int common_google_play_services_unsupported_text
-com.prasilabs.screenlocker.R$string: int common_google_play_services_unsupported_title
-com.prasilabs.screenlocker.R$string: int common_google_play_services_update_button
-com.prasilabs.screenlocker.R$string: int common_google_play_services_update_text
-com.prasilabs.screenlocker.R$string: int common_google_play_services_update_title
-com.prasilabs.screenlocker.R$string: int common_google_play_services_updating_text
-com.prasilabs.screenlocker.R$string: int common_google_play_services_updating_title
-com.prasilabs.screenlocker.R$string: int common_google_play_services_wear_update_text
-com.prasilabs.screenlocker.R$string: int common_open_on_phone
-com.prasilabs.screenlocker.R$string: int common_signin_button_text
-com.prasilabs.screenlocker.R$string: int common_signin_button_text_long
-com.prasilabs.screenlocker.R$string: int create_calendar_message
-com.prasilabs.screenlocker.R$string: int create_calendar_title
-com.prasilabs.screenlocker.R$string: int decline
 com.prasilabs.screenlocker.R$string: int developed_by_prasilabs
 com.prasilabs.screenlocker.R$string: int disabled
 com.prasilabs.screenlocker.R$string: int disabled_str
 com.prasilabs.screenlocker.R$string: int double_press_volume_lock_message
+com.prasilabs.screenlocker.R$string: int dummy_button
+com.prasilabs.screenlocker.R$string: int dummy_content
 com.prasilabs.screenlocker.R$string: int enable_message
 com.prasilabs.screenlocker.R$string: int enable_screen_lock_option_message
 com.prasilabs.screenlocker.R$string: int enabled_str
 com.prasilabs.screenlocker.R$string: int floating_button_lock
 com.prasilabs.screenlocker.R$string: int github_src_code
 com.prasilabs.screenlocker.R$string: int github_src_url
+com.prasilabs.screenlocker.R$string: int interstitial_ad_unit_id
 com.prasilabs.screenlocker.R$string: int notification_lock_message
 com.prasilabs.screenlocker.R$string: int notification_screen_lock_message
 com.prasilabs.screenlocker.R$string: int search_menu_title
 com.prasilabs.screenlocker.R$string: int shake_to_lock_screen
 com.prasilabs.screenlocker.R$string: int status_bar_notification_info_overflow
-com.prasilabs.screenlocker.R$string: int store_picture_message
-com.prasilabs.screenlocker.R$string: int store_picture_title
+com.prasilabs.screenlocker.R$string: int title_activity_ad
 com.prasilabs.screenlocker.R$string: int to_unlock_screen
 com.prasilabs.screenlocker.R$string: int try_the_app_shortcut_to_lock_screen_instantly
 com.prasilabs.screenlocker.R$string: int uninstall_app
@@ -3433,6 +3000,8 @@ com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_Spinner_Underlined
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_TextView_SpinnerItem
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_Toolbar
 com.prasilabs.screenlocker.R$style: int Base_Widget_AppCompat_Toolbar_Button_Navigation
+com.prasilabs.screenlocker.R$style: int FullscreenActionBarStyle
+com.prasilabs.screenlocker.R$style: int FullscreenTheme
 com.prasilabs.screenlocker.R$style: int Platform_AppCompat
 com.prasilabs.screenlocker.R$style: int Platform_AppCompat_Light
 com.prasilabs.screenlocker.R$style: int Platform_ThemeOverlay_AppCompat
@@ -3442,6 +3011,10 @@ com.prasilabs.screenlocker.R$style: int Platform_V11_AppCompat
 com.prasilabs.screenlocker.R$style: int Platform_V11_AppCompat_Light
 com.prasilabs.screenlocker.R$style: int Platform_V14_AppCompat
 com.prasilabs.screenlocker.R$style: int Platform_V14_AppCompat_Light
+com.prasilabs.screenlocker.R$style: int Platform_V21_AppCompat
+com.prasilabs.screenlocker.R$style: int Platform_V21_AppCompat_Light
+com.prasilabs.screenlocker.R$style: int Platform_V25_AppCompat
+com.prasilabs.screenlocker.R$style: int Platform_V25_AppCompat_Light
 com.prasilabs.screenlocker.R$style: int Platform_Widget_AppCompat_Spinner
 com.prasilabs.screenlocker.R$style: int RtlOverlay_DialogWindowTitle_AppCompat
 com.prasilabs.screenlocker.R$style: int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem
@@ -3477,6 +3050,16 @@ com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Light_Widget_Po
 com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Medium
 com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Medium_Inverse
 com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Menu
+com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Notification
+com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Notification_Info
+com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Notification_Info_Media
+com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Notification_Line2
+com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Notification_Line2_Media
+com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Notification_Media
+com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Notification_Time
+com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Notification_Time_Media
+com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Notification_Title
+com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Notification_Title_Media
 com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_SearchResult_Subtitle
 com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_SearchResult_Title
 com.prasilabs.screenlocker.R$style: int TextAppearance_AppCompat_Small
@@ -3531,7 +3114,6 @@ com.prasilabs.screenlocker.R$style: int Theme_AppCompat_Light_Dialog_MinWidth
 com.prasilabs.screenlocker.R$style: int Theme_AppCompat_Light_DialogWhenLarge
 com.prasilabs.screenlocker.R$style: int Theme_AppCompat_Light_NoActionBar
 com.prasilabs.screenlocker.R$style: int Theme_AppCompat_NoActionBar
-com.prasilabs.screenlocker.R$style: int Theme_IAPTheme
 com.prasilabs.screenlocker.R$style: int ThemeOverlay_AppCompat
 com.prasilabs.screenlocker.R$style: int ThemeOverlay_AppCompat_ActionBar
 com.prasilabs.screenlocker.R$style: int ThemeOverlay_AppCompat_Dark
@@ -3592,6 +3174,8 @@ com.prasilabs.screenlocker.R$style: int Widget_AppCompat_ListPopupWindow
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_ListView
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_ListView_DropDown
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_ListView_Menu
+com.prasilabs.screenlocker.R$style: int Widget_AppCompat_NotificationActionContainer
+com.prasilabs.screenlocker.R$style: int Widget_AppCompat_NotificationActionText
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_PopupMenu
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_PopupMenu_Overflow
 com.prasilabs.screenlocker.R$style: int Widget_AppCompat_PopupWindow
@@ -3703,10 +3287,6 @@ com.prasilabs.screenlocker.R$styleable: int ActionMode_titleTextStyle
 com.prasilabs.screenlocker.R$styleable: int[] ActivityChooserView
 com.prasilabs.screenlocker.R$styleable: int ActivityChooserView_expandActivityOverflowButtonDrawable
 com.prasilabs.screenlocker.R$styleable: int ActivityChooserView_initialActivityCount
-com.prasilabs.screenlocker.R$styleable: int[] AdsAttrs
-com.prasilabs.screenlocker.R$styleable: int AdsAttrs_adSize
-com.prasilabs.screenlocker.R$styleable: int AdsAttrs_adSizes
-com.prasilabs.screenlocker.R$styleable: int AdsAttrs_adUnitId
 com.prasilabs.screenlocker.R$styleable: int[] AlertDialog
 com.prasilabs.screenlocker.R$styleable: int AlertDialog_android_layout
 com.prasilabs.screenlocker.R$styleable: int AlertDialog_buttonPanelSideLayout
@@ -3849,6 +3429,9 @@ com.prasilabs.screenlocker.R$styleable: int AppCompatTheme_windowFixedWidthMinor
 com.prasilabs.screenlocker.R$styleable: int AppCompatTheme_windowMinWidthMajor
 com.prasilabs.screenlocker.R$styleable: int AppCompatTheme_windowMinWidthMinor
 com.prasilabs.screenlocker.R$styleable: int AppCompatTheme_windowNoTitle
+com.prasilabs.screenlocker.R$styleable: int[] ButtonBarContainerTheme
+com.prasilabs.screenlocker.R$styleable: int ButtonBarContainerTheme_metaButtonBarButtonStyle
+com.prasilabs.screenlocker.R$styleable: int ButtonBarContainerTheme_metaButtonBarStyle
 com.prasilabs.screenlocker.R$styleable: int[] ButtonBarLayout
 com.prasilabs.screenlocker.R$styleable: int ButtonBarLayout_allowStacking
 com.prasilabs.screenlocker.R$styleable: int[] ColorStateListItem
@@ -3886,10 +3469,6 @@ com.prasilabs.screenlocker.R$styleable: int LinearLayoutCompat_Layout_android_la
 com.prasilabs.screenlocker.R$styleable: int[] ListPopupWindow
 com.prasilabs.screenlocker.R$styleable: int ListPopupWindow_android_dropDownHorizontalOffset
 com.prasilabs.screenlocker.R$styleable: int ListPopupWindow_android_dropDownVerticalOffset
-com.prasilabs.screenlocker.R$styleable: int[] LoadingImageView
-com.prasilabs.screenlocker.R$styleable: int LoadingImageView_circleCrop
-com.prasilabs.screenlocker.R$styleable: int LoadingImageView_imageAspectRatio
-com.prasilabs.screenlocker.R$styleable: int LoadingImageView_imageAspectRatioAdjust
 com.prasilabs.screenlocker.R$styleable: int[] MenuGroup
 com.prasilabs.screenlocker.R$styleable: int MenuGroup_android_checkableBehavior
 com.prasilabs.screenlocker.R$styleable: int MenuGroup_android_enabled
@@ -3949,10 +3528,6 @@ com.prasilabs.screenlocker.R$styleable: int SearchView_searchIcon
 com.prasilabs.screenlocker.R$styleable: int SearchView_submitBackground
 com.prasilabs.screenlocker.R$styleable: int SearchView_suggestionRowLayout
 com.prasilabs.screenlocker.R$styleable: int SearchView_voiceIcon
-com.prasilabs.screenlocker.R$styleable: int[] SignInButton
-com.prasilabs.screenlocker.R$styleable: int SignInButton_buttonSize
-com.prasilabs.screenlocker.R$styleable: int SignInButton_colorScheme
-com.prasilabs.screenlocker.R$styleable: int SignInButton_scopeUris
 com.prasilabs.screenlocker.R$styleable: int[] Spinner
 com.prasilabs.screenlocker.R$styleable: int Spinner_android_dropDownWidth
 com.prasilabs.screenlocker.R$styleable: int Spinner_android_entries
@@ -3980,6 +3555,7 @@ com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_shadowDx
 com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_shadowDy
 com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_shadowRadius
 com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_textColor
+com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_textColorHint
 com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_textSize
 com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_textStyle
 com.prasilabs.screenlocker.R$styleable: int TextAppearance_android_typeface
@@ -4048,11 +3624,3 @@ com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider
 com.prasilabs.screenlocker.widgets.ScreenLockWidgetProvider: ScreenLockWidgetProvider()
 com.prasilabs.screenlocker.widgets.ShortCutActivity
 com.prasilabs.screenlocker.widgets.ShortCutActivity: ShortCutActivity()
-com.purplebrain.adbuddiz.sdk.AdBuddizActivity
-com.purplebrain.adbuddiz.sdk.AdBuddizActivity: AdBuddizActivity()
-com.purplebrain.adbuddiz.sdk.AdBuddizError: com.purplebrain.adbuddiz.sdk.AdBuddizError[] values()
-com.purplebrain.adbuddiz.sdk.AdBuddizError: com.purplebrain.adbuddiz.sdk.AdBuddizError valueOf(java.lang.String)
-com.purplebrain.adbuddiz.sdk.AdBuddizLogLevel: com.purplebrain.adbuddiz.sdk.AdBuddizLogLevel[] values()
-com.purplebrain.adbuddiz.sdk.AdBuddizLogLevel: com.purplebrain.adbuddiz.sdk.AdBuddizLogLevel valueOf(java.lang.String)
-com.purplebrain.adbuddiz.sdk.AdBuddizRewardedVideoError: com.purplebrain.adbuddiz.sdk.AdBuddizRewardedVideoError[] values()
-com.purplebrain.adbuddiz.sdk.AdBuddizRewardedVideoError: com.purplebrain.adbuddiz.sdk.AdBuddizRewardedVideoError valueOf(java.lang.String)

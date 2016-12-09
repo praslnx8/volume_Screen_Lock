@@ -90,8 +90,7 @@ public class ScreenLockService extends Service implements SensorEventListener
             WindowManagerUtil.removeFloatingButton();
         }
 
-
-        return super.onStartCommand(intent, flags, startId);
+        return Service.START_STICKY;
     }
 
     @Override

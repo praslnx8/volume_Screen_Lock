@@ -1,288 +1,376 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:background="@color/lgray2">
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/splash_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none"
-        android:padding="@dimen/paddingXXS"
-        android:layout_above="@+id/bottom_layout">
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/white">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <ImageView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            style="@style/textM"
+            android:layout_marginTop="@dimen/paddingS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading...."/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lgray2"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:padding="@dimen/paddingXXS"
+            android:layout_above="@+id/bottom_layout">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/paddingXS"
-                android:background="@drawable/gcard"
-                android:elevation="@dimen/paddingS"
                 android:orientation="vertical">
-
-                <TextView
-                    style="@style/textXS.primary"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/primaryDark"
-                    android:text="@string/to_unlock_screen"/>
+                    android:padding="@dimen/paddingXS"
+                    android:background="@drawable/gcard"
+                    android:elevation="@dimen/paddingS"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/textXS.primary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primaryDark"
+                        android:text="@string/to_unlock_screen"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/paddingS"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textL.primary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/enable_message"
+                            android:layout_weight="3"/>
+
+
+                        <CheckBox
+                            android:id="@+id/check_box"
+                            android:padding="@dimen/paddingXS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            style="@style/textS.black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/volume_key_unlock"/>
+
+                        <TextView
+                            style="@style/textS.black"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text=":"/>
+
+                        <TextView
+                            android:id="@+id/status_text"
+                            style="@style/textS"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/disabled"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/paddingS" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/paddingS"
-                    android:orientation="horizontal">
+                    android:elevation="@dimen/paddingS"
+                    android:background="@drawable/gcard"
+                    android:orientation="vertical">
 
                     <TextView
-                        style="@style/textL.primary"
-                        android:layout_width="wrap_content"
+                        style="@style/textXS.primary"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/enable_message"
-                        android:layout_weight="3"/>
 
+                        android:text="@string/enable_screen_lock_option_message"/>
 
-                    <CheckBox
-                        android:id="@+id/check_box"
+                    <LinearLayout
                         android:padding="@dimen/paddingXS"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textL.primary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/notification_lock_message"
+                            android:layout_weight="3"/>
+
+                        <View
+                            android:layout_width="@dimen/paddingXS"
+                            android:layout_height="0dp" />
+
+                        <Switch
+                            android:id="@+id/notification_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:padding="@dimen/paddingXS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textL.primary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/shake_to_lock_screen"
+                            android:layout_weight="3"/>
+
+                        <View
+                            android:layout_width="@dimen/paddingXS"
+                            android:layout_height="0dp" />
+
+                        <Switch
+                            android:id="@+id/shake_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:padding="@dimen/paddingXS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textL.primary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/floating_button_lock"
+                            android:layout_weight="3"/>
+
+                        <View
+                            android:layout_width="@dimen/paddingXS"
+                            android:layout_height="0dp" />
+
+                        <Switch
+                            android:id="@+id/floating_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:padding="@dimen/paddingXS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textL.primary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/double_press_volume_lock_message"
+                            android:layout_weight="3"/>
+
+                        <View
+                            android:layout_width="@dimen/paddingXS"
+                            android:layout_height="0dp" />
+
+                        <Switch
+                            android:id="@+id/volume_key_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_weight="1"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
                         android:gravity="center"
-                        android:layout_weight="1"/>
+                        android:orientation="horizontal">
 
-                </LinearLayout>
+                        <TextView
+                            style="@style/textM.secondary"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="@string/try_the_app_shortcut_to_lock_screen_instantly" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    </LinearLayout>
+
 
                     <TextView
-                        style="@style/textS.black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/volume_key_unlock"/>
-
-                    <TextView
-                        style="@style/textS.black"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text=":"/>
-
-                    <TextView
-                        android:id="@+id/status_text"
-                        style="@style/textS"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="@string/disabled"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/paddingS" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/paddingS"
-                android:elevation="@dimen/paddingS"
-                android:background="@drawable/gcard"
-                android:orientation="vertical">
-
-                <TextView
-                    style="@style/textXS.primary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-
-                    android:text="@string/enable_screen_lock_option_message"/>
-
-                <LinearLayout
-                    android:padding="@dimen/paddingXS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/textL.primary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/notification_lock_message"
-                        android:layout_weight="3"/>
-
-                    <View
-                        android:layout_width="@dimen/paddingXS"
-                        android:layout_height="0dp" />
-
-                    <Switch
-                        android:id="@+id/notification_switch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_weight="1"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:padding="@dimen/paddingXS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/textL.primary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/shake_to_lock_screen"
-                        android:layout_weight="3"/>
-
-                    <View
-                        android:layout_width="@dimen/paddingXS"
-                        android:layout_height="0dp" />
-
-                    <Switch
-                        android:id="@+id/shake_switch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_weight="1"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:padding="@dimen/paddingXS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/textL.primary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/floating_button_lock"
-                        android:layout_weight="3"/>
-
-                    <View
-                        android:layout_width="@dimen/paddingXS"
-                        android:layout_height="0dp" />
-
-                    <Switch
-                        android:id="@+id/floating_switch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_weight="1"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:padding="@dimen/paddingXS"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/textL.primary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/double_press_volume_lock_message"
-                        android:layout_weight="3"/>
-
-                    <View
-                        android:layout_width="@dimen/paddingXS"
-                        android:layout_height="0dp" />
-
-                    <Switch
-                        android:id="@+id/volume_key_switch"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_weight="1"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        style="@style/textM.secondary"
+                        android:id="@+id/device_admin_btn"
+                        android:layout_margin="@dimen/paddingS"
+                        style="@style/button.transparent.gray.small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:layout_gravity="center"
-                        android:text="@string/try_the_app_shortcut_to_lock_screen_instantly" />
+                        android:text="@string/uninstall_app"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:paddingTop="@dimen/paddingXXS"
+            android:layout_marginTop="@dimen/paddingXXXS"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/bikr_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="4dp"
+                android:padding="4dp"
+                android:background="@drawable/gcard"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ic_bikr_launcher"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp"
+                        android:text="BikeR"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"/>
+
+                        <Button
+                            android:id="@+id/bikr_install_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/green"
+                            android:textColor="@color/white"
+                            android:text="INSTALL"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:text="Bike Speedometer, Speed Analysis, Speed Rank with bikers around you"/>
+
+
 
                 </LinearLayout>
 
 
-                <TextView
-                    android:id="@+id/device_admin_btn"
-                    android:layout_margin="@dimen/paddingS"
-                    style="@style/button.transparent.gray.small"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:text="@string/uninstall_app"/>
-
-
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/github_btn"
+                style="@style/button.primary.transparent.small"
+                android:drawableStart="@drawable/ic_github"
+                android:drawableLeft="@drawable/ic_github"
+                android:layout_width="match_parent"
+                android:padding="@dimen/paddingXS"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:text="@string/github_src_code"/>
+
+            <TextView
+                android:id="@+id/page_btn"
+                style="@style/button.primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/developed_by_prasilabs"/>
 
         </LinearLayout>
 
-    </ScrollView>
+    </RelativeLayout>
 
-    <LinearLayout
-        android:id="@+id/bottom_layout"
-        android:paddingTop="@dimen/paddingXXS"
-        android:layout_marginTop="@dimen/paddingXXXS"
-        android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+</FrameLayout>
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_ad_unit_id">
-        </com.google.android.gms.ads.AdView>
-
-        <TextView
-            android:id="@+id/github_btn"
-            style="@style/button.primary.transparent.small"
-            android:drawableStart="@drawable/ic_github"
-            android:drawableLeft="@drawable/ic_github"
-            android:layout_width="match_parent"
-            android:padding="@dimen/paddingXS"
-            android:visibility="gone"
-            android:layout_height="wrap_content"
-            android:text="@string/github_src_code"/>
-
-        <TextView
-            android:id="@+id/page_btn"
-            style="@style/button.primary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/developed_by_prasilabs"/>
-
-    </LinearLayout>
-
-</RelativeLayout>

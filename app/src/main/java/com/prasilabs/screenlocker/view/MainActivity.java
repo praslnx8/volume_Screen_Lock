@@ -3,24 +3,23 @@ package com.prasilabs.screenlocker.view;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
 import com.prasilabs.screenlocker.R;
-import com.prasilabs.screenlocker.VApp;
 import com.prasilabs.screenlocker.components.VDialog;
 import com.prasilabs.screenlocker.constants.KeyConstant;
 import com.prasilabs.screenlocker.constants.RequestFor;
@@ -30,14 +29,8 @@ import com.prasilabs.screenlocker.utils.DeviceAdminUtil;
 import com.prasilabs.screenlocker.utils.MyLogger;
 import com.prasilabs.screenlocker.utils.PhoneData;
 import com.prasilabs.screenlocker.utils.ShareUtil;
-import com.purplebrain.adbuddiz.sdk.AdBuddiz;
-import com.purplebrain.adbuddiz.sdk.AdBuddizDelegate;
-import com.purplebrain.adbuddiz.sdk.AdBuddizError;
-import com.purplebrain.adbuddiz.sdk.AdBuddizLogLevel;
-import com.purplebrain.adbuddiz.sdk.AdBuddizRewardedVideoDelegate;
-import com.purplebrain.adbuddiz.sdk.AdBuddizRewardedVideoError;
 
-public class MainActivity extends AppCompatActivity implements AdBuddizRewardedVideoDelegate, AdBuddizDelegate
+public class MainActivity extends AppCompatActivity
 {
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -45,45 +38,12 @@ public class MainActivity extends AppCompatActivity implements AdBuddizRewardedV
     private CheckBox checkBox;
     private Switch notificatinSwitch, volumeSwitch, shakeSwitch, floatingSwitch;
     private long prevTime;
-    private long lastAdTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        MobileAds.initialize(VApp.getAppContext(), "ca-app-pub-9278716690121470~1246954143");
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest.Builder adBuilder = new AdRequest.Builder();
-        if(VApp.appDebug)
-        {
-            adBuilder.addTestDevice("794C17700249AE1D7CE8F8A532B090B6");
-        }
-        AdRequest adRequest = adBuilder.build();
-        mAdView.loadAd(adRequest);
-
-        AdBuddiz.setPublisherKey("b770e723-ed1b-4903-86cc-7e019dc3a41a");
-
-        if(VApp.appDebug)
-        {
-            AdBuddiz.setTestModeActive();
-            AdBuddiz.setLogLevel(AdBuddizLogLevel.Info);    // or Error, Silent
-        }
-        AdBuddiz.cacheAds(this);
-        AdBuddiz.setDelegate(this);
-        AdBuddiz.RewardedVideo.fetch(this);
-        AdBuddiz.setDelegate(this);
-        AdBuddiz.RewardedVideo.setDelegate(this);
-        if (AdBuddiz.isReadyToShowAd(this)) { // this = current Activity
-            /*if(isShowAdByTime()) {
-                AdBuddiz.showAd(this); // showAd will always display an ad
-            }*/
-
-            //Disabled
-        } else {
-            Log.d(TAG, "no ads to display now");
-        }
 
         checkBox = (CheckBox) findViewById(R.id.check_box);
         statusText = (TextView) findViewById(R.id.status_text);
@@ -95,17 +55,51 @@ public class MainActivity extends AppCompatActivity implements AdBuddizRewardedV
         shakeSwitch = (Switch) findViewById(R.id.shake_switch);
         floatingSwitch = (Switch) findViewById(R.id.floating_switch);
 
+        final LinearLayout splashLayout = (LinearLayout) findViewById(R.id.splash_layout);
+        final RelativeLayout contentLayout = (RelativeLayout) findViewById(R.id.content_view);
+        LinearLayout bikeRLayout = (LinearLayout) findViewById(R.id.bikr_layout);
+        final Button bikRinstallBtn = (Button) findViewById(R.id.bikr_install_btn);
+
+        bikeRLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                bikRinstallBtn.performClick();
+            }
+        });
+
+        bikRinstallBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                final String appPackageName = "com.prasilabs.ffloc";
+                try {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName +"&rdid=" + appPackageName)));
+                } catch (android.content.ActivityNotFoundException anfe) {
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + appPackageName + "rdid=" + appPackageName)));
+                }
+            }
+        });
+
+        splashLayout.setVisibility(View.VISIBLE);
+        contentLayout.setVisibility(View.GONE);
+
+        //for letting the ads to load
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run()
+            {
+                contentLayout.setVisibility(View.VISIBLE);
+                splashLayout.setVisibility(View.GONE);
+            }
+        }, 3000);
+
         renderView(); //for not making too many popup on setChecked
 
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                if(isChecked && isShowAdByTime())
-                {
-                    AdBuddiz.RewardedVideo.show(MainActivity.this);
-                }
-
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.UNLOCK_STR, isChecked);
                 ScreenLockService.manageService(MainActivity.this);
 
@@ -136,10 +130,6 @@ public class MainActivity extends AppCompatActivity implements AdBuddizRewardedV
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                if(isChecked && isShowAdByTime())
-                {
-                    AdBuddiz.showAd(MainActivity.this);
-                }
 
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.VOLUME_LOCK_ENABLE_STR, isChecked && DeviceAdminUtil.checkisDeviceAdminEnabled());
 
@@ -157,10 +147,6 @@ public class MainActivity extends AppCompatActivity implements AdBuddizRewardedV
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                if(isChecked && isShowAdByTime())
-                {
-                    AdBuddiz.showAd(MainActivity.this);
-                }
 
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.NOTIF_LOCK_ENABLE_STR, isChecked && DeviceAdminUtil.checkisDeviceAdminEnabled());
 
@@ -176,10 +162,6 @@ public class MainActivity extends AppCompatActivity implements AdBuddizRewardedV
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                if(isChecked && isShowAdByTime())
-                {
-                    AdBuddiz.showAd(MainActivity.this);
-                }
 
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.FLOATING_LOCK_STR, isChecked && DeviceAdminUtil.checkisDeviceAdminEnabled());
 
@@ -195,10 +177,6 @@ public class MainActivity extends AppCompatActivity implements AdBuddizRewardedV
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked)
             {
-                if(isChecked && isShowAdByTime())
-                {
-                    AdBuddiz.showAd(MainActivity.this);
-                }
 
                 PhoneData.savePhoneData(MainActivity.this, KeyConstant.SHAKE_LOCK_STR, isChecked);
 
@@ -356,63 +334,6 @@ public class MainActivity extends AppCompatActivity implements AdBuddizRewardedV
         }
 
         prevTime = System.currentTimeMillis();
-    }
-
-    private boolean isShowAdByTime()
-    {
-        boolean status =  System.currentTimeMillis() - lastAdTime > 10000;
-
-        return status;
-    }
-
-
-    @Override
-    public void didFetch()
-    {
-
-    }
-
-    @Override
-    public void didFail(AdBuddizRewardedVideoError adBuddizRewardedVideoError) {
-
-    }
-
-    @Override
-    public void didComplete()
-    {
-        lastAdTime = System.currentTimeMillis();
-    }
-
-    @Override
-    public void didNotComplete()
-    {
-
-    }
-
-    @Override
-    public void didCacheAd() {
-
-    }
-
-    @Override
-    public void didShowAd()
-    {
-        lastAdTime = System.currentTimeMillis();
-    }
-
-    @Override
-    public void didFailToShowAd(AdBuddizError adBuddizError) {
-
-    }
-
-    @Override
-    public void didClick() {
-
-    }
-
-    @Override
-    public void didHideAd() {
-
     }
 }
 
