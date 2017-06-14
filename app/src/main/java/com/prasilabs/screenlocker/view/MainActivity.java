@@ -2,8 +2,10 @@ package com.prasilabs.screenlocker.view;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -167,6 +169,8 @@ public class MainActivity extends AppCompatActivity
 
                 if (isChecked && !DeviceAdminUtil.checkisDeviceAdminEnabled()) {
                     DeviceAdminUtil.openDeviceManagerEnableAction(MainActivity.this, RequestFor.REQUEST_FLOATING_ENABLE);
+                } else if(checkDrawOverlayPermission()) {
+
                 }
 
                 ScreenLockService.manageService(MainActivity.this);
@@ -238,6 +242,10 @@ public class MainActivity extends AppCompatActivity
         }
 
         ScreenLockService.manageService(this);
+
+        if(isFloatingEnabed) {
+            checkDrawOverlayPermission();
+        }
     }
 
     @Override
@@ -316,8 +324,30 @@ public class MainActivity extends AppCompatActivity
                 ScreenLockService.manageService(this);
             }
         }
+        if (requestCode == RequestFor.REQUEST_FLOATING_PERMISSION) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (Settings.canDrawOverlays(this)) {
+                    ScreenLockService.manageService(this);
+                }
+            }
+        }
 
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+
+    public boolean checkDrawOverlayPermission() {
+        boolean isPermission = true;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.canDrawOverlays(this)) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getPackageName()));
+                startActivityForResult(intent, RequestFor.REQUEST_FLOATING_PERMISSION);
+
+                isPermission = false;
+            }
+        }
+
+        return isPermission;
     }
 
 

@@ -13,19 +13,21 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Build;
 import android.os.IBinder;
 import android.os.SystemClock;
+import android.provider.Settings;
 
 import com.prasilabs.screenlocker.R;
 import com.prasilabs.screenlocker.constants.KeyConstant;
+import com.prasilabs.screenlocker.utils.FPowerManager;
 import com.prasilabs.screenlocker.utils.MyLogger;
 import com.prasilabs.screenlocker.utils.PhoneData;
 import com.prasilabs.screenlocker.utils.ShakeSensorUtil;
 import com.prasilabs.screenlocker.utils.WindowManagerUtil;
 
-public class ScreenLockService extends Service implements SensorEventListener
-{
+public class ScreenLockService extends Service implements SensorEventListener, FSensorTracker.FSensorCallBack {
     private static final String TAG = ScreenLockService.class.getSimpleName();
 
     private static ScreenLockService screenLockService;
@@ -83,12 +85,20 @@ public class ScreenLockService extends Service implements SensorEventListener
 
         if(PhoneData.getPhoneData(this, KeyConstant.FLOATING_LOCK_STR, false))
         {
-            WindowManagerUtil.showFloatingButton(this);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if(Settings.canDrawOverlays(this)) {
+                    WindowManagerUtil.showFloatingButton(this);
+                }
+            }else {
+                WindowManagerUtil.showFloatingButton(this);
+            }
         }
         else
         {
             WindowManagerUtil.removeFloatingButton();
         }
+
+        FSensorTracker.getInstance(this).register(this);
 
         return Service.START_STICKY;
     }
@@ -192,5 +202,12 @@ public class ScreenLockService extends Service implements SensorEventListener
                 restartServicePendingIntent);
 
         super.onTaskRemoved(rootIntent);
+    }
+
+    @Override
+    public void disturbed() {
+        if(!FPowerManager.instance(this).isScreenOn()) {
+            FPowerManager.instance(this).wake();
+        }
     }
 }

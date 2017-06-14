@@ -12,6 +12,7 @@ import com.prasilabs.screenlocker.constants.IntentConstant;
 import com.prasilabs.screenlocker.constants.RequestFor;
 import com.prasilabs.screenlocker.notifications.ScreenLockNotification;
 import com.prasilabs.screenlocker.utils.DeviceAdminUtil;
+import com.prasilabs.screenlocker.utils.FPowerManager;
 import com.prasilabs.screenlocker.utils.MyLogger;
 import com.prasilabs.screenlocker.utils.PhoneData;
 import com.prasilabs.screenlocker.view.MainActivity;
@@ -21,8 +22,6 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
     private static final String TAG = MediaButtonIntentReciever.class.getSimpleName();
 
     private static long prevTime;
-
-    private static PowerManager pm;
 
     private static boolean isSingleCall = false;
 
@@ -41,14 +40,6 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
                 MyLogger.l(TAG, "media button action recieved");
                 if(intent.getExtras() != null)
                 {
-
-                    if (pm == null)
-                    {
-                        pm = (PowerManager) context.getSystemService(Context.POWER_SERVICE);
-
-                        MyLogger.l(TAG, "power manager is initialized");
-                    }
-
                     int prevVolume = intent.getExtras().getInt("android.media.EXTRA_PREV_VOLUME_STREAM_VALUE", 0);
                     int currentValue = intent.getExtras().getInt("android.media.EXTRA_VOLUME_STREAM_VALUE", 0);
 
@@ -74,20 +65,18 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
                         volumeAction = true;
                     }
 
-                    if(volumeAction || !isScreenOn(pm)) //when screen is off ui volume change will not happen
+                    if(volumeAction || !FPowerManager.instance(context).isScreenOn()) //when screen is off ui volume change will not happen
                     {
                         boolean isEnabled = PhoneData.getPhoneData(context, KeyConstant.UNLOCK_STR, false);
 
-                        if (!isScreenOn(pm) && isEnabled)
+                        if (!FPowerManager.instance(context).isScreenOn() && isEnabled)
                         {
 
-                            PowerManager.WakeLock wakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP, KeyConstant.WAKE_TAG_STR);
-                            wakeLock.acquire();
-                            wakeLock.release();
+                            FPowerManager.instance(context).wake();
 
                             MyLogger.l(TAG, "wake lock done");
                         }
-                        else if (isScreenOn(pm) && PhoneData.getPhoneData(context, KeyConstant.VOLUME_LOCK_ENABLE_STR, false) && isEnabled)
+                        else if (FPowerManager.instance(context).isScreenOn() && PhoneData.getPhoneData(context, KeyConstant.VOLUME_LOCK_ENABLE_STR, false) && isEnabled)
                         {
                             if (System.currentTimeMillis() - prevTime < 1000)
                             {
@@ -148,21 +137,4 @@ public class MediaButtonIntentReciever extends BroadcastReceiver
             Toast.makeText(context, "Please Enable Device admin in app", Toast.LENGTH_LONG).show();
         }
     }
-
-    @SuppressWarnings("deprecation")
-    private boolean isScreenOn(PowerManager pm)
-    {
-        boolean isScreenOn;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT_WATCH)
-        {
-            isScreenOn = pm.isInteractive();
-        }
-        else
-        {
-            isScreenOn = pm.isScreenOn();
-        }
-
-        return isScreenOn;
-    }
-
 }

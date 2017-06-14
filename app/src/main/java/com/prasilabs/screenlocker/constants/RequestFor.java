@@ -13,4 +13,5 @@ public class RequestFor
    public static final int REQUEST_NOTIF_ENABLE = 4;
    public static final int REQUEST_SHAKE_ENABLE = 5;
    public static final int REQUEST_FLOATING_ENABLE = 6;
+   public static final int REQUEST_FLOATING_PERMISSION = 7;
 }
